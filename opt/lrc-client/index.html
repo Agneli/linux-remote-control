@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Linux Remote Control</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="img/icons/logo-16.png" />
+    </head>
+    <body onload="startup();">
+        <div id="main">
+
+            <!-- Index ______________________________________________________-->
+            <section id="index">
+                <header class="line light-blue center">
+                    Linux Remote Control
+                </header>
+                <div class="line h70" id="servers">
+                    <div class="line center" id="msg-server"></div>
+                </div>
+                <a class="line light-orange center link-add-server" href="javascript:;" data-direction='{"from":"down","to":"up"}'>
+                    Add Server
+                </a>
+                <a class="line dark-orange center link-help" href="javascript:;" data-direction='{"from":"down","to":"up"}'>
+                    Help
+                </a>
+            </section>
+
+            <!-- Add Server _________________________________________________-->
+            <section id="add-server">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-index' data-direction='{"from":"up","to":"down"}'></a>
+                    Add Server
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+                <div class="line"></div>
+                <div class="line"></div>
+                <!--                <div class="line center">
+                                    <div class="fields">
+                                        <select name="distro" id="distro">
+                                            <option>Linux Distro</option>
+                                            <option>Ubuntu</option>
+                                            <option>Debian</option>
+                                        </select>
+                                    </div>
+                                </div>-->
+                <div class="line center">
+                    <div class="fields">
+                        <input type="text" name="name" id="name" placeholder="Account Name" />
+                    </div>
+                </div>
+                <div class="line center">
+                    <div class="fields">
+                        <input type="text" name="ip" id="ip" placeholder="IP Address" />
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line dark-orange">
+                    <a href="javascript:;" class="w50 center left dark-orange">Cancel</a>
+                    <a href="javascript:;" id="save" class="w50 center right dark-orange link-index" data-direction='{"from":"up","to":"down"}'>Save</a>
+                </div>
+            </section>
+
+
+            <!-- Help _______________________________________________________-->
+            <section id="help">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-index' data-direction='{"from":"up","to":"down"}'></a>
+                    Help
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+                <div class="line"></div>
+                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>How to install on Linux</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>How to contribute</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>FAQ</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>Report bugs</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>Send feedback</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>About</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>Credits</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+            </section>
+
+            <!-- Menu _______________________________________________________-->
+            <section id="menu">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-index' data-direction='{"from":"left","to":"right"}'></a>
+                    <span id="server-name"></span>
+                    <a href="javascript:;" id="delete-server" class='w20 right trash' onclick="return confirm('Delete server. Are you sure ?');"></a>
+                </header>
+                <div class="line"></div>
+                <a class="line dark-blue link-musics" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>Musics</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <a class="line dark-blue link-videos" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>Videos</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <a class="line dark-blue link-controls" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>Controls</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <a class="line dark-blue link-touchpad" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>Touchpad</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <a class="line dark-blue link-slideshow" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>Slideshow</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <a class="line dark-blue link-settings" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>Settings</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <div class="line"></div>
+                <div class="line"></div>
+            </section>
+
+            <!-- Musics _____________________________________________________-->
+            <section id="musics">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-menu' data-direction='{"from":"left","to":"right"}'></a>
+                    Musics
+                    <!--<a href="javascript:;" class='w20 right link-playlists playlists' data-direction='{"from":"up","to":"down"}'></a>-->
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+                <div class="line"></div>
+                <div class="line center artist"></div>
+                <div class="line center album"></div>
+                <div class="line center title"></div>
+                <div class="line center paused"></div>
+                <div class="line light-blue center">
+                    <a class="w20 left sound-min" data-command='{"step":"5"}'></a>
+                    <a class="w20 right sound-max" data-command='{"step":"5"}'></a>
+                    <div class="slider w60">   
+                        <span class="tooltip"></span>   
+                        <div class="sound-volume" data-command='{"cmd":"amixer sset Master "}'></div>  
+                        <span class="volume"></span>  
+                    </div>
+                </div>
+                <div class="line light-orange center">
+                    <div class="w20 left time elapsed">00:00</div>
+                    <div class="w20 right time duration">00:00</div>
+                    <div class="slider w60">   
+                        <span class="tooltip"></span>   
+                        <div id="sound-timeline"></div>  
+                        <span class="volume"></span>  
+                    </div>
+                </div>
+                <div class="line h20 dark-orange" id="music-controls">
+                    <a href="javascript:;" class="w20 left stop" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioStop"}'></a>
+                    <a href="javascript:;" class="w20 left prev" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPrev"}'></a>
+                    <a href="javascript:;" class="w20 left dark-orange play" id="music-play-pause" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPlay"}'></a>
+                    <a href="javascript:;" class="w20 left next" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioNext"}'></a>
+                    <a href="javascript:;" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>
+                </div>
+            </section>
+
+            <!-- Playlists __________________________________________________-->
+            <!--            <section id="playlists">
+                            <header class="line light-blue center">
+                                <a href="javascript:;" class='w20 arrow left link-musics' data-direction='{"from":"down","to":"up"}'></a>
+                                Playlists
+                                <a href="javascript:;" class='w20 right'></a>    
+                            </header>
+                            <div id="playlists-menu" class="line light-orange">
+                                <a href="javascript:;" class="w20 left center">Artists</a>
+                                <a href="javascript:;" class="w20 left center">Albuns</a>
+                                <a href="javascript:;" class="w20 left center">Songs</a>
+                                <a href="javascript:;" class="w20 left center">Playlists</a>
+                                <a href="javascript:;" class="w20 left center">Favourites</a>
+                            </div>
+                            <div class="line h60">
+                                <a class="line dark-blue">
+                                    <span class="w20 right center">
+                                        3:00
+                                    </span>
+                                    <span>
+                                        <span class="h50">Nariz de doze</span>
+                                        <span class="h50 text-light-blue">Raimundos</span>
+                                    </span>
+                                </a>
+                                <a class="line dark-blue">
+                                    <span class="w20 right center">
+                                        3:39
+                                    </span>
+                                    <span>
+                                        <span class="h50">Turn Yor Lights Down Low</span>
+                                        <span class="h50 text-light-blue">Bob Marley</span>
+                                    </span>
+                                </a>
+                                <a class="line dark-blue">
+                                    <span class="w20 right center">
+                                        3:30
+                                    </span>
+                                    <span>
+                                        Chop Suey<br />
+                                        <span class="text-light-blue">System of a Down</span>
+                                    </span>
+                                </a>
+                                <a class="line dark-blue">
+                                    <span class="w20 right center">
+                                        4:05
+                                    </span>
+                                    <span>
+                                        So far Away<br />
+                                        <span class="text-light-blue">Staind</span>
+                                    </span>
+                                </a>
+                                <a class="line dark-blue">
+                                    <span class="w20 right center">
+                                        6:51
+                                    </span>
+                                    <span>
+                                        Negro Drama<br />
+                                        <span class="text-light-blue">Racionais Mc's</span>
+                                    </span>
+                                </a>
+                                <a class="line dark-blue">
+                                    <span class="w20 right center">
+                                        5:34
+                                    </span>
+                                    <span>
+                                        Snow (Hey oh)<br />
+                                        <span class="text-light-blue">Red Hot Chili Peppers</span>
+                                    </span>
+                                </a>
+                                <a class="line dark-blue">
+                                    <span class="w20 right center">
+                                        7:26
+                                    </span>
+                                    <span>
+                                        Through The Fire And Flames<br />
+                                        <span class="text-light-blue">Dragon Force</span>
+                                    </span>
+                                </a>
+            
+                            </div>
+                            <a href="javascript:;" id="now-playing" class="line h20 dark-orange link-musics" data-direction='{"from":"right","to":"left"}'>
+                                <span class="w20 arrow right"></span>
+                                <span>
+                                    Now Playing
+                                    <span class="title">Fique! Fique!</span>
+                                    <span class="text-light-orange">Raimundos</span>
+                                </span>
+                            </a>
+                        </section>-->
+
+            <!-- Videos _____________________________________________________-->
+            <section id="videos">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-menu' data-direction='{"from":"left","to":"right"}'></a>
+                    Videos
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line center paused"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line light-blue center">
+                    <a class="w20 left sound-min" data-command='{"step":"5"}'></a>
+                    <a class="w20 right sound-max" data-command='{"step":"5"}'></a>
+                    <div class="slider w60">   
+                        <span class="tooltip"></span>   
+                        <div class="sound-volume" data-command='{"cmd":"amixer sset Master "}'></div>  
+                        <span class="volume"></span>  
+                    </div>
+                </div>
+                <div class="line light-orange center">
+                    <div class="w20 left time _elapsed">00:00</div>
+                    <div class="w20 right time _duration">00:00</div>
+                    <div class="slider w60">   
+                        <span class="tooltip"></span>   
+                        <div id="video-timeline"></div>  
+                        <span class="volume"></span>  
+                    </div>
+                </div>
+                <div class="line h20 dark-orange" id="video-controls">
+                    <a href="javascript:;" class="w20 left fullscreen" data-command='{"cmd":"export DISPLAY=:0; totem --fullscreen"}'></a>
+                    <a href="javascript:;" class="w20 left prev" data-command='{"cmd":"export DISPLAY=:0; totem --seek-bwd"}'></a>
+                    <a href="javascript:;" class="w20 left dark-orange play" id="video-play-pause" data-command='{"cmd":"export DISPLAY=:0; totem --play-pause"}'></a>
+                    <a href="javascript:;" class="w20 left next" data-command='{"cmd":"export DISPLAY=:0; totem --seek-fwd"}'></a>
+                    <a href="javascript:;" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>
+                </div>
+            </section>
+
+            <!-- Controls ___________________________________________________-->
+            <section id="controls">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-menu' data-direction='{"from":"left","to":"right"}'></a>
+                    Controls
+                    <a href="javascript:;" class='w20 right' data-direction='{"from":"right","to":"left"}'></a>
+                </header>
+                <div class="line"></div>
+                <div class="line center">Send custom command</div>
+                <div class="line">
+                    <div class="fields">
+                        <input type="text" name="command" id="command" placeholder="Command" />
+                    </div>
+                </div>
+                <a href="javascript:;" class="line center" id="send-command">Send command</a>
+                <div class="line test center"></div>
+                <div class="line"></div>
+                <div id="controls-controls" class="line h20 light-orange">
+                    <a href="javascript:;" class="w20 left lock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -l"}'></a>
+                    <a href="javascript:;" class="w20 left unlock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d"}'></a>
+                    <a href="javascript:;" class="w20 left screenshot" data-command='{"cmd":"export DISPLAY=:0; import -window root screenURC.jpg"}'></a>
+                    <a href="javascript:;" class="w20 left reboot" data-command='{"cmd":"reboot"}' onclick="return confirm('Reboot. Are you sure ?');"></a>
+                    <a href="javascript:;" class="w20 left shutdown" data-command='{"cmd":"sudo halt"}' onclick="return confirm('Shut Down. Are you sure ?');"></a>
+                </div>
+                <div class="line dark-orange center">
+                    <a class="w20 left dark-screen" data-command='{"step":"10"}'></a>
+                    <a class="w20 right light-screen" data-command='{"step":"10"}'></a>
+                    <div class="slider w60">   
+                        <span class="tooltip"></span>   
+                        <div id="backlight" data-command='{"cmd":"xbacklight -set "}'></div>  
+                        <span class="volume"></span>  
+                    </div>
+                </div>
+            </section>
+
+            <!-- Touchpad ___________________________________________________-->
+            <section id="touchpad">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-menu' data-direction='{"from":"left","to":"right"}'></a>
+                    Touchpad
+                    <a href="javascript:;" class='w20 right' data-direction='{"from":"right","to":"left"}'></a>
+                </header>
+                <canvas id="canvas" class="line h70">
+
+                </canvas>
+                <div id="mouse-controls" class="line h20 dark-orange">
+                    <a href="javascript:;" class="w50 left-click left" data-command='{"cmd":"export DISPLAY=:0; xdotool click 1"}'></a>
+                    <a href="javascript:;" class="w50 right-click right" data-command='{"cmd":"export DISPLAY=:0; xdotool click 3"}'></a>
+                </div>
+            </section>
+
+            <!-- Slideshow __________________________________________________-->
+            <section id="slideshow">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-menu' data-direction='{"from":"left","to":"right"}'></a>
+                    Slideshow
+                    <a href="javascript:;" class='w20 right' data-direction='{"from":"right","to":"left"}'></a>
+                </header>
+                <div id="slideshow-controls" class="line h90 dark-orange">
+                    <a href="javascript:;" class="w50 arrow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Left"}'></a>
+                    <a href="javascript:;" class="w50 arrow right" data-command='{"cmd":"export DISPLAY=:0; xdotool key Right"}'></a>
+                </div>
+            </section>
+
+            <!-- Settings ___________________________________________________-->
+            <section id="settings">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-menu' data-direction='{"from":"left","to":"right"}'></a>
+                    Settings
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+            </section>
+
+        </div>
+
+        <script type="text/javascript" src="js/jquery.js" ></script>
+        <script type="text/javascript" src="js/jquery-ui.js" ></script>
+        <script type="text/javascript" src="js/jquery-ui-touch-punch.js" ></script>
+        <script type="text/javascript" src="js/js.js" ></script>
+        <script type="text/javascript" src="js/touch.js" ></script>
+
+    </body>
+</html>

@@ -1,0 +1,9 @@
+Package: lrc
+Version: 0.1
+Section: web
+Priority: optional
+Architecture: all
+Installed-Size: 25
+Depends: nodejs, xdotool, xbacklight
+Maintainer: Raphael Agneli <contact@linuxremotecontrol.com>
+Description: Linux Remote Control

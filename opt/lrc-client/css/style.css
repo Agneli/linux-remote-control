@@ -1,0 +1,353 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url('../font/Ubuntu-L.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Ubuntu;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    color: #fff;
+    height: 100%;
+}
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    background: #00539f;
+}
+
+#main section {
+    display: none;
+    position: relative;
+}
+
+#main section#index {
+    display: block;
+}
+
+#main section .line {
+    display: block;
+    width: 100%;
+    height: 10%;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+}
+
+#main section .line.dark-blue {
+    background: #00539f;
+}
+
+#main section a.line.dark-blue:active {
+    background: #0095dd;
+}
+
+#main section .line.light-blue {
+    background: #0095dd;
+}
+
+#main section a.line.light-blue:active {
+    background: #00539f;
+}
+
+#main section .line.dark-orange {
+    background: #e66000;
+}
+
+#main section a.line.dark-orange:active {
+    background: #ff9500;
+}
+
+#main section .line.light-orange {
+    background: #ff9500;
+}
+
+#main section a.line.light-orange:active {
+    background: #e66000;
+}
+
+#main section .text-light-blue {
+    color: #0095dd;
+}
+
+#main section .text-dark-blue {
+    color: #00539f;
+}
+
+#main section .text-light-orange {
+    color: #ff9500;
+}
+
+#main section .line.text-dark-orange {
+    color: #e66000;
+}
+
+#main section .line span {
+    margin-left: 5%;
+}
+
+#main section .line .w20 {
+    width: 20%;
+    height: 100%;
+}
+
+#main section .line .w50 {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    /*background: #f09;*/
+}
+
+#main section .line .w60 {
+    display: inline-block;
+    width: 60%;
+    height: 100%;
+    /*background: #f09;*/
+}
+
+/*#main section .h20 {
+    height: 20%;
+}*/
+
+#main section .h50 {
+    display: table-cell;
+    /*height: 50%;*/
+    background: #f0f;
+}
+
+#main section .h60 {
+    /*height: 60%;*/
+    overflow-y: scroll;
+}
+
+#main section .h70 {
+    /*height: 70%;*/
+    overflow-y: scroll;
+}
+
+#main section .line .arrow.left {
+    background: url("../img/icons/arrow-left.png") no-repeat center;
+    background-size: auto 30%;
+}
+
+#main section .line .arrow.right {
+    background: url("../img/icons/arrow-right.png") no-repeat center;
+    background-size: auto 30%;
+}
+
+#main section .line .trash {
+    background: url("../img/icons/trash.png") no-repeat center;
+    background-size: auto 40%;
+}
+
+/* Musics / Videos ___________________________________________________________*/
+
+#main section .line .playlists {
+    background: url("../img/icons/playlists.png") no-repeat center;
+    background-size: auto 40%;
+}
+
+#main section .line .slider {
+    /*background: #f09;*/
+    margin: 0 auto;
+    position: relative;
+}
+
+#main section .line .slider .ui-slider {
+    /*height: 23%;*/
+    margin: -1.505em auto 0 auto;
+    border-radius: 100px;
+    background: url("../img/layout/black-transparent.png");
+    border: none;
+}
+
+#main section .line .slider .ui-slider-range {
+    background: #fff;
+    border-radius: 100px;
+}
+
+#main section .line .slider .ui-slider-handle {
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 100px;
+    border: 3px solid #fff;
+}
+
+#main section .line.dark-blue .ui-slider-handle {
+    background: #0095dd;
+}
+
+#main section .line.light-blue .ui-slider-handle {
+    background: #00539f;
+}
+
+#main section .line.dark-orange .ui-slider-handle {
+    background: #ff9500;
+}
+
+#main section .line.light-orange .ui-slider-handle {
+    background: #e66000;
+}
+
+#main section .line .sound-min {
+    background: url("../img/icons/sound-min.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+#main section .line .sound-max {
+    background: url("../img/icons/sound-max.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+#main section .h20 .stop {
+    background: url("../img/icons/stop.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+/*#main section .h20 .aleatory {
+    background: url("../img/icons/aleatory.png") no-repeat center;
+    background-size: auto 50%;
+}*/
+
+#main section .h20 .prev {
+    background: url("../img/icons/prev.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+#main section .h20 .play {
+    background: url("../img/icons/play.png") no-repeat center;
+    background-size: auto 70%;
+}
+
+#main section .h20 .pause {
+    background: url("../img/icons/pause.png") no-repeat center;
+    background-size: auto 70%;
+}
+
+#main section .h20 .next {
+    background: url("../img/icons/next.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+#main section .h20 .mute {
+    background: url("../img/icons/mute.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+#main section .h20 .fullscreen {
+    background: url("../img/icons/fullscreen.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+/*#main section .h20 .repeat {
+    background: url("../img/icons/repeat.png") no-repeat center;
+    background-size: auto 50%;
+}*/
+
+/* Playlists _________________________________________________________________*/
+
+#main section .h60 .line span, #main section #now-playing span {
+    display: block;
+    /*line-height: normal;*/
+}
+
+#main section #now-playing span {
+    line-height: normal;
+}
+
+#main section .h60 .line span span, #main section #now-playing span span {
+    margin:0;
+}
+
+/* Add Server ________________________________________________________________*/
+
+#main section .line .fields {
+    margin: 0 auto;
+    /*background: #f09;*/
+    overflow: hidden;
+}
+
+#main section .line .fields input, #main section .line .fields select {
+    display: inline-block;
+    /*width: 100%;*/
+    padding: 0 5%;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    float:left;
+}
+
+/* Controls __________________________________________________________________*/
+#main section .line .lock {
+    background: url("../img/icons/lock.png") no-repeat center;
+    background-size: auto 40%;
+}
+
+#main section .line .unlock {
+    background: url("../img/icons/unlock.png") no-repeat center;
+    background-size: auto 40%;
+}
+
+#main section .line .screenshot {
+    background: url("../img/icons/screenshot.png") no-repeat center;
+    background-size: auto 40%;
+}
+
+#main section .line .reboot {
+    background: url("../img/icons/reboot.png") no-repeat center;
+    background-size: auto 40%;
+}
+
+#main section .line .shutdown {
+    background: url("../img/icons/shutdown.png") no-repeat center;
+    background-size: auto 40%;
+}
+
+#main section .line .light-screen {
+    background: url("../img/icons/light-screen.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+#main section .line .dark-screen {
+    background: url("../img/icons/dark-screen.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+/* Touchpad __________________________________________________________________*/
+#main section .line .left-click {
+    background: url("../img/icons/left-click.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+#main section .line .right-click {
+    background: url("../img/icons/right-click.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+/* Resets ____________________________________________________________________*/
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    text-align: center;
+}
