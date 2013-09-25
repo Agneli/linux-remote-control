@@ -60,7 +60,7 @@ app.get(/^\/(.*)/, function(req, res) {
                 backlight = backlight[1].replace(/^\s+|\s+$/g, "");
                 backlight = backlight.split(".");
                 backlight = backlight[0];
-                console.log(backlight);
+                //console.log(backlight);
                 res.send(req.query.callback + "({'artist':'" + escape(info[0]) + "', 'album':'" + escape(info[1]) + "', 'title': '" + escape(info[2]) + "', 'elapsed': '" + info[3] + "', 'duration':'" + info[4] + "', 'volume':'" + volume[1] + "', 'backlight':'" + backlight + "'})");
             }
             else {
