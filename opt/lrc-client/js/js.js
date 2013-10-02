@@ -303,6 +303,60 @@ $(function() {
         $("#add-server").show('slide', {direction: $(this).data("direction").from}, speed);
     });
 
+    //Help
+    $(".link-help").click(function() {
+        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
+        $("#help").show('slide', {direction: $(this).data("direction").from}, speed);
+    });
+
+    //Server
+    $(".link-server").click(function() {
+        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
+        $("#server").show('slide', {direction: $(this).data("direction").from}, speed);
+    });
+
+    //Install
+    $(".link-install").click(function() {
+        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
+        $("#install").show('slide', {direction: $(this).data("direction").from}, speed);
+    });
+
+    //Contribute
+    $(".link-contribute").click(function() {
+        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
+        $("#contribute").show('slide', {direction: $(this).data("direction").from}, speed);
+    });
+
+    //FAQ
+    $(".link-faq").click(function() {
+        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
+        $("#faq").show('slide', {direction: $(this).data("direction").from}, speed);
+    });
+
+    //Install
+    $(".link-bugs").click(function() {
+        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
+        $("#bugs").show('slide', {direction: $(this).data("direction").from}, speed);
+    });
+
+    //Install
+    $(".link-feedback").click(function() {
+        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
+        $("#feedback").show('slide', {direction: $(this).data("direction").from}, speed);
+    });
+
+    //Install
+    $(".link-about").click(function() {
+        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
+        $("#about").show('slide', {direction: $(this).data("direction").from}, speed);
+    });
+
+    //Install
+    $(".link-credits").click(function() {
+        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
+        $("#credits").show('slide', {direction: $(this).data("direction").from}, speed);
+    });
+
     //Menu
     $(".link-menu").click(function() {
         $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
@@ -349,12 +403,6 @@ $(function() {
     $(".link-settings").click(function() {
         $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
         $("#settings").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Settings
-    $(".link-help").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#help").show('slide', {direction: $(this).data("direction").from}, speed);
     });
 
 });

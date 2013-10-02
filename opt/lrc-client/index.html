@@ -73,34 +73,172 @@
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
                 <div class="line"></div>
-                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>How to install on Linux</span>
+                <a class="line dark-blue link-server" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>How to add server</span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue link-install" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span>How to install on GNU/Linux</span>
+                    <div class="w20 arrow right"></div>
+                </a>
+                <a class="line dark-blue link-contribute" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
                     <span>How to contribute</span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                <!--<a class="line dark-blue link-faq" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
                     <span>FAQ</span>
                     <div class="w20 arrow right"></div>
-                </a>
-                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                </a>-->
+                <a class="line dark-blue link-bugs" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
                     <span>Report bugs</span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue link-feedback" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
                     <span>Send feedback</span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue link-about" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
                     <span>About</span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue link-menu" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue link-credits" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
                     <span>Credits</span>
                     <div class="w20 arrow right"></div>
                 </a>
+            </section>
+
+            <section id="server">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
+                    How to add server
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+                <div class="line h90">
+                    <div class="text">
+                        <p>For add a server (computer that will be controled), you need know the IP address of this computer. For discover the IP address of your computer, type the following command on your terminal.</p><br />
+                        <p class="cmd">ifconfig</p><br />
+                        <p>Now that you have the IP address of your computer, just go to "Add server" page, on home screen and type the name of server (any name of your choice) and the IP address of your computer and tap in "Save" button. This is it.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="install">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
+                    How to install on GNU/Linux
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+                <div class="line h90">
+                    <div class="text">
+                        <p>If you are with app in hands, it is likely that you have already installed it on your GNU/Linux. But if somehow you yet no have already installed, follow the following steps.</p><br />
+
+                        <p>1. Download the <strong>lrc</strong> on you GNU/Linux</p>
+                        <p class="cmd">wget http://www.linuxremotecontrol.com/lrc.deb</p><br />
+
+                        <p>2. Install .deb package</p>
+                        <p class="cmd">sudo dpkg -i lrc.deb</p><br />
+
+                        <p>3. Move <strong>/opt/lrc-client</strong> directory to your device.</p>
+                        <p class="cmd">sudo mv /opt/lrc-client your-device-directory</p><br />
+
+                        <p>4. Start lrc-server</p>
+                        <p class="cmd">node /opt/lrc-server/lrc.js</p><br />
+
+                        <p>5. Open the index.html of <strong>your-device-directory/lrc-client</strong> in a browser, add your server and have fun</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contribute">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
+                    How to contribute
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+                <div class="line h90">
+                    <div class="text">
+                        <p>And then, like the idea? But know that you can contribute to the project.</p><br />
+                        <p>If you are a developer, you can contribute to improvements and new features via <a href="https://github.com/Agneli/linux-remote-control" target="_blank" >Github</a>.</p><br />
+                        <p>If you are a user, you can help spread the word by sharing on <a href="https://plus.google.com/u/0/b/100656630688184691057/100656630688184691057/posts" target="_blank" >Google+</a>, <a href="https://www.facebook.com/pages/Linux-Remote-Control/199080510274186" target="_blank" >Facebook</a> e <a href="https://twitter.com/LinuxRemoteCont" target="_blank" >Twitter</a>.</p><br /><br />
+
+                        <div class="center">
+                            <a href="https://github.com/Agneli/linux-remote-control" target="_blank" title="Github"><img src="img/icons/github.png" alt="Github" title="Github" /></a>
+                            <a href="https://plus.google.com/u/0/b/100656630688184691057/100656630688184691057/posts" target="_blank" title="Google+"><img src="img/icons/plus.png" alt="Google+" title="Google+" /></a>
+                            <a href="https://www.facebook.com/pages/Linux-Remote-Control/199080510274186" target="_blank" title="Facebook"><img src="img/icons/facebook.png" alt="Facebook" title="Facebook" /></a>
+                            <a href="https://twitter.com/LinuxRemoteCont" target="_blank" title="Twitter"><img src="img/icons/twitter.png" alt="Twitter" title="Twitter" /></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!--            <section id="faq">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
+                    FAQ
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+            </section>-->
+
+            <section id="bugs">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
+                    Report bugs
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+                <div class="line h90">
+                    <div class="text">
+                        <p>If you found some bug in the app, tell us please.</p><br />
+                        <p>You can create a new issue on <a href="https://github.com/Agneli/linux-remote-control/issues" target="_blank" >Github</a> or contact us by email <a href="mailto:contact@linuxremotecontrol.com" target="_blank" >contact@linuxremotecontrol.com</a>.</p><br />
+                    </div>
+                </div>
+            </section>
+
+            <section id="feedback">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
+                    Send feedback
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+                <div class="line h90">
+                    <div class="text">
+                        <p>Tell us what you're thinking of the app. Send a review, sugestion or praise, we will hear thee with great pleasure.</p><br />
+                        <a href="mailto:contact@linuxremotecontrol.com" target="_blank" >contact@linuxremotecontrol.com</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
+                    About
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+                <div class="line h90">
+                    <div class="text">
+                        <p>Linux Remote Control 0.1 beta.</p><br />
+                        <p>This is a Free Software and Open Source project licensed by GNU GPL license.</p><br />
+                        <p>This app is completely free and you can download and use it without need pay anything for it.</p><br />
+                        <div class="center">
+                            <img src="img/icons/about.png" title="Linux Remote Control" alt="Linux Remote Control" /><br />
+                            <a href="http://www.linuxremotecontrol.com/index-en.html" target="_blank">www.linuxremotecontrol.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="credits">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
+                    Credits
+                    <a href="javascript:;" class='w20 right'></a>
+                </header>
+                <div class="line h90">
+                    <div class="line"></div>
+                    <a class="line dark-blue" href="https://github.com/Agneli" target="_blank">
+                        <span>Raphael Agneli</span>
+                        <div class="w20 arrow right"></div>
+                    </a>
+                </div>
             </section>
 
             <!-- Menu _______________________________________________________-->
@@ -366,7 +504,7 @@
                     Slideshow
                     <a href="javascript:;" class='w20 right' data-direction='{"from":"right","to":"left"}'></a>
                 </header>
-                <div id="slideshow-controls" class="line h90 dark-orange">
+                <div id="slideshow-controls" class="line h90">
                     <a href="javascript:;" class="w50 arrow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Left"}'></a>
                     <a href="javascript:;" class="w50 arrow right" data-command='{"cmd":"export DISPLAY=:0; xdotool key Right"}'></a>
                 </div>

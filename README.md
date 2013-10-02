@@ -34,6 +34,7 @@ node /opt/lrc-server/lrc.js
 ### Bugs
 The project still has some bugs that you can fix.
 
+- Improvements in english texts;
 - Forward and backward music from the slider;
 - Click by tapping the touchpad;
 - Move mouse relative to current cursor position;
