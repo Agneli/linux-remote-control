@@ -66,10 +66,13 @@ $(function() {
 // Delete (off) Server
 $(function() {
     $("#delete-server").click(function() {
-        var svr = JSON.stringify(localStorage.getItem("server_" + id));
-        svr = svr.replace("on", "off");
-        localStorage.setItem("server_" + id, JSON.parse(svr));
-        location.reload();
+        var _confirm = confirm('Delete server. Are you sure ?');
+        if (_confirm) {
+            var svr = JSON.stringify(localStorage.getItem("server_" + id));
+            svr = svr.replace("on", "off");
+            localStorage.setItem("server_" + id, JSON.parse(svr));
+            location.reload();
+        }
     });
 });
 
@@ -181,6 +184,16 @@ $(function() {
 });
 var port = '3000';
 
+//Clear server to back to index
+$(function() {
+    $("#clear-server").click(function() {
+        id = "";
+        host = "";
+        server_name = "";
+        $("#server-name").html("");
+    });
+});
+
 // Musics ______________________________________________________________________
 
 // Volume
@@ -254,12 +267,6 @@ screen_brightness.slider({
 });
 
 $(function() {
-    $("#controls-controls a").click(function() {
-        $.get('http://' + host + ':' + port + '/lrc', {cmd: $(this).data("command").cmd});
-    });
-});
-
-$(function() {
     $(".dark-screen").click(function() {
         var brightness = $("#backlight").slider("value");
         $("#backlight").slider("value", parseInt(brightness - $(this).data("command").step));
@@ -267,6 +274,31 @@ $(function() {
     $(".light-screen").click(function() {
         var brightness = $("#backlight").slider("value");
         $("#backlight").slider("value", parseInt($(this).data("command").step) + brightness);
+    });
+});
+
+$(function() {
+    $("#controls-controls a:not(#reboot, #shutdown)").click(function() {
+        $.get('http://' + host + ':' + port + '/lrc', {cmd: $(this).data("command").cmd});
+    });
+});
+//Reboot
+$(function() {
+    $("#controls-controls a#reboot").click(function() {
+        var _confirm = confirm('Reboot. Are you sure ?');
+        if (_confirm) {
+            $.get('http://' + host + ':' + port + '/lrc', {cmd: $(this).data("command").cmd});
+        }
+    });
+});
+
+//Shutdown
+$(function() {
+    $("#controls-controls a#shutdown").click(function() {
+        var _confirm = confirm('Shut Down. Are you sure ?');
+        if (_confirm) {
+            $.get('http://' + host + ':' + port + '/lrc', {cmd: $(this).data("command").cmd});
+        }
     });
 });
 
@@ -425,7 +457,7 @@ function pajax(u, cb) {
 // Callback functions for jsonp
 function init() {
     pajax('info', 'setInit');
-    setTimeout("pajax('info', 'checkTime')", 950);
+    setTimeout("pajax('info', 'checkTime')", 1000);
 }
 
 // Set some globals to use in checkTime
@@ -454,7 +486,7 @@ function checkTime(data) {
                 $('.elapsed').text(elapsed);
                 $('.duration').text(duration);
                 $('.sound-volume').slider("value", volume);
-                $('.test').text(backlight);
+                $('#backlight').slider("value", backlight);
 
                 $('.paused').text('');
 
@@ -480,5 +512,5 @@ function checkTime(data) {
 }
 
 // Interval to check and see which song is still playing (if at all)
-setInterval("init()", 1000); // 1 second
+setInterval("init()", 2000); // 1 second
 init();

@@ -244,9 +244,9 @@
             <!-- Menu _______________________________________________________-->
             <section id="menu">
                 <header class="line light-blue center">
-                    <a href="javascript:;" class='w20 arrow left link-index' data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="javascript:;" id="clear-server" class="w20 arrow left link-index" data-direction='{"from":"left","to":"right"}'></a>
                     <span id="server-name"></span>
-                    <a href="javascript:;" id="delete-server" class='w20 right trash' onclick="return confirm('Delete server. Are you sure ?');"></a>
+                    <a href="javascript:;" id="delete-server" class='w20 right trash'></a>
                 </header>
                 <div class="line"></div>
                 <a class="line dark-blue link-musics" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
@@ -461,14 +461,14 @@
                     </div>
                 </div>
                 <a href="javascript:;" class="line center" id="send-command">Send command</a>
-                <div class="line test center"></div>
+                <div class="line center"></div>
                 <div class="line"></div>
                 <div id="controls-controls" class="line h20 light-orange">
                     <a href="javascript:;" class="w20 left lock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -l"}'></a>
                     <a href="javascript:;" class="w20 left unlock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d"}'></a>
                     <a href="javascript:;" class="w20 left screenshot" data-command='{"cmd":"export DISPLAY=:0; import -window root screenURC.jpg"}'></a>
-                    <a href="javascript:;" class="w20 left reboot" data-command='{"cmd":"reboot"}' onclick="return confirm('Reboot. Are you sure ?');"></a>
-                    <a href="javascript:;" class="w20 left shutdown" data-command='{"cmd":"sudo halt"}' onclick="return confirm('Shut Down. Are you sure ?');"></a>
+                    <a href="javascript:;" id="reboot" class="w20 left reboot" data-command='{"cmd":"reboot"}'></a>
+                    <a href="javascript:;" id="shutdown" class="w20 left shutdown" data-command='{"cmd":"sudo halt"}'></a>
                 </div>
                 <div class="line dark-orange center">
                     <a class="w20 left dark-screen" data-command='{"step":"10"}'></a>
