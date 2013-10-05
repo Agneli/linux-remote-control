@@ -39,6 +39,7 @@ The project still has some bugs that you can fix.
 - Click by tapping the touchpad;
 - Move mouse relative to current cursor position;
 - Fix bug of the crazy volume in slider;
+- Fix bug of the crazy backlight in slider;
 - Organize and modularize my dirty Javascript =/;
 - Start lrc-server (node /opt/lrc-server/lrc.js) with computer boot;
 - Get screen resolution of the server with node.js.

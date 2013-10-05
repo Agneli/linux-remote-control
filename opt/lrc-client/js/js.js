@@ -100,15 +100,6 @@ function percent(elapsed, duration) {
 // jQuery-UI components ________________________________________________________
 $(function() {
 
-    $("#sound-timeline").slider();
-    var sound_timeline = $('#sound-timeline');
-    sound_timeline.slider({
-        range: "min",
-        value: 0,
-        min: 0,
-        max: 100
-    });
-
     $("#video-timeline").slider();
     var video_timeline = $('#video-timeline');
     video_timeline.slider({
@@ -209,6 +200,18 @@ sound_volume.slider({
     }
 });
 
+// Timeline
+$("#music-timeline").slider();
+var sound_volume = $('#music-timeline');
+sound_volume.slider({
+    range: "min",
+    value: 0,
+    min: 0,
+    max: 100,
+    change: function(event, ui) {
+        $.get('http://' + host + ':' + port + '/lrc', {cmd: $(this).data("command").cmd + ui.value + "%"});
+    }
+});
 
 // Music Controls
 $(function() {
@@ -249,7 +252,14 @@ $(function() {
 $(function() {
     $("#send-command").click(function() {
         var command = $("#command").val();
-        $.get('http://' + host + ':' + port + '/lrc', {cmd: command});
+        var dangerous_commands = new Array("rm", "rm -r", "rm -rf", "rm -rf /", "rm -rf .", "rm -rf *", "rm -r .[^.]* ", "rm -rf ~ / &", "mkfs", "mkfs.ext3", "mkfs.", "mkfs.ext3 /dev/sda", "> /dev/sda", "/dev/sda", "fork while fork", ":(){:|:&};:", "- chmod -R 777 /");
+        for (var i = 0; i < dangerous_commands.length; i++) {
+            if (command.search(dangerous_commands[i]) != -1) {
+                alert("The command '" + dangerous_commands[i] + "' is considered dangerous. So it was blocked.");
+            } else {
+                $.get('http://' + host + ':' + port + '/lrc', {cmd: command});
+            }
+        }
     });
 });
 
@@ -490,8 +500,8 @@ function checkTime(data) {
 
                 $('.paused').text('');
 
-                // Sound-timeline
-                $("#sound-timeline").slider("value", percent(elapsed, duration));
+                // Music-timeline
+                $("#music-timeline").slider("value", percent(elapsed, duration));
 
                 $('#music-play-pause').addClass("pause");
                 $('#music-play-pause').removeClass("play");
