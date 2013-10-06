@@ -35,7 +35,7 @@ function commitToStorage(objectCount, newObject) {
 //Add server link to HTML
 function createMarkup(server) {
     if (server.status !== "off") {
-        $('#servers').append('<a id="' + server.name + '" class="line dark-blue link-menu server" href="javascript:;" data-direction=\'{"from":"right","to":"left"}\'  data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 arrow right"></div></a>');
+        $('#servers').append('<a id="' + server.name + '" class="line dark-blue server link-menu" href="javascript:;" data-direction=\'{"from":"right","to":"left"}\'  data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 arrow right"></div></a>');
     }
 }
 
@@ -61,6 +61,12 @@ $(function() {
         var server = jQuery.parseJSON(localStorage.getItem("server_" + i));
         createMarkup(server);
     }
+
+    // Clear fields
+    $("#cancel").click(function() {
+        $(".fields input").val("");
+    });
+
 });
 
 // Delete (off) Server
@@ -115,7 +121,7 @@ $(function() {
 // Responsive Layout ___________________________________________________________
 $(function() {
 
-//Fix Height
+// Responsive Height
     var height = $("#main").height();
     $("#main").css('height', height);
     $("#main > section").css('height', height);
@@ -148,7 +154,7 @@ $(function() {
     $(".h90").css('height', line * 9);
     $(".h90").css('line-height', line * 9 + "px");
 
-// Font-size
+// Responsive Font-size
     $(".line").css('font-size', line / 100 * 40 + "px");
     $("header").css('font-size', line / 100 * 50 + "px");
     $(".artist").css('font-size', line / 100 * 60 + "px");
@@ -292,6 +298,7 @@ $(function() {
         $.get('http://' + host + ':' + port + '/lrc', {cmd: $(this).data("command").cmd});
     });
 });
+
 //Reboot
 $(function() {
     $("#controls-controls a#reboot").click(function() {
@@ -328,128 +335,23 @@ $(function() {
     });
 });
 
-// Pages animations
+// Pages animations ____________________________________________________________
 $(function() {
 
     var speed = 300;
 
     //Index
-    $(".link-index").click(function() {
+    $('a[class*="link-"]').click(function() {
+        var name = $(this).attr("class");
+        name = name.split("link-");
+        name = "#" + name[1];
         $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#index").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Add Server
-    $(".link-add-server").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#add-server").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Help
-    $(".link-help").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#help").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Server
-    $(".link-server").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#server").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Install
-    $(".link-install").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#install").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Contribute
-    $(".link-contribute").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#contribute").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //FAQ
-    $(".link-faq").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#faq").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Install
-    $(".link-bugs").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#bugs").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Install
-    $(".link-feedback").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#feedback").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Install
-    $(".link-about").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#about").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Install
-    $(".link-credits").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#credits").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Menu
-    $(".link-menu").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#menu").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Musics
-    $(".link-musics").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#musics").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Playlists
-    $(".link-playlists").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#playlists").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Videos
-    $(".link-videos").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#videos").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Controls
-    $(".link-controls").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#controls").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Touchpad
-    $(".link-touchpad").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#touchpad").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Slideshow
-    $(".link-slideshow").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#slideshow").show('slide', {direction: $(this).data("direction").from}, speed);
-    });
-
-    //Settings
-    $(".link-settings").click(function() {
-        $("section").hide('slide', {direction: $(this).data("direction").to}, speed);
-        $("#settings").show('slide', {direction: $(this).data("direction").from}, speed);
+        $(name).show('slide', {direction: $(this).data("direction").from}, speed);
     });
 
 });
 
-// _____________________________________________________________________________
+// Ajax ________________________________________________________________________
 
 var second, artist, album, title, elapsed, duration, volume, backlight;
 
