@@ -4,15 +4,16 @@ if (localStorage.serverCount === undefined) {
     $("#msg-server").html("Click on 'Add Server'");
 }
 
-function server(id, name, ip, status) {
+function server(id, name, ip, status, language) {
     this.id = id;
     this.name = name;
     this.ip = ip;
     this.status = status;
+    this.language = language;
 }
 
-function createNewServer(d, n, i, s) {
-    var createdServer = new server(d, n, i, s);
+function createNewServer(d, n, i, s, l) {
+    var createdServer = new server(d, n, i, s, l);
     if (localStorage.serverCount === undefined) {
         localStorage.setItem('serverCount', 0);
     }
@@ -35,7 +36,7 @@ function commitToStorage(objectCount, newObject) {
 //Add server link to HTML
 function createMarkup(server) {
     if (server.status !== "off") {
-        $('#servers').append('<a id="' + server.name + '" class="line dark-blue server link-menu" href="javascript:;" data-direction=\'{"from":"right","to":"left"}\'  data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 arrow right"></div></a>');
+        $('#servers').append('<a id="' + server.name + '" class="line dark-blue server link-menu" href="javascript:;" data-direction=\'{"from":"right","to":"left"}\'  data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '", "language": "' + server.language + '"}\'><span>' + server.name + '</span><div class="w20 arrow right"></div></a>');
     }
 }
 
@@ -49,7 +50,8 @@ $(function() {
         var name = $("#name").val();
         var ip = $("#ip").val();
         var status = "on";
-        createNewServer(id, name, ip, status);
+        var language = $("#language").val();
+        createNewServer(id, name, ip, status, language);
         //return false;
         location.reload();
     });
@@ -177,6 +179,12 @@ $(function() {
         server_name = $(this).data("server").name;
         $("#server-name").html(server_name);
         $("#delete-server").attr('data-id', '{"id":"' + id + '"}');
+
+        // Translation
+        language = $(this).data("server").language;
+        i18n.init({lng: language, debug: false}, function() {
+            $("#main").i18n();
+        });
     });
 });
 var port = '3000';
