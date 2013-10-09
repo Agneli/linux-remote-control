@@ -5,14 +5,12 @@
             "help": "Aide"
         },
         "add-server": {
-            "title": "Ajouter un serveur",
             "account-name": "Nom de compte",
             "ip-address": "Adresse IP",
             "cancel": "Annuler",
             "save": "Sauvegarder"
         },
         "help": {
-            "title": "Aide",
             "add-server": "Comment ajouter un serveur",
             "install": "Comment installer sur GNU/Linux",
             "contribute": "Comment contribuer",
@@ -69,7 +67,8 @@
             "save": "Sauvegarder"
         },
         "credits": {
-            "dev": "Développeur"
+            "dev": "Développeur",
+            "trad": "Traducteur"
         }
     }
 }

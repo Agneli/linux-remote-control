@@ -5,14 +5,12 @@
             "help": "Help"
         },
         "add-server": {
-            "title": "Add server",
             "account-name": "Account name",
             "ip-address": "IP address",
             "cancel": "Cancel",
             "save": "Save"
         },
         "help": {
-            "title": "Ajuda",
             "add-server": "How to add server",
             "install": "How to install on GNU/Linux",
             "contribute": "How to contribute",
@@ -69,7 +67,8 @@
             "save": "Save"
         },
         "credits": {
-            "dev": "Developer"
+            "dev": "Developer",
+            "trad": "Translator"
         }
     }
 }
