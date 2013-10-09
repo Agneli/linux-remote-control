@@ -1,0 +1,74 @@
+{
+    "lrc": {
+        "index": {
+            "add-server": "Server hinzufügen",
+            "help": "Hilfe"
+        },
+        "add-server": {
+            "account-name": "Account Name",
+            "ip-address": "IP Adresse",
+            "cancel": "Zurück",
+            "save": "Speichern"
+        },
+        "help": {
+            "add-server": "Wie füge ich einen Server hinzu",
+            "install": "Wie installiere ich auf GNU/Linux",
+            "contribute": "Wie kann ich zum Projekt beitragen",
+            "bugs": "Fehler melden",
+            "feedback": "Feedback senden",
+            "about": "Über",
+            "credits": "Credits"
+        },
+        "server": {
+            "p1": "Zum Hinzufügen eines Servers(Computer der gesteuert wird), musst du die IP Adresse dieses Rechners wissen. Um deine IP herauszufinden, tippe folgenden Befehl in dein Terminal.",
+            "p2": "Jetzt wo du die IP Adresse weißt, gehe zur \"Server hinzufügen\" Seite auf sem Startbildschirm und überlege dir einen Namen deiner Wahl. Füge nun die IP Adresse ein und drücke den\"Speichern\" button. Das wars."
+        },
+        "install": {
+            "p1": "Wenn du schon mit dem installieren von Anwendungen vertraut bist solltest du keine Probleme haben. Ansonsten findest du hier eine Kurzanleitung.",
+            "p2": "1. Downloade dir lrc.",
+            "p3": "2. Installiere das .deb Paket.",
+            "p4": "3. Verschiebe das Verzeichnis /opt/lrc-client auf dein Gerät.",
+            "p5": "4. Starte den lrc-server.",
+            "p6": "5. Öffne die index.html auf deinem Gerät(GERÄT/lrc-client/index.html) in einem Browser, füge den Server hinzu und habe Spaß."
+        },
+        "contribute": {
+            "p1": "Du magst die Idee aber weißt nicht wie du beitragen kannst?",
+            "p2": "Wenn du ein Entwickler bist, kannst du verbesserungen und neue Funktionen via <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a> beitragen.",
+            "p3": "Wenn du dafür nicht in der Lage bist kannst du das Projekt in der weiten Welt verbreiten indem du über <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> und <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a> teilst."
+        },
+        "bugs": {
+            "p1": "Falls du Fehler findest wäre es toll wenn du uns bescheid sagst.",
+            "p2": "Du kannst neue Fehler auf <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> posten oder uns über <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a> kontaktieren."
+        },
+        "feedback": {
+            "p1": "Erzähle uns was du über diese App denkst. Anregungen, Lob oder Kritik werden wir mit freuden empfangen."
+        },
+        "about": {
+            "p1": "Dies ist freie Software und ein Open Source Projekt lizensiert unter der GNU GPL Lizens.",
+            "p2": "Dies App ist vollständig frei, dass heißt du kannst es nutzen und verändern ohne etwas zahlen zu müssen.",
+            "link": "<a href=\"http://www.linuxremotecontrol.com/index-en.html\" target=\"_blank\">www.linuxremotecontrol.com</a>"
+        },
+        "menu": {
+            "music": "Musik",
+            "video": "Video",
+            "controls": "Steuerungen",
+            "touchpad": "Touchpad",
+            "slideshow": "Slideshow",
+            "settings": "Einstellungen"
+        },
+        "controls": {
+            "send-custom-command": "Benutzerdefinierten Befehl senden",
+            "command": "Befehl",
+            "send-command": "Befehl senden"
+        },
+        "settings": {
+            "language": "Sprache",
+            "cancel": "Zurück",
+            "save": "Speichern"
+        },
+        "credits": {
+            "dev": "Entwickler",
+            "trad": "Übersetzer"
+        }
+    }
+}
