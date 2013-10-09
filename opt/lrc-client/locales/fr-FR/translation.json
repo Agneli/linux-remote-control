@@ -1,0 +1,75 @@
+{
+    "lrc": {
+        "index": {
+            "add-server": "Ajouter un serveur",
+            "help": "Aide"
+        },
+        "add-server": {
+            "title": "Ajouter un serveur",
+            "account-name": "Nom de compte",
+            "ip-address": "Adresse IP",
+            "cancel": "Annuler",
+            "save": "Sauvegarder"
+        },
+        "help": {
+            "title": "Aide",
+            "add-server": "Comment ajouter un serveur",
+            "install": "Comment installer sur GNU/Linux",
+            "contribute": "Comment contribuer",
+            "bugs": "Signaler un problème",
+            "feedback": "Donner votre avis",
+            "about": "A propos",
+            "credits": "Crédits"
+        },
+        "server": {
+            "p1": "Pour ajouter un serveur (l'ordinateur qui va être controllé), vous devez connaître l'adresse IP de cet ordinateur. Pour ce faire, entrez la commande suivante dans votre terminal.",
+            "p2": "Maintenant que vous avez l'adresse IP de votre ordinateur, allez sur la page \"Ajouter un serveur\" depuis l'écran d'acceuil et entrez le nom du serveur (un nom de votre choix) ainsi que l'adresse IP de votre ordinateur puis cliquez sur le bouton \"Sauvegarder\". C'est tout."
+        },
+        "install": {
+            "p1": "Si vous avez l'application entre les mains, c'est que avez déjà, aupréalable, installé la version pour GNU/LINUX. Toutefois, si vous ne l'avez pas déjà fait, suivez les instructions suivantes.",
+            "p2": "1. Télechargez le lrc sur votre GNU/Linux.",
+            "p3": "2. Installez le package .deb",
+            "p4": "3. Déplacez le dossier /opt/lrc-client sur votre appareil mobile.",
+            "p5": "4. Lancez le lrc-server.",
+            "p6": "5. Ouvrez la page index.html depuis votre dossier-appareil-mobile/lrc-client dans un navigateur, ajoutez votre serveur et amusez-vous."
+        },
+        "contribute": {
+            "p1": "Et alors, vous aimez l'idée ? Vous pouvez contribuer à ce projet.",
+            "p2": "Si vous êtes un développeur, vous pouvez apporter des améliorations ou des nouvelles fonctionnalités sur <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
+            "p3": "Si vous êtes un utilisateur, vous pouvez passer le mot en le partageant sur <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> et <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>."
+        },
+        "bugs": {
+            "p1": "Si vous trouvez un bug dans l'application, dites le nous s'il vous plait.",
+            "p2": "Vous pouvez créer une nouvelle issue sur <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> ou nous contacter par email <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
+        },
+        "feedback": {
+            "p1": "Dites nous ce que vous pensez de cette application. Envoyez vos critiques, sugestions ou demandes, nous les écouterons avec un grand plasir."
+        },
+        "about": {
+            "p1": "C'est un Logiciel Libre et un projet Open Source distribué sous license GNU GPL.",
+            "p2": "Cette application est entièrement gratuite et vous pouvez la télécharger et l'utiliser sans avoir besoin de payer.",
+            "link": "<a href=\"http://www.linuxremotecontrol.com/index-en.html\" target=\"_blank\">www.linuxremotecontrol.com</a>"
+        },
+        "menu": {
+            "music": "Musique",
+            "video": "Vidéo",
+            "controls": "Contrôles",
+            "touchpad": "Pavé tactile",
+            "slideshow": "Diaporama",
+            "settings": "Paramètres"
+        },
+        "controls": {
+            "send-custom-command": "Envoyer une commande spécifique",
+            "command": "Commande",
+            "send-command": "Envoyer une commande"
+        },
+        "settings": {
+            "language": "Langage",
+            "cancel": "Annuler",
+            "save": "Sauvegarder"
+        },
+        "credits": {
+            "dev": "Développeur"
+        }
+    }
+}
