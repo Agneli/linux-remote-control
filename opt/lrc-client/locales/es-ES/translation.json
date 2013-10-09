@@ -1,4 +1,76 @@
 {
     "lrc": {
+        "index": {
+            "add-server": "Agregar Servidor",
+            "help": "Ayuda"
+        },
+        "add-server": {
+            "account-name": "Nombre de la cuenta:",
+            "ip-address": "Dirección IP",
+            "cancel": "Cancelar",
+            "save": "Guardar"
+        },
+        "help": {
+            "add-server": "Cómo agregar servidor",
+            "install": "Cómo instalar en GNU/Linux",
+            "contribute": "Cómo contribuir",
+            "bugs": "Reportar problemas",
+            "feedback": "Enviar retroalimentación",
+            "about": "Acerca",
+            "credits": "Créditos"
+        },
+        "server": {
+            "p1": "Para agregar un servidor (computadora que será controlada) usted debe saber la dirección IP de esa máquina. Para conocer la dirección IP escriba lo siguiente en su terminal.", 
+			
+			"p2": "Ahora que tiene la dirección IP simplemente vaya a la página \"Agregar Servidor\" en la pantalla de inicio y digite el nombre del servidor (cualquier nombre que usted elija) y la dirección IP y seleccione \"Guardar\". Eso es todo"
+        },
+        "install": {
+            "p1": "Si usted está utilizando la aplicación en este momento es muy probable que ya la tenga instalada en su GNU/Linux. Sin embargo si por alguna razón aún no la tiene instalada, siga los siguientes pasos.",
+			
+			"p2": "1. Descargue el lrc en su GNU/Linux.",
+			"p3": "2. Instale el paquete .deb",
+			"p4": "3. Mover el directorio /opt/lrc-client a su dispositivo.",
+			"p5": "4. Inicie el lrc-server.",
+			"p6": "5. Abra index.html desde el directorio de su dispositivo/irc-client en un explorador de internet, agregue su servidor y diviértase." 
+        },
+        "contribute": {
+            "p1": "Y entonces, le gustó la idea? Sepa que puede contribuir al proyecto.",
+            "p2": "Si usted es un desarrollador, usted puede contribuir a mejorar y agregar nueva funcionalidad en &lt;a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" &gt;Github&lt;/a&gt;.",
+            "p3": "Si usted es un usuario, puede ayudar a darnos a conocer compartiendo en &lt;a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" &gt;Google+&lt;/a&gt;, &lt;a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" &gt;Facebook&lt;/a&gt; and &lt;a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" &gt;Twitter&lt;/a&gt;."
+        },
+        "bugs": {
+            "p1": "Si usted encontró un defecto en la aplicación por favor díganoslo.",
+            "p2": "Usted puede crear una nueva entrada en &lt;a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" &gt;Github&lt;/a&gt; o contactarnos por el correo &lt;a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" &gt;contact@linuxremotecontrol.com&lt;/a&gt;."
+        },
+        "feedback": {
+            "p1": "Por favor díganos qué piensa de la aplicación. Envíe su opinión, sugerencia o agradecimiento. Estaremos complacidos de saber de usted."
+        },
+        "about": {
+            "p1": "Esta es una aplicación libre y código abierto bajo la licencia GNU GPL.",
+            "p2": "Esta aplicación es completamente gratis y usted puede descargarla y usarla sin necesidad de pagar nada por ella.",
+            "link": "&lt;a href=\"http://www.linuxremotecontrol.com/index-en.html\" target=\"_blank\"&gt;www.linuxremotecontrol.com&lt;/a&gt;"
+        },
+        "menu": {
+            "music": "Música",
+            "video": "Video",
+            "controls": "Controles",
+            "touchpad": "Touchpad",
+            "slideshow": "Disapositivas",
+            "settings": "Configuraciones"
+        },
+        "controls": {
+            "send-custom-command": "Enviar comando personalizado",
+            "command": "Comando",
+            "send-command": "Enviar comando"
+        },
+        "settings": {
+            "language": "Idioma",
+            "cancel": "Cancelar",
+            "save": "Guardar"
+        },
+        "credits": {
+            "dev": "Desarrollador",
+            "trad": "Traducciones"
+        }
     }
 }
