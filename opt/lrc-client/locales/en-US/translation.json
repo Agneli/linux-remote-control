@@ -1,4 +1,75 @@
 {
     "lrc": {
+        "index": {
+            "add-server": "Add server",
+            "help": "Help"
+        },
+        "add-server": {
+            "title": "Add server",
+            "account-name": "Account name",
+            "ip-address": "IP address",
+            "cancel": "Cancel",
+            "save": "Save"
+        },
+        "help": {
+            "title": "Ajuda",
+            "add-server": "How to add server",
+            "install": "How to install on GNU/Linux",
+            "contribute": "How to contribute",
+            "bugs": "Report bugs",
+            "feedback": "Send feedback",
+            "about": "About",
+            "credits": "Credits"
+        },
+        "server": {
+            "p1": "For add a server (computer that will be controled), you need know the IP address of this computer. For discover the IP address of your computer, type the following command on your terminal.",
+            "p2": "Now that you have the IP address of your computer, just go to \"Add server\" page on home screen and type the name of server (any name of your choice) and the IP address of your computer and tap in \"Save\" button. This is it."
+        },
+        "install": {
+            "p1": "If you are with app in hands, it is likely that you have already installed it on your GNU/Linux. But if somehow you yet no have already installed, follow the following steps.",
+            "p2": "1. Download the lrc on you GNU/Linux.",
+            "p3": "2. Install .deb package.",
+            "p4": "3. Move /opt/lrc-client directory to your device.",
+            "p5": "4. Start lrc-server.",
+            "p6": "5. Open the index.html of your-device-directory/lrc-client in a browser, add your server and have fun."
+        },
+        "contribute": {
+            "p1": "And then, like the idea? But know that you can contribute to the project.",
+            "p2": "If you are a developer, you can contribute to improvements and new features via <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
+            "p3": "If you are a user, you can help spread the word by sharing on <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> and <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>."
+        },
+        "bugs": {
+            "p1": "If you found some bug in the app, tell us please.",
+            "p2": "You can create a new issue on <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> or contact us by email <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
+        },
+        "feedback": {
+            "p1": "Tell us what you're thinking of the app. Send a review, sugestion or praise, we will hear thee with great pleasure."
+        },
+        "about": {
+            "p1": "This is a Free Software and Open Source project licensed by GNU GPL license.",
+            "p2": "This app is completely free and you can download and use it without need pay anything for it.",
+            "link": "<a href=\"http://www.linuxremotecontrol.com/index-en.html\" target=\"_blank\">www.linuxremotecontrol.com</a>"
+        },
+        "menu": {
+            "music": "Music",
+            "video": "Video",
+            "controls": "Controls",
+            "touchpad": "Touchpad",
+            "slideshow": "Slideshow",
+            "settings": "Settings"
+        },
+        "controls": {
+            "send-custom-command": "Send custom command",
+            "command": "Command",
+            "send-command": "Send command"
+        },
+        "settings": {
+            "language": "Language",
+            "cancel": "Cancel",
+            "save": "Save"
+        },
+        "credits": {
+            "dev": "Developer"
+        }
     }
 }

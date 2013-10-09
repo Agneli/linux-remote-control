@@ -18,19 +18,15 @@
                 <div class="line h70" id="servers">
                     <div class="line center" id="msg-server"></div>
                 </div>
-                <a class="line light-orange center link-add-server" href="javascript:;" data-direction='{"from":"down","to":"up"}'>
-                    Add Server
-                </a>
-                <a class="line dark-orange center link-help" href="javascript:;" data-direction='{"from":"down","to":"up"}'>
-                    Help
-                </a>
+                <a class="line light-orange center link-add-server" href="javascript:;" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.add-server"></a>
+                <a class="line dark-orange center link-help" href="javascript:;" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.help"></a>
             </section>
 
             <!-- Add Server _________________________________________________-->
             <section id="add-server">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-index' data-direction='{"from":"up","to":"down"}'></a>
-                    Add Server
+                    <span data-i18n="lrc.add-server.title"></span>
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
                 <div class="line"></div>
@@ -46,21 +42,12 @@
                                 </div>-->
                 <div class="line center">
                     <div class="fields">
-                        <input type="text" name="name" id="name" placeholder="Account Name" />
+                        <input type="text" name="name" id="name" data-i18n="[placeholder]lrc.add-server.account-name" />
                     </div>
                 </div>
                 <div class="line center">
                     <div class="fields">
-                        <input type="text" name="ip" id="ip" placeholder="IP Address" />
-                    </div>
-                </div>
-                <div class="line center">
-                    <div class="fields">
-                        <select name="language" id="language">
-                            <option value="en-US">English</option>
-                            <option value="pt-BR">Português</option>
-                            <option value="es-ES">Español</option>
-                        </select>
+                        <input type="text" name="ip" id="ip" data-i18n="[placeholder]lrc.add-server.ip-address" />
                     </div>
                 </div>
                 <div class="line"></div>
@@ -68,8 +55,8 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line dark-orange">
-                    <a href="javascript:;" id="cancel" class="w50 center left dark-orange link-index" data-direction='{"from":"up","to":"down"}'>Cancel</a>
-                    <a href="javascript:;" id="save" class="w50 center right dark-orange link-index" data-direction='{"from":"up","to":"down"}'>Save</a>
+                    <a href="javascript:;" id="cancel" class="w50 center left dark-orange link-index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
+                    <a href="javascript:;" id="save" class="w50 center right dark-orange link-index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
                 </div>
             </section>
 
@@ -78,20 +65,20 @@
             <section id="help">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-index' data-direction='{"from":"up","to":"down"}'></a>
-                    Help
+                    <span data-i18n="lrc.help.title"></span>
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
                 <div class="line"></div>
                 <a class="line dark-blue link-server" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>How to add server</span>
+                    <span data-i18n="lrc.help.add-server"></span>
                     <div class="w20 arrow right"></div>
                 </a>
                 <a class="line dark-blue link-install" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>How to install on GNU/Linux</span>
+                    <span data-i18n="lrc.help.install"></span>
                     <div class="w20 arrow right"></div>
                 </a>
                 <a class="line dark-blue link-contribute" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>How to contribute</span>
+                    <span data-i18n="lrc.help.contribute"></span>
                     <div class="w20 arrow right"></div>
                 </a>
                 <!--<a class="line dark-blue link-faq" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
@@ -99,19 +86,19 @@
                     <div class="w20 arrow right"></div>
                 </a>-->
                 <a class="line dark-blue link-bugs" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>Report bugs</span>
+                    <span data-i18n="lrc.help.bugs"></span>
                     <div class="w20 arrow right"></div>
                 </a>
                 <a class="line dark-blue link-feedback" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>Send feedback</span>
+                    <span data-i18n="lrc.help.feedback"></span>
                     <div class="w20 arrow right"></div>
                 </a>
                 <a class="line dark-blue link-about" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>About</span>
+                    <span data-i18n="lrc.help.about"></span>
                     <div class="w20 arrow right"></div>
                 </a>
                 <a class="line dark-blue link-credits" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>Credits</span>
+                    <span data-i18n="lrc.help.credits"></span>
                     <div class="w20 arrow right"></div>
                 </a>
             </section>
@@ -119,14 +106,14 @@
             <section id="server">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
-                    How to add server
+                    <span data-i18n="lrc.help.add-server"></span>
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
                 <div class="line h90">
                     <div class="text">
-                        <p>For add a server (computer that will be controled), you need know the IP address of this computer. For discover the IP address of your computer, type the following command on your terminal.</p><br />
+                        <p data-i18n="lrc.server.p1"></p><br />
                         <p class="cmd">ifconfig</p><br />
-                        <p>Now that you have the IP address of your computer, just go to "Add server" page, on home screen and type the name of server (any name of your choice) and the IP address of your computer and tap in "Save" button. This is it.</p>
+                        <p data-i18n="lrc.server.p2"></p>
                     </div>
                 </div>
             </section>
@@ -134,26 +121,26 @@
             <section id="install">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
-                    How to install on GNU/Linux
+                    <span data-i18n="lrc.help.install"></span>
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
                 <div class="line h90">
                     <div class="text">
-                        <p>If you are with app in hands, it is likely that you have already installed it on your GNU/Linux. But if somehow you yet no have already installed, follow the following steps.</p><br />
+                        <p data-i18n="lrc.install.p1"></p><br />
 
-                        <p>1. Download the <strong>lrc</strong> on you GNU/Linux</p>
+                        <p data-i18n="lrc.install.p2"></p>
                         <p class="cmd">wget http://www.linuxremotecontrol.com/lrc.deb</p><br />
 
-                        <p>2. Install .deb package</p>
+                        <p data-i18n="lrc.install.p3"></p>
                         <p class="cmd">sudo dpkg -i lrc.deb</p><br />
 
-                        <p>3. Move <strong>/opt/lrc-client</strong> directory to your device.</p>
+                        <p data-i18n="lrc.install.p4"></p>
                         <p class="cmd">sudo mv /opt/lrc-client your-device-directory</p><br />
 
-                        <p>4. Start lrc-server</p>
+                        <p data-i18n="lrc.install.p5"></p>
                         <p class="cmd">node /opt/lrc-server/lrc.js</p><br />
 
-                        <p>5. Open the index.html of <strong>your-device-directory/lrc-client</strong> in a browser, add your server and have fun</p>
+                        <p data-i18n="lrc.install.p6"></p>
                     </div>
                 </div>
             </section>
@@ -161,18 +148,18 @@
             <section id="contribute">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
-                    How to contribute
+                    <span data-i18n="lrc.help.contribute"></span>
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
                 <div class="line h90">
                     <div class="text">
-                        <p>And then, like the idea? But know that you can contribute to the project.</p><br />
-                        <p>If you are a developer, you can contribute to improvements and new features via <a href="https://github.com/Agneli/linux-remote-control" target="_blank" >Github</a>.</p><br />
-                        <p>If you are a user, you can help spread the word by sharing on <a href="https://plus.google.com/u/0/b/100656630688184691057/100656630688184691057/posts" target="_blank" >Google+</a>, <a href="https://www.facebook.com/pages/Linux-Remote-Control/199080510274186" target="_blank" >Facebook</a> e <a href="https://twitter.com/LinuxRemoteCont" target="_blank" >Twitter</a>.</p><br /><br />
+                        <p data-i18n="lrc.contribute.p1"></p><br />
+                        <p data-i18n="[html]lrc.contribute.p2"></p><br />
+                        <p data-i18n="[html]lrc.contribute.p3"></p><br /><br />
 
                         <div class="center">
                             <a href="https://github.com/Agneli/linux-remote-control" target="_blank" title="Github"><img src="img/icons/github.png" alt="Github" title="Github" /></a>
-                            <a href="https://plus.google.com/u/0/b/100656630688184691057/100656630688184691057/posts" target="_blank" title="Google+"><img src="img/icons/plus.png" alt="Google+" title="Google+" /></a>
+                            <a href="https://plus.google.com/u/0/100656630688184691057/posts" target="_blank" title="Google+"><img src="img/icons/plus.png" alt="Google+" title="Google+" /></a>
                             <a href="https://www.facebook.com/pages/Linux-Remote-Control/199080510274186" target="_blank" title="Facebook"><img src="img/icons/facebook.png" alt="Facebook" title="Facebook" /></a>
                             <a href="https://twitter.com/LinuxRemoteCont" target="_blank" title="Twitter"><img src="img/icons/twitter.png" alt="Twitter" title="Twitter" /></a>
                         </div>
@@ -191,13 +178,13 @@
             <section id="bugs">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
-                    Report bugs
+                    <span data-i18n="lrc.help.bugs"></span>
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
                 <div class="line h90">
                     <div class="text">
-                        <p>If you found some bug in the app, tell us please.</p><br />
-                        <p>You can create a new issue on <a href="https://github.com/Agneli/linux-remote-control/issues" target="_blank" >Github</a> or contact us by email <a href="mailto:contact@linuxremotecontrol.com" target="_blank" >contact@linuxremotecontrol.com</a>.</p><br />
+                        <p data-i18n="lrc.bugs.p1"></p><br />
+                        <p data-i18n="[html]lrc.bugs.p2"></p><br />
                     </div>
                 </div>
             </section>
@@ -205,12 +192,12 @@
             <section id="feedback">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
-                    Send feedback
+                    <span data-i18n="lrc.help.feedback"></span>
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
                 <div class="line h90">
                     <div class="text">
-                        <p>Tell us what you're thinking of the app. Send a review, sugestion or praise, we will hear thee with great pleasure.</p><br />
+                        <p data-i18n="lrc.feedback.p1"></p><br />
                         <a href="mailto:contact@linuxremotecontrol.com" target="_blank" >contact@linuxremotecontrol.com</a>
                     </div>
                 </div>
@@ -219,17 +206,17 @@
             <section id="about">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
-                    About
+                    <span data-i18n="lrc.help.about"></span>
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
                 <div class="line h90">
                     <div class="text">
                         <p>Linux Remote Control 0.1 beta.</p><br />
-                        <p>This is a Free Software and Open Source project licensed by GNU GPL license.</p><br />
-                        <p>This app is completely free and you can download and use it without need pay anything for it.</p><br />
+                        <p data-i18n="lrc.about.p1"></p><br />
+                        <p data-i18n="lrc.about.p2"></p><br />
                         <div class="center">
                             <img src="img/icons/about.png" title="Linux Remote Control" alt="Linux Remote Control" /><br />
-                            <a href="http://www.linuxremotecontrol.com/index-en.html" target="_blank">www.linuxremotecontrol.com</a>
+                            <span data-i18n="[html]lrc.about.link"></span>
                         </div>
                     </div>
                 </div>
@@ -238,13 +225,13 @@
             <section id="credits">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-help' data-direction='{"from":"left","to":"right"}'></a>
-                    Credits
+                    <span data-i18n="lrc.help.credits"></span>
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
                 <div class="line h90">
                     <div class="line"></div>
                     <a class="line dark-blue" href="https://github.com/Agneli" target="_blank">
-                        <span>Raphael Agneli</span>
+                        <span>Raphael Agneli <span class='text-light-blue' data-i18n="lrc.credits.dev"></span></span>
                         <div class="w20 arrow right"></div>
                     </a>
                 </div>
@@ -259,30 +246,30 @@
                 </header>
                 <div class="line"></div>
                 <a class="line dark-blue link-musics" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>Musics</span>
+                    <span data-i18n="lrc.menu.music"></span>
                     <div class="w20 arrow right"></div>
                 </a>
                 <a class="line dark-blue link-videos" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>Videos</span>
+                    <span data-i18n="lrc.menu.video"></span>
                     <div class="w20 arrow right"></div>
                 </a>
                 <a class="line dark-blue link-controls" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>Controls</span>
+                    <span data-i18n="lrc.menu.controls"></span>
                     <div class="w20 arrow right"></div>
                 </a>
                 <a class="line dark-blue link-touchpad" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>Touchpad</span>
+                    <span data-i18n="lrc.menu.touchpad"></span>
                     <div class="w20 arrow right"></div>
                 </a>
                 <a class="line dark-blue link-slideshow" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>Slideshow</span>
-                    <div class="w20 arrow right"></div>
-                </a>
-                <a class="line dark-blue link-settings" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
-                    <span>Settings</span>
+                    <span data-i18n="lrc.menu.slideshow"></span>
                     <div class="w20 arrow right"></div>
                 </a>
                 <div class="line"></div>
+                <a class="line dark-blue link-settings" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span data-i18n="lrc.menu.settings"></span>
+                    <div class="w20 arrow right"></div>
+                </a>
                 <div class="line"></div>
             </section>
 
@@ -290,7 +277,7 @@
             <section id="musics">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-menu' data-direction='{"from":"left","to":"right"}'></a>
-                    Musics
+                    <span data-i18n="lrc.menu.music"></span>
                     <!--<a href="javascript:;" class='w20 right link-playlists playlists' data-direction='{"from":"up","to":"down"}'></a>-->
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
@@ -420,7 +407,7 @@
             <section id="videos">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-menu' data-direction='{"from":"left","to":"right"}'></a>
-                    Videos
+                    <span data-i18n="lrc.menu.video"></span>
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
                 <div class="line"></div>
@@ -459,17 +446,17 @@
             <section id="controls">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-menu' data-direction='{"from":"left","to":"right"}'></a>
-                    Controls
+                    <span data-i18n="lrc.menu.controls"></span>
                     <a href="javascript:;" class='w20 right' data-direction='{"from":"right","to":"left"}'></a>
                 </header>
                 <div class="line"></div>
-                <div class="line center">Send custom command</div>
+                <div class="line center" data-i18n="lrc.controls.send-custom-command"></div>
                 <div class="line">
                     <div class="fields">
-                        <input type="text" name="command" id="command" placeholder="Command" />
+                        <input type="text" name="command" id="command" data-i18n="[placeholder]lrc.controls.command" />
                     </div>
                 </div>
-                <a href="javascript:;" class="line center" id="send-command">Send command</a>
+                <a href="javascript:;" class="line center text-light-blue" id="send-command" data-i18n="lrc.controls.send-command"></a>
                 <div class="line center"></div>
                 <div class="line"></div>
                 <div id="controls-controls" class="line h20 light-orange">
@@ -494,7 +481,7 @@
             <section id="touchpad">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-menu' data-direction='{"from":"left","to":"right"}'></a>
-                    Touchpad
+                    <span data-i18n="lrc.menu.touchpad"></span>
                     <a href="javascript:;" class='w20 right' data-direction='{"from":"right","to":"left"}'></a>
                 </header>
                 <canvas id="canvas" class="line h70">
@@ -510,7 +497,7 @@
             <section id="slideshow">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-menu' data-direction='{"from":"left","to":"right"}'></a>
-                    Slideshow
+                    <span data-i18n="lrc.menu.slideshow"></span>
                     <a href="javascript:;" class='w20 right' data-direction='{"from":"right","to":"left"}'></a>
                 </header>
                 <div id="slideshow-controls" class="line h90">
@@ -523,9 +510,29 @@
             <section id="settings">
                 <header class="line light-blue center">
                     <a href="javascript:;" class='w20 arrow left link-menu' data-direction='{"from":"left","to":"right"}'></a>
-                    Settings
+                    <span data-i18n="lrc.menu.settings"></span>
                     <a href="javascript:;" class='w20 right'></a>
                 </header>
+                <div class="line"></div>
+                <div class="line center" data-i18n="lrc.settings.language"></div>
+                <div class="line center">
+                    <div class="fields">
+                        <select name="language" id="language">
+                            <option value="en-US">English</option>
+                            <option value="pt-BR">Português</option>
+                            <!--<option value="es-ES">Español</option>-->
+                        </select>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line dark-orange">
+                    <a href="javascript:;" id="cancel-settings" class="w50 center left dark-orange link-index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.settings.cancel"></a>
+                    <a href="javascript:;" id="save-settings" class="w50 center right dark-orange link-index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.settings.save"></a>
+                </div>
             </section>
 
         </div>

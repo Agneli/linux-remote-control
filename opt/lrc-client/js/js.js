@@ -1,19 +1,19 @@
 // LocalStorage ________________________________________________________________
+
 // Stores information about the servers to be controlled
 if (localStorage.serverCount === undefined) {
     $("#msg-server").html("Click on 'Add Server'");
 }
 
-function server(id, name, ip, status, language) {
+function server(id, name, ip, status) {
     this.id = id;
     this.name = name;
     this.ip = ip;
     this.status = status;
-    this.language = language;
 }
 
-function createNewServer(d, n, i, s, l) {
-    var createdServer = new server(d, n, i, s, l);
+function createNewServer(d, n, i, s) {
+    var createdServer = new server(d, n, i, s);
     if (localStorage.serverCount === undefined) {
         localStorage.setItem('serverCount', 0);
     }
@@ -36,7 +36,7 @@ function commitToStorage(objectCount, newObject) {
 //Add server link to HTML
 function createMarkup(server) {
     if (server.status !== "off") {
-        $('#servers').append('<a id="' + server.name + '" class="line dark-blue server link-menu" href="javascript:;" data-direction=\'{"from":"right","to":"left"}\'  data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '", "language": "' + server.language + '"}\'><span>' + server.name + '</span><div class="w20 arrow right"></div></a>');
+        $('#servers').append('<a id="' + server.name + '" class="line dark-blue server link-menu" href="javascript:;" data-direction=\'{"from":"right","to":"left"}\'  data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 arrow right"></div></a>');
     }
 }
 
@@ -50,8 +50,7 @@ $(function() {
         var name = $("#name").val();
         var ip = $("#ip").val();
         var status = "on";
-        var language = $("#language").val();
-        createNewServer(id, name, ip, status, language);
+        createNewServer(id, name, ip, status);
         //return false;
         location.reload();
     });
@@ -179,12 +178,6 @@ $(function() {
         server_name = $(this).data("server").name;
         $("#server-name").html(server_name);
         $("#delete-server").attr('data-id', '{"id":"' + id + '"}');
-
-        // Translation
-        language = $(this).data("server").language;
-        i18n.init({lng: language, debug: false}, function() {
-            $("#main").i18n();
-        });
     });
 });
 var port = '3000';
@@ -250,6 +243,7 @@ $(function() {
 });
 
 // Videos ______________________________________________________________________
+
 $(function() {
 
     $("#video-controls #video-play-pause").click(function() {
@@ -327,7 +321,7 @@ $(function() {
     });
 });
 
-// Touchpad ___________________________________________________________________
+// Touchpad ____________________________________________________________________
 
 $(function() {
     $("#mouse-controls a").click(function() {
@@ -340,6 +334,27 @@ $(function() {
 $(function() {
     $("#slideshow-controls a").click(function() {
         $.get('http://' + host + ':' + port + '/lrc', {cmd: $(this).data("command").cmd});
+    });
+});
+
+// Settings ____________________________________________________________________
+
+$(function() {
+
+    if (localStorage.language === undefined) {
+        localStorage.setItem("language", "en-US");
+    }
+
+    $("#save-settings").click(function() {
+        var lang = $("#language").val();
+        localStorage.setItem("language", lang);
+        location.reload();
+    });
+
+    // Translation
+    language = localStorage.getItem("language");
+    i18n.init({lng: language, debug: false}, function() {
+        $("#main").i18n();
     });
 });
 
