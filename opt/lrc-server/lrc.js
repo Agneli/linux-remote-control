@@ -1,12 +1,12 @@
-var express = require('express'),
+var express = require("express"),
         app = express(),
-        sys = require('sys'),
-        exec = require('child_process').exec,
+        sys = require("sys"),
+        exec = require("child_process").exec,
         child;
 
-app.all('/lrc', function(req, res) {
+app.all("/lrc", function(req, res) {
 
-    if (typeof req.query.xy === 'undefined' && typeof req.query.hw === 'undefined') {
+    if (typeof req.query.xy === "undefined" && typeof req.query.hw === "undefined") {
         var command = req.query.cmd;
     } else {
 
@@ -44,14 +44,14 @@ app.all('/lrc', function(req, res) {
  */
 app.get(/^\/(.*)/, function(req, res) {
     child = exec("rhythmbox-client --print-playing-format='%ta;%at;%tt;%te;%td;' && amixer sget Master && xbacklight -get", function(error, stdout, stderr) {
-        res.header('Content-Type', 'text/javascript');
+        res.header("Content-Type", "text/javascript");
         // error of some sort
         if (error !== null) {
-            res.send('0');
+            res.send("0");
         }
         else {
             // info actually requires us returning something useful
-            if (req.params[0] == 'info') {
+            if (req.params[0] == "info") {
                 info = stdout.split(";");
                 var volume = info[5].split("%]");
                 volume = volume[0].split("[");

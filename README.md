@@ -31,6 +31,21 @@ node /opt/lrc-server/lrc.js
 
 6. Open the index.html of your-directory/lrc-client in a browser, add your server and have fun
 
+### Dependences
+
+The Linux Remote Control depends on some softwares to work correctly. Bellow is a list of this softwares.
+
+Installed with lrc.
+
+- Node.js (to execute commands on GNU/Linux)
+- Xdotool (to execute most commands, like play, pause, mute, etc.)
+- Xbacklight (to control backlight)
+
+Usually already installed on GNU/Linux.
+
+- Rhythmbox 2.97 or more (to display music info)
+- Totem Movie Player (to control the video)
+
 ### Bugs
 The project still has some bugs that you can fix.
 

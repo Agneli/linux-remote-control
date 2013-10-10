@@ -1,6 +1,6 @@
 @font-face {
     font-family: Ubuntu;
-    src: url('../font/Ubuntu-L.ttf');
+    src: url("../font/Ubuntu-L.ttf");
 }
 
 * {
@@ -101,8 +101,6 @@ a {
 }
 
 #main section .line .text {
-    /*background: #f09;*/
-    /*overflow-y: scroll;*/
     line-height: normal;
     padding: 5% 10%;
 }
@@ -134,14 +132,12 @@ a {
     display: inline-block;
     width: 50%;
     height: 100%;
-    /*background: #f09;*/
 }
 
 #main section .line .w60 {
     display: inline-block;
     width: 60%;
     height: 100%;
-    /*background: #f09;*/
 }
 
 
@@ -169,7 +165,7 @@ a {
     background-size: auto 40%;
 }
 
-/* Musics / Videos ___________________________________________________________*/
+/* Music / Video _____________________________________________________________*/
 
 #main section .line .playlists {
     background: url("../img/icons/playlists.png") no-repeat center;
@@ -177,13 +173,11 @@ a {
 }
 
 #main section .line .slider {
-    /*background: #f09;*/
     margin: 0 auto;
     position: relative;
 }
 
 #main section .line .slider .ui-slider {
-    /*height: 23%;*/
     margin: -1.505em auto 0 auto;
     border-radius: 100px;
     background: url("../img/layout/black-transparent.png");
@@ -277,7 +271,6 @@ a {
 
 #main section .h60 .line span, #main section #now-playing span {
     display: block;
-    /*line-height: normal;*/
 }
 
 #main section #now-playing span {
@@ -292,13 +285,11 @@ a {
 
 #main section .line .fields {
     margin: 0 auto;
-    /*background: #f09;*/
     overflow: hidden;
 }
 
 #main section .line .fields input, #main section .line .fields select {
     display: inline-block;
-    /*width: 100%;*/
     padding: 0 5%;
     border: none;
     border-radius: 5px;
@@ -307,6 +298,7 @@ a {
 }
 
 /* Controls __________________________________________________________________*/
+
 #main section .line .lock {
     background: url("../img/icons/lock.png") no-repeat center;
     background-size: auto 40%;
@@ -343,6 +335,7 @@ a {
 }
 
 /* Touchpad __________________________________________________________________*/
+
 #main section .line .left-click {
     background: url("../img/icons/left-click.png") no-repeat center;
     background-size: auto 50%;
