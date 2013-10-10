@@ -26,7 +26,7 @@
         "install": {
             "p1": "Si vous avez l'application entre les mains, c'est que avez déjà, aupréalable, installé la version pour GNU/LINUX. Toutefois, si vous ne l'avez pas déjà fait, suivez les instructions suivantes.",
             "p2": "1. Télechargez le lrc sur votre GNU/Linux.",
-            "p3": "2. Installez le package .deb",
+            "p3": "2. Installez le package .deb.",
             "p4": "3. Déplacez le dossier /opt/lrc-client sur votre appareil mobile.",
             "p5": "4. Lancez le lrc-server.",
             "p6": "5. Ouvrez la page index.html depuis votre dossier-appareil-mobile/lrc-client dans un navigateur, ajoutez votre serveur et amusez-vous."
