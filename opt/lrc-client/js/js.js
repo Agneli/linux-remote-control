@@ -163,7 +163,7 @@ $(function() {
     $(".h60 .line .w20").css("font-size", line / 100 * 50 + "px");
     $(".h60 .line .w20").css("margin-right", "5%");
     $("#playlists-menu a").css("font-size", line / 100 * 25 + "px");
-    //$("#now-playing span .name").css('font-size', line / 100 * 60 + "px");
+    //$("#now-playing span .name").css("font-size", line / 100 * 60 + "px");
 });
 
 // Select server from localStorage _____________________________________________
@@ -206,7 +206,7 @@ sound_volume.slider({
 
 // Timeline
 $("#music-timeline").slider();
-var sound_volume = $('#music-timeline');
+var sound_volume = $("#music-timeline");
 sound_volume.slider({
     range: "min",
     value: 0,
