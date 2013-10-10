@@ -1,0 +1,74 @@
+{
+    "lrc": {
+        "index": {
+            "add-server": "서버 추가",
+            "help": "도움말"
+        },
+        "add-server": {
+            "account-name": "아이디",
+            "ip-address": "IP 주소",
+            "cancel": "취소",
+            "save": "저장"
+        },
+        "help": {
+            "add-server": "서버 추가 방법",
+            "install": "설치하기",
+            "contribute": "참여하기",
+            "bugs": "버그 리포트",
+            "feedback": "피드백 보내기",
+            "about": "프로그램 소개",
+            "credits": "관계자"
+        },
+        "server": {
+            "p1": " 서버(이용하게 될 컴퓨터)를 추가하려면, IP 주소를 알아야 합니다. IP 주소를 알아내기 위해 터미널에서 다음 명령어를 입력하세요.",
+            "p2": "이제 IP 주소를 알아냈으니, 홈 화면의 \"서버 추가\"에 가셔서 서버 이름(원하시는 이름으로요)과 IP 주소를 입력하시고, \"저장\"버튼을 눌러주시면 됩니다."
+        },
+        "install": {
+            "p1": "어플을 가지고 계시다면, 아마도 벌써 GNU/Linux에 설치하신 것 같네요, 하지만 아직 설치하지 않으셨다면 , 다음 순서대로 해주세요.",
+            "p2": "1. lrc를 여러분의 GNU/Linux에 다운로드해주세요 .",
+            "p3": "2. .deb(데비안) 패키지를 설치해 주세요.",
+            "p4": "3. /opt/lrc-client 디렉토리를 컴퓨터로 옮겨 주세요.",
+            "p5": "4. lrc-server를 켜주세요.",
+            "p6": "5. 브라우저에서 your-device-directory/lrc-client 의 index.html을 열고, 서버 추가를 하면 됩니다."
+        },
+        "contribute": {
+            "p1": "그리고 아울러서, 아이디어가 괜찮나요? 그러시면, 프로젝트에 도움을 주실 수 있는 방법이 있습니다.",
+            "p2": "개발자이시면, 아래 주소를 통해서 성능 향상과 새로운 기능 개발에 도움을 주실 수 있습니다.<a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
+            "p3": "사용자이시면, 아래 SNS를 통해서 널리 알려주세요 <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> and <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>."
+        },
+        "bugs": {
+            "p1": "버그를 발견하시면 알려주세요.",
+            "p2": "아래 주소에 새로운 문제 제기를 해주시면 됩니다.<a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> or contact us by email <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
+        },
+        "feedback": {
+            "p1": "어플에 관한 여러분의 의견을 말씀해 주세요. 사용기나, 제안, 칭찬 등을 보내주시면, 고맙고 기쁘게 듣겠습니다."
+        },
+        "about": {
+            "p1": " 이 프로그램은 GNU GPL license를 따르는 오픈 소스 프로젝트이며, 무료 소프트웨어입니다.",
+            "p2": " 이 프로그램은 완전히 무료입니다. 다운로드해 사용하시는데 어떤 지불도 하지 않으셔도 됩니다.",
+            "link": "<a href=\"http://www.linuxremotecontrol.com/index-en.html\" target=\"_blank\">www.linuxremotecontrol.com</a>"
+        },
+        "menu": {
+            "music": "음악",
+            "video": "비디오",
+            "controls": "컨트롤",
+            "touchpad": "터치패드",
+            "slideshow": "슬라이드쇼",
+            "settings": "설정"
+        },
+        "controls": {
+            "send-custom-command": "커스텀 커맨드 실행",
+            "command": "커맨드",
+            "send-command": "커맨드 실행"
+        },
+        "settings": {
+            "language": "언어",
+            "cancel": "취소",
+            "save": "저장"
+        },
+        "credits": {
+            "dev": "개발자",
+            "trad": "번역가"
+        }
+    }
+}

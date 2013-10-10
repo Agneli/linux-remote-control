@@ -269,7 +269,7 @@ a {
 
 /* Playlists _________________________________________________________________*/
 
-#main section .h60 .line span, #main section #now-playing span {
+/*#main section .h60 .line span, #main section #now-playing span {
     display: block;
 }
 
@@ -279,7 +279,7 @@ a {
 
 #main section .h60 .line span span, #main section #now-playing span span {
     margin: 0;
-}
+}*/
 
 /* Add Server ________________________________________________________________*/
 
@@ -295,6 +295,10 @@ a {
     border-radius: 5px;
     background: #fff;
     float: left;
+}
+
+#main section .line .fields select {
+    color:#999;
 }
 
 /* Controls __________________________________________________________________*/

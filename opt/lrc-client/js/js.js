@@ -389,7 +389,7 @@ function pajax(u, cb) {
 // Callback functions for jsonp
 function init() {
     pajax("info", "setInit");
-    setTimeout("pajax('info', 'checkTime')", 1000);
+    setTimeout("pajax('info', 'checkTime')", 950);
 }
 
 // Set some globals to use in checkTime
@@ -444,5 +444,5 @@ function checkTime(data) {
 }
 
 // Interval to check and see which song is still playing (if at all)
-setInterval("init()", 2000); // 1 second
+setInterval("init()", 1000); // 1 second
 init();
