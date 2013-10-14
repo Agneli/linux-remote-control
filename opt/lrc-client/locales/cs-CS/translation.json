@@ -1,0 +1,74 @@
+{
+    "lrc": {
+        "index": {
+            "add-server": "Připojit nového serverer",
+            "help": "Pomoc"
+        },
+        "add-server": {
+            "account-name": "Accountovi jméno",
+            "ip-address": "IP adresa",
+            "cancel": "Zpátky",
+            "save": "Uložit"
+        },
+        "help": {
+            "add-server": "Jak připojím nového serverer",
+            "install": "Jak instaluji na GNU/Linux",
+            "contribute": "Jak mohu pomoct tomu projektu",
+            "bugs": "Oznámit chybu",
+            "feedback": "Poslat Feedback",
+            "about": "O",
+            "credits": "Credits"
+        },
+        "server": {
+            "p1": "Aby si mohl připojit servera (počítač který chceš ovládat) musíš vědět IP adresu. Aby si dostal tuto adresu musíš sadát tuto komando do tvójeho terminálu: ",
+            "p2": "Tehdy  jak víš tvojí IP adresu, biješ na stránky \"Připojit nového serverer\" na startovních stránkách a vymisly si nějaký jméno. Tam pak sadej IP adresu a ulož to. To je všechno."
+        },
+        "install": {
+            "p1": "Když už se vysnaš s instalovaným tak by si neměl mít problém, jinak tady najdeš krátký návod.",
+            "p2": "1. Stáhni si lrc",
+            "p3": "2. Instaluj ten .deb paket.",
+            "p4": "3. Přesun ten registr /opt/lrc-client na tvůj přistroj.",
+            "p5": "4. Nastartuj ten lrc-server.",
+            "p6": "5. Otevři index.html na tvójim přistrojí (PŘISTROJ/lrc-client/index.html) v browseru, připoj ten server a bav se."
+        },
+        "contribute": {
+            "p1": "Miluješ ten nápad ale nevis jak tomu můžeš pomoct?",
+            "p2": "Když jsi programátor, můžeš zlepšení a noví funkce přispět na <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
+            "p3": "Když ktomu nejsi v pozici můžeš ten project rozšířit přes celí svíjet na <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> a <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>."
+        },
+        "bugs": {
+            "p1": "Bilo by ujasní kdyby si nám mohl udat chyby.",
+            "p2": "Můžeš je nám napsat na <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> nebo napsat meila na<a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
+        },
+        "feedback": {
+            "p1": "Vyprávěj nám co myslíš přes tuto aplikaci. Radujeme se slyšet od tebe, jedno jestly to sou návrhy, pochvala nebo kritika."
+        },
+        "about": {
+            "p1": "To je volná software a Open Source projekt licencován v rámci GNU GPL licence.",
+            "p2": "Tuto aplikace je úplně volná, to znamená že ji můžeš používat a změnit bez toho že něco musíš platit.",
+            "link": "<a href=\"http://www.linuxremotecontrol.com/index-en.html\" target=\"_blank\">www.linuxremotecontrol.com</a>"
+        },
+        "menu": {
+            "music": "muzika",
+            "video": "video",
+            "controls": "řízení",
+            "touchpad": "touchpad",
+            "slideshow": "slideshow",
+            "settings": "nastavení"
+        },
+        "controls": {
+            "send-custom-command": "odeslat vlastní komando",
+            "command": "komando",
+            "send-command": "odeslat komando"
+        },
+        "settings": {
+            "language": "jazyk (language)",
+            "cancel": "zpátky",
+            "save": "Uložit"
+        },
+        "credits": {
+            "dev": "Programátory",
+            "trad": "Překladateli"
+        }
+    }
+}
