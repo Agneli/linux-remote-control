@@ -13,14 +13,14 @@
         "help": {
             "add-server": "Hur man lägger till server",
             "install": "Hur man installerar i GNU/Linux",
-            "contribute": "Hur man bidrar",
+            "contribute": "Bidra",
             "bugs": "Rapportera buggar",
             "feedback": "Skicka feedback",
             "about": "Om",
             "credits": "Credits"
         },
         "server": {
-            "p1": "For add a server (computer that will be controled), you need know the IP address of this computer. For discover the IP address of your computer, type the following command on your terminal.",
+            "p1": "För att lägga till en server (datorn som skall kontrolleras), så behöver du känna till IP adressen till denna dator. För att visa IP adressen till din dator, skriv följande kommando i din terminal.",
             "p2": "Now that you have the IP address of your computer, just go to \"Add server\" page on home screen and type the name of server (any name of your choice) and the IP address of your computer and tap in \"Save\" button. This is it."
         },
         "install": {
