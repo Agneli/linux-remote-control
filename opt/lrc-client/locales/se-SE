@@ -5,7 +5,7 @@
             "help": "Hjälp"
         },
         "add-server": {
-            "account-name": "Konto namn",
+            "account-name": "Kontonamn",
             "ip-address": "IP adress",
             "cancel": "Avbryt",
             "save": "Spara"
@@ -21,31 +21,31 @@
         },
         "server": {
             "p1": "För att lägga till en server (datorn som skall kontrolleras), så behöver du känna till IP adressen till denna dator. För att visa IP adressen till din dator, skriv följande kommando i din terminal.",
-            "p2": "Now that you have the IP address of your computer, just go to \"Add server\" page on home screen and type the name of server (any name of your choice) and the IP address of your computer and tap in \"Save\" button. This is it."
+            "p2": "Nu när du känner till IP adressen till din dator, gå till \"Lägg till server\" sidan på din startskärm och skriv namnet på servern (valfritt namn) och IP adressen till din dator och tryck på \"Spara\" knappen. Det är allt."
         },
         "install": {
-            "p1": "If you are with app in hands, it is likely that you have already installed it on your GNU/Linux. But if somehow you yet no have already installed, follow the following steps.",
-            "p2": "1. Download the lrc on you GNU/Linux.",
-            "p3": "2. Install .deb package.",
-            "p4": "3. Move /opt/lrc-client directory to your device.",
-            "p5": "4. Start lrc-server.",
-            "p6": "5. Open the index.html of your-device-directory/lrc-client in a browser, add your server and have fun."
+            "p1": "Om du redan har appen så är det troligt att du redan är klar med GNU/Linux installationen. Men om så inte är fallet, följ dessa steg.",
+            "p2": "1. Ladda ned lrc till GNU/Linux.",
+            "p3": "2. Installera .deb paketet.",
+            "p4": "3. Flytta /opt/lrc-client katalogen till din enhet.",
+            "p5": "4. Starta lrc-server.",
+            "p6": "5. Öppna index.html i din-enhet-katalog/lrc-client i en browser, lägg till din server och ha kul."
         },
         "contribute": {
-            "p1": "And then, like the idea? But know that you can contribute to the project.",
-            "p2": "If you are a developer, you can contribute to improvements and new features via <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
-            "p3": "If you are a user, you can help spread the word by sharing on <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> and <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>."
+            "p1": "Och vidare, gillar du idén? Du vet väll att du kan bidra till projektet.",
+            "p2": "Om du är en utvecklare, så kan du bidra med förbättringar och nya funktioner via <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
+            "p3": "Om du är en användare, så kan du hjälpa till med att sprida ordet genom att dela med <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> and <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>."
         },
         "bugs": {
-            "p1": "If you found some bug in the app, tell us please.",
-            "p2": "You can create a new issue on <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> or contact us by email <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
+            "p1": "Om du funnit en bugg i appen, vänligen meddela oss.",
+            "p2": "Du kan skapa ett ärende på <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> or contact us by email <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
         },
         "feedback": {
-            "p1": "Tell us what you're thinking of the app. Send a review, sugestion or praise, we will hear thee with great pleasure."
+            "p1": "Tala om för oss vad du tycker om appen. Skicka ett omdöme, förslag eller beröm, det blir ett nöje att höra ifrån dig."
         },
         "about": {
-            "p1": "This is a Free Software and Open Source project licensed by GNU GPL license.",
-            "p2": "This app is completely free and you can download and use it without need pay anything for it.",
+            "p1": "Detta är en fri mjukvara och ett Open Source projekt licenserat med GNU GPL licens.",
+            "p2": "Denna app är helt fri och du kan ladda ned den och använda den helt utan kostnad.",
             "link": "<a href=\"http://www.linuxremotecontrol.com/index-en.html\" target=\"_blank\">www.linuxremotecontrol.com</a>"
         },
         "menu": {
@@ -57,9 +57,9 @@
             "settings": "Inställningar"
         },
         "controls": {
-            "send-custom-command": "Send custom command",
-            "command": "Command",
-            "send-command": "Send command"
+            "send-custom-command": "Skicka anpassat kommando",
+            "command": "Kommando",
+            "send-command": "Skicka kommando"
         },
         "settings": {
             "language": "Språk",
