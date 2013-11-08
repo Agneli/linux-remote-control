@@ -146,7 +146,7 @@ $(function() {
 
     var w_h70 = $(".h70").width();
     $(".h70").css("height", line * 7);
-    $(".h70").css("width", w_h70 + "px");
+//    $(".h70").css("width", w_h70 + "px");
     $(".h70").css("line-height", line * 7 + "px");
 
     $(".h90").css("height", line * 9);
@@ -213,7 +213,7 @@ sound_volume.slider({
     min: 0,
     max: 100,
     change: function(event, ui) {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd + ui.value + "%"});
+//        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd + ui.value + "%"});
     }
 });
 
@@ -329,7 +329,7 @@ $(function() {
 // Slideshow ___________________________________________________________________
 
 $(function() {
-    $("#slideshow-controls a").click(function() {
+    $(".slideshow-controls a").click(function() {
         $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
     });
 });

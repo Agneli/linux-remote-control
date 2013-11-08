@@ -524,9 +524,13 @@
                     <span data-i18n="lrc.menu.slideshow"></span>
                     <a href="javascript:;" class="w20 right" data-direction='{"from":"right","to":"left"}'></a>
                 </header>
-                <div id="slideshow-controls" class="line h90">
+                <div class="line h70 slideshow-controls">
                     <a href="javascript:;" class="w50 arrow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Left"}'></a>
                     <a href="javascript:;" class="w50 arrow right" data-command='{"cmd":"export DISPLAY=:0; xdotool key Right"}'></a>
+                </div>
+                <div class="line h20 dark-orange slideshow-controls">
+                    <a href="javascript:;" class="w50 play-slideshow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key F5"}'></a>
+                    <a href="javascript:;" class="w50 exit-slideshow right" data-command='{"cmd":"export DISPLAY=:0; xdotool key Escape"}'></a>
                 </div>
             </section>
 

@@ -222,43 +222,53 @@ a {
     background-size: auto 50%;
 }
 
-#main section .h20 .stop {
+#main section .line .stop {
     background: url("../img/icons/stop.png") no-repeat center;
     background-size: auto 50%;
 }
 
-/*#main section .h20 .aleatory {
+/*#main section .line .aleatory {
     background: url("../img/icons/aleatory.png") no-repeat center;
     background-size: auto 50%;
 }*/
 
-#main section .h20 .prev {
+#main section .line .prev {
     background: url("../img/icons/prev.png") no-repeat center;
     background-size: auto 50%;
 }
 
-#main section .h20 .play {
+#main section .line .play {
     background: url("../img/icons/play.png") no-repeat center;
     background-size: auto 70%;
 }
 
-#main section .h20 .pause {
+#main section .line .pause {
     background: url("../img/icons/pause.png") no-repeat center;
     background-size: auto 70%;
 }
 
-#main section .h20 .next {
+#main section .line .next {
     background: url("../img/icons/next.png") no-repeat center;
     background-size: auto 50%;
 }
 
-#main section .h20 .mute {
+#main section .line .mute {
     background: url("../img/icons/mute.png") no-repeat center;
     background-size: auto 50%;
 }
 
-#main section .h20 .fullscreen {
+#main section .line .fullscreen {
     background: url("../img/icons/fullscreen.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+#main section .line .play-slideshow {
+    background: url("../img/icons/play-slideshow.png") no-repeat center;
+    background-size: auto 50%;
+}
+
+#main section .line .exit-slideshow {
+    background: url("../img/icons/exit-slideshow.png") no-repeat center;
     background-size: auto 50%;
 }
 
