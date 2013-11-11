@@ -139,6 +139,15 @@ $(function() {
     $(".h20").css("height", line * 2);
     $(".h20").css("line-height", line * 2 + "px");
 
+    $(".h30").css("height", line * 3);
+    $(".h30").css("line-height", line * 3 + "px");
+
+    $(".h40").css("height", line * 4);
+    $(".h40").css("line-height", line * 4 + "px");
+
+    $(".h50").css("height", line * 5);
+    $(".h50").css("line-height", line * 5 + "px");
+
     $(".h60").css("height", line * 6);
     $(".h60").css("line-height", line * 6 + "px");
     $(".h60 .h50").css("height", line / 2 + "px");
@@ -148,6 +157,9 @@ $(function() {
     $(".h70").css("height", line * 7);
 //    $(".h70").css("width", w_h70 + "px");
     $(".h70").css("line-height", line * 7 + "px");
+
+    $(".h80").css("height", line * 8);
+    $(".h80").css("line-height", line * 8 + "px");
 
     $(".h90").css("height", line * 9);
     $(".h90").css("line-height", line * 9 + "px");
@@ -321,7 +333,7 @@ $(function() {
 // Touchpad ____________________________________________________________________
 
 $(function() {
-    $("#mouse-controls a").click(function() {
+    $("#mouse-controls a:not(.play-slideshow)").click(function() {
         $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
     });
 });
@@ -329,7 +341,7 @@ $(function() {
 // Slideshow ___________________________________________________________________
 
 $(function() {
-    $(".slideshow-controls a").click(function() {
+    $(".slideshow-controls a:not(.mouse)").click(function() {
         $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
     });
 });
