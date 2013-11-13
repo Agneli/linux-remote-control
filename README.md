@@ -60,4 +60,4 @@ The project still has some bugs that you can fix.
 - Get screen resolution of the server with node.js.
 
 ### License
-GNU GPL
+GNU GENERAL PUBLIC LICENSE V2
