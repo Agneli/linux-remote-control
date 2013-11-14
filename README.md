@@ -21,7 +21,7 @@ sudo dpkg -i lrc.deb
 
 4. Move /opt/lrc-client directory to your device or to directory of your choice (if you prefer you can leave here)
 ```bash
-sudo mv /opt/lrc-client your-directory
+sudo mv /opt/lrc-client your-directory/lrc-client
 ```
 
 5. Start lrc-server
@@ -37,7 +37,7 @@ The Linux Remote Control depends on some softwares to work correctly. Bellow is 
 
 Installed with lrc.
 
-- Node.js (to execute commands on GNU/Linux)
+- Node.js (Express) (to execute commands on GNU/Linux)
 - Xdotool (to execute most commands, like play, pause, mute, etc.)
 - Xbacklight (to control backlight)
 

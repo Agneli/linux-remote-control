@@ -218,8 +218,8 @@ sound_volume.slider({
 
 // Timeline
 $("#music-timeline").slider();
-var sound_volume = $("#music-timeline");
-sound_volume.slider({
+var music_timeline = $("#music-timeline");
+music_timeline.slider({
     range: "min",
     value: 0,
     min: 0,
@@ -432,11 +432,10 @@ function checkTime(data) {
                 $(".sound-volume").slider("value", volume);
                 $("#backlight").slider("value", backlight);
 
-                $(".paused").text("");
-
                 // Music-timeline
                 $("#music-timeline").slider("value", percent(elapsed, duration));
 
+                $(".paused").text("");
                 $("#music-play-pause").addClass("pause");
                 $("#music-play-pause").removeClass("play");
             });
@@ -451,10 +450,9 @@ function checkTime(data) {
         }
     }
     else {
-        $(".title").text("An Error Occurred").fadeIn("fast");
+        $(".paused").text("An Error Occurred").fadeIn("fast");
     }
 }
 
 // Interval to check and see which song is still playing (if at all)
 setInterval("init()", 1000); // 1 second
-init();

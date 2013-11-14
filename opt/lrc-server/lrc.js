@@ -55,13 +55,14 @@ app.get(/^\/(.*)/, function(req, res) {
                 info = stdout.split(";");
                 var volume = info[5].split("%]");
                 volume = volume[0].split("[");
+                volume = volume[1];
 
                 var backlight = info[5].split("[on]");
                 backlight = backlight[1].replace(/^\s+|\s+$/g, "");
                 backlight = backlight.split(".");
                 backlight = backlight[0];
                 //console.log(backlight);
-                res.send(req.query.callback + "({'artist':'" + escape(info[0]) + "', 'album':'" + escape(info[1]) + "', 'title': '" + escape(info[2]) + "', 'elapsed': '" + info[3] + "', 'duration':'" + info[4] + "', 'volume':'" + volume[1] + "', 'backlight':'" + backlight + "'})");
+                res.send(req.query.callback + "({'artist':'" + escape(info[0]) + "', 'album':'" + escape(info[1]) + "', 'title': '" + escape(info[2]) + "', 'elapsed': '" + info[3] + "', 'duration':'" + info[4] + "', 'volume':'" + volume + "', 'backlight':'" + backlight + "'})");
             }
             else {
                 res.send(req.query.callback + "()");
