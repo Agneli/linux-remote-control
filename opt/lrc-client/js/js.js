@@ -401,7 +401,7 @@ function pajax(u, cb) {
 // Callback functions for jsonp
 function init() {
     pajax("info", "setInit");
-    setTimeout("pajax('info', 'checkTime')", 950);
+    setTimeout("pajax('info', 'checkTime')", 1000);
 }
 
 // Set some globals to use in checkTime
@@ -442,11 +442,11 @@ function checkTime(data) {
         }
         else {
             // is paused
-            $(function() {
-                $(".paused").text("Paused");
-                $("#music-play-pause").addClass("play");
-                $("#music-play-pause").removeClass("pause");
-            });
+//            $(function() {
+//                $(".paused").text("Paused");
+//                $("#music-play-pause").addClass("play");
+//                $("#music-play-pause").removeClass("pause");
+//            });
         }
     }
     else {
@@ -455,4 +455,4 @@ function checkTime(data) {
 }
 
 // Interval to check and see which song is still playing (if at all)
-setInterval("init()", 1000); // 1 second
+setInterval("init()", 950); // 1 second
