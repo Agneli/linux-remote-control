@@ -26,7 +26,9 @@ sudo mv /opt/lrc-client your-directory/lrc-client
 
 5. Start lrc-server
 ```bash
-node /opt/lrc-server/lrc.js
+cd /opt/lrc-server
+npm install
+npm start
 ```
 
 6. Open the index.html of your-directory/lrc-client in a browser, add your server and have fun
