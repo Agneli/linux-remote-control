@@ -36,7 +36,7 @@ function commitToStorage(objectCount, newObject) {
 //Add server link to HTML
 function createMarkup(server) {
     if (server.status !== "off") {
-        $("#servers").append('<a id="' + server.name + '" class="line dark-blue server link-menu" href="javascript:;" data-direction=\'{"from":"right","to":"left"}\'  data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 arrow right"></div></a>');
+        $("#servers").append('<a id="' + server.name + '" class="line dark-blue server" data-link="menu" href="#!" data-direction=\'{"from":"right","to":"left"}\'  data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 arrow right"></div></a>');
     }
 }
 
@@ -388,11 +388,9 @@ $(function() {
 
     var speed = 300;
 
-    //Index
-    $("a[class*='link-']").click(function() {
-        var name = $(this).attr("class");
-        name = name.split("link-");
-        name = "#" + name[1];
+    // Index
+    $("a[data-link]").click(function() {
+        var name = '#' + $(this).data("link");
         $("section").hide("slide", {direction: $(this).data("direction").to}, speed);
         $(name).show("slide", {direction: $(this).data("direction").from}, speed);
     });
