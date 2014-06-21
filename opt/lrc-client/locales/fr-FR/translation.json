@@ -54,12 +54,18 @@
             "controls": "Contrôles",
             "touchpad": "Pavé tactile",
             "slideshow": "Diaporama",
+            "custom-commands" : "Commandes personnalisées",
             "settings": "Paramètres"
         },
         "controls": {
-            "send-custom-command": "Envoyer une commande spécifique",
+            "send-custom-command": "Envoyer une commande personnalisée",
             "command": "Commande",
             "send-command": "Envoyer une commande"
+        },
+        "custom-commands": {
+            "add": "Ajouter une commande personnalisée",
+            "name": "Nom de la commande",
+            "command": "Commande à exécuter"
         },
         "settings": {
             "language": "Langage",

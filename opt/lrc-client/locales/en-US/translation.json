@@ -54,12 +54,18 @@
             "controls": "Controls",
             "touchpad": "Touchpad",
             "slideshow": "Slideshow",
+            "custom-commands" : "Custom commands",
             "settings": "Settings"
         },
         "controls": {
             "send-custom-command": "Send custom command",
             "command": "Command",
             "send-command": "Send command"
+        },
+        "custom-commands": {
+            "add": "Add a custom command",
+            "name": "Name",
+            "command": "Command to execute"
         },
         "settings": {
             "language": "Language",

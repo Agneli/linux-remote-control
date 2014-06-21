@@ -121,62 +121,66 @@ $(function() {
 
 // Responsive Layout ___________________________________________________________
 $(function() {
+    responsive_layout('#main');
+});
 
-// Responsive Height
+function responsive_layout(selector) {
+
+    // Responsive Height
     var height = $("#main").height();
     $("#main").css("height", height);
-    $("#main > section").css("height", height);
-    var line = $(".line").height();
-    var line_width = $(".line").width();
-    $(".line").css("height", line);
-    $(".line").css("line-height", line + "px");
+    $("#main" + " > section").css("height", height);
+    var line = $(selector + " .line").height();
+    var line_width = $(selector + " .line").width();
+    $(selector + " .line").css("height", line);
+    $(selector + " .line").css("line-height", line + "px");
 
-    $(".line .fields").css("width", line_width / 100 * 80 + "px");
-    var fields = $(".fields").width();
-    $(".line .fields input").css({"width": fields / 100 * 90 + "px", "padding-top": line / 100 * 20 + "px", "padding-bottom": line / 100 * 20 + "px"});
-    $(".line .fields select").css({"width": fields + "px", "padding": line / 100 * 20 + "px", "padding-bottom": line / 100 * 20 + "px"});
+    $(selector + " .line .fields").css("width", line_width / 100 * 80 + "px");
+    var fields = $(selector + " .fields").width();
+    $(selector + " .line .fields input").css({"width": fields / 100 * 90 + "px", "padding-top": line / 100 * 20 + "px", "padding-bottom": line / 100 * 20 + "px"});
+    $(selector + " .line .fields select").css({"width": fields + "px", "padding": line / 100 * 20 + "px", "padding-bottom": line / 100 * 20 + "px"});
 
-    $(".h20").css("height", line * 2);
-    $(".h20").css("line-height", line * 2 + "px");
+    $(selector + " .h20").css("height", line * 2);
+    $(selector + " .h20").css("line-height", line * 2 + "px");
 
-    $(".h30").css("height", line * 3);
-    $(".h30").css("line-height", line * 3 + "px");
+    $(selector + " .h30").css("height", line * 3);
+    $(selector + " .h30").css("line-height", line * 3 + "px");
 
-    $(".h40").css("height", line * 4);
-    $(".h40").css("line-height", line * 4 + "px");
+    $(selector + " .h40").css("height", line * 4);
+    $(selector + " .h40").css("line-height", line * 4 + "px");
 
-    $(".h50").css("height", line * 5);
-    $(".h50").css("line-height", line * 5 + "px");
+    $(selector + " .h50").css("height", line * 5);
+    $(selector + " .h50").css("line-height", line * 5 + "px");
 
-    $(".h60").css("height", line * 6);
-    $(".h60").css("line-height", line * 6 + "px");
-    $(".h60 .h50").css("height", line / 2 + "px");
-    $(".h60 .h50").css("line-height", line / 2 + "px");
+    $(selector + " .h60").css("height", line * 6);
+    $(selector + " .h60").css("line-height", line * 6 + "px");
+    $(selector + " .h60 .h50").css("height", line / 2 + "px");
+    $(selector + " .h60 .h50").css("line-height", line / 2 + "px");
 
-    var w_h70 = $(".h70").width();
-    $(".h70").css("height", line * 7);
-//    $(".h70").css("width", w_h70 + "px");
-    $(".h70").css("line-height", line * 7 + "px");
+    var w_h70 = $(selector + " .h70").width();
+    $(selector + " .h70").css("height", line * 7);
+    // $(selector + " .h70").css("width", w_h70 + "px");
+    $(selector + " .h70").css("line-height", line * 7 + "px");
 
-    $(".h80").css("height", line * 8);
-    $(".h80").css("line-height", line * 8 + "px");
+    $(selector + " .h80").css("height", line * 8);
+    $(selector + " .h80").css("line-height", line * 8 + "px");
 
-    $(".h90").css("height", line * 9);
-    $(".h90").css("line-height", line * 9 + "px");
+    $(selector + " .h90").css("height", line * 9);
+    $(selector + " .h90").css("line-height", line * 9 + "px");
 
-// Responsive Font-size
-    $(".line").css("font-size", line / 100 * 40 + "px");
-    $("header").css("font-size", line / 100 * 50 + "px");
-    $(".artist").css("font-size", line / 100 * 60 + "px");
-    $(".album").css("font-size", line / 100 * 40 + "px");
-    $(".title").css("font-size", line / 100 * 50 + "px");
-    $(".time").css("font-size", line / 100 * 30 + "px");
-    $(".h60 .line").css("font-size", line / 100 * 30 + "px");
-    $(".h60 .line .w20").css("font-size", line / 100 * 50 + "px");
-    $(".h60 .line .w20").css("margin-right", "5%");
-    $("#playlists-menu a").css("font-size", line / 100 * 25 + "px");
-    //$("#now-playing span .name").css("font-size", line / 100 * 60 + "px");
-});
+    // Responsive Font-size
+    $(selector + " .line").css("font-size", line / 100 * 40 + "px");
+    $(selector + " header").css("font-size", line / 100 * 50 + "px");
+    $(selector + " .artist").css("font-size", line / 100 * 60 + "px");
+    $(selector + " .album").css("font-size", line / 100 * 40 + "px");
+    $(selector + " .title").css("font-size", line / 100 * 50 + "px");
+    $(selector + " .time").css("font-size", line / 100 * 30 + "px");
+    $(selector + " .h60 .line").css("font-size", line / 100 * 30 + "px");
+    $(selector + " .h60 .line .w20").css("font-size", line / 100 * 50 + "px");
+    $(selector + " .h60 .line .w20").css("margin-right", "5%");
+    $(selector + " #playlists-menu a").css("font-size", line / 100 * 25 + "px");
+    //$(selector + " #now-playing span .name").css("font-size", line / 100 * 60 + "px");
+}
 
 // Select server from localStorage _____________________________________________
 var host = "", server_name = "";
@@ -343,6 +347,19 @@ $(function() {
 $(function() {
     $(".slideshow-controls a:not(.mouse)").click(function() {
         $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+    });
+});
+
+// Custom Commands _____________________________________________________________
+$(function() {
+    // Existing commands are loaded in custom-commands.js
+    $('#add-custom-command a.save').click(function() {
+        console.log('ASD');
+        var name = $('#add-custom-command input[name=name]').val();
+        var cmd = $('#add-custom-command input[name=cmd]').val();
+        navigator.custom_commands.add(name, cmd);
+        navigator.custom_commands.refresh_view();
+        responsive_layout('#custom-commands');
     });
 });
 

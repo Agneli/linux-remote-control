@@ -13,7 +13,6 @@ var ongoingTouches = new Array;
 //New Touch
 function handleStart(evt) {
     evt.preventDefault();
-    //log("touchstart.");
     var el = $("#canvas")[0];
     var ctx = el.getContext("2d");
     var touches = evt.changedTouches;
@@ -26,7 +25,6 @@ function handleStart(evt) {
         ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
         ctx.fillStyle = color;
         ctx.fill();
-//        //log("touchstart:" + i + ".");
     }
 }
 

@@ -52,7 +52,7 @@ a {
     background: #00539f;
 }
 
-#main section a.line.dark-blue:active {
+#main section a.line.dark-blue:active, #main section .line.dark-blue a:active {
     background: #0095dd;
 }
 
@@ -60,7 +60,7 @@ a {
     background: #0095dd;
 }
 
-#main section a.line.light-blue:active {
+#main section a.line.light-blue:active, #main section .line.light-blue a:active {
     background: #00539f;
 }
 
@@ -68,7 +68,7 @@ a {
     background: #e66000;
 }
 
-#main section a.line.dark-orange:active {
+#main section a.line.dark-orange:active, #main section .line.dark-orange a:active {
     background: #ff9500;
 }
 
@@ -76,7 +76,7 @@ a {
     background: #ff9500;
 }
 
-#main section a.line.light-orange:active {
+#main section a.line.light-orange:active, #main section .line.light-orange a:active {
     background: #e66000;
 }
 
@@ -387,4 +387,15 @@ a {
 
 .center {
     text-align: center;
+}
+
+/* Custom commands ___________________________________________________________*/
+#main section#custom-commands .line a {
+    padding-left: 5%;
+}
+
+/* Scroll box ________________________________________________________________*/
+.scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
 }

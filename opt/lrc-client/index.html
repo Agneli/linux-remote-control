@@ -9,7 +9,6 @@
     </head>
     <body onload="startup();">
         <div id="main">
-
             <!-- Index ______________________________________________________-->
             <section id="index">
                 <header class="line light-blue center">
@@ -289,12 +288,15 @@
                     <span data-i18n="lrc.menu.slideshow"></span>
                     <div class="w20 arrow right"></div>
                 </a>
+                <a class="line dark-blue link-custom-commands" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
+                    <span data-i18n="lrc.menu.custom-commands"></span>
+                    <div class="w20 arrow right"></div>
+                </a>
                 <div class="line"></div>
                 <a class="line dark-blue link-settings" href="javascript:;" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.settings"></span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <div class="line"></div>
             </section>
 
             <!-- Musics _____________________________________________________-->
@@ -336,96 +338,6 @@
                     <a href="javascript:;" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>
                 </div>
             </section>
-
-            <!-- Playlists __________________________________________________-->
-            <!--            <section id="playlists">
-                            <header class="line light-blue center">
-                                <a href="javascript:;" class="w20 arrow left link-musics" data-direction='{"from":"down","to":"up"}'></a>
-                                Playlists
-                                <div class="w20 right"></div>    
-                            </header>
-                            <div id="playlists-menu" class="line light-orange">
-                                <a href="javascript:;" class="w20 left center">Artists</a>
-                                <a href="javascript:;" class="w20 left center">Albuns</a>
-                                <a href="javascript:;" class="w20 left center">Songs</a>
-                                <a href="javascript:;" class="w20 left center">Playlists</a>
-                                <a href="javascript:;" class="w20 left center">Favourites</a>
-                            </div>
-                            <div class="line h60">
-                                <a class="line dark-blue">
-                                    <span class="w20 right center">
-                                        3:00
-                                    </span>
-                                    <span>
-                                        <span class="h50">Nariz de doze</span>
-                                        <span class="h50 text-light-blue">Raimundos</span>
-                                    </span>
-                                </a>
-                                <a class="line dark-blue">
-                                    <span class="w20 right center">
-                                        3:39
-                                    </span>
-                                    <span>
-                                        <span class="h50">Turn Yor Lights Down Low</span>
-                                        <span class="h50 text-light-blue">Bob Marley</span>
-                                    </span>
-                                </a>
-                                <a class="line dark-blue">
-                                    <span class="w20 right center">
-                                        3:30
-                                    </span>
-                                    <span>
-                                        Chop Suey<br />
-                                        <span class="text-light-blue">System of a Down</span>
-                                    </span>
-                                </a>
-                                <a class="line dark-blue">
-                                    <span class="w20 right center">
-                                        4:05
-                                    </span>
-                                    <span>
-                                        So far Away<br />
-                                        <span class="text-light-blue">Staind</span>
-                                    </span>
-                                </a>
-                                <a class="line dark-blue">
-                                    <span class="w20 right center">
-                                        6:51
-                                    </span>
-                                    <span>
-                                        Negro Drama<br />
-                                        <span class="text-light-blue">Racionais Mc's</span>
-                                    </span>
-                                </a>
-                                <a class="line dark-blue">
-                                    <span class="w20 right center">
-                                        5:34
-                                    </span>
-                                    <span>
-                                        Snow (Hey oh)<br />
-                                        <span class="text-light-blue">Red Hot Chili Peppers</span>
-                                    </span>
-                                </a>
-                                <a class="line dark-blue">
-                                    <span class="w20 right center">
-                                        7:26
-                                    </span>
-                                    <span>
-                                        Through The Fire And Flames<br />
-                                        <span class="text-light-blue">Dragon Force</span>
-                                    </span>
-                                </a>
-            
-                            </div>
-                            <a href="javascript:;" id="now-playing" class="line h20 dark-orange link-musics" data-direction='{"from":"right","to":"left"}'>
-                                <span class="w20 arrow right"></span>
-                                <span>
-                                    Now Playing
-                                    <span class="title">Fique! Fique!</span>
-                                    <span class="text-light-orange">Raimundos</span>
-                                </span>
-                            </a>
-                        </section>-->
 
             <!-- Videos _____________________________________________________-->
             <section id="videos">
@@ -536,6 +448,49 @@
                 </div>
             </section>
 
+            <!-- Custom commands ____________________________________________-->
+            <section id="custom-commands">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class="w20 arrow left link-menu" data-direction='{"from":"left","to":"right"}'></a>
+                    <span data-i18n="lrc.menu.custom-commands"></span>
+                    <div class="w20 right"></div>
+                </header>
+                <div class="line h80 custom-commands">
+                    <div class="h80 scroll">
+                    </div>
+                </div>
+                <a class="line light-orange center link-add-custom-command" href="javascript:;" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.custom-commands.add"></a>
+            </section>
+
+            <!-- Add custom commands ________________________________________-->
+            <section id="add-custom-command">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class="w20 arrow left link-custom-commands" data-direction='{"from":"up","to":"down"}'></a>
+                    <span data-i18n="lrc.custom-commands.add"></span>
+                    <div class="w20 right"></div>
+                </header>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line center">
+                    <div class="fields">
+                        <input type="text" name="name" data-i18n="[placeholder]lrc.custom-commands.name" />
+                    </div>
+                </div>
+                <div class="line center">
+                    <div class="fields">
+                        <input type="text" name="cmd" data-i18n="[placeholder]lrc.custom-commands.command" />
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line dark-orange">
+                    <a href="javascript:;" class="w50 center left dark-orange cancel link-custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
+                    <a href="javascript:;" class="w50 center right dark-orange save link-custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
+                </div>
+            </section>
+
             <!-- Settings ___________________________________________________-->
             <section id="settings">
                 <header class="line light-blue center">
@@ -575,6 +530,7 @@
         <script type="text/javascript" src="js/jquery.js" ></script>
         <script type="text/javascript" src="js/jquery-ui.js" ></script>
         <script type="text/javascript" src="js/jquery-ui-touch-punch.js" ></script>
+        <script type="text/javascript" src="js/custom-commands.js"></script>
         <script type="text/javascript" src="js/js.js" ></script>
         <script type="text/javascript" src="js/touch.js" ></script>
         <script type="text/javascript" src="js/i18next.js" ></script>
