@@ -73,8 +73,8 @@ $(function() {
 // Delete (off) Server
 $(function() {
     $("#delete-server").click(function() {
-        var _confirm = confirm("Delete server. Are you sure ?");
-        if (_confirm) {
+        // TODO : This should be translated
+        if(confirm("Delete server. Are you sure ?")) {
             var svr = JSON.stringify(localStorage.getItem("server_" + id));
             svr = svr.replace("on", "off");
             localStorage.setItem("server_" + id, JSON.parse(svr));
@@ -82,8 +82,6 @@ $(function() {
         }
     });
 });
-
-//localStorage.clear();
 
 // Function to convert music time to seconds ___________________________________
 function seconds(time) {

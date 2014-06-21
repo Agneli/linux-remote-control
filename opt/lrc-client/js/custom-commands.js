@@ -32,9 +32,12 @@ Custom_Commands.prototype.refresh_view = function() {
     });
 
     $("#custom-commands .custom-commands a.trash").click(function() {
-        self.remove($(this).data('index'));
-        self.refresh_view();
-        responsive_layout('#custom-commands');
+        // TODO : This should be translated
+        if(confirm("Delete command. Are you sure ?")) {
+            self.remove($(this).data('index'));
+            self.refresh_view();
+            responsive_layout('#custom-commands');
+        }
     });
 };
 
