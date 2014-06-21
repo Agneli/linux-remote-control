@@ -21,8 +21,8 @@ Custom_Commands.prototype.refresh_view = function() {
         var custom_command = custom_commands[index];
         $('#custom-commands .custom-commands .scroll')
             .append('<div class="line dark-blue">' +
-                '<a href="javascript:;" style="width: 70%" class="left" data-command="' + encodeURI(custom_command.cmd) + '">' + custom_command.name + '</a>' +
-                '<a href="javascript:;" class="trash w20 right" data-index="' + index + '"></a>' +
+                '<a href="#!" style="width: 70%" class="left" data-command="' + encodeURI(custom_command.cmd) + '">' + custom_command.name + '</a>' +
+                '<a href="#!" class="trash w20 right" data-index="' + index + '"></a>' +
             '</div>');
     }
 
