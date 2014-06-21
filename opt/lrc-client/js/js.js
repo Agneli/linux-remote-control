@@ -354,7 +354,6 @@ $(function() {
 $(function() {
     // Existing commands are loaded in custom-commands.js
     $('#add-custom-command a.save').click(function() {
-        console.log('ASD');
         var name = $('#add-custom-command input[name=name]').val();
         var cmd = $('#add-custom-command input[name=cmd]').val();
         navigator.custom_commands.add(name, cmd);
