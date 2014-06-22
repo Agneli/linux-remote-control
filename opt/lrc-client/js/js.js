@@ -2,6 +2,7 @@
 
 // Stores information about the servers to be controlled
 if (localStorage.serverCount === undefined) {
+    // TODO : This should be translated
     $("#msg-server").html("Click on 'Add Server'");
 }
 
