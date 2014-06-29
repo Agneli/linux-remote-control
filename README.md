@@ -40,6 +40,7 @@ Installed with lrc.
 - Node.js (Express) (to execute commands on GNU/Linux)
 - Xdotool (to execute most commands, like play, pause, mute, etc.)
 - Xbacklight (to control backlight)
+- PhantomJS (to get screen resolution)
 
 Usually already installed on GNU/Linux.
 
@@ -49,7 +50,6 @@ Usually already installed on GNU/Linux.
 ### Bugs
 The project still has some bugs that you can fix.
 
-- Improvements in english texts;
 - Forward and backward music from the slider;
 - Click by tapping the touchpad;
 - Move mouse relative to current cursor position;
@@ -57,7 +57,6 @@ The project still has some bugs that you can fix.
 - Fix bug of the crazy backlight in slider;
 - Organize and modularize my dirty Javascript =/;
 - Start lrc-server (node /opt/lrc-server/lrc.js) with computer boot;
-- Get screen resolution of the server with node.js.
 
 ### License
 GNU GENERAL PUBLIC LICENSE V2

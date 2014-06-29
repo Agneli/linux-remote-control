@@ -28,13 +28,13 @@
             "p2": "1. Baixe o lrc em seu GNU/Linux.",
             "p3": "2. Instale o pacote .deb.",
             "p4": "3. Mova o diretório /opt/lrc-client para o seu dispositivo.",
-            "p5": "4. Inicie o lrc-server.",
+            "p5": "3. Inicie o lrc-server.",
             "p6": "5. Abra o arquivo index.html que está em your-device-directory/lrc-client em um navegador, adicione seu servidor e divirta-se."
         },
         "contribute": {
             "p1": "E então, gostou da ideia? Pois saiba que você pode contribuir com o projeto.",
             "p2": "Se você é um desenvolvedor, Você pode contribuir com melhorias e novas funcionalidades via <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
-            "p3": "Se você é um usuário, você pode ajudar a espalhar a ideia compartilhando no <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> e <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>."
+            "p3": "Se você é um usuário, você pode ajudar a espalhar a ideia compartilhando no <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> e <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>, ou fazendo uma doação."
         },
         "bugs": {
             "p1": "Se você encontrou algum problema no aplicativo, nos avise por favor.",
@@ -54,6 +54,7 @@
             "controls": "Controles",
             "touchpad": "Touchpad",
             "slideshow": "Apresentações",
+            "custom-commands": "Comandos personalizados",
             "settings": "Configurações"
         },
         "controls": {
@@ -61,8 +62,15 @@
             "command": "Comando",
             "send-command": "Enviar comando"
         },
+        "custom-commands": {
+            "add": "Adicionar comando personalizado",
+            "name": "Nome",
+            "command": "Comando a ser executado"
+        },
         "settings": {
             "language": "Idioma",
+            "audio": "Player de áudio",
+            "video": "Player de vídeo",
             "cancel": "Cancelar",
             "save": "Salvar"
         },

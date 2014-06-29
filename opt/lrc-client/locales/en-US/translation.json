@@ -11,7 +11,7 @@
             "save": "Save"
         },
         "help": {
-            "add-server": "How to add server",
+            "add-server": "How to add a server",
             "install": "How to install on GNU/Linux",
             "contribute": "How to contribute",
             "bugs": "Report bugs",
@@ -20,19 +20,19 @@
             "credits": "Credits"
         },
         "server": {
-            "p1": "For add a server (computer that will be controled), you need know the IP address of this computer. For discover the IP address of your computer, type the following command on your terminal.",
-            "p2": "Now that you have the IP address of your computer, just go to \"Add server\" page on home screen and type the name of server (any name of your choice) and the IP address of your computer and tap in \"Save\" button. This is it."
+            "p1": "To add a server (the computer that will be controlled), you need to know the IP address of the computer.  To discover the IP address of your computer, type the following command in a terminal.",
+            "p2": "Now that you have the IP address of your computer, just go to the \"Add server\" page on the home screen and type the name of the server (you may choose any name for the server) and the IP address of your computer and tap the \"Save\" button. That's it!"
         },
         "install": {
-            "p1": "If you are with app in hands, it is likely that you have already installed it on your GNU/Linux. But if somehow you yet no have already installed, follow the following steps.",
-            "p2": "1. Download the lrc on you GNU/Linux.",
+            "p1": "If you are using the app already, it is likely that you already have it installed on your GNU/Linux system.  If you somehow do not have it already installed, use the following steps.",
+            "p2": "1. Download the lrc.deb package onto you GNU/Linux system.",
             "p3": "2. Install .deb package.",
-            "p4": "3. Move /opt/lrc-client directory to your device.",
-            "p5": "4. Start lrc-server.",
-            "p6": "5. Open the index.html of your-device-directory/lrc-client in a browser, add your server and have fun."
+            "p4": "3. Move the /opt/lrc-client directory to your device.",
+            "p5": "3. Start lrc-server.",
+            "p6": "5. Open index.html in your-device-directory/lrc-client in a browser, add your server, and have fun."
         },
         "contribute": {
-            "p1": "And then, like the idea? But know that you can contribute to the project.",
+            "p1": "Do you like this idea?  You can contribute to this project!",
             "p2": "If you are a developer, you can contribute to improvements and new features via <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
             "p3": "If you are a user, you can help spread the word by sharing on <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> and <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>."
         },
@@ -41,7 +41,7 @@
             "p2": "You can create a new issue on <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> or contact us by email <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
         },
         "feedback": {
-            "p1": "Tell us what you're thinking of the app. Send a review, sugestion or praise, we will hear thee with great pleasure."
+            "p1": "Tell us what you think of the app. Send a review, sugestion or praise, we would love to hear from you."
         },
         "about": {
             "p1": "This is a Free Software and Open Source project licensed by GNU GPL license.",
@@ -54,6 +54,7 @@
             "controls": "Controls",
             "touchpad": "Touchpad",
             "slideshow": "Slideshow",
+            "custom-commands" : "Custom commands",
             "settings": "Settings"
         },
         "controls": {
@@ -61,8 +62,15 @@
             "command": "Command",
             "send-command": "Send command"
         },
+        "custom-commands": {
+            "add": "Add a custom command",
+            "name": "Name",
+            "command": "Command to execute"
+        },
         "settings": {
             "language": "Language",
+            "audio": "Audio player",
+            "video": "Video player",
             "cancel": "Cancel",
             "save": "Save"
         },
