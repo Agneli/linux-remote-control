@@ -193,6 +193,7 @@ $(function() {
     });
 });
 var port = "3000";
+var websocketPort = "3001";
 
 //Clear server to back to index
 $(function() {

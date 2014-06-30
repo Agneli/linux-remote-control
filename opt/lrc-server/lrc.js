@@ -3,35 +3,19 @@ var express = require("express"),
         sys = require("sys"),
         exec = require("child_process").exec,
         child;
+        
+var WebSocketServer = require('ws').Server;
+var wss = new WebSocketServer({port: 3001});
+wss.on('connection', function(ws) {
+    ws.on('message', function(message) {
+        var values = message.split(';');
+        exec('export DISPLAY=:0; xdotool mousemove_relative -- ' + values[0] + ' ' + values[1], function puts(error, stdout, stderr) {});
+    });
+});
 
 app.all("/lrc", function(req, res) {
-
-    if (typeof req.query.xy === "undefined" && typeof req.query.hw === "undefined") {
-        var command = req.query.cmd;
-    } else {
-
-        //Get position of cursor
-        var xy = req.query.xy.split(" ");
-        //Get width and height of the screen of user
-        var wh = req.query.wh.split(" ");
-
-        //Get width and height of the screen of server
-        var w1 = 1366;//screen.width; //________________________________________
-        var h1 = 768;//screen.height; //________________________________________
-
-        //Get proportion of the screens
-        var w2 = w1 / wh[0];
-        var h2 = h1 / wh[1];
-
-        //New value of cursor positions with proportion
-        var x = xy[0] * w2;
-        var y = xy[1] * h2;
-
-        var command = req.query.cmd + x.toFixed() + " " + y.toFixed();
-//        console.log(command);
-    }
+    var command = req.query.cmd;
     exec(command, function(err, stdout, stderr) {
-
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "X-Requested-With");
         res.send({res: stdout});
@@ -73,5 +57,5 @@ app.get(/^\/(.*)/, function(req, res) {
 });
 
 app.listen(3000, function () {
-    console.log('Listening on port 3000');
+//    console.log('Listening on port 3000');
 });

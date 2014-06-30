@@ -29,6 +29,7 @@
             "p3": "2. Install .deb package.",
             "p4": "3. Move the /opt/lrc-client directory to your device.",
             "p5": "3. Start lrc-server.",
+            "p5": "4. Start lrc-server.",
             "p6": "5. Open index.html in your-device-directory/lrc-client in a browser, add your server, and have fun."
         },
         "contribute": {
