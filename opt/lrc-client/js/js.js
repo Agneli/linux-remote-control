@@ -236,13 +236,14 @@ music_timeline.slider({
 // Music Controls
 $(function() {
 
-    $(".sound-min").click(function() {
-        var volume = $(".sound-volume").slider("value");
-        $(".sound-volume").slider("value", parseInt(volume - $(this).data("command").step));
+    $("section#musics .sound-min").click(function() {
+        var volume = $("section#musics .sound-volume").slider("value");
+        $("section#musics .sound-volume").slider("value", parseInt(volume - $(this).data("command").step));
     });
-    $(".sound-max").click(function() {
-        var volume = $(".sound-volume").slider("value");
-        $(".sound-volume").slider("value", parseInt($(this).data("command").step) + volume);
+    
+    $("section#musics .sound-max").click(function() {
+        var volume = $("section#musics .sound-volume").slider("value");
+        $("section#musics .sound-volume").slider("value", parseInt($(this).data("command").step) + volume);
     });
 
     $("#music-controls *:not(#music-play-pause)").click(function() {
@@ -258,6 +259,16 @@ $(function() {
 // Videos ______________________________________________________________________
 
 $(function() {
+    
+    $("section#videos .sound-min").click(function() {
+        var volume = $("section#videos .sound-volume").slider("value");
+        $("section#videos .sound-volume").slider("value", parseInt(volume - $(this).data("command").step));
+    });
+    
+    $("section#videos .sound-max").click(function() {
+        var volume = $("section#videos .sound-volume").slider("value");
+        $("section#videos .sound-volume").slider("value", parseInt($(this).data("command").step) + volume);
+    });
 
     $("#video-controls #video-play-pause").click(function() {
         $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
