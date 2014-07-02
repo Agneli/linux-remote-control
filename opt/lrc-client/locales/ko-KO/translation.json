@@ -28,13 +28,13 @@
             "p2": "1. lrc를 여러분의 GNU/Linux에 다운로드해주세요 .",
             "p3": "2. .deb(데비안) 패키지를 설치해 주세요.",
             "p4": "3. /opt/lrc-client 디렉토리를 컴퓨터로 옮겨 주세요.",
-            "p5": "4. lrc-server를 켜주세요.",
+            "p5": "3. lrc-server를 켜주세요.",
             "p6": "5. 브라우저에서 your-device-directory/lrc-client 의 index.html을 열고, 서버 추가를 하면 됩니다."
         },
         "contribute": {
             "p1": "그리고 아울러서, 아이디어가 괜찮나요? 그러시면, 프로젝트에 도움을 주실 수 있는 방법이 있습니다.",
             "p2": "개발자이시면, 아래 주소를 통해서 성능 향상과 새로운 기능 개발에 도움을 주실 수 있습니다.<a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
-            "p3": "사용자이시면, 아래 SNS를 통해서 널리 알려주세요 <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> and <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>."
+            "p3": "사용자이시면, 아래 SNS를 통해서 널리 알려주세요 <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> and <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a> 또는 기부를."
         },
         "bugs": {
             "p1": "버그를 발견하시면 알려주세요.",
@@ -54,6 +54,7 @@
             "controls": "컨트롤",
             "touchpad": "터치패드",
             "slideshow": "슬라이드쇼",
+            "custom-commands": "사용자 지정 명령",
             "settings": "설정"
         },
         "controls": {
@@ -61,8 +62,15 @@
             "command": "커맨드",
             "send-command": "커맨드 실행"
         },
+        "custom-commands": {
+            "add": "사용자 지정 명령을 추가",
+            "name": "이름",
+            "command": "실행할 수있는 명령"
+        },
         "settings": {
             "language": "언어",
+            "audio": "오디오 플레이어",
+            "video": "비디오 플레이어",
             "cancel": "취소",
             "save": "저장"
         },

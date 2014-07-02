@@ -39,6 +39,15 @@ a {
     display: block;
 }
 
+#main section header.line span {
+    display: inline-block;
+    width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
 #main section .line {
     display: block;
     width: 100%;
@@ -53,31 +62,31 @@ a {
 }
 
 #main section a.line.dark-blue:active, #main section .line.dark-blue a:active {
-    background: #0095dd;
+    background-color: #0095dd;
 }
 
 #main section .line.light-blue {
-    background: #0095dd;
+    background-color: #0095dd;
 }
 
 #main section a.line.light-blue:active, #main section .line.light-blue a:active {
-    background: #00539f;
+    background-color: #00539f;
 }
 
 #main section .line.dark-orange {
-    background: #e66000;
+    background-color: #e66000;
 }
 
 #main section a.line.dark-orange:active, #main section .line.dark-orange a:active {
-    background: #ff9500;
+    background-color: #ff9500;
 }
 
 #main section .line.light-orange {
-    background: #ff9500;
+    background-color: #ff9500;
 }
 
 #main section a.line.light-orange:active, #main section .line.light-orange a:active {
-    background: #e66000;
+    background-color: #e66000;
 }
 
 #main section .text-light-blue {
@@ -123,8 +132,17 @@ a {
     padding: 1%;
 }
 
+#main section#credits .line span span {
+    font-size: 0.7em;
+}
+
 #main section .line .w20 {
     width: 20%;
+    height: 100%;
+}
+
+#main section .line .w25 {
+    width: 25%;
     height: 100%;
 }
 
@@ -333,8 +351,13 @@ a {
     background-size: auto 40%;
 }
 
-#main section .line .screenshot {
-    background: url("../img/icons/screenshot.png") no-repeat center;
+#main section .line .alt-tab {
+    background: url("../img/icons/alt-tab.png") no-repeat center;
+    background-size: auto 40%;
+}
+
+#main section .line .ok {
+    background: url("../img/icons/ok.png") no-repeat center;
     background-size: auto 40%;
 }
 

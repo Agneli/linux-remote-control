@@ -28,13 +28,13 @@
             "p2": "1. Télechargez le lrc sur votre GNU/Linux.",
             "p3": "2. Installez le package .deb.",
             "p4": "3. Déplacez le dossier /opt/lrc-client sur votre appareil mobile.",
-            "p5": "4. Lancez le lrc-server.",
+            "p5": "3. Lancez le lrc-server.",
             "p6": "5. Ouvrez la page index.html depuis votre dossier-appareil-mobile/lrc-client dans un navigateur, ajoutez votre serveur et amusez-vous."
         },
         "contribute": {
             "p1": "Et alors, vous aimez l'idée ? Vous pouvez contribuer à ce projet.",
             "p2": "Si vous êtes un développeur, vous pouvez apporter des améliorations ou des nouvelles fonctionnalités sur <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
-            "p3": "Si vous êtes un utilisateur, vous pouvez passer le mot en le partageant sur <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> et <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>."
+            "p3": "Si vous êtes un utilisateur, vous pouvez passer le mot en le partageant sur <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> et <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>, ou en faisant un don."
         },
         "bugs": {
             "p1": "Si vous trouvez un bug dans l'application, dites le nous s'il vous plait.",
@@ -54,7 +54,7 @@
             "controls": "Contrôles",
             "touchpad": "Pavé tactile",
             "slideshow": "Diaporama",
-            "custom-commands" : "Commandes personnalisées",
+            "custom-commands": "Commandes personnalisées",
             "settings": "Paramètres"
         },
         "controls": {
@@ -69,6 +69,8 @@
         },
         "settings": {
             "language": "Langage",
+            "audio": "Lecteur audio",
+            "video": "Lecteur video",
             "cancel": "Annuler",
             "save": "Sauvegarder"
         },

@@ -28,13 +28,13 @@
             "p2": "1. Stáhni si lrc",
             "p3": "2. Instaluj ten .deb paket.",
             "p4": "3. Přesun ten registr /opt/lrc-client na tvůj přistroj.",
-            "p5": "4. Nastartuj ten lrc-server.",
+            "p5": "3. Nastartuj ten lrc-server.",
             "p6": "5. Otevři index.html na tvójim přistrojí (PŘISTROJ/lrc-client/index.html) v browseru, připoj ten server a bav se."
         },
         "contribute": {
             "p1": "Miluješ ten nápad ale nevis jak tomu můžeš pomoct?",
             "p2": "Když jsi programátor, můžeš zlepšení a noví funkce přispět na <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
-            "p3": "Když ktomu nejsi v pozici můžeš ten project rozšířit přes celí svíjet na <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> a <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>."
+            "p3": "Když ktomu nejsi v pozici můžeš ten project rozšířit přes celí svíjet na <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> a <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>, nebo poskytnutí daru."
         },
         "bugs": {
             "p1": "Bilo by ujasní kdyby si nám mohl udat chyby.",
@@ -54,6 +54,7 @@
             "controls": "řízení",
             "touchpad": "touchpad",
             "slideshow": "slideshow",
+            "custom-commands": "Vlastní příkazy",
             "settings": "nastavení"
         },
         "controls": {
@@ -61,8 +62,15 @@
             "command": "komando",
             "send-command": "odeslat komando"
         },
+        "custom-commands": {
+            "add": "Přidat vlastní příkaz",
+            "name": "Název",
+            "command": "Příkaz k provedení"
+        },
         "settings": {
             "language": "jazyk (language)",
+            "audio": "Přehrávač audio",
+            "video": "Přehrávač video",
             "cancel": "zpátky",
             "save": "Uložit"
         },

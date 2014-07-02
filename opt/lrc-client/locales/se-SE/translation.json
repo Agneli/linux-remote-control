@@ -28,13 +28,13 @@
             "p2": "1. Download the lrc on you GNU/Linux.",
             "p3": "2. Install .deb package.",
             "p4": "3. Move /opt/lrc-client directory to your device.",
-            "p5": "4. Start lrc-server.",
+            "p5": "3. Start lrc-server.",
             "p6": "5. Open the index.html of your-device-directory/lrc-client in a browser, add your server and have fun."
         },
         "contribute": {
             "p1": "And then, like the idea? But know that you can contribute to the project.",
             "p2": "If you are a developer, you can contribute to improvements and new features via <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
-            "p3": "If you are a user, you can help spread the word by sharing on <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> and <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>."
+            "p3": "If you are a user, you can help spread the word by sharing on <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> and <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>, eller göra en donation."
         },
         "bugs": {
             "p1": "If you found some bug in the app, tell us please.",
@@ -54,6 +54,7 @@
             "controls": "Kontroller",
             "touchpad": "Touchpad",
             "slideshow": "Bildspel",
+            "custom-commands": "Anpassade kommandon",
             "settings": "Inställningar"
         },
         "controls": {
@@ -61,8 +62,15 @@
             "command": "Command",
             "send-command": "Send command"
         },
+        "custom-commands": {
+            "add": "Lägg till ett anpassat kommando",
+            "name": "Namn",
+            "command": "Kommando att köra"
+        },
         "settings": {
             "language": "Språk",
+            "audio": "Musikspelare",
+            "video": "Videospelare",
             "cancel": "Avbryt",
             "save": "Spara"
         },

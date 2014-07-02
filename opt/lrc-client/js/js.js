@@ -37,7 +37,7 @@ function commitToStorage(objectCount, newObject) {
 //Add server link to HTML
 function createMarkup(server) {
     if (server.status !== "off") {
-        $("#servers").append('<a id="' + server.name + '" class="line dark-blue server" data-link="menu" href="#!" data-direction=\'{"from":"right","to":"left"}\'  data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 arrow right"></div></a>');
+        $("#servers").append('<a id="' + server.name + '" class="line dark-blue server" data-page="menu" href="#!" data-direction=\'{"from":"right","to":"left"}\'  data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 arrow right"></div></a>');
     }
 }
 
@@ -193,6 +193,7 @@ $(function() {
     });
 });
 var port = "3000";
+var websocketPort = "3001";
 
 //Clear server to back to index
 $(function() {
@@ -235,13 +236,14 @@ music_timeline.slider({
 // Music Controls
 $(function() {
 
-    $(".sound-min").click(function() {
-        var volume = $(".sound-volume").slider("value");
-        $(".sound-volume").slider("value", parseInt(volume - $(this).data("command").step));
+    $("section#musics .sound-min").click(function() {
+        var volume = $("section#musics .sound-volume").slider("value");
+        $("section#musics .sound-volume").slider("value", parseInt(volume - $(this).data("command").step));
     });
-    $(".sound-max").click(function() {
-        var volume = $(".sound-volume").slider("value");
-        $(".sound-volume").slider("value", parseInt($(this).data("command").step) + volume);
+    
+    $("section#musics .sound-max").click(function() {
+        var volume = $("section#musics .sound-volume").slider("value");
+        $("section#musics .sound-volume").slider("value", parseInt($(this).data("command").step) + volume);
     });
 
     $("#music-controls *:not(#music-play-pause)").click(function() {
@@ -257,6 +259,16 @@ $(function() {
 // Videos ______________________________________________________________________
 
 $(function() {
+    
+    $("section#videos .sound-min").click(function() {
+        var volume = $("section#videos .sound-volume").slider("value");
+        $("section#videos .sound-volume").slider("value", parseInt(volume - $(this).data("command").step));
+    });
+    
+    $("section#videos .sound-max").click(function() {
+        var volume = $("section#videos .sound-volume").slider("value");
+        $("section#videos .sound-volume").slider("value", parseInt($(this).data("command").step) + volume);
+    });
 
     $("#video-controls #video-play-pause").click(function() {
         $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
@@ -266,6 +278,15 @@ $(function() {
         $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
     });
 });
+
+// Alt-tab ____________________________________________________________________
+
+$(function() {
+    $("#alt-tab a").click(function() {
+        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+    });
+});
+
 
 // Controls ____________________________________________________________________
 
@@ -388,8 +409,8 @@ $(function() {
     var speed = 300;
 
     // Index
-    $("a[data-link]").click(function() {
-        var name = '#' + $(this).data("link");
+    $("a[data-page]").click(function() {
+        var name = '#' + $(this).data("page");
         $("section").hide("slide", {direction: $(this).data("direction").to}, speed);
         $(name).show("slide", {direction: $(this).data("direction").from}, speed);
     });

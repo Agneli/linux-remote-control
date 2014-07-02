@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="shortcut icon" type="image/x-icon" href="img/icons/logo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     </head>
     <body onload="startup();">
         <div id="main">
@@ -14,31 +15,32 @@
                 <header class="line light-blue center">
                     Linux Remote Control
                 </header>
-                <div class="line h70" id="servers">
+                <div class="line h60" id="servers">
                     <div class="line center" id="msg-server"></div>
                 </div>
-                <a class="line light-orange center" data-link="add-server" href="#!" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.add-server"></a>
-                <a class="line dark-orange center" data-link="help" href="#!" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.help"></a>
+                <a class="line light-blue center" href="javascript:;" data-page="add-server" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.add-server"></a>
+                <a class="line light-orange center" href="javascript:;" data-page="settings" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.menu.settings"></a>
+                <a class="line dark-orange center" href="javascript:;" data-page="help" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.help"></a>
             </section>
 
             <!-- Add Server _________________________________________________-->
             <section id="add-server">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="index" data-direction='{"from":"up","to":"down"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="index" data-direction='{"from":"up","to":"down"}'></a>
                     <span data-i18n="lrc.index.add-server"></span>
                     <div class="w20 right"></div>
                 </header>
                 <div class="line"></div>
                 <div class="line"></div>
-                <!--                <div class="line center">
-                                    <div class="fields">
-                                        <select name="distro" id="distro">
-                                            <option>Linux Distro</option>
-                                            <option>Ubuntu</option>
-                                            <option>Debian</option>
-                                        </select>
-                                    </div>
-                                </div>-->
+                <!--<div class="line center">
+                    <div class="fields">
+                        <select name="distro" id="distro">
+                            <option>Linux Distro</option>
+                            <option>Ubuntu</option>
+                            <option>Debian</option>
+                        </select>
+                    </div>
+                </div>-->
                 <div class="line center">
                     <div class="fields">
                         <input type="text" name="name" id="name" data-i18n="[placeholder]lrc.add-server.account-name" />
@@ -54,49 +56,82 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line dark-orange">
-                    <a href="#!" id="cancel" class="w50 center left dark-orange" data-link="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
-                    <a href="#!" id="save" class="w50 center right dark-orange" data-link="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
+                    <a href="#!" id="cancel" class="w50 center left dark-orange" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
+                    <a href="#!" id="save" class="w50 center right dark-orange" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
                 </div>
             </section>
 
+            <!-- Settings ___________________________________________________-->
+            <section id="settings">
+                <header class="line light-blue center">
+                    <a href="javascript:;" class="w20 arrow left" data-page="index" data-direction='{"from":"up","down":"right"}'></a>
+                    <span data-i18n="lrc.menu.settings"></span>
+                    <div class="w20 right"></div>
+                </header>
+                <div class="line"></div>
+                <div class="line center" data-i18n="lrc.settings.language"></div>
+                <div class="line center">
+                    <div class="fields">
+                        <select name="language" id="language">
+                            <option value="en-US">English</option>
+                            <option value="pt-BR">Português</option>
+                            <option value="fr-FR">Français</option>
+                            <option value="de-DE">Deutsch</option>
+                            <option value="es-ES">Español</option>
+                            <option value="ko-KO">한국어 (Korean)</option>
+                            <option value="cs-CS">Czech</option>
+                            <option value="se-SE">Swedish</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line dark-orange">
+                    <a href="#!" id="cancel-settings" class="w50 center left dark-orange" data-page="menu" data-direction='{"from":"left","to":"right"}' data-i18n="lrc.settings.cancel"></a>
+                    <a href="#!" id="save-settings" class="w50 center right dark-orange" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.settings.save"></a>
+                </div>
+            </section>
 
             <!-- Help _______________________________________________________-->
             <section id="help">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="index" data-direction='{"from":"up","to":"down"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="index" data-direction='{"from":"up","to":"down"}'></a>
                     <span data-i18n="lrc.index.help"></span>
                     <div class="w20 right"></div>
                 </header>
                 <div class="line"></div>
-                <a class="line dark-blue" data-link="server" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="server" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.add-server"></span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue" data-link="install" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="install" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.install"></span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue" data-link="contribute" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="contribute" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.contribute"></span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <!--<a class="line dark-blue" data-link="faq" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <!--<a class="line dark-blue" data-page="faq" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span>FAQ</span>
                     <div class="w20 arrow right"></div>
                 </a>-->
-                <a class="line dark-blue" data-link="bugs" data-link="bugs" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="bugs" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.bugs"></span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue" data-link="feedback" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="feedback" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.feedback"></span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue" data-link="about" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="about" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.about"></span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue" data-link="credits" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="credits" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.credits"></span>
                     <div class="w20 arrow right"></div>
                 </a>
@@ -104,7 +139,7 @@
 
             <section id="server">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="help" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="help" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.help.add-server"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -119,7 +154,7 @@
 
             <section id="install">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="help" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="help" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.help.install"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -128,25 +163,25 @@
                         <p data-i18n="lrc.install.p1"></p><br />
 
                         <p data-i18n="lrc.install.p2"></p>
-                        <p class="cmd">wget http://www.linuxremotecontrol.com/lrc.deb</p><br />
+                        <p class="cmd">wget http://www.linuxremotecontrol.com/lrc-ffos.deb</p><br />
 
                         <p data-i18n="lrc.install.p3"></p>
-                        <p class="cmd">sudo dpkg -i lrc.deb</p><br />
+                        <p class="cmd">sudo dpkg -i lrc-ffos.deb</p><br />
 
-                        <p data-i18n="lrc.install.p4"></p>
-                        <p class="cmd">sudo mv /opt/lrc-client your-device-directory</p><br />
+                        <!--<p data-i18n="lrc.install.p4"></p>
+                        <p class="cmd">sudo mv /opt/lrc-client your-device-directory</p><br />-->
 
                         <p data-i18n="lrc.install.p5"></p>
-                        <p class="cmd">node /opt/lrc-server/lrc.js</p><br />
+                        <p class="cmd">node /opt/lrc/lrc.js</p><br />
 
-                        <p data-i18n="lrc.install.p6"></p>
+                        <!--<p data-i18n="lrc.install.p6"></p>-->
                     </div>
                 </div>
             </section>
 
             <section id="contribute">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="help" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="help" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.help.contribute"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -157,6 +192,13 @@
                         <p data-i18n="[html]lrc.contribute.p3"></p><br /><br />
 
                         <div class="center">
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+                                <input type="hidden" name="hosted_button_id" value="AFC48S7DVHYEC">
+                                <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - A maneira mais fácil e segura de efetuar pagamentos online!">
+                                <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
+                            </form>
+
                             <a href="https://github.com/Agneli/linux-remote-control" target="_blank" title="Github"><img src="img/icons/github.png" alt="Github" title="Github" /></a>
                             <a href="https://plus.google.com/u/0/100656630688184691057/posts" target="_blank" title="Google+"><img src="img/icons/plus.png" alt="Google+" title="Google+" /></a>
                             <a href="https://www.facebook.com/pages/Linux-Remote-Control/199080510274186" target="_blank" title="Facebook"><img src="img/icons/facebook.png" alt="Facebook" title="Facebook" /></a>
@@ -168,7 +210,7 @@
 
             <!--            <section id="faq">
                             <header class="line light-blue center">
-                                <a href="#!" class="w20 arrow left" data-link="help" data-direction='{"from":"left","to":"right"}'></a>
+                                <a href="#!" class="w20 arrow left" data-page="help" data-direction='{"from":"left","to":"right"}'></a>
                                 FAQ
                                 <div class="w20 right"></div>
                             </header>
@@ -176,7 +218,7 @@
 
             <section id="bugs">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="help" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="help" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.help.bugs"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -190,7 +232,7 @@
 
             <section id="feedback">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="help" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="help" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.help.feedback"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -204,18 +246,18 @@
 
             <section id="about">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="help" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="help" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.help.about"></span>
                     <div class="w20 right"></div>
                 </header>
                 <div class="line h90">
                     <div class="text">
-                        <p>Linux Remote Control 0.1 beta.</p><br />
+                        <p>Linux Remote Control 0.3 beta.</p><br />
                         <p data-i18n="lrc.about.p1"></p><br />
                         <p data-i18n="lrc.about.p2"></p><br />
                         <div class="center">
-                            <img src="img/icons/about.png" title="Linux Remote Control" alt="Linux Remote Control" /><br />
-                            <span data-i18n="[html]lrc.about.link"></span>
+                            <img src="img/layout/about.png" title="Linux Remote Control" alt="Linux Remote Control" /><br />
+                            <span class="text-light-blue" data-i18n="[html]lrc.about.link"></span>
                         </div>
                     </div>
                 </div>
@@ -223,7 +265,7 @@
 
             <section id="credits">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="help" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="help" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.help.credits"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -237,7 +279,7 @@
                         <div class="w20 arrow right"></div>
                     </a>
                     <a class="line dark-blue" href="https://github.com/AlexMl" target="_blank">
-                        <span>Alexander Mlinzk (AlexMl) <span class="text-light-blue" data-i18n="lrc.credits.trad"></span></span>
+                        <span>Alexander Mlinzk <span class="text-light-blue" data-i18n="lrc.credits.trad"></span></span>
                         <div class="w20 arrow right"></div>
                     </a>
                     <a class="line dark-blue" href="https://github.com/paulocr" target="_blank">
@@ -256,8 +298,20 @@
                         <span>Lars Viklund <span class="text-light-blue" data-i18n="lrc.credits.trad"></span></span>
                         <div class="w20 arrow right"></div>
                     </a>
+                    <a class="line dark-blue" href="https://github.com/Folkric" target="_blank">
+                        <span>Andrew Erwin <span class="text-light-blue" data-i18n="lrc.credits.trad"></span></span>
+                        <div class="w20 arrow right"></div>
+                    </a>
+                    <a class="line dark-blue" href="https://github.com/michelwilhelm" target="_blank">
+                        <span>Michel Wilhelm <span class="text-light-blue" data-i18n="lrc.credits.dev"></span></span>
+                        <div class="w20 arrow right"></div>
+                    </a>
                     <a class="line dark-blue" href="https://github.com/316k" target="_blank">
                         <span>Nicolas Hurtubise <span class="text-light-blue" data-i18n="lrc.credits.dev"></span></span>
+                        <div class="w20 arrow right"></div>
+                    </a>
+                    <a class="line dark-blue" href="https://github.com/lufte" target="_blank">
+                        <span>Javier Ayres <span class="text-light-blue" data-i18n="lrc.credits.dev"></span></span>
                         <div class="w20 arrow right"></div>
                     </a>
                 </div>
@@ -266,46 +320,43 @@
             <!-- Menu _______________________________________________________-->
             <section id="menu">
                 <header class="line light-blue center">
-                    <a href="#!" id="clear-server" class="w20 arrow left" data-link="index" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" id="clear-server" class="w20 arrow left" data-page="index" data-direction='{"from":"left","to":"right"}'></a>
                     <span id="server-name"></span>
                     <a href="#!" id="delete-server" class="w20 right trash"></a>
                 </header>
                 <div class="line"></div>
-                <a class="line dark-blue" data-link="musics" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="musics" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.music"></span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue" data-link="videos" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="videos" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.video"></span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue" data-link="controls" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="controls" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.controls"></span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue" data-link="touchpad" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="touchpad" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.touchpad"></span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue" data-link="slideshow" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="slideshow" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.slideshow"></span>
                     <div class="w20 arrow right"></div>
                 </a>
-                <a class="line dark-blue" data-link="custom-commands" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line dark-blue" data-page="custom-commands" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.custom-commands"></span>
                     <div class="w20 arrow right"></div>
                 </a>
                 <div class="line"></div>
-                <a class="line dark-blue" data-link="settings" href="#!" data-direction='{"from":"right","to":"left"}'>
-                    <span data-i18n="lrc.menu.settings"></span>
-                    <div class="w20 arrow right"></div>
-                </a>
+                <div class="line"></div>
             </section>
 
             <!-- Musics _____________________________________________________-->
             <section id="musics">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="menu" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="menu" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.menu.music"></span>
                     <!--<a href="#!" class="w20 right link-playlists playlists" data-direction='{"from":"up","to":"down"}'></a>-->
                     <div class="w20 right"></div>
@@ -334,18 +385,18 @@
                     </div>
                 </div>
                 <div class="line h20 dark-orange" id="music-controls">
-                    <a href="#!" class="w20 left stop" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioStop"}'></a>
-                    <a href="#!" class="w20 left prev" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPrev"}'></a>
-                    <a href="#!" class="w20 left play" id="music-play-pause" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPlay"}'></a>
-                    <a href="#!" class="w20 left next" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioNext"}'></a>
-                    <a href="#!" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>
+                    <a href="javascript:;" class="w25 left prev" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPrev"}'></a>
+                    <a href="javascript:;" class="w25 left play" id="music-play-pause" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPlay"}'></a>
+                    <a href="javascript:;" class="w25 left stop" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioStop"}'></a>
+                    <a href="javascript:;" class="w25 left next" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioNext"}'></a>
+                    <!--<a href="javascript:;" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>-->
                 </div>
             </section>
 
             <!-- Videos _____________________________________________________-->
             <section id="videos">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="menu" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="menu" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.menu.video"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -373,18 +424,18 @@
                     </div>
                 </div>
                 <div class="line h20 dark-orange" id="video-controls">
-                    <a href="#!" class="w20 left fullscreen" data-command='{"cmd":"export DISPLAY=:0; totem --fullscreen"}'></a>
-                    <a href="#!" class="w20 left prev" data-command='{"cmd":"export DISPLAY=:0; totem --seek-bwd"}'></a>
-                    <a href="#!" class="w20 left play" id="video-play-pause" data-command='{"cmd":"export DISPLAY=:0; totem --play-pause"}'></a>
-                    <a href="#!" class="w20 left next" data-command='{"cmd":"export DISPLAY=:0; totem --seek-fwd"}'></a>
-                    <a href="#!" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>
+                    <a href="javascript:;" class="w25 left fullscreen" data-command='{"cmd":"export DISPLAY=:0; totem --fullscreen"}'></a>
+                    <a href="javascript:;" class="w25 left prev" data-command='{"cmd":"export DISPLAY=:0; totem --seek-bwd"}'></a>
+                    <a href="javascript:;" class="w25 left play" id="video-play-pause" data-command='{"cmd":"export DISPLAY=:0; totem --play-pause"}'></a>
+                    <a href="javascript:;" class="w25 left next" data-command='{"cmd":"export DISPLAY=:0; totem --seek-fwd"}'></a>
+                    <!--<a href="javascript:;" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>-->
                 </div>
             </section>
 
             <!-- Controls ___________________________________________________-->
             <section id="controls">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="menu" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="javascript:;" class="w20 arrow left" data-page="menu" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.menu.controls"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -395,15 +446,18 @@
                         <input type="text" name="command" id="command" data-i18n="[placeholder]lrc.controls.command" />
                     </div>
                 </div>
-                <a href="#!" class="line center text-light-blue" id="send-command" data-i18n="lrc.controls.send-command"></a>
-                <div class="line center"></div>
-                <div class="line"></div>
+                <a href="javascript:;" class="line center text-light-blue" id="send-command" data-i18n="lrc.controls.send-command"></a>
+                <div id="alt-tab" class="line h20 light-blue">
+                    <a href="javascript:;" class="w25 left alt-tab" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt; sleep 0.5; xdotool key Tab"}'></a>
+                    <a href="javascript:;" class="w25 arrow left" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Left"}'></a>
+                    <a href="javascript:;" class="w25 right ok" data-command='{"cmd":"export DISPLAY=:0; xdotool keyup alt keyup Tab keyup shift"}'></a>
+                    <a href="javascript:;" class="w25 arrow right" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Right"}'></a>
+                </div>
                 <div id="controls-controls" class="line h20 light-orange">
-                    <a href="#!" class="w20 left lock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -l"}'></a>
-                    <a href="#!" class="w20 left unlock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d"}'></a>
-                    <a href="#!" class="w20 left screenshot" data-command='{"cmd":"export DISPLAY=:0; import -window root screenURC.jpg"}'></a>
-                    <a href="#!" id="reboot" class="w20 left reboot" data-command='{"cmd":"reboot"}'></a>
-                    <a href="#!" id="shutdown" class="w20 left shutdown" data-command='{"cmd":"sudo halt"}'></a>
+                    <a href="javascript:;" class="w25 left lock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -l"}'></a>
+                    <a href="javascript:;" class="w25 left unlock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d"}'></a>
+                    <a href="javascript:;" id="reboot" class="w25 left reboot" data-command='{"cmd":"reboot"}'></a>
+                    <a href="javascript:;" id="shutdown" class="w25 left shutdown" data-command='{"cmd":"sudo halt"}'></a>
                 </div>
                 <div class="line dark-orange center">
                     <a class="w20 left dark-screen" data-command='{"step":"10"}'></a>
@@ -419,24 +473,24 @@
             <!-- Touchpad ___________________________________________________-->
             <section id="touchpad">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="menu" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="menu" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.menu.touchpad"></span>
                     <div class="w20 right"></div>
                 </header>
-                <canvas id="canvas" class="line h70">
+                <div id="canvas" class="line h70">
 
-                </canvas>
+                </div>
                 <div id="mouse-controls" class="line h20 dark-orange">
                     <a href="#!" class="w33 left-click left" data-command='{"cmd":"export DISPLAY=:0; xdotool click 1"}'></a>
                     <a href="#!" class="w33 right-click left" data-command='{"cmd":"export DISPLAY=:0; xdotool click 3"}'></a>
-                    <a href="#!" class="w33 play-slideshow right" data-link="slideshow" data-direction='{"from":"right","to":"left"}'></a>
+                    <a href="#!" class="w33 play-slideshow right" data-page="slideshow" data-direction='{"from":"right","to":"left"}'></a>
                 </div>
             </section>
 
             <!-- Slideshow __________________________________________________-->
             <section id="slideshow">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="menu" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="menu" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.menu.slideshow"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -447,14 +501,14 @@
                 <div class="line h20 dark-orange slideshow-controls">
                     <a href="#!" class="w33 play-slideshow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key F5"}'></a>
                     <a href="#!" class="w33 exit-slideshow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Escape"}'></a>
-                    <a href="#!" class="w33 mouse right" data-link="touchpad" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w33 mouse right" data-page="touchpad" data-direction='{"from":"left","to":"right"}'></a>
                 </div>
             </section>
 
             <!-- Custom commands ____________________________________________-->
             <section id="custom-commands">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="menu" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="menu" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.menu.custom-commands"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -462,13 +516,13 @@
                     <div class="h80 scroll">
                     </div>
                 </div>
-                <a class="line light-orange center" data-link="add-custom-command" href="#!" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.custom-commands.add"></a>
+                <a class="line dark-orange center" data-page="add-custom-command" href="#!" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.custom-commands.add"></a>
             </section>
 
             <!-- Add custom commands ________________________________________-->
             <section id="add-custom-command">
                 <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="custom-commands" data-direction='{"from":"up","to":"down"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="custom-commands" data-direction='{"from":"up","to":"down"}'></a>
                     <span data-i18n="lrc.custom-commands.add"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -489,44 +543,10 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line dark-orange">
-                    <a href="#!" class="w50 center left dark-orange cancel" data-link="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
-                    <a href="#!" class="w50 center right dark-orange save" data-link="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
+                    <a href="#!" class="w50 center left dark-orange cancel" data-page="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
+                    <a href="#!" class="w50 center right dark-orange save" data-page="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
                 </div>
-            </section>
-
-            <!-- Settings ___________________________________________________-->
-            <section id="settings">
-                <header class="line light-blue center">
-                    <a href="#!" class="w20 arrow left" data-link="menu" data-direction='{"from":"left","to":"right"}'></a>
-                    <span data-i18n="lrc.menu.settings"></span>
-                    <div class="w20 right"></div>
-                </header>
-                <div class="line"></div>
-                <div class="line center" data-i18n="lrc.settings.language"></div>
-                <div class="line center">
-                    <div class="fields">
-                        <select name="language" id="language">
-                            <option value="en-US">English</option>
-                            <option value="pt-BR">Português</option>
-                            <option value="fr-FR">Français</option>
-                            <option value="de-DE">Deutsch</option>
-                            <option value="es-ES">Español</option>
-                            <option value="ko-KO">한국어 (Korean)</option>
-                            <option value="cs-CS">Czech</option>
-                            <option value="se-SE">Swedish</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line dark-orange">
-                    <a href="#!" id="cancel-settings" class="w50 center left dark-orange" data-link="menu" data-direction='{"from":"left","to":"right"}' data-i18n="lrc.settings.cancel"></a>
-                    <a href="#!" id="save-settings" class="w50 center right dark-orange" data-link="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.settings.save"></a>
-                </div>
-            </section>
+        </section>
 
         </div>
 

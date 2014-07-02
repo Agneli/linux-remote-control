@@ -1,13 +1,11 @@
 Package: linux-remote-control
-Version: 0.1beta
+Version: 0.3beta
 Section: web
-Priority: optional
 Architecture: all
 Installed-Size: 17600
 Depends: nodejs, xdotool, xbacklight
 Maintainer: Raphael Agneli <contact@linuxremotecontrol.com>
-Description: Turn any device into a complete remote control for GNU/Linux
- Linux Remote Control is a WebApp that turns any device with a web browser (with HTML5 support) into a complete remote control for machines that use GNU/Linux operating system.
+Description: lrc-server
  This package will install the follow dependences in your system:
  - Node.js
  - Xdotool
