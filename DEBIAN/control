@@ -1,6 +1,7 @@
 Package: linux-remote-control
-Version: 0.3beta
+Version: 0.3.1
 Section: web
+Priority: optional
 Architecture: all
 Installed-Size: 17600
 Depends: nodejs, xdotool, xbacklight
