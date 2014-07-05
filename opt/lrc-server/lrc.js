@@ -17,7 +17,6 @@ wss.on('connection', function(ws) {
 
 // Route to handle music commands
 app.all("/music", function(req, res) {
-    console.log(req.query.args);
     if('info' in req.query) {
         exec(music_manager.infos, function(error, stdout, stderr) {
             var infos = music_manager.parse_infos(stdout);

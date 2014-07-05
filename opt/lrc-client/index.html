@@ -385,10 +385,10 @@
                     </div>
                 </div>
                 <div class="line h20 dark-orange" id="music-controls">
-                    <a href="#!" class="w25 left prev" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPrev"}'></a>
-                    <a href="#!" class="w25 left play" id="music-play-pause" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPlay"}'></a>
-                    <a href="#!" class="w25 left stop" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioStop"}'></a>
-                    <a href="#!" class="w25 left next" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioNext"}'></a>
+                    <a href="#!" class="w25 left prev" data-action="previous"></a>
+                    <a href="#!" class="w25 left play" id="music-play-pause" data-action="toggle_play"></a>
+                    <a href="#!" class="w25 left stop" data-action="stop"></a>
+                    <a href="#!" class="w25 left next" data-action="next"></a>
                     <!--<a href="#!" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>-->
                 </div>
             </section>
