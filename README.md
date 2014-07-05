@@ -1,7 +1,36 @@
 # Linux Remote Control
 Turn any device into a complete remote control for your GNU/Linux.
 
-### How to Install
+## How to install lrc-client
+
+### Firefox OS ![alt tag](http://linuxremotecontrol.com/img/firefox-icon.png)
+
+1 - Visit the app page on Firefox Marketplace for your device.
+```bash
+https://marketplace.firefox.com/app/linux-remote-control
+```
+
+2 - Click on Install button.
+
+3 - [Install lrc-server](#how-to-install-lrc-server)
+
+### Android ![alt tag](http://linuxremotecontrol.com/img/android-icon.png)
+
+1 - Install Firefox 29 or higher on your Android.
+```bash
+https://play.google.com/store/apps/details?id=org.mozilla.firefox
+```
+
+2 - Visit the app page on Firefox Marketplace for your Android with Firefox.
+```bash
+https://marketplace.firefox.com/app/linux-remote-control
+```
+
+3 - Click on Install button.
+
+4 - [Install lrc-server](#how-to-install-lrc-server)
+
+### Other systems
 
 1 - Download this repository and unzip
 ```bash
@@ -30,7 +59,31 @@ node /opt/lrc-server/lrc.js
 
 6 - Open the index.html of your-directory/lrc-client in a browser, add your server and have fun
 
-### Dependences
+## How to install lrc-server
+
+1 - Download the lrc.deb package onto you GNU/Linux system.
+```bash
+wget http://www.linuxremotecontrol.com/lrc-ffos.deb
+```
+
+2 - Install .deb package.
+```bash
+sudo dpkg -i lrc-ffos.deb
+```
+
+3 - Start lrc-server.
+```bash
+node /opt/lrc/lrc.js
+```
+
+If an error occurs during installation of the package, run the following command.
+```bash
+sudo apt-get install -f
+```
+Or open .deb package by graphic interface (double click on the lrc-ffos.deb file)
+
+
+## Dependences
 
 The Linux Remote Control depends on some softwares to work correctly. Bellow is a list of this softwares.
 
@@ -45,7 +98,7 @@ Usually already installed on GNU/Linux.
 - Rhythmbox 2.97 or more (to display music info)
 - Totem Movie Player (to control the video)
 
-### Bugs
+## Bugs
 The project still has some bugs that you can fix.
 
 - Forward and backward music from the slider;
@@ -53,5 +106,5 @@ The project still has some bugs that you can fix.
 - Organize and modularize my dirty Javascript =/;
 - Start lrc-server (node /opt/lrc-server/lrc.js) with computer boot;
 
-### License
+## License
 GNU GENERAL PUBLIC LICENSE V2
