@@ -229,7 +229,9 @@ music_timeline.slider({
     min: 0,
     max: 100,
     change: function(event, ui) {
-//        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd + ui.value + "%"});
+        console.log("http://" + host + ":" + port + "/music");
+        console.log(JSON.stringify({action: "seek", args: {proportion: ui.value/100}}));
+        $.get("http://" + host + ":" + port + "/music", {action: "seek", args: {proportion: ui.value/100}});
     }
 });
 
