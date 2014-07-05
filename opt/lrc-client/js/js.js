@@ -75,7 +75,7 @@ $(function() {
 $(function() {
     $("#delete-server").click(function() {
         // TODO : This should be translated
-        if(confirm("Delete server. Are you sure ?")) {
+        if (confirm("Delete server. Are you sure ?")) {
             var svr = JSON.stringify(localStorage.getItem("server_" + id));
             svr = svr.replace("on", "off");
             localStorage.setItem("server_" + id, JSON.parse(svr));
@@ -240,7 +240,7 @@ $(function() {
         var volume = $("section#musics .sound-volume").slider("value");
         $("section#musics .sound-volume").slider("value", parseInt(volume - $(this).data("command").step));
     });
-    
+
     $("section#musics .sound-max").click(function() {
         var volume = $("section#musics .sound-volume").slider("value");
         $("section#musics .sound-volume").slider("value", parseInt($(this).data("command").step) + volume);
@@ -259,12 +259,12 @@ $(function() {
 // Videos ______________________________________________________________________
 
 $(function() {
-    
+
     $("section#videos .sound-min").click(function() {
         var volume = $("section#videos .sound-volume").slider("value");
         $("section#videos .sound-volume").slider("value", parseInt(volume - $(this).data("command").step));
     });
-    
+
     $("section#videos .sound-max").click(function() {
         var volume = $("section#videos .sound-volume").slider("value");
         $("section#videos .sound-volume").slider("value", parseInt($(this).data("command").step) + volume);
@@ -414,6 +414,14 @@ $(function() {
         $("section").hide("slide", {direction: $(this).data("direction").to}, speed);
         $(name).show("slide", {direction: $(this).data("direction").from}, speed);
     });
+
+    // Message to update lrc-server
+    if (localStorage.update03 === undefined) {
+        alert("You need to install/upgrade lrc-server. Learn how to: Help > How to install on GNU/Linux.");
+        localStorage.setItem("update03", "ok");
+        $("section").hide("slide", {direction: "left"}, speed);
+        $("#install").show("slide", {direction: "right"}, speed);
+    }
 
 });
 

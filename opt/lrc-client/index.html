@@ -18,9 +18,9 @@
                 <div class="line h60" id="servers">
                     <div class="line center" id="msg-server"></div>
                 </div>
-                <a class="line light-blue center" href="javascript:;" data-page="add-server" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.add-server"></a>
-                <a class="line light-orange center" href="javascript:;" data-page="settings" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.menu.settings"></a>
-                <a class="line dark-orange center" href="javascript:;" data-page="help" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.help"></a>
+                <a class="line light-blue center" href="#!" data-page="add-server" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.add-server"></a>
+                <a class="line light-orange center" href="#!" data-page="settings" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.menu.settings"></a>
+                <a class="line dark-orange center" href="#!" data-page="help" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.help"></a>
             </section>
 
             <!-- Add Server _________________________________________________-->
@@ -64,7 +64,7 @@
             <!-- Settings ___________________________________________________-->
             <section id="settings">
                 <header class="line light-blue center">
-                    <a href="javascript:;" class="w20 arrow left" data-page="index" data-direction='{"from":"up","down":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="index" data-direction='{"from":"up","down":"right"}'></a>
                     <span data-i18n="lrc.menu.settings"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -252,7 +252,7 @@
                 </header>
                 <div class="line h90">
                     <div class="text">
-                        <p>Linux Remote Control 0.3 beta.</p><br />
+                        <p>Linux Remote Control 0.3.1 beta.</p><br />
                         <p data-i18n="lrc.about.p1"></p><br />
                         <p data-i18n="lrc.about.p2"></p><br />
                         <div class="center">
@@ -385,11 +385,11 @@
                     </div>
                 </div>
                 <div class="line h20 dark-orange" id="music-controls">
-                    <a href="javascript:;" class="w25 left prev" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPrev"}'></a>
-                    <a href="javascript:;" class="w25 left play" id="music-play-pause" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPlay"}'></a>
-                    <a href="javascript:;" class="w25 left stop" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioStop"}'></a>
-                    <a href="javascript:;" class="w25 left next" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioNext"}'></a>
-                    <!--<a href="javascript:;" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>-->
+                    <a href="#!" class="w25 left prev" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPrev"}'></a>
+                    <a href="#!" class="w25 left play" id="music-play-pause" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPlay"}'></a>
+                    <a href="#!" class="w25 left stop" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioStop"}'></a>
+                    <a href="#!" class="w25 left next" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioNext"}'></a>
+                    <!--<a href="#!" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>-->
                 </div>
             </section>
 
@@ -424,18 +424,18 @@
                     </div>
                 </div>
                 <div class="line h20 dark-orange" id="video-controls">
-                    <a href="javascript:;" class="w25 left fullscreen" data-command='{"cmd":"export DISPLAY=:0; totem --fullscreen"}'></a>
-                    <a href="javascript:;" class="w25 left prev" data-command='{"cmd":"export DISPLAY=:0; totem --seek-bwd"}'></a>
-                    <a href="javascript:;" class="w25 left play" id="video-play-pause" data-command='{"cmd":"export DISPLAY=:0; totem --play-pause"}'></a>
-                    <a href="javascript:;" class="w25 left next" data-command='{"cmd":"export DISPLAY=:0; totem --seek-fwd"}'></a>
-                    <!--<a href="javascript:;" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>-->
+                    <a href="#!" class="w25 left fullscreen" data-command='{"cmd":"export DISPLAY=:0; totem --fullscreen"}'></a>
+                    <a href="#!" class="w25 left prev" data-command='{"cmd":"export DISPLAY=:0; totem --seek-bwd"}'></a>
+                    <a href="#!" class="w25 left play" id="video-play-pause" data-command='{"cmd":"export DISPLAY=:0; totem --play-pause"}'></a>
+                    <a href="#!" class="w25 left next" data-command='{"cmd":"export DISPLAY=:0; totem --seek-fwd"}'></a>
+                    <!--<a href="#!" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>-->
                 </div>
             </section>
 
             <!-- Controls ___________________________________________________-->
             <section id="controls">
                 <header class="line light-blue center">
-                    <a href="javascript:;" class="w20 arrow left" data-page="menu" data-direction='{"from":"left","to":"right"}'></a>
+                    <a href="#!" class="w20 arrow left" data-page="menu" data-direction='{"from":"left","to":"right"}'></a>
                     <span data-i18n="lrc.menu.controls"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -446,18 +446,18 @@
                         <input type="text" name="command" id="command" data-i18n="[placeholder]lrc.controls.command" />
                     </div>
                 </div>
-                <a href="javascript:;" class="line center text-light-blue" id="send-command" data-i18n="lrc.controls.send-command"></a>
+                <a href="#!" class="line center text-light-blue" id="send-command" data-i18n="lrc.controls.send-command"></a>
                 <div id="alt-tab" class="line h20 light-blue">
-                    <a href="javascript:;" class="w25 left alt-tab" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt; sleep 0.5; xdotool key Tab"}'></a>
-                    <a href="javascript:;" class="w25 arrow left" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Left"}'></a>
-                    <a href="javascript:;" class="w25 right ok" data-command='{"cmd":"export DISPLAY=:0; xdotool keyup alt keyup Tab keyup shift"}'></a>
-                    <a href="javascript:;" class="w25 arrow right" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Right"}'></a>
+                    <a href="#!" class="w25 left alt-tab" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt; sleep 0.5; xdotool key Tab"}'></a>
+                    <a href="#!" class="w25 arrow left" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Left"}'></a>
+                    <a href="#!" class="w25 right ok" data-command='{"cmd":"export DISPLAY=:0; xdotool keyup alt keyup Tab keyup shift"}'></a>
+                    <a href="#!" class="w25 arrow right" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Right"}'></a>
                 </div>
                 <div id="controls-controls" class="line h20 light-orange">
-                    <a href="javascript:;" class="w25 left lock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -l"}'></a>
-                    <a href="javascript:;" class="w25 left unlock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d"}'></a>
-                    <a href="javascript:;" id="reboot" class="w25 left reboot" data-command='{"cmd":"reboot"}'></a>
-                    <a href="javascript:;" id="shutdown" class="w25 left shutdown" data-command='{"cmd":"sudo halt"}'></a>
+                    <a href="#!" class="w25 left lock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -l"}'></a>
+                    <a href="#!" class="w25 left unlock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d"}'></a>
+                    <a href="#!" id="reboot" class="w25 left reboot" data-command='{"cmd":"reboot"}'></a>
+                    <a href="#!" id="shutdown" class="w25 left shutdown" data-command='{"cmd":"sudo halt"}'></a>
                 </div>
                 <div class="line dark-orange center">
                     <a class="w20 left dark-screen" data-command='{"step":"10"}'></a>
