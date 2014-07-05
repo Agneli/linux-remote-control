@@ -6,9 +6,7 @@ Turn any device into a complete remote control for your GNU/Linux.
 ### Firefox OS ![alt tag](http://linuxremotecontrol.com/img/firefox-icon.png)
 
 1 - Visit the app page on Firefox Marketplace for your device.
-```bash
-https://marketplace.firefox.com/app/linux-remote-control
-```
+[https://marketplace.firefox.com/app/linux-remote-control](https://marketplace.firefox.com/app/linux-remote-control "Linux Remote Control")
 
 2 - Click on Install button.
 
@@ -17,14 +15,10 @@ https://marketplace.firefox.com/app/linux-remote-control
 ### Android ![alt tag](http://linuxremotecontrol.com/img/android-icon.png)
 
 1 - Install Firefox 29 or higher on your Android.
-```bash
-https://play.google.com/store/apps/details?id=org.mozilla.firefox
-```
+[https://play.google.com/store/apps/details?id=org.mozilla.firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox "Firefox to Android")
 
 2 - Visit the app page on Firefox Marketplace for your Android with Firefox.
-```bash
-https://marketplace.firefox.com/app/linux-remote-control
-```
+[https://marketplace.firefox.com/app/linux-remote-control](https://marketplace.firefox.com/app/linux-remote-control "Linux Remote Control")
 
 3 - Click on Install button.
 
