@@ -381,15 +381,19 @@
                     <div class="w20 right time duration">00:00</div>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div id="music-timeline" data-command='{"cmd":""}'></div>  
+                        <div class="timeline" id="music-timeline" data-command='{"cmd":""}'></div>  
                         <span class="volume"></span>  
                     </div>
                 </div>
                 <div class="line h20 dark-orange" id="music-controls">
-                    <a href="#!" class="w25 left prev" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPrev"}'><i class="fa fa-fast-backward"></i></a>
-                    <a href="#!" class="w25 left play" id="music-play-pause" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPlay"}'><i class="fa fa-play"></i></a>
-                    <a href="#!" class="w25 left next" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioNext"}'><i class="fa fa-fast-forward"></i></a>
-                    <a href="#!" class="w25 left stop" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioStop"}'><i class="fa fa-stop"></i></a>
+<!--                    <a href="#!" class="w25 left prev" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPrev"}'></a>
+                    <a href="#!" class="w25 left play" id="music-play-pause" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPlay"}'></a>
+                    <a href="#!" class="w25 left next" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioNext"}'></a>
+                    <a href="#!" class="w25 left stop" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioStop"}'></a>-->
+                    <a href="#!" class="w25 left prev" data-action="previous"><i class="fa fa-fast-backward"></i></a>
+                    <a href="#!" class="w25 left play" id="music-play-pause" data-action="toggle_play"><i class="fa fa-play"></i></a>
+                    <a href="#!" class="w25 left next" data-action="next"><i class="fa fa-fast-forward"></i></a>
+                    <a href="#!" class="w25 left stop" data-action="stop"><i class="fa fa-stop"></i></a>
                     <!--<a href="#!" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>-->
                 </div>
             </section>
@@ -420,7 +424,7 @@
                     <div class="w20 right time _duration">00:00</div>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div id="video-timeline"></div>  
+                        <div class="timeline" id="video-timeline"></div>  
                         <span class="volume"></span>  
                     </div>
                 </div>
@@ -547,7 +551,7 @@
                     <a href="#!" class="w50 center left dark-orange cancel" data-page="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
                     <a href="#!" class="w50 center right dark-orange save" data-page="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
                 </div>
-            </section>
+        </section>
 
         </div>
 

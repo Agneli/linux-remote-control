@@ -37,7 +37,7 @@ function commitToStorage(objectCount, newObject) {
 //Add server link to HTML
 function createMarkup(server) {
     if (server.status !== "off") {
-        $("#servers").append('<a id="' + server.name + '" class="line dark-blue server" data-page="menu" href="#!" data-direction=\'{"from":"right","to":"left"}\'  data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 right"><i class="fa fa-chevron-right"></i></div></a>');
+        $("#servers").append('<a id="' + server.name.replace(" ", "-") + '" class="line dark-blue server" data-page="menu" href="#!" data-direction=\'{"from":"right","to":"left"}\' data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 right"><i class="fa fa-chevron-right"></i></div></a>');
     }
 }
 
@@ -229,7 +229,7 @@ music_timeline.slider({
     min: 0,
     max: 100,
     change: function(event, ui) {
-//        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd + ui.value + "%"});
+        $.get("http://" + host + ":" + port + "/music", {action: "seek", args: {proportion: ui.value/100}});
     }
 });
 
@@ -246,14 +246,9 @@ $(function() {
         $("section#musics .sound-volume").slider("value", parseInt($(this).data("command").step) + volume);
     });
 
-    $("#music-controls *:not(#music-play-pause)").click(function() {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+    $("#music-controls a").click(function() {
+        $.get("http://" + host + ":" + port + "/music", {action: $(this).data("action")});
     });
-
-    $("#music-controls #music-play-pause").click(function() {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
-    });
-
 });
 
 // Videos ______________________________________________________________________

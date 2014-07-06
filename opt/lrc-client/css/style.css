@@ -212,8 +212,16 @@ a {
 #main section .line .slider .ui-slider {
     margin: -1.505em auto 0 auto;
     border-radius: 100px;
-    background: url("../img/layout/black-transparent.png");
+    /*background: url("../img/layout/black-transparent.png");*/
     border: none;
+}
+
+#main section .line .slider .ui-slider.sound-volume {
+    background: #00539f;
+}
+
+#main section .line .slider .ui-slider.timeline {
+    background: #e66000;
 }
 
 #main section .line .slider .ui-slider-range {

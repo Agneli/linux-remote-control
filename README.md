@@ -5,7 +5,8 @@ Turn any device into a complete remote control for your GNU/Linux.
 
 ### Firefox OS ![alt tag](http://linuxremotecontrol.com/img/firefox-icon.png)
 
-1 - Visit the app page on Firefox Marketplace for your device.<br/>
+1 - Visit the app page on Firefox Marketplace for your device.
+
 [https://marketplace.firefox.com/app/linux-remote-control](https://marketplace.firefox.com/app/linux-remote-control "Linux Remote Control")
 
 2 - Click on Install button.
@@ -14,10 +15,12 @@ Turn any device into a complete remote control for your GNU/Linux.
 
 ### Android ![alt tag](http://linuxremotecontrol.com/img/android-icon.png)
 
-1 - Install Firefox 29 or higher on your Android.<br/>
+1 - Install Firefox 29 or higher on your Android.
+
 [https://play.google.com/store/apps/details?id=org.mozilla.firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox "Firefox to Android")
 
-2 - Visit the app page on Firefox Marketplace for your Android with Firefox.<br/>
+2 - Visit the app page on Firefox Marketplace for your Android with Firefox.
+
 [https://marketplace.firefox.com/app/linux-remote-control](https://marketplace.firefox.com/app/linux-remote-control "Linux Remote Control")
 
 3 - Click on Install button.
@@ -89,13 +92,15 @@ Installed with lrc.
 
 Usually already installed on GNU/Linux.
 
-- Rhythmbox 2.97 or more (to display music info)
 - Totem Movie Player (to control the video)
+
+## Music player
+
+lrc currenlty supports two music players : Rhythmbox (used by default) and Music On Console (moc). To use another driver than the default one, edit /opt/lrc-server/Music_Manager.js and uncomment the lines you need.
 
 ## Bugs
 The project still has some bugs that you can fix.
 
-- Forward and backward music from the slider;
 - Click by tapping the touchpad;
 - Organize and modularize my dirty Javascript =/;
 - Start lrc-server (node /opt/lrc-server/lrc.js) with computer boot;
