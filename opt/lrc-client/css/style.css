@@ -1,6 +1,6 @@
 @font-face {
     font-family: Ubuntu;
-    src: url("../font/Ubuntu-L.ttf");
+    src: url("../fonts/Ubuntu-L.ttf");
 }
 
 * {
@@ -128,6 +128,10 @@ a {
     margin: 0 5%;
 }
 
+#main section .line .text .center .link-site, #main section .line .text .center .link-site a {
+    margin:0;    
+}
+
 #main section .line .text .cmd {
     background: #0095dd;
     padding: 1%;
@@ -140,23 +144,27 @@ a {
 #main section .line .w20 {
     width: 20%;
     height: 100%;
+    text-align: center;
 }
 
 #main section .line .w25 {
     width: 25%;
     height: 100%;
+    text-align: center;
 }
 
 #main section .line .w33 {
     display: inline-block;
     width: 33%;
     height: 100%;
+    text-align: center;
 }
 
 #main section .line .w50 {
     display: inline-block;
     width: 50%;
     height: 100%;
+    text-align: center;
 }
 
 #main section .line .w60 {
@@ -174,7 +182,7 @@ a {
     overflow-y: scroll;
 }
 
-#main section .line .arrow.left {
+/*#main section .line .arrow.left {
     background: url("../img/icons/arrow-left.png") no-repeat center;
     background-size: auto 30%;
 }
@@ -187,7 +195,7 @@ a {
 #main section .line .trash {
     background: url("../img/icons/trash.png") no-repeat center;
     background-size: auto 40%;
-}
+}*/
 
 /* Music / Video _____________________________________________________________*/
 
@@ -236,7 +244,7 @@ a {
     background: #e66000;
 }
 
-#main section .line .sound-min {
+/*#main section .line .sound-min {
     background: url("../img/icons/sound-min.png") no-repeat center;
     background-size: auto 50%;
 }
@@ -251,10 +259,10 @@ a {
     background-size: auto 50%;
 }
 
-/*#main section .line .aleatory {
+#main section .line .aleatory {
     background: url("../img/icons/aleatory.png") no-repeat center;
     background-size: auto 50%;
-}*/
+}
 
 #main section .line .prev {
     background: url("../img/icons/prev.png") no-repeat center;
@@ -284,7 +292,7 @@ a {
 #main section .line .fullscreen {
     background: url("../img/icons/fullscreen.png") no-repeat center;
     background-size: auto 50%;
-}
+}*/
 
 #main section .line .play-slideshow {
     background: url("../img/icons/play-slideshow.png") no-repeat center;
@@ -342,7 +350,7 @@ a {
 
 /* Controls __________________________________________________________________*/
 
-#main section .line .lock {
+/*#main section .line .lock {
     background: url("../img/icons/lock.png") no-repeat center;
     background-size: auto 40%;
 }
@@ -411,6 +419,10 @@ a {
 
 .center {
     text-align: center;
+}
+
+.fa {
+    vertical-align:middle;
 }
 
 /* Custom commands ___________________________________________________________*/
