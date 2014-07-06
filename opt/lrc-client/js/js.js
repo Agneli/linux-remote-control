@@ -229,7 +229,7 @@ music_timeline.slider({
     min: 0,
     max: 100,
     change: function(event, ui) {
-//        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd + ui.value + "%"});
+        $.get("http://" + host + ":" + port + "/music", {action: "seek", args: {proportion: ui.value/100}});
     }
 });
 
@@ -246,14 +246,9 @@ $(function() {
         $("section#musics .sound-volume").slider("value", parseInt($(this).data("command").step) + volume);
     });
 
-    $("#music-controls *:not(#music-play-pause)").click(function() {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+    $("#music-controls a").click(function() {
+        $.get("http://" + host + ":" + port + "/music", {action: $(this).data("action")});
     });
-
-    $("#music-controls #music-play-pause").click(function() {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
-    });
-
 });
 
 // Videos ______________________________________________________________________

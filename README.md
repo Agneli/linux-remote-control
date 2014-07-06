@@ -89,13 +89,15 @@ Installed with lrc.
 
 Usually already installed on GNU/Linux.
 
-- Rhythmbox 2.97 or more (to display music info)
 - Totem Movie Player (to control the video)
+
+### Music player
+
+lrc currenlty supports two music players : Rhythmbox (used by default) and Music On Console (moc). To use another driver than the default one, edit /opt/lrc-server/Music_Manager.js and uncomment the lines you need.
 
 ## Bugs
 The project still has some bugs that you can fix.
 
-- Forward and backward music from the slider;
 - Click by tapping the touchpad;
 - Organize and modularize my dirty Javascript =/;
 - Start lrc-server (node /opt/lrc-server/lrc.js) with computer boot;
