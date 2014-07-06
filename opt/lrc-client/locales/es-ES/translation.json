@@ -11,7 +11,7 @@
             "save": "Guardar"
         },
         "help": {
-            "add-server": "Cómo agregar servidor",
+            "add-server": "Cómo agregar un servidor",
             "install": "Cómo instalar en GNU/Linux",
             "contribute": "Cómo contribuir",
             "bugs": "Reportar problemas",
@@ -20,31 +20,31 @@
             "credits": "Créditos"
         },
         "server": {
-            "p1": "Para agregar un servidor (computadora que será controlada) usted debe saber la dirección IP de esa máquina. Para conocer la dirección IP escriba lo siguiente en su terminal.",
-            "p2": "Ahora que tiene la dirección IP simplemente vaya a la página \"Agregar Servidor\" en la pantalla de inicio y digite el nombre del servidor (cualquier nombre que usted elija) y la dirección IP y seleccione \"Guardar\". Eso es todo"
+            "p1": "Para agregar un servidor (computadora que será controlada) debe saber la dirección IP de esa máquina. Para conocer la dirección IP escriba lo siguiente en su terminal.",
+            "p2": "Ahora que tiene la dirección IP simplemente vaya a la página \"Agregar Servidor\" en la pantalla de inicio, digite el nombre del servidor (cualquier nombre que usted elija) y la dirección IP y seleccione \"Guardar\". Eso es todo"
         },
         "install": {
-            "p1": "Si usted está utilizando la aplicación en este momento es muy probable que ya la tenga instalada en su GNU/Linux. Sin embargo si por alguna razón aún no la tiene instalada, siga los siguientes pasos.",
-            "p2": "1. Descargue el lrc en su GNU/Linux.",
+            "p1": "Si está utilizando la aplicación en este momento es muy probable que ya la tenga instalada en su GNU/Linux. Sin embargo si por alguna razón aún no la tiene instalada, siga los siguientes pasos.",
+            "p2": "1. Descargue lrc en su GNU/Linux.",
             "p3": "2. Instale el paquete .deb.",
-            "p4": "3. Mover el directorio /opt/lrc-client a su dispositivo.",
+            "p4": "3. Mueva el directorio /opt/lrc-client a su dispositivo.",
             "p5": "3. Inicie el lrc-server.",
             "p6": "5. Abra index.html desde el directorio de su dispositivo/irc-client en un explorador de internet, agregue su servidor y diviértase."
         },
         "contribute": {
-            "p1": "Y entonces, le gustó la idea? Sepa que puede contribuir al proyecto.",
-            "p2": "Si usted es un desarrollador, usted puede contribuir a mejorar y agregar nueva funcionalidad en <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
+            "p1": "Y entonces, ¿le gustó la idea? Sepa que puede contribuir al proyecto.",
+            "p2": "Si usted es un desarrollador, puede contribuir a mejorar y agregar nuevas funcionalidades en <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a>.",
             "p3": "Si usted es un usuario, puede ayudar a darnos a conocer compartiendo en <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> and <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a>, o hacer una donación."
         },
         "bugs": {
-            "p1": "Si usted encontró un defecto en la aplicación por favor díganoslo.",
-            "p2": "Usted puede crear una nueva entrada en <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> o contactarnos por el correo <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
+            "p1": "Si encontró un defecto en la aplicación por favor díganoslo.",
+            "p2": "Puede crear una nueva entrada en <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> o contactarnos por el correo <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
         },
         "feedback": {
             "p1": "Por favor díganos qué piensa de la aplicación. Envíe su opinión, sugerencia o agradecimiento. Estaremos complacidos de saber de usted."
         },
         "about": {
-            "p1": "Esta es una aplicación libre y código abierto bajo la licencia GNU GPL.",
+            "p1": "Esta es una aplicación libre y de código abierto bajo la licencia GNU GPL.",
             "p2": "Esta aplicación es completamente gratis y usted puede descargarla y usarla sin necesidad de pagar nada por ella.",
             "link": "<a href=\"http://www.linuxremotecontrol.com/index-en.html\" target=\"_blank\">www.linuxremotecontrol.com</a>"
         },
@@ -53,8 +53,8 @@
             "video": "Video",
             "controls": "Controles",
             "touchpad": "Touchpad",
-            "slideshow": "Disapositivas",
-            "custom-commands": "Los comandos personalizados",
+            "slideshow": "Diapositivas",
+            "custom-commands": "Comandos personalizados",
             "settings": "Configuraciones"
         },
         "controls": {
