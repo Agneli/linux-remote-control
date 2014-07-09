@@ -1,12 +1,13 @@
 @font-face {
-    font-family: Ubuntu;
-    src: url("../fonts/Ubuntu-L.ttf");
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-L.woff') format('woff');
 }
 
 * {
     padding: 0;
     margin: 0;
-    font-family: Ubuntu;
+    font-family: Ubuntu, sans-serif;
+    font-weight: lighter;
     outline: none;
 }
 
