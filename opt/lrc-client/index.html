@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
         <link rel="shortcut icon" type="image/x-icon" href="img/icons/logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     </head>
@@ -33,15 +33,6 @@
                 </header>
                 <div class="line"></div>
                 <div class="line"></div>
-                <!--<div class="line center">
-                    <div class="fields">
-                        <select name="distro" id="distro">
-                            <option>Linux Distro</option>
-                            <option>Ubuntu</option>
-                            <option>Debian</option>
-                        </select>
-                    </div>
-                </div>-->
                 <div class="line center">
                     <div class="fields">
                         <input type="text" name="name" id="name" data-i18n="[placeholder]lrc.add-server.account-name" />
@@ -91,7 +82,7 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line dark-orange">
-                    <a href="#!" id="cancel-settings" class="w50 center left dark-orange" data-page="menu" data-direction='{"from":"left","to":"right"}' data-i18n="lrc.settings.cancel"></a>
+                    <a href="#!" id="cancel-settings" class="w50 center left dark-orange" data-page="index" data-direction='{"from":"left","to":"right"}' data-i18n="lrc.settings.cancel"></a>
                     <a href="#!" id="save-settings" class="w50 center right dark-orange" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.settings.save"></a>
                 </div>
             </section>
@@ -116,10 +107,6 @@
                     <span data-i18n="lrc.help.contribute"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <!--<a class="line dark-blue" data-page="faq" href="#!" data-direction='{"from":"right","to":"left"}'>
-                    <span>FAQ</span>
-                    <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
-                </a>-->
                 <a class="line dark-blue" data-page="bugs" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.bugs"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
@@ -196,7 +183,7 @@
                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                                 <input type="hidden" name="cmd" value="_s-xclick">
                                 <input type="hidden" name="hosted_button_id" value="AFC48S7DVHYEC">
-                                <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - A maneira mais fácil e segura de efetuar pagamentos online!">
+                                <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_SM.gif" style="border:0;" name="submit" alt="PayPal - A maneira mais fácil e segura de efetuar pagamentos online!">
                                 <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
                             </form><br />
 
@@ -208,14 +195,6 @@
                     </div>
                 </div>
             </section>
-
-            <!--            <section id="faq">
-                            <header class="line light-blue center">
-                                <a href="#!" class="w20 arrow left" data-page="help" data-direction='{"from":"left","to":"right"}'></a>
-                                FAQ
-                                <div class="w20 right"></div>
-                            </header>
-                        </section>-->
 
             <section id="bugs">
                 <header class="line light-blue center">
@@ -359,7 +338,6 @@
                 <header class="line light-blue center">
                     <a href="#!" class="w20 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.menu.music"></span>
-                    <!--<a href="#!" class="w20 right link-playlists playlists" data-direction='{"from":"up","to":"down"}'></a>-->
                     <div class="w20 right"></div>
                 </header>
                 <div class="line"></div>
@@ -386,10 +364,6 @@
                     </div>
                 </div>
                 <div class="line h20 dark-orange" id="music-controls">
-<!--                    <a href="#!" class="w25 left prev" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPrev"}'></a>
-                    <a href="#!" class="w25 left play" id="music-play-pause" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPlay"}'></a>
-                    <a href="#!" class="w25 left next" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioNext"}'></a>
-                    <a href="#!" class="w25 left stop" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioStop"}'></a>-->
                     <a href="#!" class="w25 left prev" data-action="previous"><i class="fa fa-fast-backward"></i></a>
                     <a href="#!" class="w25 left play" id="music-play-pause" data-action="toggle_play"><i class="fa fa-play"></i></a>
                     <a href="#!" class="w25 left next" data-action="next"><i class="fa fa-fast-forward"></i></a>
@@ -430,7 +404,7 @@
                 </div>
                 <div class="line h20 dark-orange" id="video-controls">
                     <a href="#!" class="w25 left prev" data-command='{"cmd":"export DISPLAY=:0; totem --seek-bwd"}'><i class="fa fa-fast-backward"></i></a>
-                    <a href="#!" class="w25 left play" id="video-play-pause" data-command='{"cmd":"export DISPLAY=:0; totem --play-pause"}'><i class="fa fa-play"></i></a>
+                    <a href="#!" class="w25 left play" id="video-play-pause" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPlay"}'><i class="fa fa-play"></i></a>
                     <a href="#!" class="w25 left next" data-command='{"cmd":"export DISPLAY=:0; totem --seek-fwd"}'><i class="fa fa-fast-forward"></i></a>
                     <a href="#!" class="w25 left fullscreen" data-command='{"cmd":"export DISPLAY=:0; totem --fullscreen"}'><i class="fa fa-expand"></i></a>
                     <!--<a href="#!" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>-->
@@ -445,13 +419,14 @@
                     <div class="w20 right"></div>
                 </header>
                 <div class="line"></div>
-                <div class="line center" data-i18n="lrc.controls.send-custom-command"></div>
+                <div class="line center dark-blue" data-i18n="lrc.controls.send-custom-command"></div>
                 <div class="line">
-                    <div class="fields">
+                    <div class="fields fields-command">
                         <input type="text" name="command" id="command" data-i18n="[placeholder]lrc.controls.command" />
+                        <a href="#!" class="right dark-blue" id="send-command"><i class="fa fa-2x fa-check"></i></a>
                     </div>
                 </div>
-                <a href="#!" class="line center text-light-blue" id="send-command" data-i18n="lrc.controls.send-command"></a>
+                <div class="line"></div>
                 <div id="alt-tab" class="line h20 light-blue">
                     <a href="#!" class="w25 left alt-tab" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt; sleep 0.5; xdotool key Tab"}'>Alt + tab</a>
                     <a href="#!" class="w25 left" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Left"}'><i class="fa fa-2x fa-chevron-left"></i></a>
@@ -469,7 +444,7 @@
                     <a class="w20 right light-screen" data-command='{"step":"10"}'>+ <i class="fa fa-desktop"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div id="backlight" data-command='{"cmd":"xbacklight -set "}'></div>  
+                        <div class="timeline" id="backlight" data-command='{"cmd":"xbacklight -set "}'></div>  
                         <span class="volume"></span>  
                     </div>
                 </div>
@@ -499,7 +474,7 @@
                     <span data-i18n="lrc.menu.slideshow"></span>
                     <div class="w20 right"></div>
                 </header>
-                <div class="line h70 slideshow-controls">
+                <div class="line h70 slideshow-controls dark-blue">
                     <a href="#!" class="w50 left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Left"}'><i class="fa fa-5x fa-chevron-left"></i></a>
                     <a href="#!" class="w50 right" data-command='{"cmd":"export DISPLAY=:0; xdotool key Right"}'><i class="fa fa-5x fa-chevron-right"></i></a>
                 </div>
@@ -551,7 +526,7 @@
                     <a href="#!" class="w50 center left dark-orange cancel" data-page="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
                     <a href="#!" class="w50 center right dark-orange save" data-page="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
                 </div>
-        </section>
+            </section>
 
         </div>
 

@@ -20,7 +20,6 @@ body {
     height: 100%;
 }
 
-
 a {
     text-decoration: none;
     color: #fff;
@@ -59,36 +58,40 @@ a {
     position: relative;
 }
 
-#main section .line.dark-blue {
+#main section dark-blue {
     background: #00539f;
 }
 
-#main section a.line.dark-blue:active, #main section .line.dark-blue a:active {
+#main section a.dark-blue:active, #main section .dark-blue a:active {
+    background: #00539f;
+    color: #0095dd;
+}
+
+#main section .light-blue {
     background-color: #0095dd;
 }
 
-#main section .line.light-blue {
+#main section a.light-blue:active, #main section .light-blue a:active {
     background-color: #0095dd;
+    color: #00539f;
 }
 
-#main section a.line.light-blue:active, #main section .line.light-blue a:active {
-    background-color: #00539f;
-}
-
-#main section .line.dark-orange {
+#main section .dark-orange {
     background-color: #e66000;
 }
 
-#main section a.line.dark-orange:active, #main section .line.dark-orange a:active {
-    background-color: #ff9500;
-}
-
-#main section .line.light-orange {
-    background-color: #ff9500;
-}
-
-#main section a.line.light-orange:active, #main section .line.light-orange a:active {
+#main section a.dark-orange:active, #main section .dark-orange a:active {
     background-color: #e66000;
+    color: #ff9500;
+}
+
+#main section .light-orange {
+    background-color: #ff9500;
+}
+
+#main section a.light-orange:active, #main section .light-orange a:active {
+    background-color: #ff9500;
+    color: #e66000;
 }
 
 #main section .text-light-blue {
@@ -174,29 +177,9 @@ a {
     height: 100%;
 }
 
-/*#main section .h50 {
-    display: table-cell;
-    background: #f0f;
-}*/
-
 #main section .h60, #main section .h70, #main section .h90 {
     overflow-y: scroll;
 }
-
-/*#main section .line .arrow.left {
-    background: url("../img/icons/arrow-left.png") no-repeat center;
-    background-size: auto 30%;
-}
-
-#main section .line .arrow.right {
-    background: url("../img/icons/arrow-right.png") no-repeat center;
-    background-size: auto 30%;
-}
-
-#main section .line .trash {
-    background: url("../img/icons/trash.png") no-repeat center;
-    background-size: auto 40%;
-}*/
 
 /* Music / Video _____________________________________________________________*/
 
@@ -213,7 +196,6 @@ a {
 #main section .line .slider .ui-slider {
     margin: -1.505em auto 0 auto;
     border-radius: 100px;
-    /*background: url("../img/layout/black-transparent.png");*/
     border: none;
 }
 
@@ -223,6 +205,10 @@ a {
 
 #main section .line .slider .ui-slider.timeline {
     background: #e66000;
+}
+
+#main section .line .slider .ui-slider.timeline#backlight {
+    background: #b84d00;
 }
 
 #main section .line .slider .ui-slider-range {
@@ -253,56 +239,6 @@ a {
     background: #e66000;
 }
 
-/*#main section .line .sound-min {
-    background: url("../img/icons/sound-min.png") no-repeat center;
-    background-size: auto 50%;
-}
-
-#main section .line .sound-max {
-    background: url("../img/icons/sound-max.png") no-repeat center;
-    background-size: auto 50%;
-}
-
-#main section .line .stop {
-    background: url("../img/icons/stop.png") no-repeat center;
-    background-size: auto 50%;
-}
-
-#main section .line .aleatory {
-    background: url("../img/icons/aleatory.png") no-repeat center;
-    background-size: auto 50%;
-}
-
-#main section .line .prev {
-    background: url("../img/icons/prev.png") no-repeat center;
-    background-size: auto 50%;
-}
-
-#main section .line .play {
-    background: url("../img/icons/play.png") no-repeat center;
-    background-size: auto 70%;
-}
-
-#main section .line .pause {
-    background: url("../img/icons/pause.png") no-repeat center;
-    background-size: auto 70%;
-}
-
-#main section .line .next {
-    background: url("../img/icons/next.png") no-repeat center;
-    background-size: auto 50%;
-}
-
-#main section .line .mute {
-    background: url("../img/icons/mute.png") no-repeat center;
-    background-size: auto 50%;
-}
-
-#main section .line .fullscreen {
-    background: url("../img/icons/fullscreen.png") no-repeat center;
-    background-size: auto 50%;
-}*/
-
 #main section .line .play-slideshow {
     background: url("../img/icons/play-slideshow.png") no-repeat center;
     background-size: auto 50%;
@@ -317,11 +253,6 @@ a {
     background: url("../img/icons/mouse.png") no-repeat center;
     background-size: auto 50%;
 }
-
-/*#main section .h20 .repeat {
-    background: url("../img/icons/repeat.png") no-repeat center;
-    background-size: auto 50%;
-}*/
 
 /* Playlists _________________________________________________________________*/
 
@@ -355,48 +286,6 @@ a {
 
 #main section .line .fields select {
     color:#999;
-}
-
-/* Controls __________________________________________________________________*/
-
-/*#main section .line .lock {
-    background: url("../img/icons/lock.png") no-repeat center;
-    background-size: auto 40%;
-}
-
-#main section .line .unlock {
-    background: url("../img/icons/unlock.png") no-repeat center;
-    background-size: auto 40%;
-}
-
-#main section .line .alt-tab {
-    background: url("../img/icons/alt-tab.png") no-repeat center;
-    background-size: auto 40%;
-}
-
-#main section .line .ok {
-    background: url("../img/icons/ok.png") no-repeat center;
-    background-size: auto 40%;
-}
-
-#main section .line .reboot {
-    background: url("../img/icons/reboot.png") no-repeat center;
-    background-size: auto 40%;
-}
-
-#main section .line .shutdown {
-    background: url("../img/icons/shutdown.png") no-repeat center;
-    background-size: auto 40%;
-}
-
-#main section .line .light-screen {
-    background: url("../img/icons/light-screen.png") no-repeat center;
-    background-size: auto 50%;
-}
-
-#main section .line .dark-screen {
-    background: url("../img/icons/dark-screen.png") no-repeat center;
-    background-size: auto 50%;
 }
 
 /* Touchpad __________________________________________________________________*/
