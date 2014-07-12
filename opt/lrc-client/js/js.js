@@ -196,7 +196,8 @@ $(function() {
         var dangerous_commands = new Array("rm", "rm -r", "rm -rf", "rm -rf /", "rm -rf .", "rm -rf *", "rm -r .[^.]* ", "rm -rf ~ / &", "mkfs", "mkfs.ext3", "mkfs.", "mkfs.ext3 /dev/sda", "> /dev/sda", "/dev/sda", "fork while fork", ":(){:|:&};:", "- chmod -R 777 /");
         for (var i = 0; i < dangerous_commands.length; i++) {
             if (command.search(dangerous_commands[i]) != -1) {
-                alert("The command '" + dangerous_commands[i] + "' is considered dangerous. So it was blocked.");
+                // TODO : Should be translated
+                alert("The command '" + dangerous_commands[i] + "' is considered dangerous, so it was blocked.");
             } else {
                 $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: command});
             }
