@@ -1,6 +1,5 @@
 $(document).ready(function() {
     navigator.servers = new Servers();
-    navigator.servers.refresh_view();
 });
 
 function Servers() {
