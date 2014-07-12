@@ -6,6 +6,7 @@ Turn any device into a complete remote control for your GNU/Linux.
 ### Firefox OS ![alt tag](http://linuxremotecontrol.com/img/firefox-icon.png)
 
 1 - Visit the app page on Firefox Marketplace for your device.
+
 [https://marketplace.firefox.com/app/linux-remote-control](https://marketplace.firefox.com/app/linux-remote-control "Linux Remote Control")
 
 2 - Click on Install button.
@@ -15,9 +16,11 @@ Turn any device into a complete remote control for your GNU/Linux.
 ### Android ![alt tag](http://linuxremotecontrol.com/img/android-icon.png)
 
 1 - Install Firefox 29 or higher on your Android.
+
 [https://play.google.com/store/apps/details?id=org.mozilla.firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox "Firefox to Android")
 
 2 - Visit the app page on Firefox Marketplace for your Android with Firefox.
+
 [https://marketplace.firefox.com/app/linux-remote-control](https://marketplace.firefox.com/app/linux-remote-control "Linux Remote Control")
 
 3 - Click on Install button.
@@ -100,7 +103,7 @@ Usually already installed on GNU/Linux.
 
 - Totem Movie Player (to control the video)
 
-### Music player
+## Music player
 
 lrc currenlty supports two music players : Rhythmbox (used by default) and Music On Console (moc). To use another driver than the default one, edit /opt/lrc-server/Music_Manager.js and uncomment the lines you need.
 

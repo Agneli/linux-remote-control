@@ -12,24 +12,25 @@ var wss = new WebSocketServer({port: 3001});
 wss.on('connection', function(ws) {
     ws.on('message', function(message) {
         var values = message.split(';');
-        exec('export DISPLAY=:0; xdotool mousemove_relative -- ' + values[0] + ' ' + values[1], function puts(error, stdout, stderr) {});
+        exec('export DISPLAY=:0; xdotool mousemove_relative -- ' + values[0] + ' ' + values[1], function puts(error, stdout, stderr) {
+        });
     });
 });
 
 // Route to handle music commands
 app.all("/music", function(req, res) {
-    if('info' in req.query) {
+    if ('info' in req.query) {
         exec(music_manager.infos, function(error, stdout, stderr) {
             var infos = music_manager.parse_infos(stdout);
             res.send(infos);
         });
-    } else if('action' in req.query && req.query.action in music_manager) {
+    } else if ('action' in req.query && req.query.action in music_manager) {
         var command = music_manager[req.query.action];
 
-        if(typeof command == 'string') {
+        if (typeof command == 'string') {
             exec(command);
             res.send({state: 0});
-        } else if(typeof command == 'function') {
+        } else if (typeof command == 'function') {
             command(music_manager, exec, req.query.args || {});
             res.send({state: 0});
         } else {
@@ -67,7 +68,6 @@ app.get(/^\/(.*)/, function(req, res) {
                 volume = volume[1];
 
                 var backlight = stdout.split("[on]");
-
                 backlight = backlight[1].replace(/^\s+|\s+$/g, "");
                 backlight = backlight.split(".");
                 backlight = backlight[0];

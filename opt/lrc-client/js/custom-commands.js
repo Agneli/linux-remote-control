@@ -17,23 +17,23 @@ Custom_Commands.prototype.refresh_view = function() {
 
     $('#custom-commands .custom-commands .scroll').empty();
 
-    for(var index in custom_commands) {
+    for (var index in custom_commands) {
         var custom_command = custom_commands[index];
         $('#custom-commands .custom-commands .scroll')
-            .append('<div class="line dark-blue">' +
-                '<a href="#!" style="width: 70%" class="left" data-command="' + escape(custom_command.cmd) + '">' + custom_command.name + '</a>' +
-                '<a href="#!" class="trash w20 right" data-index="' + index + '"></a>' +
-            '</div>');
+                .append('<div class="line dark-blue">' +
+                    '<a href="#!" style="width: 70%" class="left" data-command="' + encodeURI(custom_command.cmd) + '">' + custom_command.name + '</a>' +
+                    '<a href="#!" class="w20 right trash" data-index="' + index + '"><i class="fa fa-trash-o"></i></a>' +
+                '</div>');
     }
 
     // Refresh events
     $("#custom-commands .custom-commands a[data-command]").click(function() {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: escape($(this).data("command"))});
+        $.get("http://" + host + ":" + port + "/lrc", {cmd: decodeURI($(this).data("command"))});
     });
 
     $("#custom-commands .custom-commands a.trash").click(function() {
         // TODO : This should be translated
-        if(confirm("Delete command. Are you sure ?")) {
+        if (confirm("Delete command. Are you sure ?")) {
             self.remove($(this).data('index'));
             self.refresh_view();
             responsive_layout('#custom-commands');

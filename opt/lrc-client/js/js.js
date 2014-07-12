@@ -37,7 +37,7 @@ function commitToStorage(objectCount, newObject) {
 //Add server link to HTML
 function createMarkup(server) {
     if (server.status !== "off") {
-        $("#servers").append('<a id="' + server.name + '" class="line dark-blue server" data-page="menu" href="#!" data-direction=\'{"from":"right","to":"left"}\'  data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 arrow right"></div></a>');
+        $("#servers").append('<a id="' + server.name.replace(" ", "-") + '" class="line dark-blue server" data-page="menu" href="#!" data-direction=\'{"from":"right","to":"left"}\' data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 right"><i class="fa fa-chevron-right"></i></div></a>');
     }
 }
 
@@ -135,8 +135,11 @@ function responsive_layout(selector) {
     $(selector + " .line").css("line-height", line + "px");
 
     $(selector + " .line .fields").css("width", line_width / 100 * 80 + "px");
+    $(selector + " .line .fields").css("height", line);
+    $(selector + " .line .fields").css("line-height", line + "px");
     var fields = $(selector + " .fields").width();
-    $(selector + " .line .fields input").css({"width": fields / 100 * 90 + "px", "padding-top": line / 100 * 20 + "px", "padding-bottom": line / 100 * 20 + "px"});
+    $(selector + " .line .fields input").css({"width": fields / 100 * 90 + "px", "padding-top": line / 100 * 20 + "px", "padding-bottom": line / 100 * 20 + "px", "margin-top": line / 100 * 10 + "px"});
+    $(selector + " .line .fields-command input").css({"width": fields / 100 * 70 + "px", "padding-top": line / 100 * 20 + "px", "padding-bottom": line / 100 * 20 + "px", "margin-top": line / 100 * 10 + "px"});
     $(selector + " .line .fields select").css({"width": fields + "px", "padding": line / 100 * 20 + "px", "padding-bottom": line / 100 * 20 + "px"});
 
     $(selector + " .h20").css("height", line * 2);
@@ -229,7 +232,7 @@ music_timeline.slider({
     min: 0,
     max: 100,
     change: function(event, ui) {
-        $.get("http://" + host + ":" + port + "/music", {action: "seek", args: {proportion: ui.value/100}});
+        $.get("http://" + host + ":" + port + "/music", {action: "seek", args: {proportion: ui.value / 100}});
     }
 });
 
