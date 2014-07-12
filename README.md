@@ -76,6 +76,15 @@ sudo apt-get install -f
 ```
 Or open .deb package by graphic interface (double click on the lrc-ffos.deb file)
 
+### Start the server on computer boot
+
+If you wish to have the Linux Remote Control server to be always available, just add a cron job on reboot :
+
+```bash
+$ crontab -e
+# Add this cron job
+@reboot node /opt/lrc-server/lrc.js
+```
 
 ## Dependences
 
