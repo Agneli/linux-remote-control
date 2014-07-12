@@ -2,7 +2,8 @@ var express = require("express"),
         app = express(),
         sys = require("sys"),
         exec = require("child_process").exec,
-        music_manager = require("Music_Manager.js").driver,
+        config = require("configuration.js").config,
+        music_manager = require("Music_Manager.js").drivers[config.music_driver],
         child;
 
 // Relative mouse move uses WebSocket
@@ -78,6 +79,6 @@ app.get(/^\/(.*)/, function(req, res) {
     });
 });
 
-app.listen(3000, function () {
-//    console.log('Listening on port 3000');
+app.listen(config.port, function () {
+    console.log('Listening on port ' + config.port);
 });
