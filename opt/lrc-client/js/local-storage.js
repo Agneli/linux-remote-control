@@ -40,4 +40,4 @@ Local_Storage.prototype.append = function(object) {
 
     this.save(current_array);
     console.log(object);
-}
+};

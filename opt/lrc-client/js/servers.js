@@ -1,85 +1,62 @@
-// LocalStorage ________________________________________________________________
+$(document).ready(function() {
+    navigator.servers = new Servers();
+    navigator.servers.refresh_view();
+});
 
-// Stores information about the servers to be controlled
-if (localStorage.serverCount === undefined) {
-    // TODO : This should be translated
-    $("#msg-server").html("Click on 'Add Server'");
+function Servers() {
+    Local_Storage.apply(this);
+    this.localStorage_key = 'servers';
 }
+Servers.prototype = new Local_Storage();
 
-function server(id, name, ip, status) {
-    this.id = id;
-    this.name = name;
-    this.ip = ip;
-    this.status = status;
-}
+Servers.prototype.refresh_view = function() {
+    $("#servers").empty()
+                 .append('<div class="line center" id="msg-server"></div>');
 
-function createNewServer(d, n, i, s) {
-    var createdServer = new server(d, n, i, s);
-    if (localStorage.serverCount === undefined) {
-        localStorage.setItem("serverCount", 0);
+    if(this.all().length) {
+        for(var index in this.all()) {
+            var server = this.all()[index];
+            server.index = index;
+            $("#servers").append('<a class="line dark-blue server" data-page="menu" href="#!" data-direction=\'{"from":"right","to":"left"}\' data-server=\'' + JSON.stringify(server) + '\'><span>' + server.name + '</span><div class="w20 right"><i class="fa fa-chevron-right"></i></div></a>');
+        }
+
+        // Refresh server click events
+        $(".server").unbind('click').click(function() {
+            navigator.host = $(this).data("server").ip;
+            $("#server-name").html($(this).data("server").name);
+            $("#delete-server").data("index", $(this).data("server").index);
+        });
+
+        pages_animations('#servers');
+    } else {
+        // TODO : This should be translated
+        $("#msg-server").html("Click on 'Add Server'");
     }
-    var serverSize = parseInt(localStorage.serverCount) + 1;
-    commitToStorage(serverSize, createdServer);
-}
+    
+    responsive_layout('#index');
+};
 
-function commitToStorage(objectCount, newObject) {
-    // The unique key of the object:
-    var item = "server_" + objectCount;
-    localStorage.setItem("serverCount", objectCount);
-
-    // Put the object into storage
-    localStorage.setItem(item, JSON.stringify(newObject));
-
-    // Create Markup
-    createMarkup(newObject);
-}
-
-//Add server link to HTML
-function createMarkup(server) {
-    if (server.status !== "off") {
-        $("#servers").append('<a id="' + server.name.replace(" ", "-") + '" class="line dark-blue server" data-page="menu" href="#!" data-direction=\'{"from":"right","to":"left"}\' data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 right"><i class="fa fa-chevron-right"></i></div></a>');
-    }
-}
-
+// Events
 $(function() {
     $("#save").click(function() {
-        if (localStorage.serverCount === undefined) {
-            var id = 1;
-        } else {
-            id = 1 + parseInt(localStorage.getItem("serverCount"));
-        }
-        var name = $("#name").val();
-        var ip = $("#ip").val();
-        var status = "on";
-        createNewServer(id, name, ip, status);
-        //return false;
-        location.reload();
+        navigator.servers.append({
+            name: $('#name').val(),
+            ip: $("#ip").val(),
+        });
+        navigator.servers.refresh_view();
     });
 
-    var serverCount = localStorage.getItem("serverCount");
-    for (i = 1; i <= serverCount; i++)
-    {
-        //var number = parseInt(i) + 1;
-        var server = jQuery.parseJSON(localStorage.getItem("server_" + i));
-        createMarkup(server);
-    }
-
     // Clear fields
-    $("#cancel").click(function() {
+    $("#cancel, #save").click(function() {
         $(".fields input").val("");
     });
 
-});
-
-// Delete (off) Server
-$(function() {
+    // Delete Server (removes it from localStorage)
     $("#delete-server").click(function() {
         // TODO : This should be translated
         if (confirm("Delete server. Are you sure ?")) {
-            var svr = JSON.stringify(localStorage.getItem("server_" + id));
-            svr = svr.replace("on", "off");
-            localStorage.setItem("server_" + id, JSON.parse(svr));
-            location.reload();
+            navigator.servers.remove($(this).data('index'));
+            navigator.servers.refresh_view();
         }
     });
 });
