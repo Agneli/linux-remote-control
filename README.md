@@ -79,6 +79,10 @@ sudo apt-get install -f
 ```
 Or open .deb package by graphic interface (double click on the lrc-ffos.deb file)
 
+### Configuration
+
+Linux-remote-control will work out-of-the-box in most cases. However, if you wish to change the default settings (for instance, if you wish to use another music player than Rhythmbox), just modify the configuration file in /opt/lrc-server/node_modules/configuration.js
+
 ### Start the server on computer boot
 
 If you wish to have the Linux Remote Control server to be always available, just add a cron job on reboot :
@@ -103,9 +107,10 @@ Usually already installed on GNU/Linux.
 
 - Totem Movie Player (to control the video)
 
-## Music player
+One of the following music players.
 
-lrc currenlty supports two music players : Rhythmbox (used by default) and Music On Console (moc). To use another driver than the default one, edit /opt/lrc-server/Music_Manager.js and uncomment the lines you need.
+- Rhythmbox
+- moc
 
 ## Bugs
 The project still has some bugs that you can fix.
