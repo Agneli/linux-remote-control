@@ -157,7 +157,6 @@ $(function() {
 });
 
 // Videos ______________________________________________________________________
-
 $(function() {
 
     $("section#videos .sound-min").click(function() {
@@ -180,7 +179,6 @@ $(function() {
 });
 
 // Alt-tab ____________________________________________________________________
-
 $(function() {
     $("#alt-tab a").click(function() {
         $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
@@ -189,18 +187,15 @@ $(function() {
 
 
 // Controls ____________________________________________________________________
-
 $(function() {
     $("#send-command").click(function() {
         var command = $("#command").val();
         var dangerous_commands = new Array("rm", "rm -r", "rm -rf", "rm -rf /", "rm -rf .", "rm -rf *", "rm -r .[^.]* ", "rm -rf ~ / &", "mkfs", "mkfs.ext3", "mkfs.", "mkfs.ext3 /dev/sda", "> /dev/sda", "/dev/sda", "fork while fork", ":(){:|:&};:", "- chmod -R 777 /");
-        for (var i = 0; i < dangerous_commands.length; i++) {
-            if (command.search(dangerous_commands[i]) != -1) {
-                // TODO : Should be translated
-                alert("The command '" + dangerous_commands[i] + "' is considered dangerous, so it was blocked.");
-            } else {
-                $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: command});
-            }
+        if(dangerous_commands.indexOf(command) == -1) {
+            $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: command});
+        } else {
+            // TODO : Should be translated
+            alert("The command '" + command + "' is considered dangerous, so it was blocked.");
         }
     });
 });
@@ -304,6 +299,8 @@ $(function() {
     });
 });
 
+
+// Pages animations ____________________________________________________________
 function pages_animations(context) {
     var speed = 300;
     context = context || '';
@@ -316,9 +313,9 @@ function pages_animations(context) {
     });
 }
 
-// Pages animations ____________________________________________________________
 $(function() {
     pages_animations();
+    navigator.servers.refresh_view();
 
     // Message to update lrc-server
     if (localStorage.update03 === undefined) {
