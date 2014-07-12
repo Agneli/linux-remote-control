@@ -3,7 +3,7 @@ var express = require("express"),
         sys = require("sys"),
         exec = require("child_process").exec,
         config = require("configuration.js").config,
-        music_manager = require("Music_Manager.js").drivers[config.music_driver],
+        music_manager = require("music.js").drivers[config.music_driver],
         child;
 
 // Relative mouse move uses WebSocket
