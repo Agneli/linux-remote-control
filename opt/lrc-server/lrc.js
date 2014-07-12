@@ -53,7 +53,7 @@ app.all("/lrc", function(req, res) {
  * handles all requests
  */
 app.get(/^\/(.*)/, function(req, res) {
-    child = exec("amixer sget Master && xbacklight -get", function(error, stdout, stderr) {
+    child = exec("amixer sget Master | grep '%]' && xbacklight -get", function(error, stdout, stderr) {
         res.header("Content-Type", "text/javascript");
         // error of some sort
         if (error !== null) {
@@ -61,16 +61,15 @@ app.get(/^\/(.*)/, function(req, res) {
         } else {
             // info actually requires us returning something useful
             if (req.params[0] == "info") {
-                info = stdout.split(";");
-                var volume = info[5].split("%]");
+                var volume = stdout.split("%]");
                 volume = volume[0].split("[");
                 volume = volume[1];
 
-                var backlight = info[5].split("[on]");
+                var backlight = stdout.split("[on]");
+
                 backlight = backlight[1].replace(/^\s+|\s+$/g, "");
                 backlight = backlight.split(".");
                 backlight = backlight[0];
-                //console.log(backlight);
                 res.send(req.query.callback + "({'volume':'" + volume + "', 'backlight':'" + backlight + "'})");
             } else {
                 res.send(req.query.callback + "()");
