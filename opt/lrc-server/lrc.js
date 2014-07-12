@@ -8,7 +8,7 @@ var express = require("express"),
 
 // Relative mouse move uses WebSocket
 var WebSocketServer = require('ws').Server;
-var wss = new WebSocketServer({port: 3001});
+var wss = new WebSocketServer({port: config.websocket_port});
 wss.on('connection', function(ws) {
     ws.on('message', function(message) {
         var values = message.split(';');
