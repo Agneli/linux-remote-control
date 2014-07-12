@@ -117,7 +117,6 @@ The project still has some bugs that you can fix.
 
 - Click by tapping the touchpad;
 - Organize and modularize my dirty Javascript =/;
-- Start lrc-server (node /opt/lrc-server/lrc.js) with computer boot;
 
 ## License
 GNU GENERAL PUBLIC LICENSE V2
