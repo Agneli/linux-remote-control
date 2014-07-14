@@ -2,12 +2,13 @@ var express = require("express"),
         app = express(),
         sys = require("sys"),
         exec = require("child_process").exec,
-        music_manager = require("Music_Manager.js").driver,
+        config = require("configuration.js").config,
+        music_manager = require("music.js").drivers[config.music_driver],
         child;
 
 // Relative mouse move uses WebSocket
 var WebSocketServer = require('ws').Server;
-var wss = new WebSocketServer({port: 3001});
+var wss = new WebSocketServer({port: config.websocket_port});
 wss.on('connection', function(ws) {
     ws.on('message', function(message) {
         var values = message.split(';');
@@ -54,7 +55,7 @@ app.all("/lrc", function(req, res) {
  * handles all requests
  */
 app.get(/^\/(.*)/, function(req, res) {
-    child = exec("amixer sget Master && xbacklight -get", function(error, stdout, stderr) {
+    child = exec("amixer sget Master | grep '%]' && xbacklight -get", function(error, stdout, stderr) {
         res.header("Content-Type", "text/javascript");
         // error of some sort
         if (error !== null) {
@@ -62,16 +63,14 @@ app.get(/^\/(.*)/, function(req, res) {
         } else {
             // info actually requires us returning something useful
             if (req.params[0] == "info") {
-                info = stdout;
-                var volume = info[5].split("%]");
+                var volume = stdout.split("%]");
                 volume = volume[0].split("[");
                 volume = volume[1];
 
-                var backlight = info.split("[on]");
+                var backlight = stdout.split("[on]");
                 backlight = backlight[1].replace(/^\s+|\s+$/g, "");
                 backlight = backlight.split(".");
                 backlight = backlight[0];
-                //console.log(backlight);
                 res.send(req.query.callback + "({'volume':'" + volume + "', 'backlight':'" + backlight + "'})");
             } else {
                 res.send(req.query.callback + "()");
@@ -80,6 +79,6 @@ app.get(/^\/(.*)/, function(req, res) {
     });
 });
 
-app.listen(3000, function() {
-//    console.log('Listening on port 3000');
+app.listen(config.port, function () {
+    console.log('Listening on port ' + config.port);
 });

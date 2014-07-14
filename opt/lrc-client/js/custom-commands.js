@@ -7,8 +7,11 @@ $(document).ready(function() {
  * Custom commands are stored as strignified JSON object in localStorage.
  */
 function Custom_Commands() {
+    Local_Storage.apply(this);
     this.localStorage_key = 'custom_commands';
 }
+
+Custom_Commands.prototype = new Local_Storage();
 
 Custom_Commands.prototype.refresh_view = function() {
     // Load custom commands into the HTML view
@@ -28,7 +31,15 @@ Custom_Commands.prototype.refresh_view = function() {
 
     // Refresh events
     $("#custom-commands .custom-commands a[data-command]").click(function() {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: decodeURI($(this).data("command"))});
+        $.get(
+            "http://" + host + ":" + port + "/lrc",
+            {cmd: decodeURI($(this).data("command"))},
+            function(response) {
+                if(response.res !== '') {
+                    alert(response.res);
+                }
+            }
+        );
     });
 
     $("#custom-commands .custom-commands a.trash").click(function() {
@@ -46,28 +57,6 @@ Custom_Commands.prototype.add = function(name, command) {
         name: name,
         cmd: command
     };
-    custom_commands = this.all();
 
-    custom_commands.push(custom_command);
-
-    this.save(custom_commands);
-};
-
-/**
- * Returns a list of custom commands
- */
-Custom_Commands.prototype.all = function() {
-    return jQuery.parseJSON(localStorage.getItem(this.localStorage_key) || '[]');
-};
-
-Custom_Commands.prototype.save = function(custom_commands) {
-    localStorage.setItem(this.localStorage_key, JSON.stringify(custom_commands));
-};
-
-Custom_Commands.prototype.remove = function(index) {
-    var custom_commands = this.all();
-
-    custom_commands.splice(index, 1);
-
-    this.save(custom_commands);
+    this.append(custom_command);
 };

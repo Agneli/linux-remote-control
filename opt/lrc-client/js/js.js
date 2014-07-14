@@ -1,89 +1,3 @@
-// LocalStorage ________________________________________________________________
-
-// Stores information about the servers to be controlled
-if (localStorage.serverCount === undefined) {
-    // TODO : This should be translated
-    $("#msg-server").html("Click on 'Add Server'");
-}
-
-function server(id, name, ip, status) {
-    this.id = id;
-    this.name = name;
-    this.ip = ip;
-    this.status = status;
-}
-
-function createNewServer(d, n, i, s) {
-    var createdServer = new server(d, n, i, s);
-    if (localStorage.serverCount === undefined) {
-        localStorage.setItem("serverCount", 0);
-    }
-    var serverSize = parseInt(localStorage.serverCount) + 1;
-    commitToStorage(serverSize, createdServer);
-}
-
-function commitToStorage(objectCount, newObject) {
-    // The unique key of the object:
-    var item = "server_" + objectCount;
-    localStorage.setItem("serverCount", objectCount);
-
-    // Put the object into storage
-    localStorage.setItem(item, JSON.stringify(newObject));
-
-    // Create Markup
-    createMarkup(newObject);
-}
-
-//Add server link to HTML
-function createMarkup(server) {
-    if (server.status !== "off") {
-        $("#servers").append('<a id="' + server.name.replace(" ", "-") + '" class="line dark-blue server" data-page="menu" href="#!" data-direction=\'{"from":"right","to":"left"}\' data-server=\'{"id":"' + server.id + '", "ip":"' + server.ip + '", "name": "' + server.name + '"}\'><span>' + server.name + '</span><div class="w20 right"><i class="fa fa-chevron-right"></i></div></a>');
-    }
-}
-
-$(function() {
-    $("#save").click(function() {
-        if (localStorage.serverCount === undefined) {
-            var id = 1;
-        } else {
-            id = 1 + parseInt(localStorage.getItem("serverCount"));
-        }
-        var name = $("#name").val();
-        var ip = $("#ip").val();
-        var status = "on";
-        createNewServer(id, name, ip, status);
-        //return false;
-        location.reload();
-    });
-
-    var serverCount = localStorage.getItem("serverCount");
-    for (i = 1; i <= serverCount; i++)
-    {
-        //var number = parseInt(i) + 1;
-        var server = jQuery.parseJSON(localStorage.getItem("server_" + i));
-        createMarkup(server);
-    }
-
-    // Clear fields
-    $("#cancel").click(function() {
-        $(".fields input").val("");
-    });
-
-});
-
-// Delete (off) Server
-$(function() {
-    $("#delete-server").click(function() {
-        // TODO : This should be translated
-        if (confirm("Delete server. Are you sure ?")) {
-            var svr = JSON.stringify(localStorage.getItem("server_" + id));
-            svr = svr.replace("on", "off");
-            localStorage.setItem("server_" + id, JSON.parse(svr));
-            location.reload();
-        }
-    });
-});
-
 // Function to convert music time to seconds ___________________________________
 function seconds(time) {
     var split = time.split(":");
@@ -129,8 +43,8 @@ function responsive_layout(selector) {
     var height = $("#main").height();
     $("#main").css("height", height);
     $("#main" + " > section").css("height", height);
-    var line = $(selector + " .line").height();
-    var line_width = $(selector + " .line").width();
+    var line = $(selector + " .line").first().height();
+    var line_width = $(selector + " .line").first().width();
     $(selector + " .line").css("height", line);
     $(selector + " .line").css("line-height", line + "px");
 
@@ -184,26 +98,14 @@ function responsive_layout(selector) {
     //$(selector + " #now-playing span .name").css("font-size", line / 100 * 60 + "px");
 }
 
-// Select server from localStorage _____________________________________________
-var host = "", server_name = "";
-$(function() {
-    $(".server").click(function() {
-        id = $(this).data("server").id;
-        host = $(this).data("server").ip;
-        server_name = $(this).data("server").name;
-        $("#server-name").html(server_name);
-        $("#delete-server").attr("data-id", '{"id":"' + id + '"}');
-    });
-});
+navigator.host = "";
 var port = "3000";
 var websocketPort = "3001";
 
 //Clear server to back to index
 $(function() {
     $("#clear-server").click(function() {
-        id = "";
-        host = "";
-        server_name = "";
+        navigator.host = "";
         $("#server-name").html("");
     });
 });
@@ -219,7 +121,7 @@ sound_volume.slider({
     min: 0,
     max: 100,
     change: function(event, ui) {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd + ui.value + "%"});
+        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd + ui.value + "%"});
     }
 });
 
@@ -232,7 +134,7 @@ music_timeline.slider({
     min: 0,
     max: 100,
     change: function(event, ui) {
-        $.get("http://" + host + ":" + port + "/music", {action: "seek", args: {proportion: ui.value / 100}});
+        $.get("http://" + navigator.host + ":" + port + "/music", {action: "seek", args: {proportion: ui.value / 100}});
     }
 });
 
@@ -250,12 +152,11 @@ $(function() {
     });
 
     $("#music-controls a").click(function() {
-        $.get("http://" + host + ":" + port + "/music", {action: $(this).data("action")});
+        $.get("http://" + navigator.host + ":" + port + "/music", {action: $(this).data("action")});
     });
 });
 
 // Videos ______________________________________________________________________
-
 $(function() {
 
     $("section#videos .sound-min").click(function() {
@@ -269,35 +170,32 @@ $(function() {
     });
 
     $("#video-controls #video-play-pause").click(function() {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
     });
 
     $("#video-controls *:not(#video-play-pause)").click(function() {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
     });
 });
 
 // Alt-tab ____________________________________________________________________
-
 $(function() {
     $("#alt-tab a").click(function() {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
     });
 });
 
 
 // Controls ____________________________________________________________________
-
 $(function() {
     $("#send-command").click(function() {
         var command = $("#command").val();
         var dangerous_commands = new Array("rm", "rm -r", "rm -rf", "rm -rf /", "rm -rf .", "rm -rf *", "rm -r .[^.]* ", "rm -rf ~ / &", "mkfs", "mkfs.ext3", "mkfs.", "mkfs.ext3 /dev/sda", "> /dev/sda", "/dev/sda", "fork while fork", ":(){:|:&};:", "- chmod -R 777 /");
-        for (var i = 0; i < dangerous_commands.length; i++) {
-            if (command.search(dangerous_commands[i]) != -1) {
-                alert("The command '" + dangerous_commands[i] + "' is considered dangerous. So it was blocked.");
-            } else {
-                $.get("http://" + host + ":" + port + "/lrc", {cmd: command});
-            }
+        if(dangerous_commands.indexOf(command) == -1) {
+            $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: command});
+        } else {
+            // TODO : Should be translated
+            alert("The command '" + command + "' is considered dangerous, so it was blocked.");
         }
     });
 });
@@ -311,7 +209,7 @@ screen_brightness.slider({
     min: 0,
     max: 100,
     change: function(event, ui) {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd + ui.value});
+        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd + ui.value});
     }
 });
 
@@ -328,7 +226,7 @@ $(function() {
 
 $(function() {
     $("#controls-controls a:not(#reboot, #shutdown)").click(function() {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
     });
 });
 
@@ -337,7 +235,7 @@ $(function() {
     $("#controls-controls a#reboot").click(function() {
         var _confirm = confirm("Reboot. Are you sure ?");
         if (_confirm) {
-            $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+            $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
         }
     });
 });
@@ -347,7 +245,7 @@ $(function() {
     $("#controls-controls a#shutdown").click(function() {
         var _confirm = confirm("Shut Down. Are you sure ?");
         if (_confirm) {
-            $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+            $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
         }
     });
 });
@@ -356,7 +254,7 @@ $(function() {
 
 $(function() {
     $("#mouse-controls a:not(.play-slideshow)").click(function() {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
     });
 });
 
@@ -364,7 +262,7 @@ $(function() {
 
 $(function() {
     $(".slideshow-controls a:not(.mouse)").click(function() {
-        $.get("http://" + host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
     });
 });
 
@@ -401,17 +299,23 @@ $(function() {
     });
 });
 
-// Pages animations ____________________________________________________________
-$(function() {
 
+// Pages animations ____________________________________________________________
+function pages_animations(context) {
     var speed = 300;
+    context = context || '';
 
     // Index
-    $("a[data-page]").click(function() {
+    $(context + " a[data-page]").click(function() {
         var name = '#' + $(this).data("page");
         $("section").hide("slide", {direction: $(this).data("direction").to}, speed);
         $(name).show("slide", {direction: $(this).data("direction").from}, speed);
     });
+}
+
+$(function() {
+    pages_animations();
+    navigator.servers.refresh_view();
 
     // Message to update lrc-server
     if (localStorage.update03 === undefined) {
@@ -420,7 +324,6 @@ $(function() {
         $("section").hide("slide", {direction: "left"}, speed);
         $("#install").show("slide", {direction: "right"}, speed);
     }
-
 });
 
 // Ajax ________________________________________________________________________
@@ -432,7 +335,7 @@ var second, artist, album, title, elapsed, duration, volume, backlight;
 // Because cache should always be false for this kind of stuff
 function pajax(u, cb) {
     $.ajax({
-        url: "http://" + host + ":" + port + "/" + u,
+        url: "http://" + navigator.host + ":" + port + "/" + u,
         dataType: "jsonp",
         cache: false,
         jsonpCallback: cb});
