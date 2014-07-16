@@ -93,6 +93,10 @@ $ crontab -e
 @reboot node /opt/lrc-server/lrc.js
 ```
 
+### Firewall issues
+
+The default ports for the server are 3000 for HTTP requests and 3001 for WebSockets. You might want to open those ports (at least when you are not on a public network) with tools such as `firewall-config`.
+
 ## Dependences
 
 The Linux Remote Control depends on some softwares to work correctly. Bellow is a list of this softwares.
