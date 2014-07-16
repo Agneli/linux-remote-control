@@ -31,9 +31,19 @@ Servers.prototype.refresh_view = function() {
         // TODO : This should be translated
         $("#msg-server").html("Click on 'Add Server'");
     }
-    
+
     responsive_layout('#index');
 };
+
+Servers.prototype.rename = function(index, name) {
+    var servers = this.all();
+
+    console.log(servers);
+
+    servers[index].name = name;
+
+    this.save(servers);
+}
 
 // Events
 $(function() {
@@ -57,5 +67,11 @@ $(function() {
             navigator.servers.remove($(this).data('index'));
             navigator.servers.refresh_view();
         }
+    });
+
+    $("#server-name").blur(function() {
+        console.log($(this).data('index') + $(this).text());
+        navigator.servers.rename($("#delete-server").data('index'), $(this).text());
+        navigator.servers.refresh_view();
     });
 });
