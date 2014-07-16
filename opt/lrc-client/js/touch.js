@@ -12,7 +12,7 @@ function startup() {
 function handleTouchstart(evt) {
     //check if socket is connected
     if (socket === null || socket.readyState != WebSocket.OPEN) {
-        socket = new WebSocket('ws://' + host + ':' + websocketPort);
+        socket = new WebSocket('ws://' + navigator.host + ':' + websocketPort);
     }
     if (activeTouch === null) {
         evt.preventDefault();

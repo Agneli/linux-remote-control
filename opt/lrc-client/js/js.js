@@ -301,8 +301,8 @@ $(function() {
 
 
 // Pages animations ____________________________________________________________
+var speed = 300;
 function pages_animations(context) {
-    var speed = 300;
     context = context || '';
 
     // Index
