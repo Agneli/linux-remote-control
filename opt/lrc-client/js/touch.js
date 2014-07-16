@@ -1,4 +1,8 @@
-var activeTouch, socket;
+var CLICK_PREFIX = 'c';
+var MOVE_PREFIX = 'm';
+var SCROLL_PREFIX = 's';
+
+var activeTouch, touchCount, scrolling, socket;
 
 function startup() {
     var el = $('#canvas')[0];
@@ -6,6 +10,8 @@ function startup() {
     el.addEventListener('touchend', handleTouchend, false);
     el.addEventListener('touchmove', handleTouchmove, false);
     activeTouch = null;
+    touchCount = 0;
+    scrolling = false;
     socket = null;
 }
 
@@ -14,23 +20,31 @@ function handleTouchstart(evt) {
     if (socket === null || socket.readyState != WebSocket.OPEN) {
         socket = new WebSocket('ws://' + navigator.host + ':' + websocketPort);
     }
-    if (activeTouch === null) {
-        evt.preventDefault();
+    evt.preventDefault();
+    if (touchCount == 0) {
         activeTouch = evt.changedTouches[0];
     }
+    touchCount += evt.changedTouches.length;
+    scrolling = touchCount > 1;
 }
 
 function handleTouchend(evt) {
-    if (evt.changedTouches[0].identifier == activeTouch.identifier) {
-        activeTouch = null;
-    }
+    touchCount -= evt.changedTouches.length;
+    scrolling = touchCount != 0;
 }
 
 function handleTouchmove(evt) {
-    if (evt.changedTouches[0].identifier == activeTouch.identifier) {
-        var deltaX = parseInt((evt.changedTouches[0].clientX - activeTouch.clientX) * 3);
-        var deltaY = parseInt((evt.changedTouches[0].clientY - activeTouch.clientY) * 3);
+    var deltaX, deltaY;
+    if (!scrolling) {
+        deltaX = evt.changedTouches[0].clientX - activeTouch.clientX;
+        deltaY = evt.changedTouches[0].clientY - activeTouch.clientY;
         activeTouch = evt.changedTouches[0];
-        socket.send(deltaX + ';' + deltaY);
+        socket.send(MOVE_PREFIX + deltaX + ';' + deltaY);
+    } else if (touchCount == 2) {
+        deltaY = evt.changedTouches.identifiedTouch(activeTouch.identifier).clientY - activeTouch.clientY;
+        if (deltaY != 0) {
+            activeTouch = evt.changedTouches.identifiedTouch(activeTouch.identifier);
+            socket.send(SCROLL_PREFIX + deltaY);
+        }
     }
 }
