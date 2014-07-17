@@ -265,7 +265,7 @@ $(function() {
 // Touchpad ____________________________________________________________________
 
 $(function() {
-    $("#mouse-controls a:not(.play-slideshow)").click(function() {
+    $("#mouse-controls a:not(.slideshow)").click(function() {
         $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
     });
 });

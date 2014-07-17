@@ -145,6 +145,12 @@ a {
     font-size: 0.7em;
 }
 
+#main section .line .w14 {
+    width: 14.1%;
+    height: 100%;
+    text-align: center;
+}
+
 #main section .line .w20 {
     width: 20%;
     height: 100%;
@@ -249,11 +255,6 @@ a {
     background-size: auto 50%;
 }
 
-#main section .line .mouse {
-    background: url("../img/icons/mouse.png") no-repeat center;
-    background-size: auto 50%;
-}
-
 /* Playlists _________________________________________________________________*/
 
 /*#main section .h60 .line span, #main section #now-playing span {
@@ -324,7 +325,8 @@ a {
 }
 
 /* Custom commands ___________________________________________________________*/
-#main section#custom-commands .line a {
+#main section#custom-commands .line a.link-custom-command {
+    width: 70%;
     padding-left: 5%;
 }
 
