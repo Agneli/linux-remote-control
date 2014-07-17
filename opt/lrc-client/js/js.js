@@ -316,8 +316,6 @@ $(function() {
                 command = "xdotool keydown " + char + " keyup " + char;
             }
 
-            console.log(command);
-
             $.get("http://" + navigator.host + ":" + port + "/lrc",
                 {cmd: command}
             );
