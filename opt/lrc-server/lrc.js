@@ -1,3 +1,8 @@
+//CONSTANTS
+var CLICK_PREFIX = 'c';
+var MOVE_PREFIX = 'm';
+var SCROLL_PREFIX = 's';
+
 var express = require("express"),
         app = express(),
         sys = require("sys"),
@@ -9,12 +14,40 @@ var express = require("express"),
 // Relative mouse move uses WebSocket
 var WebSocketServer = require('ws').Server;
 var wss = new WebSocketServer({port: config.websocket_port});
+var values, x, y;
+var handleMessage = function(message) {
+    var prefix = message[0];
+    message = message.substr(1);
+    switch (prefix) {
+        case CLICK_PREFIX:
+            //Clicks are not yet sent over websocket
+        break;
+        case MOVE_PREFIX:
+            values = message.split(';');
+            x = parseInt(values[0]);
+            y = parseInt(values[1]);
+            if (Math.abs(x) > 10) {
+                if (Math.abs(x) > 20) {
+                    x = x * 2;
+                }
+                x = x * 2;
+            }
+            if (Math.abs(y) > 10) {
+                if (Math.abs(y) > 20) {
+                    y = y * 2;
+                }
+                y = y * 2;
+            }
+            exec('xdotool mousemove_relative -- ' + x + ' ' + y, function puts(error, stdout, stderr) {});
+        break;
+        case SCROLL_PREFIX:
+            var button = message < 0 ? 4 : 5;
+            exec('xdotool click ' + button, function puts(error, stdout, stderr) {});
+        break;
+    }
+}
 wss.on('connection', function(ws) {
-    ws.on('message', function(message) {
-        var values = message.split(';');
-        exec('export DISPLAY=:0; xdotool mousemove_relative -- ' + values[0] + ' ' + values[1], function puts(error, stdout, stderr) {
-        });
-    });
+    ws.on('message', handleMessage);
 });
 
 // Route to handle music commands
