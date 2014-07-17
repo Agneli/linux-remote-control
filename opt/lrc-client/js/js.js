@@ -290,6 +290,38 @@ $(function() {
     });
 });
 
+// Keyboard input
+$(function() {
+    $("input.keyboard-input").each(function() {
+        $(this).keypress(function(e) {
+            e.preventDefault();
+            var char = String.fromCharCode(e.charCode);
+            var escaped_chars = /['&><;(){}\\~#*`"]/;
+
+            if(char.match(escaped_chars)) {
+                char = "\\" + char;
+            }
+
+            var command = "xdotool type " + char;
+
+            // Special characters
+            if(e.keyCode == 8) {
+                char = 'BackSpace';
+                command = "xdotool keydown " + char + " keyup " + char;
+            } else if(char === ' ') {
+                char = 'space';
+                command = "xdotool keydown " + char + " keyup " + char;
+            }
+
+            console.log(command);
+
+            $.get("http://" + navigator.host + ":" + port + "/lrc",
+                {cmd: command}
+            );
+        });
+    });
+});
+
 // Settings ____________________________________________________________________
 
 $(function() {
