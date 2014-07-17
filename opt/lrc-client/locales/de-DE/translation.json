@@ -41,7 +41,7 @@
             "p2": "Du kannst neue Fehler auf <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> posten oder uns über <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a> kontaktieren."
         },
         "feedback": {
-            "p1": "Erzähle uns was du über diese App denkst. Anregungen, Lob oder Kritik werden wir mit freuden empfangen."
+            "p1": "Erzähle uns was du über diese App denkst. Anregungen, Lob oder Kritik werden wir mit freuden entgegennehmen."
         },
         "about": {
             "p1": "Dies ist freie Software und ein Open Source Projekt lizensiert unter der GNU GPL Lizens.",
@@ -63,14 +63,14 @@
             "send-command": "Befehl senden"
         },
         "custom-commands": {
-            "add": "Fügen Sie einen benutzerdefinierten Befehl",
+            "add": "Einen benutzerdefinierten Befehl hinzufügen",
             "name": "Name",
-            "command": "Befehl, der ausgeführt"
+            "command": "Auszuführender Befehl"
         },
         "settings": {
             "language": "Sprache",
-            "audio": "Audio player",
-            "video": "Video player",
+            "audio": "Audio Player",
+            "video": "Video Player",
             "cancel": "Zurück",
             "save": "Speichern"
         },
