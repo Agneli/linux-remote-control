@@ -308,6 +308,9 @@ $(function() {
             if(e.keyCode == 8) {
                 char = 'BackSpace';
                 command = "xdotool keydown " + char + " keyup " + char;
+            } else if(e.keyCode == 13) {
+                char = 'Return';
+                command = "xdotool keydown " + char + " keyup " + char;
             } else if(char === ' ') {
                 char = 'space';
                 command = "xdotool keydown " + char + " keyup " + char;
