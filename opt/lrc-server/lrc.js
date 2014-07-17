@@ -47,7 +47,7 @@ app.all("/lrc", function(req, res) {
     exec(command, function(err, stdout, stderr) {
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "X-Requested-With");
-        res.send({res: stdout});
+        res.send({stdout: stdout, error: err, stderr: stderr});
     });
 });
 

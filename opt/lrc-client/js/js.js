@@ -190,9 +190,21 @@ $(function() {
 $(function() {
     $("#send-command").click(function() {
         var command = $("#command").val();
-        var dangerous_commands = new Array("rm", "rm -r", "rm -rf", "rm -rf /", "rm -rf .", "rm -rf *", "rm -r .[^.]* ", "rm -rf ~ / &", "mkfs", "mkfs.ext3", "mkfs.", "mkfs.ext3 /dev/sda", "> /dev/sda", "/dev/sda", "fork while fork", ":(){:|:&};:", "- chmod -R 777 /");
-        if(dangerous_commands.indexOf(command) == -1) {
-            $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: command});
+        var dangerous_commands = new Array(/^rm .*/, /^mkfs(\..{,8})? .*/, /> \/dev\/sd.*$/, "fork while fork", ":(){:|:&};:", /^chmod -R 777 \//);
+        var dangerous = false;
+        for(var index in dangerous_commands) {
+            dangerous = dangerous || command.search(dangerous_commands[index]) != -1;
+        }
+        if(!dangerous) {
+            $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: command}).done(function(response) {
+                if(response.error) {
+                    alert('An error occured');
+                    console.log(response.error);
+                }
+                if(response.stdout !== '') {
+                    alert(response.stdout);
+                }
+            });
         } else {
             // TODO : Should be translated
             alert("The command '" + command + "' is considered dangerous, so it was blocked.");
