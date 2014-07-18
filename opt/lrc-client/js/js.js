@@ -292,6 +292,10 @@ $(function() {
 
 // Keyboard input
 $(function() {
+    $(".keyboard").click(function(){
+        $("input.keyboard-input").focus();
+    });
+
     $("input.keyboard-input").each(function() {
         $(this).keypress(function(e) {
             e.preventDefault();
