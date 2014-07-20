@@ -23,7 +23,7 @@ Custom_Commands.prototype.refresh_view = function() {
     for (var index in custom_commands) {
         var custom_command = custom_commands[index];
         $('#custom-commands .custom-commands .scroll')
-                .append('<div class="line dark-blue">' +
+                .append('<div class="line color1-dark">' +
                     '<a href="#!" class="left link-custom-command" data-command="' + encodeURI(custom_command.cmd) + '">' + custom_command.name + '</a>' +
                     '<a href="#!" class="w20 right trash" data-index="' + index + '"><i class="fa fa-trash-o"></i></a>' +
                 '</div>');

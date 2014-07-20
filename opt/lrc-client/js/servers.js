@@ -16,7 +16,7 @@ Servers.prototype.refresh_view = function() {
         for(var index in this.all()) {
             var server = this.all()[index];
             server.index = index;
-            $("#servers").append('<a class="line dark-blue server" data-page="menu" href="#!" data-direction=\'{"from":"right","to":"left"}\' data-server=\'' + JSON.stringify(server) + '\'><span>' + server.name + '</span><div class="w20 right"><i class="fa fa-chevron-right"></i></div></a>');
+            $("#servers").append('<a class="line color1-dark server" data-page="menu" href="#!" data-direction=\'{"from":"right","to":"left"}\' data-server=\'' + JSON.stringify(server) + '\'><span>' + server.name + '</span><div class="w20 right"><i class="fa fa-chevron-right"></i></div></a>');
         }
 
         // Refresh server click events
@@ -50,7 +50,7 @@ $(function() {
     $("#save").click(function() {
         navigator.servers.append({
             name: $('#name').val(),
-            ip: $("#ip").val(),
+            ip: $("#ip").val()
         });
         navigator.servers.refresh_view();
     });

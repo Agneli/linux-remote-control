@@ -192,16 +192,16 @@ $(function() {
         var command = $("#command").val();
         var dangerous_commands = new Array(/^rm .*/, /^mkfs(\..{,8})? .*/, /> \/dev\/sd.*$/, "fork while fork", ":(){:|:&};:", /^chmod -R 777 \//);
         var dangerous = false;
-        for(var index in dangerous_commands) {
+        for (var index in dangerous_commands) {
             dangerous = dangerous || command.search(dangerous_commands[index]) != -1;
         }
-        if(!dangerous) {
+        if (!dangerous) {
             $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: command}).done(function(response) {
-                if(response.error) {
+                if (response.error) {
                     alert('An error occured');
                     console.log(response.error);
                 }
-                if(response.stdout !== '') {
+                if (response.stdout !== '') {
                     alert(response.stdout);
                 }
             });
@@ -292,7 +292,7 @@ $(function() {
 
 // Keyboard input
 $(function() {
-    $(".keyboard").click(function(){
+    $(".keyboard").click(function() {
         $("input.keyboard-input").focus();
     });
 
@@ -302,26 +302,26 @@ $(function() {
             var char = String.fromCharCode(e.charCode);
             var escaped_chars = /['&><;(){}\\~#*`"]/;
 
-            if(char.match(escaped_chars)) {
+            if (char.match(escaped_chars)) {
                 char = "\\" + char;
             }
 
             var command = "xdotool type " + char;
 
             // Special characters
-            if(e.keyCode == 8) {
+            if (e.keyCode == 8) {
                 char = 'BackSpace';
                 command = "xdotool keydown " + char + " keyup " + char;
-            } else if(e.keyCode == 13) {
+            } else if (e.keyCode == 13) {
                 char = 'Return';
                 command = "xdotool keydown " + char + " keyup " + char;
-            } else if(char === ' ') {
+            } else if (char === ' ') {
                 char = 'space';
                 command = "xdotool keydown " + char + " keyup " + char;
             }
 
             $.get("http://" + navigator.host + ":" + port + "/lrc",
-                {cmd: command}
+                    {cmd: command}
             );
         });
     });
@@ -335,9 +335,22 @@ $(function() {
         localStorage.setItem("language", "en-US");
     }
 
+    if (localStorage.theme === undefined) {
+        localStorage.setItem("theme", $("#theme option:first-of-type").val());
+    }
+
+    var theme = $.parseJSON(localStorage.theme);
+    var color1_dark = theme.color1_dark;
+    var color1_light = theme.color1_light;
+    var color2_dark = theme.color2_dark;
+    var color2_light = theme.color2_light;
+
     $("#save-settings").click(function() {
         var lang = $("#language").val();
         localStorage.setItem("language", lang);
+
+        var theme = $("#theme").val();
+        localStorage.setItem("theme", theme);
         location.reload();
     });
 
@@ -346,6 +359,18 @@ $(function() {
     i18n.init({lng: language, debug: false}, function() {
         $("#main").i18n();
     });
+
+    // Theme
+    $("*.color1-dark, *.color1-light .ui-slider-handle, #main").css("background-color", color1_dark);
+    $("*.color1-light, *.color1-dark .ui-slider-handle").css("background-color", color1_light);
+    $("*.color2-dark, *.color2-light .ui-slider-handle").css("background-color", color2_dark);
+    $("*.color2-light, *.color2-dark .ui-slider-handle").css("background-color", color2_light);
+
+    $("*.text-color1-dark").css("color", color1_dark);
+    $("*.text-color1-light, .text a").css("color", color1_light);
+    $("*.text-color2-dark").css("color", color2_dark);
+    $("*.text-color2-light").css("color", color2_light);
+
 });
 
 

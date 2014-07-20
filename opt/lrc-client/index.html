@@ -13,20 +13,20 @@
         <div id="main">
             <!-- Index ______________________________________________________-->
             <section id="index">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     Linux Remote Control
                 </header>
                 <div class="line h60" id="servers">
                     <div class="line center" id="msg-server"></div>
                 </div>
-                <a class="line light-blue center" href="#!" data-page="add-server" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.add-server"></a>
-                <a class="line light-orange center" href="#!" data-page="settings" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.menu.settings"></a>
-                <a class="line dark-orange center" href="#!" data-page="help" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.help"></a>
+                <a class="line color1-light center" href="#!" data-page="add-server" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.add-server"></a>
+                <a class="line color2-light center" href="#!" data-page="settings" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.menu.settings"></a>
+                <a class="line color2-dark center" href="#!" data-page="help" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.help"></a>
             </section>
 
             <!-- Add Server _________________________________________________-->
             <section id="add-server">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <a href="#!" class="w20 left" data-page="index" data-direction='{"from":"up","to":"down"}'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.index.add-server"></span>
                     <div class="w20 right"></div>
@@ -47,15 +47,15 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
-                <div class="line dark-orange">
-                    <a href="#!" id="cancel" class="w50 center left dark-orange" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
-                    <a href="#!" id="save" class="w50 center right dark-orange" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
+                <div class="line color2-dark">
+                    <a href="#!" id="cancel" class="w50 center left color2-dark" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
+                    <a href="#!" id="save" class="w50 center right color2-dark" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
                 </div>
             </section>
 
             <!-- Settings ___________________________________________________-->
             <section id="settings">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <a href="#!" class="w20 left" data-page="index" data-direction='{"from":"up","down":"right"}'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.menu.settings"></span>
                     <div class="w20 right"></div>
@@ -76,57 +76,71 @@
                         </select>
                     </div>
                 </div>
+                <div class="line center" data-i18n="lrc.settings.language"></div>
+                <div class="line center">
+                    <div class="fields">
+                        <select name="language" id="theme">
+                            <option value='{"color1_dark":"#00539f","color1_light":"#0095dd","color2_dark":"#e66000","color2_light":"#ff9500"}'>Blue and Orange</option>
+                            <option value='{"color1_dark":"#9f0a00","color1_light":"#dc0011","color2_dark":"#009f4c","color2_light":"#02e04c"}'>Red and Green</option>
+                            <option value='{"color1_dark":"#9f0051","color1_light":"#de0090","color2_dark":"#6f01e4","color2_light":"#9e00ff"}'>Pink and Purple</option>
+                            <option value='{"color1_dark":"#fc5b3f","color1_light":"#fcb03c","color2_dark":"#068587","color2_light":"#6fb07f"}'>Orange and Green</option>
+                            <option value='{"color1_dark":"#068587","color1_light":"#6fb07f","color2_dark":"#fc5b3f","color2_light":"#fcb03c"}'>Green and Orange</option>
+                            <option value='{"color1_dark":"#253036","color1_light":"#324049","color2_dark":"#932629","color2_light":"#e02b24"}'>Gray and Red</option>
+                            <option value='{"color1_dark":"#e84594","color1_light":"#f5a1Ca","color2_dark":"#6b88c2","color2_light":"#85a6d8"}'>Pink and Blue</option>
+                            <option value='{"color1_dark":"#776828","color1_light":"#aa9439","color2_dark":"#666","color2_light":"#888"}'>Golden and Silver</option>
+                            <option value='{"color1_dark":"#294d5c","color1_light":"#5198b5","color2_dark":"#83d4F6","color2_light":"#63b9dd"}'>Shades of blue</option>
+                        </select>
+                    </div>
+                </div>
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line dark-orange">
-                    <a href="#!" id="cancel-settings" class="w50 center left dark-orange" data-page="index" data-direction='{"from":"left","to":"right"}' data-i18n="lrc.settings.cancel"></a>
-                    <a href="#!" id="save-settings" class="w50 center right dark-orange" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.settings.save"></a>
+                <div class="line color2-dark">
+                    <a href="#!" id="cancel-settings" class="w50 center left color2-dark" data-page="index" data-direction='{"from":"left","to":"right"}' data-i18n="lrc.settings.cancel"></a>
+                    <a href="#!" id="save-settings" class="w50 center right color2-dark" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.settings.save"></a>
                 </div>
             </section>
 
             <!-- Help _______________________________________________________-->
             <section id="help">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <a href="#!" class="w20 left" data-page="index" data-direction='{"from":"up","to":"down"}'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.index.help"></span>
                     <div class="w20 right"></div>
                 </header>
                 <div class="line"></div>
-                <a class="line dark-blue" data-page="server" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="server" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.add-server"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line dark-blue" data-page="install" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="install" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.install"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line dark-blue" data-page="contribute" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="contribute" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.contribute"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line dark-blue" data-page="bugs" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="bugs" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.bugs"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line dark-blue" data-page="feedback" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="feedback" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.feedback"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line dark-blue" data-page="about" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="about" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.about"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line dark-blue" data-page="credits" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="credits" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.help.credits"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
             </section>
 
             <section id="server">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.add-server"></span>
                     <div class="w20 right"></div>
@@ -134,14 +148,14 @@
                 <div class="line h90">
                     <div class="text">
                         <p data-i18n="lrc.server.p1"></p><br />
-                        <p class="cmd">ifconfig</p><br />
+                        <p class="cmd color1-light">ifconfig</p><br />
                         <p data-i18n="lrc.server.p2"></p>
                     </div>
                 </div>
             </section>
 
             <section id="install">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.install"></span>
                     <div class="w20 right"></div>
@@ -151,16 +165,16 @@
                         <p data-i18n="lrc.install.p1"></p><br />
 
                         <p data-i18n="lrc.install.p2"></p>
-                        <p class="cmd">wget http://www.linuxremotecontrol.com/lrc-ffos.deb</p><br />
+                        <p class="cmd color1-light small">wget http://www.linuxremotecontrol.com/lrc-ffos.deb</p><br />
 
                         <p data-i18n="lrc.install.p3"></p>
-                        <p class="cmd">sudo dpkg -i lrc-ffos.deb</p><br />
+                        <p class="cmd color1-light">sudo dpkg -i lrc-ffos.deb</p><br />
 
                         <!--<p data-i18n="lrc.install.p4"></p>
-                        <p class="cmd">sudo mv /opt/lrc-client your-device-directory</p><br />-->
+                        <p class="cmd color1-light">sudo mv /opt/lrc-client your-device-directory</p><br />-->
 
                         <p data-i18n="lrc.install.p5"></p>
-                        <p class="cmd">node /opt/lrc/lrc.js</p><br />
+                        <p class="cmd color1-light">node /opt/lrc/lrc.js</p><br />
 
                         <!--<p data-i18n="lrc.install.p6"></p>-->
                     </div>
@@ -168,7 +182,7 @@
             </section>
 
             <section id="contribute">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.contribute"></span>
                     <div class="w20 right"></div>
@@ -197,7 +211,7 @@
             </section>
 
             <section id="bugs">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.bugs"></span>
                     <div class="w20 right"></div>
@@ -206,12 +220,13 @@
                     <div class="text">
                         <p data-i18n="lrc.bugs.p1"></p><br />
                         <p data-i18n="[html]lrc.bugs.p2"></p><br />
+                        <a href="mailto:contact@linuxremotecontrol.com" target="_blank" class="small">contact@linuxremotecontrol.com</a>
                     </div>
                 </div>
             </section>
 
             <section id="feedback">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.feedback"></span>
                     <div class="w20 right"></div>
@@ -219,13 +234,13 @@
                 <div class="line h90">
                     <div class="text">
                         <p data-i18n="lrc.feedback.p1"></p><br />
-                        <a href="mailto:contact@linuxremotecontrol.com" target="_blank" >contact@linuxremotecontrol.com</a>
+                        <a href="mailto:contact@linuxremotecontrol.com" target="_blank" class="small">contact@linuxremotecontrol.com</a>
                     </div>
                 </div>
             </section>
 
             <section id="about">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.about"></span>
                     <div class="w20 right"></div>
@@ -244,54 +259,54 @@
             </section>
 
             <section id="credits">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.credits"></span>
                     <div class="w20 right"></div>
                 </header>
                 <div class="line h90">
-                    <a class="line dark-blue" href="https://github.com/Agneli" target="_blank">
-                        <span>Raphael Agneli <span class="text-light-blue" data-i18n="lrc.credits.dev"></span></span>
+                    <a class="line color1-dark" href="https://github.com/Agneli" target="_blank">
+                        <span>Raphael Agneli <span class="text-color1-light" data-i18n="lrc.credits.dev"></span></span>
                         <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                     </a>
-                    <a class="line dark-blue" href="https://github.com/cyrilf" target="_blank">
-                        <span>Cyril F <span class="text-light-blue" data-i18n="lrc.credits.trad"></span></span>
+                    <a class="line color1-dark" href="https://github.com/cyrilf" target="_blank">
+                        <span>Cyril F <span class="text-color1-light" data-i18n="lrc.credits.trad"></span></span>
                         <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                     </a>
-                    <a class="line dark-blue" href="https://github.com/AlexMl" target="_blank">
-                        <span>Alexander Mlinzk <span class="text-light-blue" data-i18n="lrc.credits.trad"></span></span>
+                    <a class="line color1-dark" href="https://github.com/AlexMl" target="_blank">
+                        <span>Alexander Mlinzk <span class="text-color1-light" data-i18n="lrc.credits.trad"></span></span>
                         <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                     </a>
-                    <a class="line dark-blue" href="https://github.com/paulocr" target="_blank">
-                        <span>Paulo Calvo <span class="text-light-blue" data-i18n="lrc.credits.trad"></span></span>
+                    <a class="line color1-dark" href="https://github.com/paulocr" target="_blank">
+                        <span>Paulo Calvo <span class="text-color1-light" data-i18n="lrc.credits.trad"></span></span>
                         <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                     </a>
-                    <a class="line dark-blue" href="https://github.com/bagjunggyu" target="_blank">
-                        <span>Jung Kyu Park <span class="text-light-blue" data-i18n="lrc.credits.trad"></span></span>
+                    <a class="line color1-dark" href="https://github.com/bagjunggyu" target="_blank">
+                        <span>Jung Kyu Park <span class="text-color1-light" data-i18n="lrc.credits.trad"></span></span>
                         <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                     </a>
-                    <a class="line dark-blue" href="https://github.com/zepatrik" target="_blank">
-                        <span>Patrik Neu <span class="text-light-blue" data-i18n="lrc.credits.trad"></span></span>
+                    <a class="line color1-dark" href="https://github.com/zepatrik" target="_blank">
+                        <span>Patrik Neu <span class="text-color1-light" data-i18n="lrc.credits.trad"></span></span>
                         <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                     </a>
-                    <a class="line dark-blue" href="https://github.com/omnitrax" target="_blank">
-                        <span>Lars Viklund <span class="text-light-blue" data-i18n="lrc.credits.trad"></span></span>
+                    <a class="line color1-dark" href="https://github.com/omnitrax" target="_blank">
+                        <span>Lars Viklund <span class="text-color1-light" data-i18n="lrc.credits.trad"></span></span>
                         <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                     </a>
-                    <a class="line dark-blue" href="https://github.com/Folkric" target="_blank">
-                        <span>Andrew Erwin <span class="text-light-blue" data-i18n="lrc.credits.trad"></span></span>
+                    <a class="line color1-dark" href="https://github.com/Folkric" target="_blank">
+                        <span>Andrew Erwin <span class="text-color1-light" data-i18n="lrc.credits.trad"></span></span>
                         <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                     </a>
-                    <a class="line dark-blue" href="https://github.com/michelwilhelm" target="_blank">
-                        <span>Michel Wilhelm <span class="text-light-blue" data-i18n="lrc.credits.dev"></span></span>
+                    <a class="line color1-dark" href="https://github.com/michelwilhelm" target="_blank">
+                        <span>Michel Wilhelm <span class="text-color1-light" data-i18n="lrc.credits.dev"></span></span>
                         <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                     </a>
-                    <a class="line dark-blue" href="https://github.com/316k" target="_blank">
-                        <span>Nicolas Hurtubise <span class="text-light-blue" data-i18n="lrc.credits.dev"></span></span>
+                    <a class="line color1-dark" href="https://github.com/316k" target="_blank">
+                        <span>Nicolas Hurtubise <span class="text-color1-light" data-i18n="lrc.credits.dev"></span></span>
                         <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                     </a>
-                    <a class="line dark-blue" href="https://github.com/lufte" target="_blank">
-                        <span>Javier Ayres <span class="text-light-blue" data-i18n="lrc.credits.dev"></span></span>
+                    <a class="line color1-dark" href="https://github.com/lufte" target="_blank">
+                        <span>Javier Ayres <span class="text-color1-light" data-i18n="lrc.credits.dev"></span></span>
                         <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                     </a>
                 </div>
@@ -299,33 +314,33 @@
 
             <!-- Menu _______________________________________________________-->
             <section id="menu">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <a href="#!" id="clear-server" class="w20 left" data-page="index" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
                     <span id="server-name" contenteditable></span>
                     <a href="#!" id="delete-server" data-page="index" data-direction='{"from":"left","to":"right"}' class="w20 right"><i class="fa fa-trash-o"></i></a>
                 </header>
                 <div class="line"></div>
-                <a class="line dark-blue" data-page="musics" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="musics" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.music"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line dark-blue" data-page="videos" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="videos" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.video"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line dark-blue" data-page="controls" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="controls" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.controls"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line dark-blue" data-page="touchpad" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="touchpad" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.touchpad"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line dark-blue" data-page="slideshow" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="slideshow" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.slideshow"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line dark-blue" data-page="custom-commands" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="custom-commands" href="#!" data-direction='{"from":"right","to":"left"}'>
                     <span data-i18n="lrc.menu.custom-commands"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
@@ -335,7 +350,7 @@
 
             <!-- Musics _____________________________________________________-->
             <section id="musics">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <!--<span data-i18n="lrc.menu.music"></span>-->
                     <a href="#!" class="w14 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-list"></i></a>
                     <a href="#!" class="w14 left" data-page="musics" data-direction='{"from":"left","to":"right"}'><i class="fa fa-music"></i></a>
@@ -350,25 +365,25 @@
                 <div class="line center album"></div>
                 <div class="line center title"></div>
                 <div class="line center paused"></div>
-                <div class="line light-blue center">
+                <div class="line color1-light center">
                     <a class="w20 left sound-min" data-command='{"step":"5"}'><i class="fa fa-volume-off"></i></a>
                     <a class="w20 right sound-max" data-command='{"step":"5"}'><i class="fa fa-volume-up"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="sound-volume" data-command='{"cmd":"amixer sset Master "}'></div>  
+                        <div class="sound-volume color1-dark" data-command='{"cmd":"amixer sset Master "}'></div>  
                         <span class="volume"></span>  
                     </div>
                 </div>
-                <div class="line light-orange center">
+                <div class="line color2-light center">
                     <div class="w20 left time elapsed">00:00</div>
                     <div class="w20 right time duration">00:00</div>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="timeline" id="music-timeline" data-command='{"cmd":""}'></div>  
+                        <div class="timeline color2-dark" id="music-timeline" data-command='{"cmd":""}'></div>  
                         <span class="volume"></span>  
                     </div>
                 </div>
-                <div class="line h20 dark-orange" id="music-controls">
+                <div class="line h20 color2-dark" id="music-controls">
                     <a href="#!" class="w25 left prev" data-action="previous"><i class="fa fa-fast-backward"></i></a>
                     <a href="#!" class="w25 left play" id="music-play-pause" data-action="toggle_play"><i class="fa fa-play"></i></a>
                     <a href="#!" class="w25 left next" data-action="next"><i class="fa fa-fast-forward"></i></a>
@@ -379,7 +394,7 @@
 
             <!-- Videos _____________________________________________________-->
             <section id="videos">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <!--<span data-i18n="lrc.menu.video"></span>-->
                     <a href="#!" class="w14 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-list"></i></a>
                     <a href="#!" class="w14 left" data-page="musics" data-direction='{"from":"left","to":"right"}'><i class="fa fa-music"></i></a>
@@ -394,25 +409,25 @@
                 <div class="line center paused"></div>
                 <div class="line"></div>
                 <div class="line"></div>
-                <div class="line light-blue center">
+                <div class="line color1-light center">
                     <a class="w20 left sound-min" data-command='{"step":"5"}'><i class="fa fa-volume-off"></i></a>
                     <a class="w20 right sound-max" data-command='{"step":"5"}'><i class="fa fa-volume-up"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="sound-volume" data-command='{"cmd":"amixer sset Master "}'></div>  
+                        <div class="sound-volume color1-dark" data-command='{"cmd":"amixer sset Master "}'></div>  
                         <span class="volume"></span>  
                     </div>
                 </div>
-                <div class="line light-orange center">
+                <div class="line color2-light center">
                     <div class="w20 left time _elapsed">00:00</div>
                     <div class="w20 right time _duration">00:00</div>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="timeline" id="video-timeline"></div>  
+                        <div class="timeline color2-dark" id="video-timeline"></div>  
                         <span class="volume"></span>  
                     </div>
                 </div>
-                <div class="line h20 dark-orange" id="video-controls">
+                <div class="line h20 color2-dark" id="video-controls">
                     <a href="#!" class="w25 left prev" data-command='{"cmd":"export DISPLAY=:0; totem --seek-bwd"}'><i class="fa fa-fast-backward"></i></a>
                     <a href="#!" class="w25 left play" id="video-play-pause" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioPlay"}'><i class="fa fa-play"></i></a>
                     <a href="#!" class="w25 left next" data-command='{"cmd":"export DISPLAY=:0; totem --seek-fwd"}'><i class="fa fa-fast-forward"></i></a>
@@ -423,7 +438,7 @@
 
             <!-- Controls ___________________________________________________-->
             <section id="controls">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <!--<span data-i18n="lrc.menu.controls"></span>-->
                     <a href="#!" class="w14 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-list"></i></a>
                     <a href="#!" class="w14 left" data-page="musics" data-direction='{"from":"left","to":"right"}'><i class="fa fa-music"></i></a>
@@ -434,32 +449,32 @@
                     <a href="#!" class="w14 left" data-page="custom-commands" data-direction='{"from":"left","to":"right"}'><i class="fa fa-terminal"></i></a>
                 </header>
                 <div class="line"></div>
-                <div class="line center dark-blue" data-i18n="lrc.controls.send-custom-command"></div>
+                <div class="line center color1-dark" data-i18n="lrc.controls.send-custom-command"></div>
                 <div class="line">
                     <div class="fields fields-command">
                         <input type="text" name="command" id="command" data-i18n="[placeholder]lrc.controls.command" />
-                        <a href="#!" class="right dark-blue" id="send-command"><i class="fa fa-2x fa-check"></i></a>
+                        <a href="#!" class="right color1-dark" id="send-command"><i class="fa fa-2x fa-check"></i></a>
                     </div>
                 </div>
                 <div class="line"></div>
-                <div id="alt-tab" class="line h20 light-blue">
+                <div id="alt-tab" class="line h20 color1-light">
                     <a href="#!" class="w25 left alt-tab" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt; sleep 0.5; xdotool key Tab"}'>Alt + tab</a>
                     <a href="#!" class="w25 left" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Left"}'><i class="fa fa-2x fa-chevron-left"></i></a>
                     <a href="#!" class="w25 right ok" data-command='{"cmd":"export DISPLAY=:0; xdotool keyup alt keyup Tab keyup shift"}'><i class="fa fa-2x fa-check"></i></a>
                     <a href="#!" class="w25 right" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Right"}'><i class="fa fa-2x fa-chevron-right"></i></a>
                 </div>
-                <div id="controls-controls" class="line h20 light-orange">
+                <div id="controls-controls" class="line h20 color2-light">
                     <a href="#!" class="w25 left lock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -l"}'><i class="fa fa-2x fa-lock"></i></a>
                     <a href="#!" class="w25 left unlock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d"}'><i class="fa fa-2x fa-unlock"></i></a>
                     <a href="#!" id="reboot" class="w25 left reboot" data-command='{"cmd":"reboot"}'><i class="fa fa-2x fa-repeat"></i></a>
                     <a href="#!" id="shutdown" class="w25 left shutdown" data-command='{"cmd":"sudo halt"}'><i class="fa fa-2x fa-power-off"></i></a>
                 </div>
-                <div class="line dark-orange center">
+                <div class="line color2-dark center">
                     <a class="w20 left dark-screen" data-command='{"step":"10"}'><i class="fa fa-desktop"> -</i></a>
                     <a class="w20 right light-screen" data-command='{"step":"10"}'>+ <i class="fa fa-desktop"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="timeline" id="backlight" data-command='{"cmd":"xbacklight -set "}'></div>  
+                        <div class="timeline color2-light" id="backlight" data-command='{"cmd":"xbacklight -set "}'></div>  
                         <span class="volume"></span>  
                     </div>
                 </div>
@@ -467,7 +482,7 @@
 
             <!-- Touchpad ___________________________________________________-->
             <section id="touchpad">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <!--<span data-i18n="lrc.menu.touchpad"></span>-->
                     <a href="#!" class="w14 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-list"></i></a>
                     <a href="#!" class="w14 left" data-page="musics" data-direction='{"from":"left","to":"right"}'><i class="fa fa-music"></i></a>
@@ -479,7 +494,7 @@
                 </header>
                 <div id="canvas" class="line h70">
                 </div>
-                <div id="mouse-controls" class="line h20 dark-orange">
+                <div id="mouse-controls" class="line h20 color2-dark">
                     <a href="#!" class="w33 left-click left" data-command='{"cmd":"export DISPLAY=:0; xdotool click 1"}'></a>
                     <a href="#!" class="w33 right-click left" data-command='{"cmd":"export DISPLAY=:0; xdotool click 3"}'></a>
                     <a href="#!" class="w33 keyboard right" data-command='{"cmd":""}'><i class="fa fa-3x fa-keyboard-o"></i></a>
@@ -489,7 +504,7 @@
 
             <!-- Slideshow __________________________________________________-->
             <section id="slideshow">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <!--<span data-i18n="lrc.menu.slideshow"></span>-->
                     <a href="#!" class="w14 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-list"></i></a>
                     <a href="#!" class="w14 left" data-page="musics" data-direction='{"from":"left","to":"right"}'><i class="fa fa-music"></i></a>
@@ -499,11 +514,11 @@
                     <a href="#!" class="w14 left" data-page="slideshow" data-direction='{"from":"left","to":"right"}'><i class="fa fa-unsorted fa-rotate-90"></i></a>
                     <a href="#!" class="w14 left" data-page="custom-commands" data-direction='{"from":"left","to":"right"}'><i class="fa fa-terminal"></i></a>
                 </header>
-                <div class="line h70 slideshow-controls dark-blue">
+                <div class="line h70 slideshow-controls color1-dark">
                     <a href="#!" class="w50 left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Left"}'><i class="fa fa-5x fa-chevron-left"></i></a>
                     <a href="#!" class="w50 right" data-command='{"cmd":"export DISPLAY=:0; xdotool key Right"}'><i class="fa fa-5x fa-chevron-right"></i></a>
                 </div>
-                <div class="line h20 dark-orange slideshow-controls">
+                <div class="line h20 color2-dark slideshow-controls">
                     <a href="#!" class="w33 play-slideshow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key F5"}'></a>
                     <a href="#!" class="w33 exit-slideshow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Escape"}'></a>
                     <a href="#!" class="w33 mouse right" data-page="touchpad" data-direction='{"from":"left","to":"right"}'><i class="fa fa-2x fa-hand-o-up"></i></a>
@@ -512,7 +527,7 @@
 
             <!-- Custom commands ____________________________________________-->
             <section id="custom-commands">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <!--<span data-i18n="lrc.menu.custom-commands"></span>-->
                     <a href="#!" class="w14 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-list"></i></a>
                     <a href="#!" class="w14 left" data-page="musics" data-direction='{"from":"left","to":"right"}'><i class="fa fa-music"></i></a>
@@ -527,12 +542,12 @@
                     <div class="h70 scroll">
                     </div>
                 </div>
-                <a class="line dark-orange center" data-page="add-custom-command" href="#!" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.custom-commands.add"></a>
+                <a class="line color2-dark center" data-page="add-custom-command" href="#!" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.custom-commands.add"></a>
             </section>
 
             <!-- Add custom commands ________________________________________-->
             <section id="add-custom-command">
-                <header class="line light-blue center">
+                <header class="line color1-light center">
                     <a href="#!" class="w20 left" data-page="custom-commands" data-direction='{"from":"up","to":"down"}'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.custom-commands.add"></span>
                     <div class="w20 right"></div>
@@ -553,9 +568,9 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
-                <div class="line dark-orange">
-                    <a href="#!" class="w50 center left dark-orange cancel" data-page="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
-                    <a href="#!" class="w50 center right dark-orange save" data-page="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
+                <div class="line color2-dark">
+                    <a href="#!" class="w50 center left color2-dark cancel" data-page="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
+                    <a href="#!" class="w50 center right color2-dark save" data-page="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
                 </div>
             </section>
 

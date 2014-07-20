@@ -28,7 +28,6 @@ a {
 #main {
     width: 100%;
     height: 100%;
-    background: #00539f;
 }
 
 #main section {
@@ -58,58 +57,6 @@ a {
     position: relative;
 }
 
-#main section dark-blue {
-    background: #00539f;
-}
-
-#main section a.dark-blue:active, #main section .dark-blue a:active {
-    background: #00539f;
-    color: #0095dd;
-}
-
-#main section .light-blue {
-    background-color: #0095dd;
-}
-
-#main section a.light-blue:active, #main section .light-blue a:active {
-    background-color: #0095dd;
-    color: #00539f;
-}
-
-#main section .dark-orange {
-    background-color: #e66000;
-}
-
-#main section a.dark-orange:active, #main section .dark-orange a:active {
-    background-color: #e66000;
-    color: #ff9500;
-}
-
-#main section .light-orange {
-    background-color: #ff9500;
-}
-
-#main section a.light-orange:active, #main section .light-orange a:active {
-    background-color: #ff9500;
-    color: #e66000;
-}
-
-#main section .text-light-blue {
-    color: #0095dd;
-}
-
-#main section .text-dark-blue {
-    color: #00539f;
-}
-
-#main section .text-light-orange {
-    color: #ff9500;
-}
-
-#main section .line.text-dark-orange {
-    color: #e66000;
-}
-
 #main section .line span {
     margin-left: 5%;
 }
@@ -119,9 +66,9 @@ a {
     padding: 5% 10%;
 }
 
-#main section .line .text a {
+/*#main section .line .text a {
     color: #0095dd;
-}
+}*/
 
 #main section .line .text.credits a {
     color: #fff;
@@ -137,7 +84,6 @@ a {
 }
 
 #main section .line .text .cmd {
-    background: #0095dd;
     padding: 1%;
 }
 
@@ -205,18 +151,6 @@ a {
     border: none;
 }
 
-#main section .line .slider .ui-slider.sound-volume {
-    background: #00539f;
-}
-
-#main section .line .slider .ui-slider.timeline {
-    background: #e66000;
-}
-
-#main section .line .slider .ui-slider.timeline#backlight {
-    background: #b84d00;
-}
-
 #main section .line .slider .ui-slider-range {
     background: #fff;
     border-radius: 100px;
@@ -227,22 +161,6 @@ a {
     height: 1.1em;
     border-radius: 100px;
     border: 3px solid #fff;
-}
-
-#main section .line.dark-blue .ui-slider-handle {
-    background: #0095dd;
-}
-
-#main section .line.light-blue .ui-slider-handle {
-    background: #00539f;
-}
-
-#main section .line.dark-orange .ui-slider-handle {
-    background: #ff9500;
-}
-
-#main section .line.light-orange .ui-slider-handle {
-    background: #e66000;
 }
 
 #main section .line .play-slideshow {
@@ -338,6 +256,10 @@ a {
 
 .fa {
     vertical-align:middle;
+}
+
+.small {
+    font-size: 0.9rem;
 }
 
 /* Custom commands ___________________________________________________________*/
