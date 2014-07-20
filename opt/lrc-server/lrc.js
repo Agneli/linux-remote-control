@@ -24,8 +24,8 @@ var handleMessage = function(message) {
         break;
         case MOVE_PREFIX:
             values = message.split(';');
-            x = parseInt(values[0]);
-            y = parseInt(values[1]);
+            x = parseInt(values[0]) * config.mouse_speed.x;
+            y = parseInt(values[1]) * config.mouse_speed.y;
             if (Math.abs(x) > 10) {
                 if (Math.abs(x) > 20) {
                     x = x * 2;
