@@ -38,7 +38,7 @@
         },
         "bugs": {
             "p1": "버그를 발견하시면 알려주세요.",
-            "p2": "아래 주소에 새로운 문제 제기를 해주시면 됩니다.<a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> or contact us by email <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
+            "p2": "아래 주소에 새로운 문제 제기를 해주시면 됩니다.<a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> 또는 이메일로 연락:"
         },
         "feedback": {
             "p1": "어플에 관한 여러분의 의견을 말씀해 주세요. 사용기나, 제안, 칭찬 등을 보내주시면, 고맙고 기쁘게 듣겠습니다."
@@ -69,6 +69,7 @@
         },
         "settings": {
             "language": "언어",
+            "theme": "테마",
             "audio": "오디오 플레이어",
             "video": "비디오 플레이어",
             "cancel": "취소",

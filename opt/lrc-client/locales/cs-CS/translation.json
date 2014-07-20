@@ -17,7 +17,7 @@
             "bugs": "Oznámit chybu",
             "feedback": "Poslat Feedback",
             "about": "O",
-            "credits": "Credits"
+            "credits": "Kredity"
         },
         "server": {
             "p1": "Aby si mohl připojit servera (počítač který chceš ovládat) musíš vědět IP adresu. Aby si dostal tuto adresu musíš sadát tuto komando do tvójeho terminálu: ",
@@ -38,7 +38,7 @@
         },
         "bugs": {
             "p1": "Bilo by ujasní kdyby si nám mohl udat chyby.",
-            "p2": "Můžeš je nám napsat na <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> nebo napsat meila na<a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
+            "p2": "Můžeš je nám napsat na <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> nebo napsat meila na:"
         },
         "feedback": {
             "p1": "Vyprávěj nám co myslíš přes tuto aplikaci. Radujeme se slyšet od tebe, jedno jestly to sou návrhy, pochvala nebo kritika."
@@ -69,6 +69,7 @@
         },
         "settings": {
             "language": "jazyk (language)",
+            "theme": "Téma",
             "audio": "Přehrávač audio",
             "video": "Přehrávač video",
             "cancel": "zpátky",

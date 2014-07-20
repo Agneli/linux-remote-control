@@ -17,7 +17,7 @@
             "bugs": "Rapportera buggar",
             "feedback": "Skicka feedback",
             "about": "Om",
-            "credits": "Credits"
+            "credits": "Krediter"
         },
         "server": {
             "p1": "For add a server (computer that will be controled), you need know the IP address of this computer. For discover the IP address of your computer, type the following command on your terminal.",
@@ -38,7 +38,7 @@
         },
         "bugs": {
             "p1": "If you found some bug in the app, tell us please.",
-            "p2": "You can create a new issue on <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> or contact us by email <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
+            "p2": "You can create a new issue on <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> or contact us by email:"
         },
         "feedback": {
             "p1": "Tell us what you're thinking of the app. Send a review, sugestion or praise, we will hear thee with great pleasure."
@@ -69,6 +69,7 @@
         },
         "settings": {
             "language": "Språk",
+            "theme": "Tema",
             "audio": "Musikspelare",
             "video": "Videospelare",
             "cancel": "Avbryt",

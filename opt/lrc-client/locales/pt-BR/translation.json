@@ -38,7 +38,7 @@
         },
         "bugs": {
             "p1": "Se você encontrou algum problema no aplicativo, nos avise por favor.",
-            "p2": "Você pode criar uma nova issue no <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> ou entrar em contato pelo e-mail <a href=\"mailto:contact@linuxremotecontrol.com\" target=\"_blank\" >contact@linuxremotecontrol.com</a>."
+            "p2": "Você pode criar uma nova issue no <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> ou entrar em contato pelo e-mail:"
         },
         "feedback": {
             "p1": "Diga-nos o que você achou do aplicativo. Envie um comentário, sugestão ou elogio, nós te ouviremos com o maior prazer."
@@ -69,6 +69,7 @@
         },
         "settings": {
             "language": "Idioma",
+            "theme": "Tema",
             "audio": "Player de áudio",
             "video": "Player de vídeo",
             "cancel": "Cancelar",
