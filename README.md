@@ -70,7 +70,7 @@ sudo dpkg -i lrc-ffos.deb
 
 3 - Start lrc-server.
 ```bash
-node /opt/lrc/lrc.js
+node /opt/lrc-server/lrc.js
 ```
 
 If an error occurs during installation of the package, run the following command.
