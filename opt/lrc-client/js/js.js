@@ -354,22 +354,43 @@ $(function() {
         location.reload();
     });
 
+    $("#cancel-settings").click(function() {
+        changeTheme(color1_dark, color1_light, color2_dark, color2_light);
+    });
+
     // Translation
     language = localStorage.getItem("language");
     i18n.init({lng: language, debug: false}, function() {
         $("#main").i18n();
     });
 
-    // Theme
-    $("*.color1-dark, *.color1-light .ui-slider-handle, #main").css("background-color", color1_dark);
-    $("*.color1-light, *.color1-dark .ui-slider-handle").css("background-color", color1_light);
-    $("*.color2-dark, *.color2-light .ui-slider-handle").css("background-color", color2_dark);
-    $("*.color2-light, *.color2-dark .ui-slider-handle").css("background-color", color2_light);
+    // Preview Theme
+    $("#theme").change(function() {
+        var colors = $(this).val();
+        theme = $.parseJSON(colors);
+        var color1_dark = theme.color1_dark;
+        var color1_light = theme.color1_light;
+        var color2_dark = theme.color2_dark;
+        var color2_light = theme.color2_light;
 
-    $("*.text-color1-dark").css("color", color1_dark);
-    $("*.text-color1-light, .text a").css("color", color1_light);
-    $("*.text-color2-dark").css("color", color2_dark);
-    $("*.text-color2-light").css("color", color2_light);
+        changeTheme(color1_dark, color1_light, color2_dark, color2_light);
+    });
+
+    // Change Theme
+    function changeTheme(color1_dark, color1_light, color2_dark, color2_light) {
+        $("*.color1-dark, *.color1-light .ui-slider-handle, #main").css("background-color", color1_dark);
+        $("*.color1-light, *.color1-dark .ui-slider-handle").css("background-color", color1_light);
+        $("*.color2-dark, *.color2-light .ui-slider-handle").css("background-color", color2_dark);
+        $("*.color2-light, *.color2-dark .ui-slider-handle").css("background-color", color2_light);
+
+        $("*.text-color1-dark").css("color", color1_dark);
+        $("*.text-color1-light, .text a").css("color", color1_light);
+        $("*.text-color2-dark").css("color", color2_dark);
+        $("*.text-color2-light").css("color", color2_light);
+    }
+
+    // Apply changes
+    changeTheme(color1_dark, color1_light, color2_dark, color2_light);
 
 });
 
