@@ -56,6 +56,9 @@ function responsive_layout(selector) {
     $(selector + " .line .fields-command input").css({"width": fields / 100 * 70 + "px", "padding-top": line / 100 * 20 + "px", "padding-bottom": line / 100 * 20 + "px", "margin-top": line / 100 * 10 + "px"});
     $(selector + " .line .fields select").css({"width": fields + "px", "padding": line / 100 * 20 + "px", "padding-bottom": line / 100 * 20 + "px"});
 
+    $(selector + " .theme a").css("height", line * 0.8);
+    $(selector + " .theme a").css("border", "1px solid #fff");
+
     $(selector + " .h20").css("height", line * 2);
     $(selector + " .h20").css("line-height", line * 2 + "px");
 
@@ -335,11 +338,13 @@ $(function() {
         localStorage.setItem("language", "en-US");
     }
 
+    var default_theme = JSON.stringify($(".theme a:first-of-type").data("theme"));
+
     if (localStorage.theme === undefined) {
-        localStorage.setItem("theme", $("#theme option:first-of-type").val());
+        localStorage.setItem("theme", default_theme);
     }
 
-    var theme = $.parseJSON(localStorage.theme);
+    var theme = JSON.parse(localStorage.theme);
     var color1_dark = theme.color1_dark;
     var color1_light = theme.color1_light;
     var color2_dark = theme.color2_dark;
@@ -349,8 +354,7 @@ $(function() {
         var lang = $("#language").val();
         localStorage.setItem("language", lang);
 
-        var theme = $("#theme").val();
-        localStorage.setItem("theme", theme);
+        localStorage.setItem("theme", theme_save);
         location.reload();
     });
 
@@ -365,15 +369,20 @@ $(function() {
     });
 
     // Preview Theme
-    $("#theme").change(function() {
-        var colors = $(this).val();
-        theme = $.parseJSON(colors);
+    $(".theme a").each(function() {
+
+        var theme = $(this).data("theme");
         var color1_dark = theme.color1_dark;
         var color1_light = theme.color1_light;
         var color2_dark = theme.color2_dark;
         var color2_light = theme.color2_light;
 
-        changeTheme(color1_dark, color1_light, color2_dark, color2_light);
+        $(this).css("background-image", "linear-gradient(" + color1_dark + " 0, " + color1_dark + " 25%, " + color1_light + " 25%, " + color1_light + " 50%, " + color2_light + " 50%, " + color2_light + " 75%, " + color2_dark + " 75%, " + color2_dark + " 100%)");
+
+        $(this).click(function() {
+            theme_save = JSON.stringify($(this).data("theme"));
+            changeTheme(color1_dark, color1_light, color2_dark, color2_light);
+        });
     });
 
     // Change Theme

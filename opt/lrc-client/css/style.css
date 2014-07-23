@@ -66,10 +66,6 @@ a {
     padding: 5% 10%;
 }
 
-/*#main section .line .text a {
-    color: #0095dd;
-}*/
-
 #main section .line .text.credits a {
     color: #fff;
 }
@@ -92,6 +88,7 @@ a {
 }
 
 #main section .line .w14 {
+    display: inline-block;
     width: 14.1%;
     height: 100%;
     text-align: center;
