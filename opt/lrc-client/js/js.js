@@ -58,6 +58,7 @@ function responsive_layout(selector) {
 
     $(selector + " .theme a").css("height", line * 0.8);
     $(selector + " .theme a").css("border", "1px solid #fff");
+    $(selector + " .theme a").css("border-radius", "5px");
 
     $(selector + " .h20").css("height", line * 2);
     $(selector + " .h20").css("line-height", line * 2 + "px");
