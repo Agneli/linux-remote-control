@@ -1,5 +1,5 @@
 {
-    "version": "0.3.1",
+    "version": "0.4",
     "name": "Linux Remote Control",
     "description": "A complete remote control for GNU/Linux",
     "launch_path": "/index.html",
