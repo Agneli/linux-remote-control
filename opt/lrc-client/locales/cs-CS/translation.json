@@ -1,22 +1,22 @@
 {
     "lrc": {
         "index": {
-            "add-server": "Připojit nového serverer",
+            "add-server": "Připojit se na nový server",
             "help": "Pomoc"
         },
         "add-server": {
-            "account-name": "Accountovi jméno",
+            "account-name": "Uživatelské jméno",
             "ip-address": "IP adresa",
-            "cancel": "Zpátky",
+            "cancel": "Zrušit",
             "save": "Uložit"
         },
         "help": {
-            "add-server": "Jak připojím nového serverer",
-            "install": "Jak instaluji na GNU/Linux",
-            "contribute": "Jak mohu pomoct tomu projektu",
-            "bugs": "Oznámit chybu",
+            "add-server": "Jak se připojit na server",
+            "install": "Jak nainstalovat na GNU/Linux",
+            "contribute": "Jak mohu pomoci tomu projektu",
+            "bugs": "Nahlásit chybu",
             "feedback": "Poslat Feedback",
-            "about": "O",
+            "about": "O aplikaci",
             "credits": "Kredity"
         },
         "server": {
@@ -49,18 +49,18 @@
             "link": "<a href=\"http://www.linuxremotecontrol.com/index-en.html\" target=\"_blank\">www.linuxremotecontrol.com</a>"
         },
         "menu": {
-            "music": "muzika",
-            "video": "video",
+            "music": "Hudba",
+            "video": "Video",
             "controls": "řízení",
             "touchpad": "touchpad",
-            "slideshow": "slideshow",
+            "slideshow": "Slideshow",
             "custom-commands": "Vlastní příkazy",
-            "settings": "nastavení"
+            "settings": "Nastavení"
         },
         "controls": {
-            "send-custom-command": "odeslat vlastní komando",
-            "command": "komando",
-            "send-command": "odeslat komando"
+            "send-custom-command": "odeslat vlastní příkaz",
+            "command": "příkaz",
+            "send-command": "odeslat příkaz"
         },
         "custom-commands": {
             "add": "Přidat vlastní příkaz",
@@ -72,12 +72,12 @@
             "theme": "Téma",
             "audio": "Přehrávač audio",
             "video": "Přehrávač video",
-            "cancel": "zpátky",
+            "cancel": "Zrušit",
             "save": "Uložit"
         },
         "credits": {
-            "dev": "Programátory",
-            "trad": "Překladateli"
+            "dev": "Programátor",
+            "trad": "Překladatel"
         }
     }
 }
