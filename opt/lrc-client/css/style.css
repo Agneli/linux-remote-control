@@ -39,10 +39,6 @@ a {
     display: block;
 }
 
-#main section#server div p a, #main section#install div p a, #main section#contribute div p a, #main section#bugs div p a,  #main section#feedback div p a, #main section#bugs div p a,{
-	color: #aaa;
-}
-
 #main section header.line span {
     display: inline-block;
     width: 60%;
