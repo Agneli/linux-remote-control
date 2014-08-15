@@ -24,11 +24,11 @@
             "p2": "Zpravidla začíná číslem 192 a je napsaná za slovem inet. Celé toto číslo vložte do kolonky \"přidat nový server\"."
         },
         "install": {
-            "p1": "Pokud potřebujete nainstalovat ",
-            "p2": "1. Stáhni si lrc",
-            "p3": "2. Instaluj ten .deb paket.",
+            "p1": "Pro správnou funkčnost aplikace, potřebujete mít na straně serveru nainstalovaný lrc-server.",
+            "p2": "1. Stáhněte si lrc.",
+            "p3": "2. Nainstalujte .deb balíček.",
             "p4": "3. Přesun ten registr /opt/lrc-client na tvůj přistroj.",
-            "p5": "3. Nastartuj ten lrc-server.",
+            "p5": "3. Spusťte lrc-server.",
             "p6": "5. Otevři index.html na tvójim přistrojí (PŘISTROJ/lrc-client/index.html) v browseru, připoj ten server a bav se."
         },
         "contribute": {
