@@ -353,10 +353,14 @@ $(function() {
 
     $("#save-settings").click(function() {
         var lang = $("#language").val();
-        localStorage.setItem("language", lang);
 
-        localStorage.setItem("theme", theme_save);
-        location.reload();
+		if(typeof theme_save!=="undefined")
+			localStorage.setItem("theme", theme_save);
+
+		if(language!=lang) {
+        	localStorage.setItem("language", lang);
+        	location.reload();
+		}
     });
 
     $("#cancel-settings").click(function() {
