@@ -359,7 +359,11 @@ $(function() {
 
 		if(language!=lang) {
         	localStorage.setItem("language", lang);
-        	location.reload();
+			i18n.init({lng: lang, debug: false}, function() {
+				$("#main").i18n();
+			});
+			language=lang;
+        	//location.reload();
 		}
     });
 
