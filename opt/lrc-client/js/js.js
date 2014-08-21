@@ -421,8 +421,27 @@ function pages_animations(context) {
     // Index
     $(context + " a[data-page]").click(function() {
         var name = '#' + $(this).data("page");
-        $("section").hide("slide", {direction: $(this).data("direction").to}, speed);
-        $(name).show("slide", {direction: $(this).data("direction").from}, speed);
+		if($(this).data("direction")=="left") {
+			$(this).parents("section").animate({left:"-"+ $("section").width() +"px"}, speed);
+			$(name).css({left:$("section").width() +"px"})
+				.show()
+				.animate({left:0}, speed);
+		}else if($(this).data("direction")=="right") {
+			$(this).parents("section").animate({left:$("section").width() +"px"}, speed);
+			$(name).css({left:"-"+$("section").width() +"px"})
+				.show()
+				.animate({left:0}, speed);
+		}else if($(this).data("direction")=="down") {
+			$(this).parents("section").animate({top:$("section").height() +"px"}, speed);
+			$(name).css({top:"-"+$("section").height() +"px"})
+				.show()
+				.animate({top:0}, speed);
+		}else if($(this).data("direction")=="up") {
+			$(this).parents("section").animate({top:"-"+$("section").height() +"px"}, speed);
+			$(name).css({top:$("section").height() +"px"})
+				.show()
+				.animate({top:0}, speed);
+		}
     });
 }
 
