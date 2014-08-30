@@ -20,31 +20,31 @@
             "credits": "Credits"
         },
         "server": {
-            "p1": "Zum Hinzufügen eines Servers(Computer der gesteuert wird), musst du die IP Adresse dieses Rechners wissen. Um deine IP herauszufinden, tippe folgenden Befehl in dein Terminal.",
-            "p2": "Jetzt wo du die IP Adresse weißt, gehe zum Startbildschirm und drücke \"Server hinzufügen\". Überlege dir einen Namen deiner Wahl und füge die IP Adresse ein. Drücke abschließend den\"Speichern\" button. Fertig."
+            "p1": "Zum Hinzufügen eines Servers (Computer der gesteuert wird), muss die IP Adresse dieses Rechners bekannt sein. Um deine IP herauszufinden, tippe folgenden Befehl in dein Terminal.",
+            "p2": "Jetzt wo du die IP Adresse weißt, gehe zum Startbildschirm und drücke \"Server hinzufügen\". Überlege dir einen Namen deiner Wahl und füge die IP-Adresse ein. Drücke abschließend den \"Speichern\" button. Fertig."
         },
         "install": {
-            "p1": "Wenn du schon mit dem installieren von Anwendungen vertraut bist solltest du keine Probleme haben. Ansonsten findest du hier eine Kurzanleitung.",
-            "p2": "1. Downloade dir lrc.",
-            "p3": "2. Installiere das .deb Paket.",
-            "p4": "3. Verschiebe das Verzeichnis /opt/lrc-client auf dein Gerät.",
-            "p5": "3. Starte den lrc-server.",
-            "p6": "5. Öffne die index.html auf deinem Gerät(GERÄT/lrc-client/index.html) in einem Browser, füge den Server hinzu und habe Spaß."
+            "p1": "Wenn du schon mit dem Installieren von Anwendungen vertraut bist solltest du keine Probleme haben. Ansonsten findest du hier eine Kurzanleitung.",
+            "p2": "1. Downloade dir lrc",
+            "p3": "2. Installiere das .deb Paket",
+            "p4": "3. Verschiebe das Verzeichnis /opt/lrc-client auf dein Gerät",
+            "p5": "3. Starte den lrc-server",
+            "p6": "5. Öffne die index.html auf deinem Gerät(GERÄT/lrc-client/index.html) in einem Browser, füge den Server hinzu und habe Spaß"
         },
         "contribute": {
-            "p1": "Du magst die Idee aber weißt nicht wie du beitragen kannst?",
-            "p2": "Wenn du ein Entwickler bist, kannst du verbesserungen und neue Funktionen via <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a> beitragen.",
-            "p3": "Wenn du dafür nicht in der Lage bist kannst du das Projekt in der weiten Welt verbreiten indem du über <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> und <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a> teilst, oder mit einer Spende."
+            "p1": "Du magst die Idee aber weißt nicht wie du Beitragen kannst?",
+            "p2": "Wenn du ein Entwickler bist, kannst du Verbesserungen und neue Funktionen via <a href=\"https://github.com/Agneli/linux-remote-control\" target=\"_blank\" >Github</a> beitragen.",
+            "p3": "Wenn du dafür nicht in der Lage bist kannst du das Projekt über <a href=\"https://plus.google.com/u/0/100656630688184691057/posts\" target=\"_blank\" >Google+</a>, <a href=\"https://www.facebook.com/pages/Linux-Remote-Control/199080510274186\" target=\"_blank\" >Facebook</a> und <a href=\"https://twitter.com/LinuxRemoteCont\" target=\"_blank\" >Twitter</a> in der Welt verbreiten, oder mit einer Spende die Entwicklung unterstützen."
         },
         "bugs": {
             "p1": "Falls du Fehler findest wäre es toll wenn du uns bescheid sagst.",
-            "p2": "Du kannst neue Fehler auf <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> posten oder uns über kontaktieren:"
+            "p2": "Du kannst neue Fehler auf <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> posten oder uns über diese E-Mail kontaktieren:"
         },
         "feedback": {
-            "p1": "Erzähle uns was du über diese App denkst. Anregungen, Lob oder Kritik werden wir mit freuden entgegennehmen."
+            "p1": "Erzähle uns was du von dieser App denkst. Anregungen, Lob oder Kritik werden wir mit Freuden entgegennehmen."
         },
         "about": {
-            "p1": "Dies ist freie Software und ein Open Source Projekt lizensiert unter der GNU GPL Lizens.",
+            "p1": "Dies ist freie Software und ein Open Source Projekt, lizensiert unter der GNU GPL Lizens.",
             "p2": "Dies App ist vollständig frei, dass heißt du kannst es nutzen und verändern ohne etwas zahlen zu müssen.",
             "link": "<a href=\"http://www.linuxremotecontrol.com/index-en.html\" target=\"_blank\">www.linuxremotecontrol.com</a>"
         },
