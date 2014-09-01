@@ -18,6 +18,7 @@ html {
 body {
     color: #fff;
     height: 100%;
+	overflow: hidden;
 }
 
 a {
@@ -32,7 +33,10 @@ a {
 
 #main section {
     display: none;
-    position: relative;
+    position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
 }
 
 #main section#index {

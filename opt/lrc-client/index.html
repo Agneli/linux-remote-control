@@ -19,15 +19,15 @@
                 <div class="line h60" id="servers">
                     <div class="line center" id="msg-server"></div>
                 </div>
-                <a class="line color1-light center" href="#!" data-page="add-server" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.add-server"></a>
-                <a class="line color2-light center" href="#!" data-page="settings" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.menu.settings"></a>
-                <a class="line color2-dark center" href="#!" data-page="help" data-direction='{"from":"down","to":"up"}' data-i18n="lrc.index.help"></a>
+                <a class="line color1-light center" href="#!" data-page="add-server" data-direction='up' data-i18n="lrc.index.add-server"></a>
+                <a class="line color2-light center" href="#!" data-page="settings" data-direction='up' data-i18n="lrc.menu.settings"></a>
+                <a class="line color2-dark center" href="#!" data-page="help" data-direction='up' data-i18n="lrc.index.help"></a>
             </section>
 
             <!-- Add Server _________________________________________________-->
             <section id="add-server">
                 <header class="line color1-light center">
-                    <a href="#!" class="w20 left" data-page="index" data-direction='{"from":"up","to":"down"}'><i class="fa fa-chevron-left"></i></a>
+                    <a href="#!" class="w20 left" data-page="index" data-direction='down'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.index.add-server"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -48,15 +48,15 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line color2-light">
-                    <a href="#!" id="cancel" class="w50 center left" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
-                    <a href="#!" id="save" class="w50 center right" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
+                    <a href="#!" id="cancel" class="w50 center left" data-page="index" data-direction='down' data-i18n="lrc.add-server.cancel"></a>
+                    <a href="#!" id="save" class="w50 center right" data-page="index" data-direction='down' data-i18n="lrc.add-server.save"></a>
                 </div>
             </section>
 
             <!-- Settings ___________________________________________________-->
             <section id="settings">
                 <header class="line color1-light center">
-                    <a href="#!" class="w20 left" data-page="index" data-direction='{"from":"up","down":"right"}'><i class="fa fa-chevron-left"></i></a>
+                    <a href="#!" class="w20 left" data-page="index" data-direction='down'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.menu.settings"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -71,7 +71,7 @@
                             <option value="de-DE">Deutsch</option>
                             <option value="es-ES">Español</option>
                             <option value="ko-KO">한국어 (Korean)</option>
-                            <option value="cs-CS">Czech</option>
+                            <option value="cs-CZ">Czech</option>
                             <option value="se-SE">Swedish</option>
                         </select>
                     </div>
@@ -94,44 +94,44 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line color2-light">
-                    <a href="#!" id="cancel-settings" class="w50 center left" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.settings.cancel"></a>
-                    <a href="#!" id="save-settings" class="w50 center right" data-page="index" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.settings.save"></a>
+                    <a href="#!" id="cancel-settings" class="w50 center left" data-page="index" data-direction='down' data-i18n="lrc.settings.cancel"></a>
+                    <a href="#!" id="save-settings" class="w50 center right" data-page="index" data-direction='down' data-i18n="lrc.settings.save"></a>
                 </div>
             </section>
 
             <!-- Help _______________________________________________________-->
             <section id="help">
                 <header class="line color1-light center">
-                    <a href="#!" class="w20 left" data-page="index" data-direction='{"from":"up","to":"down"}'><i class="fa fa-chevron-left"></i></a>
+                    <a href="#!" class="w20 left" data-page="index" data-direction='down'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.index.help"></span>
                     <div class="w20 right"></div>
                 </header>
                 <div class="line"></div>
-                <a class="line color1-dark" data-page="server" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="server" href="#!" data-direction='left'>
                     <span data-i18n="lrc.help.add-server"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line color1-dark" data-page="install" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="install" href="#!" data-direction='left'>
                     <span data-i18n="lrc.help.install"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line color1-dark" data-page="contribute" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="contribute" href="#!" data-direction='left'>
                     <span data-i18n="lrc.help.contribute"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line color1-dark" data-page="bugs" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="bugs" href="#!" data-direction='left'>
                     <span data-i18n="lrc.help.bugs"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line color1-dark" data-page="feedback" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="feedback" href="#!" data-direction='left'>
                     <span data-i18n="lrc.help.feedback"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line color1-dark" data-page="about" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="about" href="#!" data-direction='left'>
                     <span data-i18n="lrc.help.about"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line color1-dark" data-page="credits" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="credits" href="#!" data-direction='left'>
                     <span data-i18n="lrc.help.credits"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
@@ -139,7 +139,7 @@
 
             <section id="server">
                 <header class="line color1-light center">
-                    <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
+                    <a href="#!" class="w20 left" data-page="help" data-direction='right'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.add-server"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -154,7 +154,7 @@
 
             <section id="install">
                 <header class="line color1-light center">
-                    <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
+                    <a href="#!" class="w20 left" data-page="help" data-direction='right'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.install"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -181,7 +181,7 @@
 
             <section id="contribute">
                 <header class="line color1-light center">
-                    <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
+                    <a href="#!" class="w20 left" data-page="help" data-direction='right'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.contribute"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -210,7 +210,7 @@
 
             <section id="bugs">
                 <header class="line color1-light center">
-                    <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
+                    <a href="#!" class="w20 left" data-page="help" data-direction='right'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.bugs"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -225,7 +225,7 @@
 
             <section id="feedback">
                 <header class="line color1-light center">
-                    <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
+                    <a href="#!" class="w20 left" data-page="help" data-direction='right'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.feedback"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -239,7 +239,7 @@
 
             <section id="about">
                 <header class="line color1-light center">
-                    <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
+                    <a href="#!" class="w20 left" data-page="help" data-direction='right'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.about"></span>
                     <div class="w20 right"></div>
                 </header>
@@ -258,11 +258,11 @@
 
             <section id="credits">
                 <header class="line color1-light center">
-                    <a href="#!" class="w20 left" data-page="help" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
+                    <a href="#!" class="w20 left" data-page="help" data-direction='right'><i class="fa fa-chevron-left"></i></a>
                     <span data-i18n="lrc.help.credits"></span>
                     <div class="w20 right"></div>
                 </header>
-                <div class="line h90">
+                <div class="line h90">/
                     <a class="line color1-dark" href="https://github.com/Agneli" target="_blank">
                         <span>Raphael Agneli <span class="text-color1-light" data-i18n="lrc.credits.dev"></span></span>
                         <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
@@ -317,32 +317,32 @@
             <!-- Menu _______________________________________________________-->
             <section id="menu">
                 <header class="line color1-light center">
-                    <a href="#!" id="clear-server" class="w20 left" data-page="index" data-direction='{"from":"left","to":"right"}'><i class="fa fa-chevron-left"></i></a>
+                    <a href="#!" id="clear-server" class="w20 left" data-page="index" data-direction='right'><i class="fa fa-chevron-left"></i></a>
                     <span id="server-name" contenteditable></span>
-                    <a href="#!" id="delete-server" data-page="index" data-direction='{"from":"left","to":"right"}' class="w20 right"><i class="fa fa-trash-o"></i></a>
+                    <a href="#!" id="delete-server" data-page="index" data-direction='right' class="w20 right"><i class="fa fa-trash-o"></i></a>
                 </header>
                 <div class="line"></div>
-                <a class="line color1-dark" data-page="musics" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="musics" href="#!" data-direction='left'>
                     <span data-i18n="lrc.menu.music"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line color1-dark" data-page="videos" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="videos" href="#!" data-direction='left'>
                     <span data-i18n="lrc.menu.video"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line color1-dark" data-page="controls" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="controls" href="#!" data-direction='left'>
                     <span data-i18n="lrc.menu.controls"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line color1-dark" data-page="touchpad" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="touchpad" href="#!" data-direction='left'>
                     <span data-i18n="lrc.menu.touchpad"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line color1-dark" data-page="slideshow" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="slideshow" href="#!" data-direction='left'>
                     <span data-i18n="lrc.menu.slideshow"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
-                <a class="line color1-dark" data-page="custom-commands" href="#!" data-direction='{"from":"right","to":"left"}'>
+                <a class="line color1-dark" data-page="custom-commands" href="#!" data-direction='left'>
                     <span data-i18n="lrc.menu.custom-commands"></span>
                     <div class="w20 right"><i class="fa fa-chevron-right"></i></div>
                 </a>
@@ -354,13 +354,13 @@
             <section id="musics">
                 <header class="line color1-light center">
                     <!--<span data-i18n="lrc.menu.music"></span>-->
-                    <a href="#!" class="w14 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-list"></i></a>
-                    <a href="#!" class="w14 left" data-page="musics" data-direction='{"from":"left","to":"right"}'><i class="fa fa-music"></i></a>
-                    <a href="#!" class="w14 left" data-page="videos" data-direction='{"from":"left","to":"right"}'><i class="fa fa-film"></i></a>
-                    <a href="#!" class="w14 left" data-page="controls" data-direction='{"from":"left","to":"right"}'><i class="fa fa-desktop"></i></a>
-                    <a href="#!" class="w14 left" data-page="touchpad" data-direction='{"from":"left","to":"right"}'><i class="fa fa-hand-o-up"></i></a>
-                    <a href="#!" class="w14 left" data-page="slideshow" data-direction='{"from":"left","to":"right"}'><i class="fa fa-unsorted fa-rotate-90"></i></a>
-                    <a href="#!" class="w14 left" data-page="custom-commands" data-direction='{"from":"left","to":"right"}'><i class="fa fa-terminal"></i></a>
+                    <a href="#!" class="w14 left" data-page="menu" data-direction='right'><i class="fa fa-list"></i></a>
+                    <a href="#!" class="w14 left" data-page="musics" data-direction='none'><i class="fa fa-music"></i></a>
+                    <a href="#!" class="w14 left" data-page="videos" data-direction='left'><i class="fa fa-film"></i></a>
+                    <a href="#!" class="w14 left" data-page="controls" data-direction='left'><i class="fa fa-desktop"></i></a>
+                    <a href="#!" class="w14 left" data-page="touchpad" data-direction='left'><i class="fa fa-hand-o-up"></i></a>
+                    <a href="#!" class="w14 left" data-page="slideshow" data-direction='left'><i class="fa fa-unsorted fa-rotate-90"></i></a>
+                    <a href="#!" class="w14 left" data-page="custom-commands" data-direction='left'><i class="fa fa-terminal"></i></a>
                 </header>
                 <div class="line"></div>
                 <div class="line center artist"></div>
@@ -398,13 +398,13 @@
             <section id="videos">
                 <header class="line color1-light center">
                     <!--<span data-i18n="lrc.menu.video"></span>-->
-                    <a href="#!" class="w14 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-list"></i></a>
-                    <a href="#!" class="w14 left" data-page="musics" data-direction='{"from":"left","to":"right"}'><i class="fa fa-music"></i></a>
-                    <a href="#!" class="w14 left" data-page="videos" data-direction='{"from":"left","to":"right"}'><i class="fa fa-film"></i></a>
-                    <a href="#!" class="w14 left" data-page="controls" data-direction='{"from":"left","to":"right"}'><i class="fa fa-desktop"></i></a>
-                    <a href="#!" class="w14 left" data-page="touchpad" data-direction='{"from":"left","to":"right"}'><i class="fa fa-hand-o-up"></i></a>
-                    <a href="#!" class="w14 left" data-page="slideshow" data-direction='{"from":"left","to":"right"}'><i class="fa fa-unsorted fa-rotate-90"></i></a>
-                    <a href="#!" class="w14 left" data-page="custom-commands" data-direction='{"from":"left","to":"right"}'><i class="fa fa-terminal"></i></a>
+                    <a href="#!" class="w14 left" data-page="menu" data-direction='right'><i class="fa fa-list"></i></a>
+                    <a href="#!" class="w14 left" data-page="musics" data-direction='right'><i class="fa fa-music"></i></a>
+                    <a href="#!" class="w14 left" data-page="videos" data-direction='none'><i class="fa fa-film"></i></a>
+                    <a href="#!" class="w14 left" data-page="controls" data-direction='left'><i class="fa fa-desktop"></i></a>
+                    <a href="#!" class="w14 left" data-page="touchpad" data-direction='left'><i class="fa fa-hand-o-up"></i></a>
+                    <a href="#!" class="w14 left" data-page="slideshow" data-direction='left'><i class="fa fa-unsorted fa-rotate-90"></i></a>
+                    <a href="#!" class="w14 left" data-page="custom-commands" data-direction='left'><i class="fa fa-terminal"></i></a>
                 </header>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -442,13 +442,13 @@
             <section id="controls">
                 <header class="line color1-light center">
                     <!--<span data-i18n="lrc.menu.controls"></span>-->
-                    <a href="#!" class="w14 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-list"></i></a>
-                    <a href="#!" class="w14 left" data-page="musics" data-direction='{"from":"left","to":"right"}'><i class="fa fa-music"></i></a>
-                    <a href="#!" class="w14 left" data-page="videos" data-direction='{"from":"left","to":"right"}'><i class="fa fa-film"></i></a>
-                    <a href="#!" class="w14 left" data-page="controls" data-direction='{"from":"left","to":"right"}'><i class="fa fa-desktop"></i></a>
-                    <a href="#!" class="w14 left" data-page="touchpad" data-direction='{"from":"left","to":"right"}'><i class="fa fa-hand-o-up"></i></a>
-                    <a href="#!" class="w14 left" data-page="slideshow" data-direction='{"from":"left","to":"right"}'><i class="fa fa-unsorted fa-rotate-90"></i></a>
-                    <a href="#!" class="w14 left" data-page="custom-commands" data-direction='{"from":"left","to":"right"}'><i class="fa fa-terminal"></i></a>
+                    <a href="#!" class="w14 left" data-page="menu" data-direction='right'><i class="fa fa-list"></i></a>
+                    <a href="#!" class="w14 left" data-page="musics" data-direction='right'><i class="fa fa-music"></i></a>
+                    <a href="#!" class="w14 left" data-page="videos" data-direction='right'><i class="fa fa-film"></i></a>
+                    <a href="#!" class="w14 left" data-page="controls" data-direction='none'><i class="fa fa-desktop"></i></a>
+                    <a href="#!" class="w14 left" data-page="touchpad" data-direction='left'><i class="fa fa-hand-o-up"></i></a>
+                    <a href="#!" class="w14 left" data-page="slideshow" data-direction='left'><i class="fa fa-unsorted fa-rotate-90"></i></a>
+                    <a href="#!" class="w14 left" data-page="custom-commands" data-direction='left'><i class="fa fa-terminal"></i></a>
                 </header>
                 <div class="line"></div>
                 <div class="line center color1-dark" data-i18n="lrc.controls.send-custom-command"></div>
@@ -486,13 +486,13 @@
             <section id="touchpad">
                 <header class="line color1-light center">
                     <!--<span data-i18n="lrc.menu.touchpad"></span>-->
-                    <a href="#!" class="w14 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-list"></i></a>
-                    <a href="#!" class="w14 left" data-page="musics" data-direction='{"from":"left","to":"right"}'><i class="fa fa-music"></i></a>
-                    <a href="#!" class="w14 left" data-page="videos" data-direction='{"from":"left","to":"right"}'><i class="fa fa-film"></i></a>
-                    <a href="#!" class="w14 left" data-page="controls" data-direction='{"from":"left","to":"right"}'><i class="fa fa-desktop"></i></a>
-                    <a href="#!" class="w14 left" data-page="touchpad" data-direction='{"from":"left","to":"right"}'><i class="fa fa-hand-o-up"></i></a>
-                    <a href="#!" class="w14 left" data-page="slideshow" data-direction='{"from":"left","to":"right"}'><i class="fa fa-unsorted fa-rotate-90"></i></a>
-                    <a href="#!" class="w14 left" data-page="custom-commands" data-direction='{"from":"left","to":"right"}'><i class="fa fa-terminal"></i></a>
+                    <a href="#!" class="w14 left" data-page="menu" data-direction='right'><i class="fa fa-list"></i></a>
+                    <a href="#!" class="w14 left" data-page="musics" data-direction='right'><i class="fa fa-music"></i></a>
+                    <a href="#!" class="w14 left" data-page="videos" data-direction='right'><i class="fa fa-film"></i></a>
+                    <a href="#!" class="w14 left" data-page="controls" data-direction='right'><i class="fa fa-desktop"></i></a>
+                    <a href="#!" class="w14 left" data-page="touchpad" data-direction='none'><i class="fa fa-hand-o-up"></i></a>
+                    <a href="#!" class="w14 left" data-page="slideshow" data-direction='left'><i class="fa fa-unsorted fa-rotate-90"></i></a>
+                    <a href="#!" class="w14 left" data-page="custom-commands" data-direction='left'><i class="fa fa-terminal"></i></a>
                 </header>
                 <div id="canvas" class="line h70">
                 </div>
@@ -508,13 +508,13 @@
             <section id="slideshow">
                 <header class="line color1-light center">
                     <!--<span data-i18n="lrc.menu.slideshow"></span>-->
-                    <a href="#!" class="w14 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-list"></i></a>
-                    <a href="#!" class="w14 left" data-page="musics" data-direction='{"from":"left","to":"right"}'><i class="fa fa-music"></i></a>
-                    <a href="#!" class="w14 left" data-page="videos" data-direction='{"from":"left","to":"right"}'><i class="fa fa-film"></i></a>
-                    <a href="#!" class="w14 left" data-page="controls" data-direction='{"from":"left","to":"right"}'><i class="fa fa-desktop"></i></a>
-                    <a href="#!" class="w14 left" data-page="touchpad" data-direction='{"from":"left","to":"right"}'><i class="fa fa-hand-o-up"></i></a>
-                    <a href="#!" class="w14 left" data-page="slideshow" data-direction='{"from":"left","to":"right"}'><i class="fa fa-unsorted fa-rotate-90"></i></a>
-                    <a href="#!" class="w14 left" data-page="custom-commands" data-direction='{"from":"left","to":"right"}'><i class="fa fa-terminal"></i></a>
+                    <a href="#!" class="w14 left" data-page="menu" data-direction='right'><i class="fa fa-list"></i></a>
+                    <a href="#!" class="w14 left" data-page="musics" data-direction='right'><i class="fa fa-music"></i></a>
+                    <a href="#!" class="w14 left" data-page="videos" data-direction='right'><i class="fa fa-film"></i></a>
+                    <a href="#!" class="w14 left" data-page="controls" data-direction='right'><i class="fa fa-desktop"></i></a>
+                    <a href="#!" class="w14 left" data-page="touchpad" data-direction='right'><i class="fa fa-hand-o-up"></i></a>
+                    <a href="#!" class="w14 left" data-page="slideshow" data-direction='none'><i class="fa fa-unsorted fa-rotate-90"></i></a>
+                    <a href="#!" class="w14 left" data-page="custom-commands" data-direction='left'><i class="fa fa-terminal"></i></a>
                 </header>
                 <div class="line h70 slideshow-controls color1-dark">
                     <a href="#!" class="w50 left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Left"}'><i class="fa fa-5x fa-chevron-left"></i></a>
@@ -523,7 +523,7 @@
                 <div class="line h20 color2-light slideshow-controls">
                     <a href="#!" class="w33 play-slideshow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key F5"}'></a>
                     <a href="#!" class="w33 exit-slideshow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Escape"}'></a>
-                    <a href="#!" class="w33 mouse right" data-page="touchpad" data-direction='{"from":"left","to":"right"}'><i class="fa fa-2x fa-hand-o-up"></i></a>
+                    <a href="#!" class="w33 mouse right" data-page="touchpad" data-direction='left'><i class="fa fa-2x fa-hand-o-up"></i></a>
                 </div>
             </section>
 
@@ -531,13 +531,13 @@
             <section id="custom-commands">
                 <header class="line color1-light center">
                     <!--<span data-i18n="lrc.menu.custom-commands"></span>-->
-                    <a href="#!" class="w14 left" data-page="menu" data-direction='{"from":"left","to":"right"}'><i class="fa fa-list"></i></a>
-                    <a href="#!" class="w14 left" data-page="musics" data-direction='{"from":"left","to":"right"}'><i class="fa fa-music"></i></a>
-                    <a href="#!" class="w14 left" data-page="videos" data-direction='{"from":"left","to":"right"}'><i class="fa fa-film"></i></a>
-                    <a href="#!" class="w14 left" data-page="controls" data-direction='{"from":"left","to":"right"}'><i class="fa fa-desktop"></i></a>
-                    <a href="#!" class="w14 left" data-page="touchpad" data-direction='{"from":"left","to":"right"}'><i class="fa fa-hand-o-up"></i></a>
-                    <a href="#!" class="w14 left" data-page="slideshow" data-direction='{"from":"left","to":"right"}'><i class="fa fa-unsorted fa-rotate-90"></i></a>
-                    <a href="#!" class="w14 left" data-page="custom-commands" data-direction='{"from":"left","to":"right"}'><i class="fa fa-terminal"></i></a>
+                    <a href="#!" class="w14 left" data-page="menu" data-direction='right'><i class="fa fa-list"></i></a>
+                    <a href="#!" class="w14 left" data-page="musics" data-direction='right'><i class="fa fa-music"></i></a>
+                    <a href="#!" class="w14 left" data-page="videos" data-direction='right'><i class="fa fa-film"></i></a>
+                    <a href="#!" class="w14 left" data-page="controls" data-direction='right'><i class="fa fa-desktop"></i></a>
+                    <a href="#!" class="w14 left" data-page="touchpad" data-direction='right'><i class="fa fa-hand-o-up"></i></a>
+                    <a href="#!" class="w14 left" data-page="slideshow" data-direction='right'><i class="fa fa-unsorted fa-rotate-90"></i></a>
+                    <a href="#!" class="w14 left" data-page="custom-commands" data-direction='none'><i class="fa fa-terminal"></i></a>
                 </header>
                 <div class="line"></div>
                 <div class="line h70 custom-commands">
@@ -571,8 +571,8 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line color2-light">
-                    <a href="#!" class="w50 center left cancel" data-page="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.cancel"></a>
-                    <a href="#!" class="w50 center right save" data-page="custom-commands" data-direction='{"from":"up","to":"down"}' data-i18n="lrc.add-server.save"></a>
+                    <a href="#!" class="w50 center left cancel" data-page="custom-commands" data-direction='up' data-i18n="lrc.add-server.cancel"></a>
+                    <a href="#!" class="w50 center right save" data-page="custom-commands" data-direction='up' data-i18n="lrc.add-server.save"></a>
                 </div>
             </section>
 
