@@ -53,6 +53,10 @@ sudo mv /opt/lrc-client your-directory/lrc-client
 ```bash
 node /opt/lrc-server/lrc.js
 ```
+or
+```bash
+nodejs /opt/lrc-server/lrc.js
+```
 
 6 - Open the index.html of your-directory/lrc-client in a browser, add your server and have fun
 
@@ -71,6 +75,10 @@ sudo dpkg -i lrc-ffos.deb
 3 - Start lrc-server.
 ```bash
 node /opt/lrc-server/lrc.js
+```
+or
+```bash
+nodejs /opt/lrc-server/lrc.js
 ```
 
 If an error occurs during installation of the package, run the following command.
