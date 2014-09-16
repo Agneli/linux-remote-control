@@ -100,10 +100,17 @@ app.get(/^\/(.*)/, function(req, res) {
                 volume = volume[0].split("[");
                 volume = volume[1];
 
-                var backlight = stdout.split("[on]");
-                backlight = backlight[1].replace(/^\s+|\s+$/g, "");
+                var backlight = stdout.split(/\[o(?:n|ff)\]/); // Matches [on] or [off]
+
+                // Unmute the speakers
+                if(stdout.indexOf("[off]") != -1) {
+                    exec("amixer sset Master unmute");
+                }
+
+                backlight = backlight[backlight.length-1].trim();
                 backlight = backlight.split(".");
                 backlight = backlight[0];
+
                 res.send(req.query.callback + "({'volume':'" + volume + "', 'backlight':'" + backlight + "'})");
             } else {
                 res.send(req.query.callback + "()");
