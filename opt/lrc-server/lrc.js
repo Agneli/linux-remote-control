@@ -9,6 +9,7 @@ var express = require("express"),
         exec = require("child_process").exec,
         config = require("configuration.js").config,
         music_manager = require("music.js").drivers[config.music_driver],
+        cmd = require("cmd.js"),
         child;
 
 // Relative mouse move uses WebSocket
@@ -121,4 +122,12 @@ app.get(/^\/(.*)/, function(req, res) {
 
 app.listen(config.port, function () {
     console.log('Listening on port ' + config.port);
+
+    if(config.certified) {
+        console.log('> SMS command line, type `help` for more information.');
+
+        // Command line listener
+        var stdin = process.openStdin();
+        stdin.addListener("data", cmd.parse_cmd);
+    }
 });
