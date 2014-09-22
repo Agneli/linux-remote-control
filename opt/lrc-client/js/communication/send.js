@@ -1,0 +1,3 @@
+function send(fct, data) {
+    
+}
