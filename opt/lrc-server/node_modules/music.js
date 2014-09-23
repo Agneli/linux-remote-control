@@ -6,7 +6,15 @@ exports.drivers.rhythmbox = {
     infos: "rhythmbox-client --print-playing-format='%ta;%at;%tt;%te;%td;'",
     parse_infos: function(stdout) {
         info = stdout.split(";");
-        return {artist: escape(info[0]), album: escape(info[1]), title: escape(info[2]), elapsed: info[3], duration: info[4], state: "unknown"};
+        return {
+            artist: escape(info[0]),
+            album: escape(info[1]),
+            title: escape(info[2]),
+            elapsed: info[3],
+            duration: info[4],
+            state: "unknown",
+            play_symbol: escape('<i class="fa fa-play"></i>')
+        };
     },
     toggle_play: "export DISPLAY=:0; xdotool key XF86AudioPlay",
     stop: "export DISPLAY=:0; xdotool key XF86AudioStop",
@@ -21,7 +29,15 @@ exports.drivers.moc = {
     infos: "mocp -Q '%artist;%album;%song;%cs;%ts;%state;'",
     parse_infos: function(stdout) {
         info = stdout.split(";");
-        return {artist: escape(info[0]), album: escape(info[1]), title: escape(info[2]), elapsed: parseInt(info[3]), duration: parseInt(info[4]), state: escape(info[5].toLowerCase())};
+        return {
+            artist: escape(info[0]),
+            album: escape(info[1]),
+            title: escape(info[2]),
+            elapsed: parseInt(info[3]),
+            duration: parseInt(info[4]),
+            state: escape((info[5] || '').toLowerCase()),
+            play_symbol: escape(info[5] == 'PAUSE' ? '<i class="fa fa-play"></i>' : '<i class="fa fa-pause"></i>')
+        };
     },
     toggle_play: "mocp -G",
     stop: "mocp -P",
