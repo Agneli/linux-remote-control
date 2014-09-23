@@ -45,11 +45,24 @@ var handleMessage = function(message) {
             var button = message < 0 ? 4 : 5;
             exec('xdotool click ' + button, function puts(error, stdout, stderr) {});
         break;
+        default:
+            console.log('WebSocket received : ' + message);
+        break;
     }
 };
 wss.on('connection', function(ws) {
     ws.on('message', handleMessage);
+    setInterval(function() {
+        wss.broadcast(JSON.stringify({status: 'Running', driver: config.connection_driver, port: config.port}));
+    }, 3000);
 });
+
+// WebSocket test
+wss.broadcast = function(data) {
+    for(var i in this.clients) {
+        this.clients[i].send(data);
+    }
+};
 
 // Route to handle music commands
 app.all("/music", function(req, res) {
