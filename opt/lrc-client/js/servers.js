@@ -21,7 +21,11 @@ Servers.prototype.refresh_view = function() {
 
         // Refresh server click events
         $(".server").unbind('click').click(function() {
+            connection = new Connection_HTTP($(this).data("server").ip);
+
+            // @deprecated
             navigator.host = $(this).data("server").ip;
+
             $("#server-name").html($(this).data("server").name);
             $("#delete-server").data("index", $(this).data("server").index);
         });
@@ -37,8 +41,6 @@ Servers.prototype.refresh_view = function() {
 
 Servers.prototype.rename = function(index, name) {
     var servers = this.all();
-
-    console.log(servers);
 
     servers[index].name = name;
 
@@ -70,7 +72,6 @@ $(function() {
     });
 
     $("#server-name").blur(function() {
-        console.log($(this).data('index') + $(this).text());
         navigator.servers.rename($("#delete-server").data('index'), $(this).text());
         navigator.servers.refresh_view();
     });

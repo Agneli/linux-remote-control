@@ -378,32 +378,34 @@
                     <a href="#!" class="w14 left" data-page="slideshow" data-direction='left'><i class="fa fa-unsorted fa-rotate-90"></i></a>
                     <a href="#!" class="w14 left" data-page="custom-commands" data-direction='left'><i class="fa fa-terminal"></i></a>
                 </header>
+                <div class="line center" data-watch="music.artist"></div>
+                <div class="line center" data-watch="music.album"></div>
+                <div class="line center" data-watch="music.title"></div>
+                <div class="line center"></div>
                 <div class="line"></div>
-                <div class="line center artist"></div>
-                <div class="line center album"></div>
-                <div class="line center title"></div>
-                <div class="line center paused"></div>
                 <div class="line color1-light center">
                     <a class="w20 left sound-min" data-command='{"step":"5"}'><i class="fa fa-volume-off"></i></a>
                     <a class="w20 right sound-max" data-command='{"step":"5"}'><i class="fa fa-volume-up"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="sound-volume color1-dark" data-command='{"cmd":"amixer sset Master "}'></div>  
+                        <div class="sound-volume color1-dark" data-watch="volume" data-command='{"cmd":"amixer sset Master "}'></div>
                         <span class="volume"></span>  
                     </div>
                 </div>
                 <div class="line color2-light center">
-                    <div class="w20 left time elapsed">00:00</div>
-                    <div class="w20 right time duration">00:00</div>
-                    <div class="slider w60">   
-                        <span class="tooltip"></span>   
-                        <div class="timeline color2-dark" id="music-timeline" data-command='{"cmd":""}'></div>  
-                        <span class="volume"></span>  
+                    <div class="w20 left time" data-watch="music.elapsed-formatted">00:00</div>
+                    <div class="w20 right time" data-watch="music.duration-formatted">00:00</div>
+                    <div class="slider w60">
+                        <span class="tooltip"></span>
+                        <div class="timeline color2-dark" id="music-timeline" data-watch="music.elapsed-percent" data-command='{"cmd":""}'></div>
+                        <span class="volume"></span>
                     </div>
                 </div>
                 <div class="line h20 color2-dark" id="music-controls">
                     <a href="#!" class="w25 left prev" data-action="previous"><i class="fa fa-fast-backward"></i></a>
-                    <a href="#!" id="music-play-pause" class="w25 left play" data-action="toggle_play"><i class="fa fa-play"></i></a>
+                    <a href="#!" class="w25 left play" data-action="toggle_play" data-watch="music.play_symbol">
+                        <i class="fa fa-play"></i>
+                    </a>
                     <a href="#!" class="w25 left next" data-action="next"><i class="fa fa-fast-forward"></i></a>
                     <a href="#!" class="w25 left stop" data-action="stop"><i class="fa fa-stop"></i></a>
                     <!--<a href="#!" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>-->
@@ -432,7 +434,7 @@
                     <a class="w20 right sound-max" data-command='{"step":"5"}'><i class="fa fa-volume-up"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="sound-volume color1-dark" data-command='{"cmd":"amixer sset Master "}'></div>  
+                        <div class="sound-volume color1-dark" data-watch="volume" data-command='{"cmd":"amixer sset Master "}'></div>
                         <span class="volume"></span>  
                     </div>
                 </div>
@@ -492,7 +494,7 @@
                     <a class="w20 right light-screen" data-command='{"step":"10"}'>+ <i class="fa fa-desktop"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="timeline color2-light" id="backlight" data-command='{"cmd":"xbacklight -set "}'></div>  
+                        <div class="timeline color2-light" id="backlight" data-watch="backlight" data-command='{"cmd":"xbacklight -set "}'></div>
                         <span class="volume"></span>  
                     </div>
                 </div>
@@ -591,17 +593,18 @@
                     <a href="#!" class="w50 center right save" data-page="custom-commands" data-direction='down' data-i18n="lrc.add-server.save"></a>
                 </div>
             </section>
-
         </div>
 
         <script type="text/javascript" src="js/lib/jquery.js" ></script>
         <script type="text/javascript" src="js/lib/jquery-ui.js" ></script>
         <script type="text/javascript" src="js/lib/jquery-ui-touch-punch.js" ></script>
+        <script type="text/javascript" src="js/lib/i18next.js" ></script>
         <script type="text/javascript" src="js/lib/local-storage.js"></script>
         <script type="text/javascript" src="js/custom-commands.js"></script>
         <script type="text/javascript" src="js/servers.js"></script>
-        <script type="text/javascript" src="js/js.js" ></script>
-        <script type="text/javascript" src="js/touch.js" ></script>
-        <script type="text/javascript" src="js/lib/i18next.js" ></script>
+        <script type="text/javascript" src="js/connection/connection.js"></script>
+        <script type="text/javascript" src="js/connection/http.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
+        <script type="text/javascript" src="js/touch.js"></script>
     </body>
 </html>
