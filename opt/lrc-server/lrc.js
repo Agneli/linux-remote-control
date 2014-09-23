@@ -134,6 +134,9 @@ app.all("/info", function(req, res) {
  * Handles all other requests by sending informations about the server
  */
 app.get(/^\/(.*)/, function(req, res) {
+    res.header("Content-Type", "text/javascript");
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.send({status: 'Running', driver: config.connection_driver, port: config.port});
 });
 

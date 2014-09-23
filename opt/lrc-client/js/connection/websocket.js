@@ -11,7 +11,12 @@ function Connection_WebSocket(host, port) {
 
     // Log about the WebSocket connection
     this.websocket.onopen = function () { console.log('WebSocket connection opened'); };
-    this.websocket.onclose = function () { console.log('WebSocket connection closed'); };
+    this.websocket.onclose = function () {
+        console.log('WebSocket connection closed');
+        if(confirm('Connection to the server lost ! Reload app ?')) {
+            window.location.reload();
+        }
+    };
     this.websocket.onerror = function (error) { console.error('WebSocket error : ' + error); };
 
     var that = this;

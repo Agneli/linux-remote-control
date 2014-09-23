@@ -85,12 +85,42 @@ var port = "3000";
 var websocketPort = "3001";
 var connection = new Connection();
 
-//Clear server to back to index
+// Clear server to back to index
 $(function() {
     $("#clear-server").click(function() {
         navigator.host = "";
         $("#server-name").html("");
     });
+});
+
+// Get the server status
+function refresh_servers_status() {
+    var servers = navigator.servers.all();
+    for(var index in servers) {
+        servers[index].host = servers[index].ip;
+        servers[index].port = 3000;
+        servers[index].index = index;
+        Connection.server_status(servers[index], function(server, response) {
+            $('#servers a:eq(' + server.index + ') span')
+              .text(server.name)
+              .css({
+                  fontStyle: 'normal',
+                  opacity: 1
+              });
+        }, function(server, response) {
+            $('#servers a:eq(' + server.index + ') span')
+              .text(server.name + ' (not available)')
+              .css({
+                  fontStyle: 'italic',
+                  opacity: 0.5
+              });
+        });
+    }
+}
+
+$(function() {
+    refresh_servers_status();
+    setInterval(refresh_servers_status, 5000);
 });
 
 // Musics ______________________________________________________________________
