@@ -3,11 +3,13 @@
  * (slower and more memory-consuming than WebSocket)
  */
 function Connection_HTTP(host, port, refresh_rate) {
+    Connection.apply(this);
+
     port = port || 3000;
     refresh_rate = refresh_rate || 1000;
 
-    Connection.apply(this);
     this.url = "http://" + host + ":" + port + '/';
+
     var that = this;
     setInterval(function() {
         that.refresh();
