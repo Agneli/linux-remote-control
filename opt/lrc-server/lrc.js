@@ -126,8 +126,6 @@ app.all("/info", function(req, res) {
             backlight: backlight,
         };
 
-        console.log(req.query.callback + "(" + JSON.stringify(data) + ")");
-
         res.send(req.query.callback + '(' + JSON.stringify(data) + ')');
     });
 });
