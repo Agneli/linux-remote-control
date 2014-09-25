@@ -3,9 +3,9 @@ var     app = require("express")(),
         sys = require("sys"),
         exec = require("child_process").exec,
         config = require("./configuration.js").config,
-        music_manager = require("music.js").drivers[config.music_driver],
-        cmd = require("cmd.js"),
-        connection = require("connection.js").drivers[config.connection_driver],
+        music_manager = require("./lib/music.js").drivers[config.music_driver],
+        cmd = require("./lib/cmd.js"),
+        connection = require("./lib/connection.js").drivers[config.connection_driver],
         WebSocketServer = require('ws').Server;
 
 var actions = {
