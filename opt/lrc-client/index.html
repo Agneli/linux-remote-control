@@ -388,7 +388,7 @@
                     <a class="w20 right sound-max" data-command='{"step":"5"}'><i class="fa fa-volume-up"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="sound-volume color1-dark" data-watch="volume" data-command='{"cmd":"amixer sset Master "}'></div>
+                        <div class="sound-volume color1-dark" data-watch="volume" data-base-command='{"cmd":"amixer sset Master "}'></div>
                         <span class="volume"></span>  
                     </div>
                 </div>
@@ -434,7 +434,7 @@
                     <a class="w20 right sound-max" data-command='{"step":"5"}'><i class="fa fa-volume-up"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="sound-volume color1-dark" data-watch="volume" data-command='{"cmd":"amixer sset Master "}'></div>
+                        <div class="sound-volume color1-dark" data-watch="volume" data-base-command='{"cmd":"amixer sset Master "}'></div>
                         <span class="volume"></span>  
                     </div>
                 </div>
@@ -478,23 +478,39 @@
                 </div>
                 <div class="line"></div>
                 <div id="alt-tab" class="line h20 color1-light">
-                    <a href="#!" class="w25 left alt-tab" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt; sleep 0.5; xdotool key Tab"}'>Alt + tab</a>
-                    <a href="#!" class="w25 left" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Left"}'><i class="fa fa-2x fa-chevron-left"></i></a>
-                    <a href="#!" class="w25 right ok" data-command='{"cmd":"export DISPLAY=:0; xdotool keyup alt keyup Tab keyup shift"}'><i class="fa fa-2x fa-check"></i></a>
-                    <a href="#!" class="w25 right" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Right"}'><i class="fa fa-2x fa-chevron-right"></i></a>
+                    <a href="#!" class="w25 left alt-tab" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt; sleep 0.5; xdotool key Tab"}'>
+                        Alt + tab
+                    </a>
+                    <a href="#!" class="w25 left" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Left"}'>
+                        <i class="fa fa-2x fa-chevron-left"></i>
+                    </a>
+                    <a href="#!" class="w25 right ok" data-command='{"cmd":"export DISPLAY=:0; xdotool keyup alt keyup Tab keyup shift"}'>
+                        <i class="fa fa-2x fa-check"></i>
+                    </a>
+                    <a href="#!" class="w25 right" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Right"}'>
+                        <i class="fa fa-2x fa-chevron-right"></i>
+                    </a>
                 </div>
                 <div id="controls-controls" class="line h20 color2-light">
-                    <a href="#!" class="w25 left lock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -l"}'><i class="fa fa-2x fa-lock"></i></a>
-                    <a href="#!" class="w25 left unlock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d"}'><i class="fa fa-2x fa-unlock"></i></a>
-                    <a href="#!" id="reboot" class="w25 left reboot" data-command='{"cmd":"reboot"}'><i class="fa fa-2x fa-repeat"></i></a>
-                    <a href="#!" id="shutdown" class="w25 left shutdown" data-command='{"cmd":"sudo halt"}'><i class="fa fa-2x fa-power-off"></i></a>
+                    <a href="#!" class="w25 left lock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -l"}'>
+                        <i class="fa fa-2x fa-lock"></i>
+                    </a>
+                    <a href="#!" class="w25 left unlock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d"}'>
+                        <i class="fa fa-2x fa-unlock"></i>
+                    </a>
+                    <a href="#!" id="reboot" class="w25 left reboot" data-confirm="Reboot" data-command='{"cmd":"reboot"}'>
+                        <i class="fa fa-2x fa-repeat"></i>
+                    </a>
+                    <a href="#!" id="shutdown" class="w25 left shutdown" data-confirm="Shutdown" data-command='{"cmd":"sudo halt"}'>
+                        <i class="fa fa-2x fa-power-off"></i>
+                    </a>
                 </div>
                 <div class="line color2-dark center">
                     <a class="w20 left dark-screen" data-command='{"step":"10"}'><i class="fa fa-desktop"> -</i></a>
                     <a class="w20 right light-screen" data-command='{"step":"10"}'>+ <i class="fa fa-desktop"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="timeline color2-light" id="backlight" data-watch="backlight" data-command='{"cmd":"xbacklight -set "}'></div>
+                        <div class="timeline color2-light" id="backlight" data-watch="backlight" data-base-command='{"cmd":"xbacklight -set "}'></div>
                         <span class="volume"></span>  
                     </div>
                 </div>

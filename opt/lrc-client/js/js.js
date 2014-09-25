@@ -82,7 +82,6 @@ function responsive_layout(selector) {
 
 navigator.host = "";
 var port = "3000";
-var websocketPort = "3001";
 var connection = new Connection();
 
 // Clear server to back to index
@@ -132,7 +131,7 @@ $(".sound-volume").slider({
     min: 0,
     max: 100,
     change: function(event, ui) {
-        connection.send('lrc', {cmd: $(this).data("command").cmd + ui.value + "%"});
+        connection.send('lrc', {cmd: $(this).data("base-command").cmd + ui.value + "%"});
     }
 });
 
@@ -152,12 +151,12 @@ $(function() {
 
     $("section#musics .sound-min").click(function() {
         var volume = $("section#musics .sound-volume").slider("value");
-        $("section#musics .sound-volume").slider("value", parseInt(volume - $(this).data("command").step));
+        $("section#musics .sound-volume").slider("value", parseInt(volume - $(this).data("base-command").step));
     });
 
     $("section#musics .sound-max").click(function() {
         var volume = $("section#musics .sound-volume").slider("value");
-        $("section#musics .sound-volume").slider("value", parseInt($(this).data("command").step) + volume);
+        $("section#musics .sound-volume").slider("value", parseInt($(this).data("base-command").step) + volume);
     });
 
     $("#music-controls a").click(function() {
@@ -172,26 +171,15 @@ $(function() {
     // reimplementing the same thing for each specific .sound-volume
     $("section#videos .sound-min").click(function() {
         var volume = $("section#videos .sound-volume").slider("value");
-        $("section#videos .sound-volume").slider("value", parseInt(volume - $(this).data("command").step));
+        $("section#videos .sound-volume").slider("value", parseInt(volume - $(this).data("base-command").step));
     });
 
     $("section#videos .sound-max").click(function() {
         var volume = $("section#videos .sound-volume").slider("value");
-        $("section#videos .sound-volume").slider("value", parseInt($(this).data("command").step) + volume);
+        $("section#videos .sound-volume").slider("value", parseInt($(this).data("base-command").step) + volume);
     });
 
-    $("#video-controls *").click(function() {
-        connection.send('lrc', {cmd: $(this).data("command").cmd});
-    });
 });
-
-// Alt-tab ____________________________________________________________________
-$(function() {
-    $("#alt-tab a").click(function() {
-        connection.send('lrc', {cmd: $(this).data("command").cmd});
-    });
-});
-
 
 // Controls ____________________________________________________________________
 $(function() {
@@ -228,59 +216,35 @@ screen_brightness.slider({
     min: 0,
     max: 100,
     change: function(event, ui) {
-        connection.send('lrc', {cmd: $(this).data("command").cmd + ui.value});
+        connection.send('lrc', {cmd: $(this).data("base-command").cmd + ui.value});
     }
 });
 
 $(function() {
     $(".dark-screen").click(function() {
         var brightness = $("#backlight").slider("value");
-        $("#backlight").slider("value", parseInt(brightness - $(this).data("command").step));
+        $("#backlight").slider("value", parseInt(brightness - $(this).data("base-command").step));
     });
     $(".light-screen").click(function() {
         var brightness = $("#backlight").slider("value");
-        $("#backlight").slider("value", parseInt($(this).data("command").step) + brightness);
+        $("#backlight").slider("value", parseInt($(this).data("base-command").step) + brightness);
     });
 });
 
+// Commands
 $(function() {
-    $("#controls-controls a:not(#reboot, #shutdown)").click(function() {
+
+    $("[data-command]:not([data-confirm])").click(function() {
         connection.send('lrc', {cmd: $(this).data("command").cmd});
     });
-});
 
-//Reboot
-$(function() {
+    // Commands asking for confirmation
     $("#controls-controls a#reboot").click(function() {
-        if (confirm("Reboot. Are you sure ?")) {
+        if (confirm($(this).data("confirm") + ". Are you sure ?")) {
             connection.send('lrc', {cmd: $(this).data("command").cmd});
         }
     });
-});
 
-//Shutdown
-$(function() {
-    $("#controls-controls a#shutdown").click(function() {
-        if (confirm("Shut Down. Are you sure ?")) {
-            connection.send('lrc', {cmd: $(this).data("command").cmd});
-        }
-    });
-});
-
-// Touchpad ____________________________________________________________________
-
-$(function() {
-    $("#mouse-controls a:not(.slideshow)").click(function() {
-        connection.send('lrc', {cmd: $(this).data("command").cmd});
-    });
-});
-
-// Slideshow ___________________________________________________________________
-
-$(function() {
-    $(".slideshow-controls a:not(.mouse)").click(function() {
-        connection.send('lrc', {cmd: $(this).data("command").cmd});
-    });
 });
 
 // Custom Commands _____________________________________________________________
