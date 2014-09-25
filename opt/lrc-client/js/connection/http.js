@@ -5,7 +5,6 @@
 function Connection_HTTP(host, port, refresh_rate) {
     Connection.apply(this);
 
-    port = port || 3000;
     refresh_rate = refresh_rate || 1000;
 
     this.url = "http://" + host + ":" + port + '/';

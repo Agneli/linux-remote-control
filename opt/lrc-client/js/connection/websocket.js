@@ -4,8 +4,6 @@
 function Connection_WebSocket(host, port) {
     Connection.apply(this);
 
-    port = port || 3001;
-
     window.WebSocket = window.WebSocket || window.MozWebSocket;
     this.websocket = new WebSocket("ws://" + host + ":" + port + '/');
 
