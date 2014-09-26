@@ -43,22 +43,20 @@
                     </div>
                 </div>
                 <div class="line center">
+                    <small>Advanced configuration</small>
+                </div>
+                <div class="line center">
                     <div class="fields">
-                        <input type="numeric" name="http-port" id="http-port" data-i18n="[placeholder]lrc.add-server.http-port" value="3000" />
+                        <select name="connection-type">
+                            <option value="WebSocket">WebSocket</option>
+                            <option value="HTTP">HTTP</option>
+                            <!--option value="Bluetooth">TODO : Bluetooth</option-->
+                        </select>
                     </div>
                 </div>
                 <div class="line center">
                     <div class="fields">
-                        <input type="numeric" name="websocket-port" id="websocket-port" data-i18n="[placeholder]lrc.add-server.websocket-port" value="3001" />
-                    </div>
-                </div>
-                <div class="line center">
-                    <div class="fields">
-                            <select name="communication-method">
-                                <option value="http">HTTP</option>
-                                <option value="websocket">WebSocket</option>
-                                <option value="bluetooth">Bluetooth</option>
-                            </select>
+                        <input type="numeric" name="port" data-i18n="[placeholder]lrc.add-server.http-port" value="3000" />
                     </div>
                 </div>
                 <div class="line"></div>

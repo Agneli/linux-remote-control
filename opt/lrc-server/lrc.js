@@ -51,10 +51,10 @@ var actions = {
 
             if (typeof command == 'string') {
                 exec(command);
-                callback(1)
+                callback(null)
             } else if (typeof command == 'function') {
                 command(music_manager, exec, parameters.args || {});
-                callback(1);
+                callback(null);
             } else {
                 callback({error: "command not supported by driver " + music_manager.name});
             }
@@ -75,7 +75,7 @@ var actions = {
      */
     c: function(parameters, callback) {
         exec('xdotool click ' + parameters.b, new Function);
-        callback(1);
+        callback(null);
     },
     // Mouse move
     m: function(parameters, callback) {

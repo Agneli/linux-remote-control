@@ -2,7 +2,7 @@ var CLICK_PREFIX = 'c';
 var MOVE_PREFIX = 'm';
 var SCROLL_PREFIX = 's';
 
-var activeTouch, touchCount, scrolling, socket;
+var activeTouch, touchCount, scrolling;
 
 function startup() {
     var el = $('#canvas')[0];
@@ -12,14 +12,9 @@ function startup() {
     activeTouch = null;
     touchCount = 0;
     scrolling = false;
-    socket = null;
 }
 
 function handleTouchstart(evt) {
-    //check if socket is connected
-    if (socket === null || socket.readyState != WebSocket.OPEN) {
-        socket = new WebSocket('ws://' + navigator.host + ':' + websocketPort);
-    }
     evt.preventDefault();
     if (touchCount == 0) {
         activeTouch = evt.changedTouches[0];
@@ -39,12 +34,12 @@ function handleTouchmove(evt) {
         deltaX = evt.changedTouches[0].clientX - activeTouch.clientX;
         deltaY = evt.changedTouches[0].clientY - activeTouch.clientY;
         activeTouch = evt.changedTouches[0];
-        socket.send(MOVE_PREFIX + deltaX + ';' + deltaY);
+        connection.send(MOVE_PREFIX, {x: deltaX, y: deltaY});
     } else if (touchCount == 2) {
         deltaY = evt.changedTouches.identifiedTouch(activeTouch.identifier).clientY - activeTouch.clientY;
         if (deltaY != 0) {
             activeTouch = evt.changedTouches.identifiedTouch(activeTouch.identifier);
-            socket.send(SCROLL_PREFIX + deltaY);
+            connection.send(SCROLL_PREFIX, {s: deltaY});
         }
     }
 }

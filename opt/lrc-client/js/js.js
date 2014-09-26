@@ -80,24 +80,22 @@ function responsive_layout(selector) {
     //$(selector + " #now-playing span .name").css("font-size", line / 100 * 60 + "px");
 }
 
-navigator.host = "";
-var port = "3000";
-var connection = new Connection();
+var connection;
 
 // Clear server to back to index
 $(function() {
     $("#clear-server").click(function() {
-        navigator.host = "";
         $("#server-name").html("");
     });
 });
+
+/*
+TODO : Display server status on server selection
 
 // Get the server status
 function refresh_servers_status() {
     var servers = navigator.servers.all();
     for(var index in servers) {
-        servers[index].host = servers[index].ip;
-        servers[index].port = 3000;
         servers[index].index = index;
         Connection.server_status(servers[index], function(server, response) {
             $('#servers a:eq(' + server.index + ') span')
@@ -121,6 +119,7 @@ $(function() {
     refresh_servers_status();
     setInterval(refresh_servers_status, 5000);
 });
+*/
 
 // Musics ______________________________________________________________________
 
