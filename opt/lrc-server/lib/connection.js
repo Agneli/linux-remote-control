@@ -4,7 +4,6 @@ exports.drivers = {};
 exports.drivers.HTTP = function(servers, actions, config) {
     var app = servers.HTTP;
     app.all(/\/(.+)/, function(req, res) {
-        res.header("Content-Type", "text/javascript");
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "X-Requested-With");
 
@@ -13,6 +12,7 @@ exports.drivers.HTTP = function(servers, actions, config) {
                 res.send(result);
             });
         } else {
+            console.log("Invalid command : " + req.params[0]);
             res.send(null);
         }
     });

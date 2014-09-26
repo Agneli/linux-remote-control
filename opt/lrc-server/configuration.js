@@ -8,7 +8,7 @@ exports.config = {
         y: 2
     },
     // Available drivers : HTTP, WebSocket
-    connection_driver: 'HTTP',
+    connection_driver: 'WebSocket',
     // Indicates if the client app is installed as a certified app
     certified: false
 };

@@ -1,11 +1,11 @@
 /**
  * Driver to connect to a server via a WebSocket
  */
-function Connection_WebSocket(host, port) {
+function Connection_WebSocket(server) {
     Connection.apply(this);
 
     window.WebSocket = window.WebSocket || window.MozWebSocket;
-    this.websocket = new WebSocket("ws://" + host + ":" + port + '/');
+    this.websocket = new WebSocket("ws://" + server.host + ":" + server.port + '/');
 
     // Log about the WebSocket connection
     this.websocket.onopen = function () { console.log('WebSocket connection opened'); };
@@ -26,6 +26,11 @@ function Connection_WebSocket(host, port) {
 // Extends Connection
 Connection_WebSocket.prototype = new Connection();
 
+Connection_WebSocket.prototype.delete = function() {
+    this.websocket.onclose = null;
+    this.websocket.close();
+};
+
 /**
  * Sends a command to the server via HTTP GET
  */
@@ -38,8 +43,7 @@ Connection_WebSocket.prototype.send = function(fct, arguments, callback) {
  * Callback used to refresh the view when a WebSocket message is received
  */
 Connection_WebSocket.prototype.refresh = function(data) {
-    data = JSON.parse(data);
-    console.log(data);
+
     for(object in data) {
         if(data[object] instanceof Object) {
             for(key in data[object]) {
