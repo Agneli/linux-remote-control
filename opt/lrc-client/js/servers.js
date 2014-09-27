@@ -57,7 +57,7 @@ $(function() {
 
     // Clear fields
     $("#cancel, #save").click(function() {
-        $(".fields input").val("");
+        $('#add-server input[name="name"]').val("");
     });
 
     // Delete Server (removes it from localStorage)
