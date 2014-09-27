@@ -47,7 +47,7 @@ exports.drivers.WebSocket = function(servers, actions, config) {
 
             if(action in actions) {
                 actions[action](parameters, function(result) {
-                    if(result) {
+                    if(result !== null) {
                         wss.broadcast(result);
                     }
                 });
@@ -64,7 +64,7 @@ exports.drivers.WebSocket = function(servers, actions, config) {
                     wss.broadcast(JSON.stringify(result));
                 });
             }
-        }, 3000);
+        }, config.refresh_delay);
     });
 
     wss.broadcast = function(data) {

@@ -9,6 +9,8 @@ exports.config = {
     },
     // Available drivers : HTTP, WebSocket
     connection_driver: 'WebSocket',
+    // Milliseconds between each delay ~ Not used with HTTP driver
+    refresh_delay: 1000,
     // Indicates if the client app is installed as a certified app
     certified: false
 };
