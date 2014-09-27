@@ -80,7 +80,7 @@ function responsive_layout(selector) {
     //$(selector + " #now-playing span .name").css("font-size", line / 100 * 60 + "px");
 }
 
-var connection;
+var connection = null;
 
 // Clear server to back to index
 $(function() {
@@ -150,12 +150,12 @@ $(function() {
 
     $("section#musics .sound-min").click(function() {
         var volume = $("section#musics .sound-volume").slider("value");
-        $("section#musics .sound-volume").slider("value", parseInt(volume - $(this).data("base-command").step));
+        $("section#musics .sound-volume").slider("value", parseInt(volume - $(this).data("step")));
     });
 
     $("section#musics .sound-max").click(function() {
         var volume = $("section#musics .sound-volume").slider("value");
-        $("section#musics .sound-volume").slider("value", parseInt($(this).data("base-command").step) + volume);
+        $("section#musics .sound-volume").slider("value", parseInt($(this).data("step")) + volume);
     });
 
     $("#music-controls a").click(function() {
@@ -169,13 +169,15 @@ $(function() {
     // TODO : Volume managing should be done with a jQuery context instead of
     // reimplementing the same thing for each specific .sound-volume
     $("section#videos .sound-min").click(function() {
+        console.log($(this));
+        console.log($(this).data("base-command"));
         var volume = $("section#videos .sound-volume").slider("value");
-        $("section#videos .sound-volume").slider("value", parseInt(volume - $(this).data("base-command").step));
+        $("section#videos .sound-volume").slider("value", parseInt(volume - $(this).data("step")));
     });
 
     $("section#videos .sound-max").click(function() {
         var volume = $("section#videos .sound-volume").slider("value");
-        $("section#videos .sound-volume").slider("value", parseInt($(this).data("base-command").step) + volume);
+        $("section#videos .sound-volume").slider("value", parseInt($(this).data("step")) + volume);
     });
 
 });
@@ -222,11 +224,11 @@ screen_brightness.slider({
 $(function() {
     $(".dark-screen").click(function() {
         var brightness = $("#backlight").slider("value");
-        $("#backlight").slider("value", parseInt(brightness - $(this).data("base-command").step));
+        $("#backlight").slider("value", parseInt(brightness - $(this).data("step")));
     });
     $(".light-screen").click(function() {
         var brightness = $("#backlight").slider("value");
-        $("#backlight").slider("value", parseInt($(this).data("base-command").step) + brightness);
+        $("#backlight").slider("value", parseInt($(this).data("step")) + brightness);
     });
 });
 
@@ -238,7 +240,7 @@ $(function() {
     });
 
     // Commands asking for confirmation
-    $("#controls-controls a#reboot").click(function() {
+    $("[data-command][data-confirm]").click(function() {
         if (confirm($(this).data("confirm") + ". Are you sure ?")) {
             connection.send('lrc', {cmd: $(this).data("command").cmd});
         }

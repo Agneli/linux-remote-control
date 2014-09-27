@@ -43,7 +43,7 @@ Connection_WebSocket.prototype.send = function(fct, arguments, callback) {
  * Callback used to refresh the view when a WebSocket message is received
  */
 Connection_WebSocket.prototype.refresh = function(data) {
-
+    data = $.parseJSON(data);
     for(object in data) {
         if(data[object] instanceof Object) {
             for(key in data[object]) {
