@@ -54,6 +54,7 @@ Connection_WebSocket.prototype.refresh = function(data) {
         console.error(json_error);
         return
     }
+
     for(object in data) {
         if(data[object] instanceof Object) {
             for(key in data[object]) {
