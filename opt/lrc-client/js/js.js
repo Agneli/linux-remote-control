@@ -129,7 +129,7 @@ $(".sound-volume").slider({
     value: 0,
     min: 0,
     max: 100,
-    change: function(event, ui) {
+    stop: function(event, ui) {
         connection.send('lrc', {cmd: $(this).data("base-command").cmd + ui.value + "%"});
     }
 });
@@ -140,7 +140,7 @@ $("#music-timeline").slider({
     value: 0,
     min: 0,
     max: 100,
-    change: function(event, ui) {
+    stop: function(event, ui) {
         connection.send('music', {action: "seek", args: {proportion: ui.value / 100}});
     }
 });
@@ -216,7 +216,7 @@ screen_brightness.slider({
     value: 0,
     min: 0,
     max: 100,
-    change: function(event, ui) {
+    stop: function(event, ui) {
         connection.send('lrc', {cmd: $(this).data("base-command").cmd + ui.value});
     }
 });

@@ -47,16 +47,12 @@ Connection_HTTP.prototype.refresh = function() {
                     for(key in data[object]) {
                         var watch_selector = '[data-watch="' + object + '.' + key + '"]';
                         $(watch_selector + ':not(.slider ' + watch_selector + ')').html(unescape(data[object][key]));
-                        // FIXME : Attributting a value to a slider may trigger events
-                        // leading to infinite loops (such as music.elapsed-percent, that
-                        // updates the server, that updates the app, that updates the server...
-                        //$('.slider ' + watch_selector).slider("value", unescape(data[object][key]));
+                        $('.slider ' + watch_selector).slider("value", unescape(data[object][key]));
                     }
                 } else {
                     var watch_selector = '[data-watch="' + object + '"]';
                     $(watch_selector + ':not(.slider ' + watch_selector + ')').html(unescape(data[object]));
-                    // FIXME : see previous fixme
-                    //$('.slider ' + watch_selector).slider("value", unescape(data[object]));
+                    $('.slider ' + watch_selector).slider("value", unescape(data[object]));
                 }
             }
         });
