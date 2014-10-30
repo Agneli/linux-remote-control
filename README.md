@@ -131,4 +131,4 @@ The project still has some bugs that you can fix.
 - Organize and modularize my dirty Javascript =/;
 
 ## License
-GNU GENERAL PUBLIC LICENSE V2
+GNU GENERAL PUBLIC LICENSE V3
