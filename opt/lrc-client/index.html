@@ -32,7 +32,6 @@
                     <div class="w20 right"></div>
                 </header>
                 <div class="line"></div>
-                <div class="line"></div>
                 <div class="line center">
                     <div class="fields">
                         <input type="text" name="name" id="name" data-i18n="[placeholder]lrc.add-server.account-name" />
@@ -43,8 +42,23 @@
                         <input type="text" name="ip" id="ip" data-i18n="[placeholder]lrc.add-server.ip-address" />
                     </div>
                 </div>
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="line center">
+                    <small>Advanced configuration</small>
+                </div>
+                <div class="line center">
+                    <div class="fields">
+                        <select name="connection-type">
+                            <option value="WebSocket">WebSocket</option>
+                            <option value="HTTP">HTTP</option>
+                            <!--option value="Bluetooth">TODO : Bluetooth</option-->
+                        </select>
+                    </div>
+                </div>
+                <div class="line center">
+                    <div class="fields">
+                        <input type="numeric" name="port" data-i18n="[placeholder]lrc.add-server.http-port" value="3000" />
+                    </div>
+                </div>
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line color2-light">
@@ -362,32 +376,34 @@
                     <a href="#!" class="w14 left" data-page="slideshow" data-direction='left'><i class="fa fa-unsorted fa-rotate-90"></i></a>
                     <a href="#!" class="w14 left" data-page="custom-commands" data-direction='left'><i class="fa fa-terminal"></i></a>
                 </header>
+                <div class="line center" data-watch="music.artist"></div>
+                <div class="line center" data-watch="music.album"></div>
+                <div class="line center" data-watch="music.title"></div>
+                <div class="line center"></div>
                 <div class="line"></div>
-                <div class="line center artist"></div>
-                <div class="line center album"></div>
-                <div class="line center title"></div>
-                <div class="line center paused"></div>
                 <div class="line color1-light center">
-                    <a class="w20 left sound-min" data-command='{"step":"5"}'><i class="fa fa-volume-off"></i></a>
-                    <a class="w20 right sound-max" data-command='{"step":"5"}'><i class="fa fa-volume-up"></i></a>
+                    <a class="w20 left sound-min" data-step="5"><i class="fa fa-volume-off"></i></a>
+                    <a class="w20 right sound-max" data-step="5"><i class="fa fa-volume-up"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="sound-volume color1-dark" data-command='{"cmd":"amixer sset Master "}'></div>  
+                        <div class="sound-volume color1-dark" data-watch="volume" data-base-command='{"cmd":"amixer sset Master "}'></div>
                         <span class="volume"></span>  
                     </div>
                 </div>
                 <div class="line color2-light center">
-                    <div class="w20 left time elapsed">00:00</div>
-                    <div class="w20 right time duration">00:00</div>
-                    <div class="slider w60">   
-                        <span class="tooltip"></span>   
-                        <div class="timeline color2-dark" id="music-timeline" data-command='{"cmd":""}'></div>  
-                        <span class="volume"></span>  
+                    <div class="w20 left time" data-watch="music.elapsed-formatted">00:00</div>
+                    <div class="w20 right time" data-watch="music.duration-formatted">00:00</div>
+                    <div class="slider w60">
+                        <span class="tooltip"></span>
+                        <div class="timeline color2-dark" id="music-timeline" data-watch="music.elapsed-percent" data-command='{"cmd":""}'></div>
+                        <span class="volume"></span>
                     </div>
                 </div>
                 <div class="line h20 color2-dark" id="music-controls">
                     <a href="#!" class="w25 left prev" data-action="previous"><i class="fa fa-fast-backward"></i></a>
-                    <a href="#!" id="music-play-pause" class="w25 left play" data-action="toggle_play"><i class="fa fa-play"></i></a>
+                    <a href="#!" class="w25 left play" data-action="toggle_play" data-watch="music.play_symbol">
+                        <i class="fa fa-play"></i>
+                    </a>
                     <a href="#!" class="w25 left next" data-action="next"><i class="fa fa-fast-forward"></i></a>
                     <a href="#!" class="w25 left stop" data-action="stop"><i class="fa fa-stop"></i></a>
                     <!--<a href="#!" class="w20 left mute" data-command='{"cmd":"export DISPLAY=:0; xdotool key XF86AudioMute"}'></a>-->
@@ -412,11 +428,11 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line color1-light center">
-                    <a class="w20 left sound-min" data-command='{"step":"5"}'><i class="fa fa-volume-off"></i></a>
-                    <a class="w20 right sound-max" data-command='{"step":"5"}'><i class="fa fa-volume-up"></i></a>
+                    <a class="w20 left sound-min" data-step="5"><i class="fa fa-volume-off"></i></a>
+                    <a class="w20 right sound-max" data-step="5"><i class="fa fa-volume-up"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="sound-volume color1-dark" data-command='{"cmd":"amixer sset Master "}'></div>  
+                        <div class="sound-volume color1-dark" data-watch="volume" data-base-command='{"cmd":"amixer sset Master "}'></div>
                         <span class="volume"></span>  
                     </div>
                 </div>
@@ -460,23 +476,39 @@
                 </div>
                 <div class="line"></div>
                 <div id="alt-tab" class="line h20 color1-light">
-                    <a href="#!" class="w25 left alt-tab" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt; sleep 0.5; xdotool key Tab"}'>Alt + tab</a>
-                    <a href="#!" class="w25 left" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Left"}'><i class="fa fa-2x fa-chevron-left"></i></a>
-                    <a href="#!" class="w25 right ok" data-command='{"cmd":"export DISPLAY=:0; xdotool keyup alt keyup Tab keyup shift"}'><i class="fa fa-2x fa-check"></i></a>
-                    <a href="#!" class="w25 right" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Right"}'><i class="fa fa-2x fa-chevron-right"></i></a>
+                    <a href="#!" class="w25 left alt-tab" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt; sleep 0.5; xdotool key Tab"}'>
+                        Alt + tab
+                    </a>
+                    <a href="#!" class="w25 left" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Left"}'>
+                        <i class="fa fa-2x fa-chevron-left"></i>
+                    </a>
+                    <a href="#!" class="w25 right ok" data-command='{"cmd":"export DISPLAY=:0; xdotool keyup alt keyup Tab keyup shift"}'>
+                        <i class="fa fa-2x fa-check"></i>
+                    </a>
+                    <a href="#!" class="w25 right" data-command='{"cmd":"export DISPLAY=:0; xdotool keydown alt key Right"}'>
+                        <i class="fa fa-2x fa-chevron-right"></i>
+                    </a>
                 </div>
                 <div id="controls-controls" class="line h20 color2-light">
-                    <a href="#!" class="w25 left lock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -l"}'><i class="fa fa-2x fa-lock"></i></a>
-                    <a href="#!" class="w25 left unlock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d"}'><i class="fa fa-2x fa-unlock"></i></a>
-                    <a href="#!" id="reboot" class="w25 left reboot" data-command='{"cmd":"reboot"}'><i class="fa fa-2x fa-repeat"></i></a>
-                    <a href="#!" id="shutdown" class="w25 left shutdown" data-command='{"cmd":"sudo halt"}'><i class="fa fa-2x fa-power-off"></i></a>
+                    <a href="#!" class="w25 left lock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -l"}'>
+                        <i class="fa fa-2x fa-lock"></i>
+                    </a>
+                    <a href="#!" class="w25 left unlock" data-command='{"cmd":"export DISPLAY=:0; gnome-screensaver; gnome-screensaver-command -d"}'>
+                        <i class="fa fa-2x fa-unlock"></i>
+                    </a>
+                    <a href="#!" id="reboot" class="w25 left reboot" data-confirm="Reboot" data-command='{"cmd":"reboot"}'>
+                        <i class="fa fa-2x fa-repeat"></i>
+                    </a>
+                    <a href="#!" id="shutdown" class="w25 left shutdown" data-confirm="Shutdown" data-command='{"cmd":"sudo halt"}'>
+                        <i class="fa fa-2x fa-power-off"></i>
+                    </a>
                 </div>
                 <div class="line color2-dark center">
-                    <a class="w20 left dark-screen" data-command='{"step":"10"}'><i class="fa fa-desktop"> -</i></a>
-                    <a class="w20 right light-screen" data-command='{"step":"10"}'>+ <i class="fa fa-desktop"></i></a>
+                    <a class="w20 left dark-screen" data-step="10"><i class="fa fa-desktop"> -</i></a>
+                    <a class="w20 right light-screen" data-step="10">+ <i class="fa fa-desktop"></i></a>
                     <div class="slider w60">   
                         <span class="tooltip"></span>   
-                        <div class="timeline color2-light" id="backlight" data-command='{"cmd":"xbacklight -set "}'></div>  
+                        <div class="timeline color2-light" id="backlight" data-watch="backlight" data-base-command='{"cmd":"xbacklight -set "}'></div>
                         <span class="volume"></span>  
                     </div>
                 </div>
@@ -575,18 +607,19 @@
                     <a href="#!" class="w50 center right save" data-page="custom-commands" data-direction='down' data-i18n="lrc.add-server.save"></a>
                 </div>
             </section>
-
         </div>
 
-        <script type="text/javascript" src="js/jquery.js" ></script>
-        <script type="text/javascript" src="js/jquery-ui.js" ></script>
-        <script type="text/javascript" src="js/jquery-ui-touch-punch.js" ></script>
-        <script type="text/javascript" src="js/local-storage.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.js" ></script>
+        <script type="text/javascript" src="js/lib/jquery-ui.js" ></script>
+        <script type="text/javascript" src="js/lib/jquery-ui-touch-punch.js" ></script>
+        <script type="text/javascript" src="js/lib/i18next.js" ></script>
+        <script type="text/javascript" src="js/lib/local-storage.js"></script>
         <script type="text/javascript" src="js/custom-commands.js"></script>
         <script type="text/javascript" src="js/servers.js"></script>
-        <script type="text/javascript" src="js/js.js" ></script>
-        <script type="text/javascript" src="js/touch.js" ></script>
-        <script type="text/javascript" src="js/i18next.js" ></script>
-
+        <script type="text/javascript" src="js/connection/connection.js"></script>
+        <script type="text/javascript" src="js/connection/http.js"></script>
+        <script type="text/javascript" src="js/connection/websocket.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
+        <script type="text/javascript" src="js/touch.js"></script>
     </body>
 </html>

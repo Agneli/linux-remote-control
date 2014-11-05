@@ -18,10 +18,10 @@ Servers.prototype.refresh_view = function() {
             server.index = index;
             $("#servers").append('<a class="line color1-dark server" data-page="menu" href="#!" data-direction=\'left\' data-server=\'' + JSON.stringify(server) + '\'><span>' + server.name + '</span><div class="w20 right"><i class="fa fa-chevron-right"></i></div></a>');
         }
-
         // Refresh server click events
         $(".server").unbind('click').click(function() {
-            navigator.host = $(this).data("server").ip;
+            connection && connection.delete();
+            connection = Connection.factory($(this).data("server"));
             $("#server-name").html($(this).data("server").name);
             $("#delete-server").data("index", $(this).data("server").index);
         });
@@ -38,8 +38,6 @@ Servers.prototype.refresh_view = function() {
 Servers.prototype.rename = function(index, name) {
     var servers = this.all();
 
-    console.log(servers);
-
     servers[index].name = name;
 
     this.save(servers);
@@ -49,15 +47,17 @@ Servers.prototype.rename = function(index, name) {
 $(function() {
     $("#save").click(function() {
         navigator.servers.append({
-            name: $('#name').val(),
-            ip: $("#ip").val()
+            name: $('#add-server input[name="name"]').val(),
+            host: $('#add-server input[name="ip"]').val(),
+            type: $('#add-server select[name="connection-type"]').val(),
+            port: $('#add-server input[name="port"]').val()
         });
         navigator.servers.refresh_view();
     });
 
     // Clear fields
     $("#cancel, #save").click(function() {
-        $(".fields input").val("");
+        $('#add-server input[name="name"]').val("");
     });
 
     // Delete Server (removes it from localStorage)
@@ -70,7 +70,6 @@ $(function() {
     });
 
     $("#server-name").blur(function() {
-        console.log($(this).data('index') + $(this).text());
         navigator.servers.rename($("#delete-server").data('index'), $(this).text());
         navigator.servers.refresh_view();
     });

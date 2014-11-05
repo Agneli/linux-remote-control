@@ -1,0 +1,52 @@
+{
+    "version": "0.4",
+    "name": "Linux Remote Control",
+    "description": "A complete remote control for GNU/Linux",
+    "launch_path": "/index.html",
+    "icons": {
+        "16": "/img/icons/icon-16.png",
+        "32": "/img/icons/icon-32.png",
+        "48": "/img/icons/icon-48.png",
+        "60": "/img/icons/icon-60.png",
+        "64": "/img/icons/icon-64.png",
+        "90": "/img/icons/icon-90.png",
+        "120": "/img/icons/icon-120.png",
+        "128": "/img/icons/icon-128.png",
+        "256": "/img/icons/icon-256.png"
+    },
+    "developer": {
+        "name": "Raphael Agneli",
+        "url": "http://www.agneli.com/"
+    },
+    "installs_allowed_from": ["*"],
+    "locales": {
+        "en": {
+            "description": "A complete remote control for GNU/Linux.",
+            "developer": {
+                "name": "Raphael Agneli",
+                "url": "http://www.agneli.com/"
+            }
+        },
+        "pt": {
+            "description": "Um controle remoto completo para GNU/Linux.",
+            "developer": {
+                "name": "Raphael Agneli",
+                "url": "http://www.agneli.com/"
+            }
+        },
+        "es": {
+            "description": "Un control remoto completo para GNU/Linux.",
+            "developer": {
+                "name": "Raphael Agneli",
+                "url": "http://www.agneli.com/"
+            }
+        }
+    },
+    "default_locale": "en",
+    "orientation": "portrait",
+    "type": "certified",
+    "permissions": {
+        "sms": {},
+        "bluetooth": {}
+    }
+}

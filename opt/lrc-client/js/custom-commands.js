@@ -31,9 +31,9 @@ Custom_Commands.prototype.refresh_view = function() {
 
     // Refresh events
     $("#custom-commands .custom-commands a[data-command]").click(function() {
-        $.get(
-            "http://" + navigator.host + ":" + port + "/lrc",
-            {cmd: decodeURI($(this).data("command"))},
+        connection.send(
+            "lrc",
+            { cmd: decodeURI($(this).data("command")) },
             function(response) {
                 if(response.stdout !== '') {
                     alert(response.stdout);

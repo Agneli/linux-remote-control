@@ -29,36 +29,27 @@ Turn any device into a complete remote control for your GNU/Linux.
 
 ### Other systems
 
-1 - Download this repository and unzip
+In a command line :
+
 ```bash
+# 1 - Download this repository and unzip
 unzip linux-remote-control-master.zip
-```
 
-2 - Make a .deb package of the project
-```bash
+# 2 - Make a .deb package of the project
 dpkg-deb -b linux-remote-control-master/ lrc.deb
-```
 
-3 - Install .deb package
-```bash
+# 3 - Install .deb package
 sudo dpkg -i lrc.deb
-```
 
-4 - Move /opt/lrc-client directory to your device or to directory of your choice (if you prefer you can leave here)
-```bash
+# 4 - Move /opt/lrc-client directory to your device or to directory of your choice (if you prefer you can leave here)
 sudo mv /opt/lrc-client your-directory/lrc-client
+
+# 5 - Start lrc-server
+# (depending on the OS, the server can be called `node` or `nodejs`)
+node /opt/lrc-server/lrc.js || nodejs /opt/lrc-server/lrc.js
 ```
 
-5 - Start lrc-server
-```bash
-node /opt/lrc-server/lrc.js
-```
-or
-```bash
-nodejs /opt/lrc-server/lrc.js
-```
-
-6 - Open the index.html of your-directory/lrc-client in a browser, add your server and have fun
+Finally, open the index.html of your-directory/lrc-client in a browser, add your server and have fun !
 
 ## How to install lrc-server
 
@@ -89,7 +80,7 @@ Or open .deb package by graphic interface (double click on the lrc-ffos.deb file
 
 ### Configuration
 
-Linux-remote-control will work out-of-the-box in most cases. However, if you wish to change the default settings (for instance, if you wish to use another music player than Rhythmbox), just modify the configuration file in /opt/lrc-server/node_modules/configuration.js
+Linux-remote-control will work out-of-the-box in most cases. However, if you wish to change the default settings (for instance, if you wish to use another music player than Rhythmbox), just modify the configuration file in /opt/lrc-server/configuration.js
 
 ### Start the server on computer boot
 
@@ -103,7 +94,11 @@ $ crontab -e
 
 ### Firewall issues
 
-The default ports for the server are 3000 for HTTP requests and 3001 for WebSockets. You might want to open those ports (at least when you are not on a public network) with tools such as `firewall-config`.
+The default port the server is 3000. You might want to open that port (at least when you are not on a public network) with tools such as `firewall-config`, or using the following command :
+
+```bash
+sudo firewall-cmd --add-port=3000/tcp
+```
 
 ## Dependences
 
