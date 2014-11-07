@@ -27,39 +27,6 @@ Turn any device into a complete remote control for your GNU/Linux.
 
 4 - [Install lrc-server](#how-to-install-lrc-server)
 
-### Other systems
-
-1 - Download this repository and unzip
-```bash
-unzip linux-remote-control-master.zip
-```
-
-2 - Make a .deb package of the project
-```bash
-dpkg-deb -b linux-remote-control-master/ lrc.deb
-```
-
-3 - Install .deb package
-```bash
-sudo dpkg -i lrc.deb
-```
-
-4 - Move /opt/lrc-client directory to your device or to directory of your choice (if you prefer you can leave here)
-```bash
-sudo mv /opt/lrc-client your-directory/lrc-client
-```
-
-5 - Start lrc-server
-```bash
-node /opt/lrc-server/lrc.js
-```
-or
-```bash
-nodejs /opt/lrc-server/lrc.js
-```
-
-6 - Open the index.html of your-directory/lrc-client in a browser, add your server and have fun
-
 ## How to install lrc-server
 
 1 - Download the lrc.deb package onto you GNU/Linux system.
@@ -86,6 +53,46 @@ If an error occurs during installation of the package, run the following command
 sudo apt-get install -f
 ```
 Or open .deb package by graphic interface (double click on the lrc-ffos.deb file)
+
+## Developers
+
+To test the developer version follow the steps below:
+
+1 - Download this repository and unzip
+```bash
+unzip linux-remote-control-master.zip
+```
+
+2 - Open folder that the project was unzipped
+```bash
+cd linux-remote-control-master
+```
+
+3 - Move linux-remote-control-master/opt/lrc-client directory to your device or to directory of your choice (if you prefer you can leave here)
+```bash
+sudo mv linux-remote-control-master/opt/lrc-client your-directory/lrc-client
+```
+
+4 - Move linux-remote-control-master/opt/lrc-server directory to directory of your choice (we recommend /opt)
+```bash
+sudo mv linux-remote-control-master/opt/lrc-server /opt/lrc-server
+```
+
+5 - Install the dependences
+```bash
+sudo apt-get install nodejs xdotool xbacklight
+```
+
+6 - Start lrc-server
+```bash
+node /opt/lrc-server/lrc.js
+```
+or
+```bash
+nodejs /opt/lrc-server/lrc.js
+```
+
+7 - Open the index.html of your-directory/lrc-client in a browser (or in the browser of your device), add your server and have fun
 
 ### Configuration
 
