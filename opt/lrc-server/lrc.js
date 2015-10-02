@@ -1,5 +1,7 @@
 //CONSTANTS
 var CLICK_PREFIX = 'c';
+var MOUSEUP_PREFIX = 'u';
+var MOUSEDOWN_PREFIX = 'd';
 var MOVE_PREFIX = 'm';
 var SCROLL_PREFIX = 's';
 
@@ -20,24 +22,24 @@ var handleMessage = function(message) {
     message = message.substr(1);
     switch (prefix) {
         case CLICK_PREFIX:
-            //Clicks are not yet sent over websocket
+            var button = message;
+            console.log('xdotool click ' + button);
+            exec('xdotool click ' + button, function puts(error, stdout, stderr) {});
+        break;
+        case MOUSEUP_PREFIX:
+            var button = message;
+            console.log('xdotool mouseup ' + button);
+            exec('xdotool mouseup ' + button, function puts(error, stdout, stderr) {});
+        break;
+        case MOUSEDOWN_PREFIX:
+            var button = message;
+            console.log('xdotool mousedown ' + button);
+            exec('xdotool mousedown ' + button, function puts(error, stdout, stderr) {});
         break;
         case MOVE_PREFIX:
             values = message.split(';');
             x = parseInt(values[0]) * config.mouse_speed.x;
             y = parseInt(values[1]) * config.mouse_speed.y;
-            if (Math.abs(x) > 10) {
-                if (Math.abs(x) > 20) {
-                    x = x * 2;
-                }
-                x = x * 2;
-            }
-            if (Math.abs(y) > 10) {
-                if (Math.abs(y) > 20) {
-                    y = y * 2;
-                }
-                y = y * 2;
-            }
             exec('xdotool mousemove_relative -- ' + x + ' ' + y, function puts(error, stdout, stderr) {});
         break;
         case SCROLL_PREFIX:
