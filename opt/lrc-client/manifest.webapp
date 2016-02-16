@@ -40,6 +40,13 @@
                 "name": "Raphael Agneli",
                 "url": "http://www.agneli.com/"
             }
+        },
+        "fr": {
+            "description": "Un contrôle à distance complet pour GNU/Linux.",
+            "developer": {
+                "name": "Raphael Agneli",
+                "url": "http://www.agneli.com/"
+            }
         }
     },
     "default_locale": "en",
