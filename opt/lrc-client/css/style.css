@@ -117,6 +117,16 @@ a {
     text-align: center;
 }
 
+#main section #mouseclick .w50 {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    margin: -1px;
+    margin-top: 1px;
+    border: 1px solid #318CE7;
+}
+
 #main section .line .w50 {
     display: inline-block;
     width: 50%;
