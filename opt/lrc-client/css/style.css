@@ -127,6 +127,15 @@ a {
     border: 1px solid #318CE7;
 }
 
+#main section #slidecontrol .w50 {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    margin: -2px;
+    border: 1px solid #318CE7;
+}
+
 #main section .line .w50 {
     display: inline-block;
     width: 50%;
