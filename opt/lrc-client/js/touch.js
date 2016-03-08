@@ -7,10 +7,14 @@ var SCROLL_PREFIX = 's';
 var activeTouch, touchCount, scrolling, socket, startTime, touchHoldTime, touchHold;
 
 function startup() {
-    var el = $('#canvas')[0];
+    var el = $('#Touchpad-canvas')[0];
     el.addEventListener('touchstart', handleTouchstart, false);
     el.addEventListener('touchend', handleTouchend, false);
     el.addEventListener('touchmove', handleTouchmove, false);
+    var al = $('#Slideshow-canvas')[0];
+    al.addEventListener('touchstart', handleTouchstart, false);
+    al.addEventListener('touchend', handleTouchend, false);
+    al.addEventListener('touchmove', handleTouchmove, false);
     activeTouch = null;
     touchHoldTime = 0;
     touchHold = false;

@@ -330,6 +330,7 @@ $(function() {
         });
     });
 });
+// Creer fonction clavier avec gestion de tableau pour multitouch et traiter les combinaisons
 
 // Settings ____________________________________________________________________
 

@@ -494,7 +494,7 @@
                     <a href="#!" class="w14 left" data-page="slideshow" data-direction='left'><i class="fa fa-unsorted fa-rotate-90"></i></a>
                     <a href="#!" class="w14 left" data-page="custom-commands" data-direction='left'><i class="fa fa-terminal"></i></a>
                 </header>
-                <div id="canvas" class="line h70">
+                <div id="Touchpad-canvas" class="line h70">
                 </div>
                 <div id="mouse-controls" class="line h20 color2-light">
                     <a href="#!" class="w33 left-click left" data-command='{"cmd":"export DISPLAY=:0; xdotool click 1"}'></a>
@@ -520,7 +520,7 @@
                     <a href="#!" class="w50 left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Left"}'><i class="fa fa-chevron-left"></i></a>
                     <a href="#!" class="w50 right" data-command='{"cmd":"export DISPLAY=:0; xdotool key Right"}'><i class="fa fa-chevron-right"></i></a>
                 </div>
-                <div id="canvas" class="line h50">
+                <div id="Slideshow-canvas" class="line h50">
                 </div>
                 <div id="mouseclick" class="line h10 slideshow-controls color1-dark">
                     <a href="#!" class="w50 left-click left" data-command='{"cmd":"export DISPLAY=:0; xdotool click 1"}'></a>
@@ -532,6 +532,11 @@
                     <a href="#!" class="w33 keyboard right" data-command='{"cmd":""}'><i class="fa fa-3x fa-keyboard-o"></i></a>
                 </div>
                 <input type="text" class="keyboard-input" />
+                <div class="combined-keyboard">
+                    <button id="ctrl">Ctrl</button>
+                    <button id="c">C</button>
+                    <button id="v">V</button>
+                </div>
             </section>
 
             <!-- Custom commands ____________________________________________-->
