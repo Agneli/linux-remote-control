@@ -289,6 +289,19 @@ $(function() {
     });
 });
 
+$(function() {
+    $(".combined-keyboard #hide").click(function() {
+        $(".combined-keyboard").css("display","none");
+    });
+});
+
+$(function() {
+    $(".slideshow-controls .combined").click(function() {
+        $(".combined-keyboard").css("display","block");
+        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+    });
+});
+
 // Custom Commands _____________________________________________________________
 $(function() {
     // Existing commands are loaded in custom-commands.js
@@ -337,7 +350,25 @@ $(function() {
         });
     });
 });
-// Creer fonction clavier avec gestion de tableau pour multitouch et traiter les combinaisons
+
+
+// Tableau de combinaison
+//var buttonStatus = {};
+// Keyboard combined
+$(document).ready(function(){
+    // event par touche (press up et down)
+    // En fonction de la touche courante verifier les combinaisons possibles associées
+    $(".combined-keyboard #ctrl").mouseup(function() {//pour chaque // cf exemple http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_mup_mdown_ref
+        //buttonStatus.ctrl = false;
+        $(".combined-keyboard").css("background","red");
+        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+    });
+    $(".combined-keyboard #ctrl").mousedown(function() {//pour chaque
+        //buttonStatus.ctrl = true;
+        $(".combined-keyboard").css("background","blue");
+        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+    });
+});
 
 // Settings ____________________________________________________________________
 
