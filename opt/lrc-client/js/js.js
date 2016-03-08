@@ -1,3 +1,10 @@
+// Function to catch context menu and stop it ___________________________________
+window.oncontextmenu = function(event) {
+     event.preventDefault();
+     event.stopPropagation();
+     return false;
+};
+
 // Function to convert music time to seconds ___________________________________
 function seconds(time) {
     var split = time.split(":");
