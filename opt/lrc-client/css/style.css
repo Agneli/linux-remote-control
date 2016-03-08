@@ -185,12 +185,12 @@ a {
 
 #main section .line .play-slideshow {
     background: url("../img/icons/play-slideshow.png") no-repeat center;
-    background-size: auto 50%;
+    background-size: auto 40%;
 }
 
 #main section .line .exit-slideshow {
     background: url("../img/icons/exit-slideshow.png") no-repeat center;
-    background-size: auto 50%;
+    background-size: auto 40%;
 }
 
 /* Playlists _________________________________________________________________*/
