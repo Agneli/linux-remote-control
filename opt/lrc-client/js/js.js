@@ -290,7 +290,7 @@ $(function() {
 });
 
 $(function() {
-    $(".combined-keyboard #hide").click(function() {
+    $(".combined-keyboard #hide, #Slideshow-canvas").click(function() {
         $(".combined-keyboard").css("display","none");
     });
 });
@@ -353,20 +353,68 @@ $(function() {
 
 
 // Tableau de combinaison
-//var buttonStatus = {};
+var buttonStatus = {};
 // Keyboard combined
-$(document).ready(function(){
-    // event par touche (press up et down)
+//TODO : same with click+movingmouse
+$(function(){
+    //----------------SIMULATION MULTITOUCH----------------
     // En fonction de la touche courante verifier les combinaisons possibles associées
-    $(".combined-keyboard #ctrl").mouseup(function() {//pour chaque // cf exemple http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_mup_mdown_ref
-        //buttonStatus.ctrl = false;
-        $(".combined-keyboard").css("background","red");
-        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+    //  TOUCHE 'CTRL'
+    $(".combined-keyboard #ctrl").on("touchstart", function(e) {//pour chaque // cf exemple http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_mup_mdown_ref
+        e.preventDefault();
+        var command ="";
+
+        buttonStatus.ctrl = true;
+        $(".combined-keyboard").css("background","#696969");
+        if(buttonStatus.v == true){
+            $("#Slideshow-canvas").html("Vous appuyez sur : v ctrl");
+            command = "xdotool keydown ctrl key v";// ou xdotool key ctrl+v
+        }
+        else{
+            $("#Slideshow-canvas").html("Vous appuyez sur : ctrl");
+        }
+        
+        $.get("http://" + navigator.host + ":" + port + "/lrc",
+            {cmd: command}
+        );
     });
-    $(".combined-keyboard #ctrl").mousedown(function() {//pour chaque
-        //buttonStatus.ctrl = true;
-        $(".combined-keyboard").css("background","blue");
-        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+
+    $(".combined-keyboard #ctrl").on("touchend", function(e) {
+        //buttonStatus.ctrl = false;
+        $(".combined-keyboard").css("background","#808080");
+        //$("#Slideshow-canvas").html("");
+    });
+
+    //  TOUCHE 'V'
+    $(".combined-keyboard #v").on("touchstart", function(e) {
+        buttonStatus.v = true;
+        $(".combined-keyboard").css("background","#696969");
+        if(buttonStatus.ctrl == true){
+            $("#Slideshow-canvas").html("Vous appuyez sur : ctrl v");
+        }
+        else{
+            $("#Slideshow-canvas").html("Vous appuyez sur : v");
+        }
+        
+        $.get("http://" + navigator.host + ":" + port + "/lrc",
+            {cmd: command}
+        );
+    });
+
+    $(".combined-keyboard #v").on("touchend", function(e) {
+        //buttonStatus.v = false;
+        $(".combined-keyboard").css("background","#808080");
+        //$("#Slideshow-canvas").html("");
+    });
+
+    //  TOUCHE RESET
+    $(".combined-keyboard #alt").on("touchend", function(e) {
+        buttonStatus = {};
+        $("#Slideshow-canvas").html("");
+
+        $.get("http://" + navigator.host + ":" + port + "/lrc",
+            {cmd: command}
+        );
     });
 });
 

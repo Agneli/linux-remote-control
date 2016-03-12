@@ -43,6 +43,7 @@ function handleTouchstart(evt) {
         touchHold = true;
         console.log("touchHold", touchHold)
     }
+    $("#Slideshow-canvas").html( " start " );
 }
 
 function handleTouchend(evt) {
@@ -59,9 +60,11 @@ function handleTouchend(evt) {
     }
     
     scrolling = touchCount != 0;
+    $("#Slideshow-canvas").html( "" );
 }
 
 function handleTouchmove(evt) {
+    $("#Slideshow-canvas").html( " move " );
     var deltaX, deltaY;
     var time = (+new Date()) - startTime;
     if (!scrolling) {
