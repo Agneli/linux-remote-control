@@ -271,7 +271,7 @@ a {
     bottom: 0;
     background: grey;
     width: 100%;
-    height: 40%;
+    height: 45%;
 }
 
 #main section .combined-keyboard button {
@@ -281,9 +281,19 @@ a {
     top:0;
 }
 
+#main section .combined-keyboard #keypressed {
+    width: 100% ; 
+    height: 8%;
+    font-size: 14px;
+    background: #303030;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
 #main section .combined-keyboard #ctrl, #main section .combined-keyboard #alt {
     width: 45% ; 
-    height: 42%;
+    height: 38%;
     font-size: 30px;
     float: left;
     clear:both;
@@ -294,7 +304,7 @@ a {
 #main section .combined-keyboard #u, #main section .combined-keyboard #i,
  #main section .combined-keyboard #b, #main section .combined-keyboard #n {
     width: 20%; 
-    height: 20%;
+    height: 18%;
     font-size: 30px;
     float: right;
 }
