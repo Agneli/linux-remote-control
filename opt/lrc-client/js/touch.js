@@ -34,7 +34,7 @@ function startup() {
             e.preventDefault();
             var command = "";
 
-            $(".combined-keyboard").css("background","#696969");
+            //$(".combined-keyboard").css("background","#696969");
                 buttonStatus.alt = false;
                 $(".combined-keyboard #alt").html("Alt");
 
@@ -72,7 +72,7 @@ function startup() {
 
         $(".combined-keyboard #ctrl").on("touchend", function(e) { // A decommenter hors emulateur
             //buttonStatus.ctrl = false;
-            $(".combined-keyboard").css("background","#808080");
+            //$(".combined-keyboard").css("background","#808080");
             //$(".combined-keyboard #ctrl").html("Ctrl");
             //$("#keypressed").html("");
         });
@@ -82,7 +82,7 @@ function startup() {
             e.preventDefault();
             var command = "";
 
-            $(".combined-keyboard").css("background","#696969");
+            //$(".combined-keyboard").css("background","#696969");
             buttonStatus.ctrl = false;
             $(".combined-keyboard #ctrl").html("Ctrl");
 
@@ -120,7 +120,7 @@ function startup() {
 
         $(".combined-keyboard #alt").on("touchend", function(e) { // A decommenter hors emulateur
             //buttonStatus.alt = false;
-            $(".combined-keyboard").css("background","#808080");
+            //$(".combined-keyboard").css("background","#808080");
             //$(".combined-keyboard #alt").html("Alt");
             //$("#keypressed").html("");
         });
@@ -130,7 +130,7 @@ function startup() {
             e.preventDefault();
             var command = "";
 
-            $(".combined-keyboard").css("background","#696969");
+            //$(".combined-keyboard").css("background","#696969");
             buttonStatus.c = false;
             $(".combined-keyboard #c").html("C");
             buttonStatus.b = false;
@@ -163,7 +163,7 @@ function startup() {
 
         $(".combined-keyboard #v").on("touchend", function(e) { // A decommenter hors emulateur
             //buttonStatus.v = false;
-            $(".combined-keyboard").css("background","#808080");
+            //$(".combined-keyboard").css("background","#808080");
             //$(".combined-keyboard #v").html("V");
             //$("#keypressed").html("");
         });
@@ -174,7 +174,7 @@ function startup() {
             e.preventDefault();
             var command = "";
 
-            $(".combined-keyboard").css("background","#696969");
+            //$(".combined-keyboard").css("background","#696969");
             buttonStatus.v = false;
             $(".combined-keyboard #v").html("V");
             buttonStatus.b = false;
@@ -207,7 +207,7 @@ function startup() {
 
         $(".combined-keyboard #c").on("touchend", function(e) { // A decommenter hors emulateur
             //buttonStatus.c = false;
-            $(".combined-keyboard").css("background","#808080");
+            //$(".combined-keyboard").css("background","#808080");
             //$(".combined-keyboard #c").html("C");
             //$("#keypressed").html("");
         });
@@ -218,7 +218,7 @@ function startup() {
             e.preventDefault();
             var command = "";
 
-            $(".combined-keyboard").css("background","#696969");
+            //$(".combined-keyboard").css("background","#696969");
             buttonStatus.c = false;
             $(".combined-keyboard #c").html("C");
             buttonStatus.b = false;
@@ -251,7 +251,7 @@ function startup() {
 
         $(".combined-keyboard #a").on("touchend", function(e) { // A decommenter hors emulateur
             //buttonStatus.a = false;
-            $(".combined-keyboard").css("background","#808080");
+            //$(".combined-keyboard").css("background","#808080");
             //$(".combined-keyboard #a").html("A");
             //$("#keypressed").html("");
         });
@@ -262,7 +262,7 @@ function startup() {
             e.preventDefault();
             var command = "";
 
-            $(".combined-keyboard").css("background","#696969");
+            //$(".combined-keyboard").css("background","#696969");
             buttonStatus.c = false;
             $(".combined-keyboard #c").html("C");
             buttonStatus.b = false;
@@ -295,7 +295,7 @@ function startup() {
 
         $(".combined-keyboard #x").on("touchend", function(e) { // A decommenter hors emulateur
             //buttonStatus.x = false;
-            $(".combined-keyboard").css("background","#808080");
+            //$(".combined-keyboard").css("background","#808080");
             //$(".combined-keyboard #x").html("X");
             //$("#keypressed").html("");
         });
@@ -306,7 +306,7 @@ function startup() {
             e.preventDefault();
             var command = "";
 
-            $(".combined-keyboard").css("background","#696969");
+            //$(".combined-keyboard").css("background","#696969");
             buttonStatus.c = false;
             $(".combined-keyboard #c").html("C");
             buttonStatus.b = false;
@@ -339,7 +339,7 @@ function startup() {
 
         $(".combined-keyboard #i").on("touchend", function(e) { // A decommenter hors emulateur
             //buttonStatus.i = false;
-            $(".combined-keyboard").css("background","#808080");
+            //$(".combined-keyboard").css("background","#808080");
             //$(".combined-keyboard #i").html("I");
             //$("#keypressed").html("");
         });
@@ -350,7 +350,7 @@ function startup() {
             e.preventDefault();
             var command = "";
 
-            $(".combined-keyboard").css("background","#696969");
+            //$(".combined-keyboard").css("background","#696969");
             buttonStatus.c = false;
             $(".combined-keyboard #c").html("C");
             buttonStatus.b = false;
@@ -383,7 +383,7 @@ function startup() {
 
         $(".combined-keyboard #u").on("touchend", function(e) { // A decommenter hors emulateur
             //buttonStatus.u = false;
-            $(".combined-keyboard").css("background","#808080");
+            //$(".combined-keyboard").css("background","#808080");
             //$(".combined-keyboard #u").html("U");
             //$("#keypressed").html("");
         });
@@ -394,7 +394,7 @@ function startup() {
             e.preventDefault();
             var command = "";
 
-            $(".combined-keyboard").css("background","#696969");
+            //$(".combined-keyboard").css("background","#696969");
             buttonStatus.c = false;
             $(".combined-keyboard #c").html("C");
             buttonStatus.a = false;
@@ -427,7 +427,7 @@ function startup() {
 
         $(".combined-keyboard #b").on("touchend", function(e) { // A decommenter hors emulateur
             //buttonStatus.b = false;
-            $(".combined-keyboard").css("background","#808080");
+            //$(".combined-keyboard").css("background","#808080");
             //$(".combined-keyboard #b").html("B");
             //$("#keypressed").html("");
         });
