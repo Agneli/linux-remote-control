@@ -271,6 +271,7 @@ a {
     bottom: 0;
     width: 100%;
     height: 45%;
+    border-top: solid 2px #318CE7;
 }
 
 #main section .combined-keyboard button {
@@ -289,6 +290,7 @@ a {
     text-align: left;
     padding-left: 10px;
     padding-top: 3px;
+    background: #318CE7;
 }
 
 #main section .combined-keyboard #ctrl, #main section .combined-keyboard #alt {
