@@ -1,3 +1,10 @@
+// Function to catch context menu and stop it ___________________________________
+window.oncontextmenu = function(event) {
+     event.preventDefault();
+     event.stopPropagation();
+     return false;
+};
+
 // Function to convert music time to seconds ___________________________________
 function seconds(time) {
     var split = time.split(":");
@@ -278,6 +285,19 @@ $(function() {
 
 $(function() {
     $(".slideshow-controls a:not(.mouse)").click(function() {
+        $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
+    });
+});
+
+$(function() {
+    $(".combined-keyboard #hide, #Slideshow-canvas").click(function() {
+        $(".combined-keyboard").css("display","none");
+    });
+});
+
+$(function() {
+    $(".slideshow-controls .combined").click(function() {
+        $(".combined-keyboard").css("display","block");
         $.get("http://" + navigator.host + ":" + port + "/lrc", {cmd: $(this).data("command").cmd});
     });
 });

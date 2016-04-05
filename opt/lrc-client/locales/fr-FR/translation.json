@@ -20,11 +20,11 @@
             "credits": "Crédits"
         },
         "server": {
-            "p1": "Pour ajouter un serveur (l'ordinateur qui va être controllé), vous devez connaître l'adresse IP de cet ordinateur. Pour ce faire, entrez la commande suivante dans votre terminal.",
-            "p2": "Maintenant que vous avez l'adresse IP de votre ordinateur, allez sur la page \"Ajouter un serveur\" depuis l'écran d'acceuil et entrez le nom du serveur (un nom de votre choix) ainsi que l'adresse IP de votre ordinateur puis cliquez sur le bouton \"Sauvegarder\". C'est tout."
+            "p1": "Pour ajouter un serveur (l'ordinateur qui va être contrôlé), vous devez connaître l'adresse IP de cet ordinateur. Pour ce faire, entrez la commande suivante dans votre terminal.",
+            "p2": "Maintenant que vous avez l'adresse IP de votre ordinateur, allez sur la page \"Ajouter un serveur\" depuis l'écran d'accueil et entrez le nom du serveur (un nom de votre choix) ainsi que l'adresse IP de votre ordinateur puis cliquez sur le bouton \"Sauvegarder\". C'est tout."
         },
         "install": {
-            "p1": "Si vous avez l'application entre les mains, c'est que avez déjà, aupréalable, installé la version pour GNU/LINUX. Toutefois, si vous ne l'avez pas déjà fait, suivez les instructions suivantes.",
+            "p1": "Si vous avez l'application entre les mains, c'est que avez déjà, au préalable, installé la version pour GNU/LINUX. Toutefois, si vous ne l'avez pas déjà fait, suivez les instructions suivantes.",
             "p2": "1. Télechargez le lrc sur votre GNU/Linux.",
             "p3": "2. Installez le package .deb.",
             "p4": "3. Déplacez le dossier /opt/lrc-client sur votre appareil mobile.",
@@ -41,7 +41,7 @@
             "p2": "Vous pouvez créer une nouvelle issue sur <a href=\"https://github.com/Agneli/linux-remote-control/issues\" target=\"_blank\" >Github</a> ou nous contacter par email:"
         },
         "feedback": {
-            "p1": "Dites nous ce que vous pensez de cette application. Envoyez vos critiques, sugestions ou demandes, nous les écouterons avec un grand plasir."
+            "p1": "Dites nous ce que vous pensez de cette application. Envoyez vos critiques, suggestions ou demandes, nous les écouterons avec un grand plasir."
         },
         "about": {
             "p1": "C'est un Logiciel Libre et un projet Open Source distribué sous license GNU GPL.",
@@ -68,7 +68,7 @@
             "command": "Commande à exécuter"
         },
         "settings": {
-            "language": "Langage",
+            "language": "Language",
             "theme": "Thème",
             "audio": "Lecteur audio",
             "video": "Lecteur video",

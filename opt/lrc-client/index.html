@@ -494,7 +494,7 @@
                     <a href="#!" class="w14 left" data-page="slideshow" data-direction='left'><i class="fa fa-unsorted fa-rotate-90"></i></a>
                     <a href="#!" class="w14 left" data-page="custom-commands" data-direction='left'><i class="fa fa-terminal"></i></a>
                 </header>
-                <div id="canvas" class="line h70">
+                <div id="Touchpad-canvas" class="line h70">
                 </div>
                 <div id="mouse-controls" class="line h20 color2-light">
                     <a href="#!" class="w33 left-click left" data-command='{"cmd":"export DISPLAY=:0; xdotool click 1"}'></a>
@@ -516,14 +516,35 @@
                     <a href="#!" class="w14 left" data-page="slideshow" data-direction='none'><i class="fa fa-unsorted fa-rotate-90"></i></a>
                     <a href="#!" class="w14 left" data-page="custom-commands" data-direction='left'><i class="fa fa-terminal"></i></a>
                 </header>
-                <div class="line h70 slideshow-controls color1-dark">
-                    <a href="#!" class="w50 left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Left"}'><i class="fa fa-5x fa-chevron-left"></i></a>
-                    <a href="#!" class="w50 right" data-command='{"cmd":"export DISPLAY=:0; xdotool key Right"}'><i class="fa fa-5x fa-chevron-right"></i></a>
+                <div id="slidecontrol" class="line h10 slideshow-controls color1-dark">
+                    <a href="#!" class="w50 left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Left"}'><i class="fa fa-chevron-left"></i></a>
+                    <a href="#!" class="w50 right" data-command='{"cmd":"export DISPLAY=:0; xdotool key Right"}'><i class="fa fa-chevron-right"></i></a>
+                </div>
+                <div id="Slideshow-canvas" class="line h50">
+                </div>
+                <div id="mouseclick" class="line h10 slideshow-controls color1-dark">
+                    <a href="#!" class="w50 left-click left" data-command='{"cmd":"export DISPLAY=:0; xdotool click 1"}'></a>
+                    <a href="#!" class="w50 right-click right" data-command='{"cmd":"export DISPLAY=:0; xdotool click 3"}'></a>
                 </div>
                 <div class="line h20 color2-light slideshow-controls">
-                    <a href="#!" class="w33 play-slideshow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key F5"}'></a>
-                    <a href="#!" class="w33 exit-slideshow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Escape"}'></a>
-                    <a href="#!" class="w33 mouse right" data-page="touchpad" data-direction='left'><i class="fa fa-2x fa-hand-o-up"></i></a>
+                    <a href="#!" class="w25 play-slideshow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key F5"}'></a>
+                    <a href="#!" class="w25 exit-slideshow left" data-command='{"cmd":"export DISPLAY=:0; xdotool key Escape"}'></a>
+                    <a href="#!" class="w25 keyboard left" data-command='{"cmd":""}'><i class="fa fa-2x fa-keyboard-o"></i></a>
+                    <a href="#!" class="w25 combined right" data-command='{"cmd":""}'><i class="fa fa-2x fa-link"></i></a>
+                </div>
+                <input type="text" class="keyboard-input"/>
+                <div class="combined-keyboard color1-dark">
+                    <div id="keypressed"></div>
+                    <button id="hide"><i class="fa fa-2x fa-angle-down"></i></button>
+                    <button id="ctrl" class="hl">Ctrl</button>
+                    <button id="c" class="hr">C</button>
+                    <button id="v" class="hl">V</button>
+                    <button id="x" class="br">X</button>
+                    <button id="a" class="bl">A</button>
+                    <button id="alt" class="bl">Alt</button>
+                    <button id="u" class="hr">U</button>
+                    <button id="i" class="hl">I</button>
+                    <button id="b" class="bl">B</button>
                 </div>
             </section>
 
